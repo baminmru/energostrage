@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <db DataSource="PIREXE"
+    Oracle="//192.168.9.220:1521/xe"
+    UserID="beavis"
+    Password="beavis7654"
+    TimeOut="1000"
+    >
+  </db>
+  <test_token>1d631038-c687-4576-a935-3574fafdb3c4</test_token>
+  <token>5a45c0bd-846e-4aa1-b902-bdf8706b41a9</token>
+  <portal>SNTPORTAL</portal>
+  <inn>7800000078</inn>
+</config>

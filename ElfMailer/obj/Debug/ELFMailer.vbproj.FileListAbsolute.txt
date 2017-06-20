@@ -1,0 +1,16 @@
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\mailconfig.xml
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ToidMail.exe.config
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ToidMail.exe
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ToidMail.pdb
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ToidMail.xml
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ELFMailer.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ToidMail.Resources.resources
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ELFMailer.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ToidMail.exe
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ToidMail.xml
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ToidMail.pdb
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\Config.xml
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.dll
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.pdb
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.xml
+C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ELFMailer.vbproj.ToidMail.exe.config

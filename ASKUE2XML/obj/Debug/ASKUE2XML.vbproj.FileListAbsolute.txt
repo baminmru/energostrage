@@ -1,0 +1,11 @@
+C:\bami\SZT_VOLOGDA\ASKUE2XML\bin\Debug\A2XML_Config.xml
+C:\bami\SZT_VOLOGDA\ASKUE2XML\bin\Debug\A2XML.exe.config
+C:\bami\SZT_VOLOGDA\ASKUE2XML\bin\Debug\A2XML.exe
+C:\bami\SZT_VOLOGDA\ASKUE2XML\bin\Debug\A2XML.pdb
+C:\bami\SZT_VOLOGDA\ASKUE2XML\bin\Debug\A2XML.xml
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\A2XML.Resources.resources
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\ASKUE2XML.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\A2XML.exe
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\A2XML.xml
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\A2XML.pdb
+C:\bami\SZT_VOLOGDA\ASKUE2XML\obj\Debug\ASKUE2XML.vbprojResolveAssemblyReference.cache

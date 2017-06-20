@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config server="192.168.9.226\SQLEXPRESS"
+        database="cendb" 
+        user="bami" 
+        password="bami7654" 
+        INN="00000001"  
+        NAME="Мурманский филиал"
+        path="c:\data\"
+        lastdate="01.01.2016"
+></config>

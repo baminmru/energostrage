@@ -1,0 +1,17 @@
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ESReadService.exe
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ESReadService.pdb
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ESReadService.xml
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ELFDBMain.dll
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ELFDBMain.pdb
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ELFDBMain.xml
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.Resources.resources
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.ESReaderService.resources
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.exe
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.xml
+C:\bami\SZT_VOLOGDA\ESReadService\obj\x86\Debug\ESReadService.pdb
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\Config.xml
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.pdb
+C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.xml

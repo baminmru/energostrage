@@ -1,0 +1,20 @@
+create table PHONEDURATION
+(
+  tid   NUMBER,
+  tdate DATE,
+  tnum  VARCHAR2(16),
+  tdur  VARCHAR2(8),
+  tcost VARCHAR2(24)
+)
+;
+comment on column PHONEDURATION.tid
+  is 'Идентификатор 1-COM4, тел. +7-981-113-97-99; 2-COM5, тел. +7-981-749-44-09;';
+comment on column PHONEDURATION.tdate
+  is 'Дата и время сессии связи';
+comment on column PHONEDURATION.tnum
+  is 'Номер телефона с которым выполнялась связь';
+comment on column PHONEDURATION.tdur
+  is 'Время сеанса связи';
+comment on column PHONEDURATION.tcost
+  is 'Цена сверх тарифа';
+

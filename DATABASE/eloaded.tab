@@ -1,0 +1,7 @@
+create table ELOADED
+(
+  loaded_id  INTEGER,
+  loadedname VARCHAR2(128)
+)
+;
+

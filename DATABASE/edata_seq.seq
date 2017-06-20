@@ -1,0 +1,7 @@
+create sequence EDATA_SEQ
+minvalue 1
+maxvalue 99999999999999999999999999
+start with 130883892
+increment by 1
+cache 20;
+

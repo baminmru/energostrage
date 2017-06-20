@@ -1,0 +1,17 @@
+create table EDATA_WEEK
+(
+  chanel_id NUMBER not null,
+  year      NUMBER not null,
+  week      NUMBER not null,
+  code_t    NUMBER(18,6),
+  code_h    NUMBER(18,6),
+  code_l    NUMBER(18,6),
+  code_01   NUMBER(18,6),
+  code_02   NUMBER(18,6),
+  code_03   NUMBER(18,6),
+  code_04   NUMBER(18,6)
+)
+;
+alter table EDATA_WEEK
+  add constraint PK_EDATA_WEEK primary key (CHANEL_ID, YEAR, WEEK);
+

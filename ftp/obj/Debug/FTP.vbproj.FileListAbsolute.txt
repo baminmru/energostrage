@@ -1,0 +1,16 @@
+D:\MDB\Generated\Generated Dlls\FTP.dll
+D:\MDB\Generated\Generated Dlls\FTP.pdb
+D:\MDB\Generated\Generated Dlls\FTP.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\ftp\obj\Debug\ResolveAssemblyReference.cache
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\ftp\obj\Debug\FTP.dll
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\ftp\obj\Debug\FTP.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\ftp\obj\Debug\FTP.pdb
+C:\Generated\Generated Dlls\FTP.dll
+C:\Generated\Generated Dlls\FTP.pdb
+C:\Generated\Generated Dlls\FTP.xml
+C:\bami\Projects\SZT_VOLOGDA\ftp\obj\Debug\FTP.dll
+C:\bami\Projects\SZT_VOLOGDA\ftp\obj\Debug\FTP.xml
+C:\bami\Projects\SZT_VOLOGDA\ftp\obj\Debug\FTP.pdb
+C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.dll
+C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.xml
+C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.pdb

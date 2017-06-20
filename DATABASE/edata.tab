@@ -1,0 +1,46 @@
+create table EDATA
+(
+  data_id   INTEGER not null,
+  chanel_id INTEGER not null,
+  c_date    DATE,
+  lightsave VARCHAR2(1),
+  p_date    DATE,
+  p_start   DATE,
+  p_end     DATE,
+  code_t    NUMBER(18,6),
+  code_h    NUMBER(18,6),
+  code_l    NUMBER(18,6),
+  code_01   NUMBER(18,6),
+  code_02   NUMBER(18,6),
+  code_03   NUMBER(18,6),
+  code_04   NUMBER(18,6)
+)
+;
+comment on column EDATA.c_date
+  is 'Дата создания файла <timestamp>';
+comment on column EDATA.lightsave
+  is 'Время зимнее/летнее/признак перевода вр. 0/1/2 <daylightsavingtime>';
+comment on column EDATA.p_date
+  is 'Дата операционного периода <day>';
+comment on column EDATA.p_start
+  is 'Дата и время начала периода (формат - DTГГГГММДДччммсс)';
+comment on column EDATA.p_end
+  is 'Дата и время окончания периода  (формат - DTГГГГММДДччммсс)';
+comment on column EDATA.code_t
+  is 'Температура (''C)';
+comment on column EDATA.code_h
+  is 'Влажность (H)';
+comment on column EDATA.code_l
+  is 'Освещенность (лк)';
+comment on column EDATA.code_01
+  is 'Активный привем (A+)';
+comment on column EDATA.code_02
+  is 'Активная отдача (A-)';
+comment on column EDATA.code_03
+  is 'Реактивный прием (R+)';
+comment on column EDATA.code_04
+  is 'Реакитвная отдача (R-)';
+create index EDATA_IDX on EDATA (CHANEL_ID, P_DATE);
+alter table EDATA
+  add constraint PK_EDATA1 primary key (DATA_ID);
+

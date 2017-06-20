@@ -1,0 +1,7 @@
+create sequence TBL_SEQ
+minvalue 1
+maxvalue 99999
+start with 470
+increment by 3
+nocache;
+

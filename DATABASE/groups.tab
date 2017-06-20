@@ -1,0 +1,10 @@
+create table GROUPS
+(
+  groups_id NUMBER(10) not null,
+  name      VARCHAR2(255),
+  address   VARCHAR2(255)
+)
+;
+alter table GROUPS
+  add constraint GROUPS_PK primary key (GROUPS_ID);
+

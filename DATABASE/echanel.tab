@@ -1,0 +1,17 @@
+create table ECHANEL
+(
+  chanel_id    INTEGER not null,
+  node_id      INTEGER not null,
+  mchanel_code VARCHAR2(6),
+  mchanel_desc VARCHAR2(512)
+)
+;
+comment on column ECHANEL.mchanel_code
+  is 'Код измерительного канала <measuringchannel code>';
+comment on column ECHANEL.mchanel_desc
+  is 'Текстовое описание измерительного канала <measuringchannel desc>';
+create index ECHANEL_IDX on ECHANEL (NODE_ID);
+create index ECHANEL_IDX2 on ECHANEL (NODE_ID, MCHANEL_CODE);
+alter table ECHANEL
+  add constraint PK_ECHANEL primary key (CHANEL_ID);
+

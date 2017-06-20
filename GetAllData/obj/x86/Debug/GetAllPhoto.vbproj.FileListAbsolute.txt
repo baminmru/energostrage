@@ -1,0 +1,15 @@
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\CFG_GetAllPhoto.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\GetAllPhoto.exe.config
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\GetAllPhoto.exe
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\GetAllPhoto.pdb
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\GetAllPhoto.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\FTP.dll
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\FTP.pdb
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\bin\Debug\FTP.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\GetAllPhoto.Resources.resources
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\ResGen.read.1.tlog
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\ResGen.write.1.tlog
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\GetAllPhoto.exe
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\GetAllPhoto.xml
+D:\MDB\svn.1gb.rumdatabase\trunk\tools\GetAllPhoto\obj\x86\Debug\GetAllPhoto.pdb

@@ -1,0 +1,142 @@
+create table ELECTRO
+(
+  id       NUMBER(10),
+  id_bd    NUMBER(5) not null,
+  id_ptype NUMBER(2) not null,
+  dcall    DATE not null,
+  dcounter DATE not null,
+  t0       NUMBER(18,6) default 0,
+  t1       NUMBER(18,6) default 0,
+  t2       NUMBER(18,6) default 0,
+  t3       NUMBER(18,6) default 0,
+  t4       NUMBER(18,6) default 0,
+  t5       NUMBER(18,6) default 0,
+  c1       NUMBER(18,6) default 0,
+  c2       NUMBER(18,6) default 0,
+  c3       NUMBER(18,6) default 0,
+  p0       NUMBER(18,6) default 0,
+  p1       NUMBER(18,6) default 0,
+  p2       NUMBER(18,6) default 0,
+  p3       NUMBER(18,6) default 0,
+  g0       NUMBER(18,6) default 0,
+  g1       NUMBER(18,6) default 0,
+  g2       NUMBER(18,6) default 0,
+  g3       NUMBER(18,6) default 0,
+  g4       NUMBER(18,6) default 0,
+  g5       NUMBER(18,6) default 0,
+  u1       NUMBER(18,6) default 0,
+  u2       NUMBER(18,6) default 0,
+  u3       NUMBER(18,6) default 0,
+  errtime  NUMBER(12),
+  errtimeh NUMBER(12),
+  hc       VARCHAR2(180),
+  check_a  NUMBER(1) default 0,
+  oktime   NUMBER(18,6),
+  worktime NUMBER(18,6),
+  hc_code  VARCHAR2(180),
+  i1       NUMBER default 0,
+  i2       NUMBER default 0,
+  i3       NUMBER default 0,
+  ap1      NUMBER default 0,
+  ap2      NUMBER default 0,
+  ap3      NUMBER default 0,
+  ap0      NUMBER default 0,
+  am0      NUMBER default 0 not null,
+  am1      NUMBER default 0,
+  am2      NUMBER default 0,
+  am3      NUMBER default 0,
+  rp0      NUMBER default 0,
+  rp1      NUMBER default 0,
+  rp2      NUMBER default 0,
+  rp3      NUMBER default 0,
+  rm0      NUMBER default 0,
+  rm1      NUMBER default 0,
+  rm2      NUMBER default 0,
+  rm3      NUMBER default 0
+)
+;
+comment on column ELECTRO.t0
+  is 'Энергия тариф сумма';
+comment on column ELECTRO.t1
+  is 'Энергия тариф 1';
+comment on column ELECTRO.t2
+  is 'Энергия тариф 2';
+comment on column ELECTRO.t3
+  is 'Энергия тариф 3';
+comment on column ELECTRO.t4
+  is 'Энергия тариф 4';
+comment on column ELECTRO.t5
+  is 'Энергия потери';
+comment on column ELECTRO.c1
+  is 'Косинус фи 1 фаза';
+comment on column ELECTRO.c2
+  is 'Косинус фи 2 фаза';
+comment on column ELECTRO.c3
+  is 'Косинус фи 3 фаза';
+comment on column ELECTRO.p0
+  is 'Мощность общая';
+comment on column ELECTRO.p1
+  is 'Мощность ф 1';
+comment on column ELECTRO.p2
+  is 'Мощность ф 2';
+comment on column ELECTRO.p3
+  is 'Мощность ф 3';
+comment on column ELECTRO.g0
+  is 'Накопленная энергия общая';
+comment on column ELECTRO.g1
+  is 'Накопленная энергия тариф 1';
+comment on column ELECTRO.g2
+  is 'Накопленная энергия тариф 2';
+comment on column ELECTRO.g3
+  is 'Накопленная энергия тариф  3';
+comment on column ELECTRO.g4
+  is 'Накопленная энергия тариф 4';
+comment on column ELECTRO.g5
+  is 'Накопленная энергия потери';
+comment on column ELECTRO.u1
+  is 'Напряжение ф 1';
+comment on column ELECTRO.u2
+  is 'Напряжение ф 2';
+comment on column ELECTRO.u3
+  is 'Напряжение ф 3';
+comment on column ELECTRO.i1
+  is 'Ток ф 1';
+comment on column ELECTRO.i2
+  is 'Ток ф 2';
+comment on column ELECTRO.i3
+  is 'Ток ф3';
+comment on column ELECTRO.ap1
+  is 'Активная + Ф 1';
+comment on column ELECTRO.ap2
+  is 'Активная + Ф 2';
+comment on column ELECTRO.ap3
+  is 'Активная + Ф 3';
+comment on column ELECTRO.ap0
+  is 'Активная + общ';
+comment on column ELECTRO.am0
+  is 'Активная - общ';
+comment on column ELECTRO.am1
+  is 'Активная - ф 1';
+comment on column ELECTRO.am2
+  is 'Активная - ф 2';
+comment on column ELECTRO.am3
+  is 'Активная - ф 3';
+comment on column ELECTRO.rp0
+  is 'Реактивная + общ';
+comment on column ELECTRO.rp1
+  is 'Реактивная + ф1';
+comment on column ELECTRO.rp2
+  is 'Реактивная + ф 2';
+comment on column ELECTRO.rp3
+  is 'Реактивная + ф3';
+comment on column ELECTRO.rm0
+  is 'Реактивная - общ';
+comment on column ELECTRO.rm1
+  is 'Реактивная - ф 1';
+comment on column ELECTRO.rm2
+  is 'Реактивная - ф 2';
+comment on column ELECTRO.rm3
+  is 'Реактивная - ф 3';
+alter table ELECTRO
+  add constraint ELECTRO_PK primary key (ID_BD, ID_PTYPE, DCOUNTER, DCALL);
+

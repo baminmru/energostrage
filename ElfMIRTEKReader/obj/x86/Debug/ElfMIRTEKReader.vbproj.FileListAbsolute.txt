@@ -1,0 +1,13 @@
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.Resources.resources
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\Config.xml
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ElfMIRTEKReader.exe
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ElfMIRTEKReader.pdb
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ElfMIRTEKReader.xml
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ELFDBMain.dll
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ELFDBMain.pdb
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ELFDBMain.xml
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.exe
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.xml
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.pdb
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.vbprojResolveAssemblyReference.cache

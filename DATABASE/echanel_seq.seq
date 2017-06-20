@@ -1,0 +1,7 @@
+create sequence ECHANEL_SEQ
+minvalue 1
+maxvalue 9999999
+start with 18803
+increment by 3
+cache 20;
+

@@ -1,0 +1,3 @@
+﻿
+2016.04.28 13:41:53 process file: c:\data\c2xml_00000001_20160101.xml FSIZE=82314741
+2016.04.28 13:41:53 skip processing, file already loaded, so delete -c:\data\c2xml_00000001_20160101.xml size: 82314741

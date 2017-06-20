@@ -1,0 +1,1907 @@
+2016.11.16 00:00:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:00:22 38163
+2016.11.16 00:00:28 -ERR
+2016.11.16 00:05:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:05:22 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:05:22 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:05:33 -OK
+2016.11.16 00:05:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:05:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:05:43 -OK
+2016.11.16 00:05:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:05:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:05:48 Get Cur:Индекс находился вне границ массива.
+2016.11.16 00:05:50 -OK
+2016.11.16 00:10:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:10:23 38163
+2016.11.16 00:10:28 -ERR
+2016.11.16 00:15:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:15:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:15:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:15:33 -OK
+2016.11.16 00:15:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:15:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:15:40 Get Cur:Индекс находился вне границ массива.
+2016.11.16 00:15:42 -OK
+2016.11.16 00:15:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:15:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:15:53 -OK
+2016.11.16 00:20:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:20:23 38163
+2016.11.16 00:20:28 -ERR
+2016.11.16 00:25:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:25:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:25:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:25:33 -OK
+2016.11.16 00:25:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:25:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:25:43 -OK
+2016.11.16 00:25:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:25:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:25:54 -OK
+2016.11.16 00:30:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:30:23 38163
+2016.11.16 00:30:28 -ERR
+2016.11.16 00:35:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:35:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:35:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:35:33 -OK
+2016.11.16 00:35:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:35:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:35:43 -OK
+2016.11.16 00:35:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:35:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:35:54 -OK
+2016.11.16 00:40:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:40:23 38163
+2016.11.16 00:40:28 -ERR
+2016.11.16 00:45:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:45:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:45:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:45:32 -OK
+2016.11.16 00:45:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:45:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:45:42 -OK
+2016.11.16 00:45:42 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:45:42 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:45:52 Get Total:Индекс находился вне границ массива.
+2016.11.16 00:45:52 -OK
+2016.11.16 00:50:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 00:50:23 38163
+2016.11.16 00:50:28 -ERR
+2016.11.16 00:55:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 00:55:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 00:55:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 00:55:33 -OK
+2016.11.16 00:55:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 00:55:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 00:55:42 Get Total:Индекс находился вне границ массива.
+2016.11.16 00:55:42 -OK
+2016.11.16 00:55:42 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 00:55:42 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 00:55:52 -OK
+2016.11.16 01:00:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:00:23 38163
+2016.11.16 01:00:29 -ERR
+2016.11.16 01:05:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:05:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:05:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:05:33 -OK
+2016.11.16 01:05:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:05:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:05:43 -OK
+2016.11.16 01:05:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:05:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:05:53 -OK
+2016.11.16 01:10:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:10:23 38163
+2016.11.16 01:10:29 -ERR
+2016.11.16 01:15:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:15:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:15:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:15:32 -OK
+2016.11.16 01:15:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:15:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:15:43 -OK
+2016.11.16 01:15:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:15:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:15:53 -OK
+2016.11.16 01:20:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:20:23 38163
+2016.11.16 01:20:29 -ERR
+2016.11.16 01:25:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:25:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:25:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:25:33 -OK
+2016.11.16 01:25:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:25:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:25:44 -OK
+2016.11.16 01:25:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:25:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:25:54 -OK
+2016.11.16 01:30:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:30:23 38163
+2016.11.16 01:30:29 -ERR
+2016.11.16 01:35:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:35:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:35:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:35:33 -OK
+2016.11.16 01:35:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:35:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:35:44 -OK
+2016.11.16 01:35:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:35:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:35:53 -OK
+2016.11.16 01:40:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:40:23 38163
+2016.11.16 01:40:29 -ERR
+2016.11.16 01:45:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:45:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:45:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:45:33 Get Total:Индекс находился вне границ массива.
+2016.11.16 01:45:33 -OK
+2016.11.16 01:45:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:45:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:45:43 -OK
+2016.11.16 01:45:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:45:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:45:52 Get Total:Индекс находился вне границ массива.
+2016.11.16 01:45:52 -OK
+2016.11.16 01:50:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 01:50:23 38163
+2016.11.16 01:50:29 -ERR
+2016.11.16 01:55:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 01:55:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 01:55:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 01:55:33 -OK
+2016.11.16 01:55:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 01:55:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 01:55:43 -OK
+2016.11.16 01:55:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 01:55:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 01:55:53 -OK
+2016.11.16 02:00:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:00:23 38163
+2016.11.16 02:00:29 -ERR
+2016.11.16 02:05:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:05:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:05:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:05:33 -OK
+2016.11.16 02:05:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:05:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:05:43 -OK
+2016.11.16 02:05:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:05:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:05:53 -OK
+2016.11.16 02:10:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:10:23 38163
+2016.11.16 02:10:29 -ERR
+2016.11.16 02:15:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:15:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:15:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:15:33 -OK
+2016.11.16 02:15:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:15:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:15:44 -OK
+2016.11.16 02:15:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:15:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:15:54 -OK
+2016.11.16 02:20:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:20:23 38163
+2016.11.16 02:20:29 -ERR
+2016.11.16 02:25:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:25:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:25:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:25:33 -OK
+2016.11.16 02:25:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:25:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:25:43 -OK
+2016.11.16 02:25:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:25:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:25:54 -OK
+2016.11.16 02:30:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:30:23 38163
+2016.11.16 02:30:29 -ERR
+2016.11.16 02:35:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:35:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:35:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:35:33 -OK
+2016.11.16 02:35:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:35:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:35:43 -OK
+2016.11.16 02:35:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:35:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:35:53 -OK
+2016.11.16 02:40:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:40:23 38163
+2016.11.16 02:40:29 -ERR
+2016.11.16 02:45:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:45:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:45:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:45:33 -OK
+2016.11.16 02:45:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:45:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:45:43 -OK
+2016.11.16 02:45:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:45:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:45:52 -OK
+2016.11.16 02:50:22 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 02:50:23 38163
+2016.11.16 02:50:29 -ERR
+2016.11.16 02:55:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 02:55:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 02:55:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 02:55:33 -OK
+2016.11.16 02:55:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 02:55:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 02:55:43 -OK
+2016.11.16 02:55:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 02:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 02:55:53 -OK
+2016.11.16 03:00:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:00:23 38163
+2016.11.16 03:00:29 -ERR
+2016.11.16 03:05:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:05:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:05:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:05:33 -OK
+2016.11.16 03:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:05:44 -OK
+2016.11.16 03:05:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:05:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:05:54 -OK
+2016.11.16 03:10:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:10:23 38163
+2016.11.16 03:10:29 -ERR
+2016.11.16 03:15:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:15:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:15:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:15:33 -OK
+2016.11.16 03:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:15:44 -OK
+2016.11.16 03:15:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:15:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:15:54 -OK
+2016.11.16 03:20:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:20:23 38163
+2016.11.16 03:20:29 -ERR
+2016.11.16 03:25:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:25:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:25:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:25:33 -OK
+2016.11.16 03:25:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:25:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:25:43 -OK
+2016.11.16 03:25:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:25:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:25:54 -OK
+2016.11.16 03:30:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:30:23 38163
+2016.11.16 03:30:29 -ERR
+2016.11.16 03:35:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:35:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:35:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:35:33 -OK
+2016.11.16 03:35:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:35:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:35:43 -OK
+2016.11.16 03:35:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:35:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:35:53 -OK
+2016.11.16 03:40:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:40:23 38163
+2016.11.16 03:40:29 -ERR
+2016.11.16 03:45:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:45:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:45:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:45:33 -OK
+2016.11.16 03:45:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:45:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:45:43 -OK
+2016.11.16 03:45:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:45:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:45:53 -OK
+2016.11.16 03:50:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 03:50:23 38163
+2016.11.16 03:50:29 -ERR
+2016.11.16 03:55:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 03:55:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 03:55:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 03:55:33 -OK
+2016.11.16 03:55:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 03:55:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 03:55:44 -OK
+2016.11.16 03:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 03:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 03:55:54 -OK
+2016.11.16 04:00:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:00:23 38163
+2016.11.16 04:00:29 -ERR
+2016.11.16 04:05:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:05:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:05:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:05:34 -OK
+2016.11.16 04:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:05:44 -OK
+2016.11.16 04:05:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:05:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:05:55 -OK
+2016.11.16 04:10:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:10:23 38163
+2016.11.16 04:10:29 -ERR
+2016.11.16 04:15:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:15:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:15:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:15:34 -OK
+2016.11.16 04:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:15:44 -OK
+2016.11.16 04:15:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:15:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:15:54 -OK
+2016.11.16 04:20:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:20:23 38163
+2016.11.16 04:20:29 -ERR
+2016.11.16 04:25:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:25:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:25:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:25:34 -OK
+2016.11.16 04:25:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:25:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:25:43 -OK
+2016.11.16 04:25:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:25:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:25:53 -OK
+2016.11.16 04:30:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:30:23 38163
+2016.11.16 04:30:29 -ERR
+2016.11.16 04:35:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:35:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:35:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:35:33 -OK
+2016.11.16 04:35:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:35:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:35:43 -OK
+2016.11.16 04:35:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:35:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:35:53 -OK
+2016.11.16 04:40:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:40:23 38163
+2016.11.16 04:40:29 -ERR
+2016.11.16 04:45:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:45:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:45:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:45:33 -OK
+2016.11.16 04:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:45:44 -OK
+2016.11.16 04:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:45:54 -OK
+2016.11.16 04:50:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 04:50:23 38163
+2016.11.16 04:50:29 -ERR
+2016.11.16 04:55:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 04:55:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 04:55:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 04:55:33 -OK
+2016.11.16 04:55:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 04:55:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 04:55:41 Get Cur:Индекс находился вне границ массива.
+2016.11.16 04:55:43 -OK
+2016.11.16 04:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 04:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 04:55:54 -OK
+2016.11.16 05:00:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:00:23 38163
+2016.11.16 05:00:29 -ERR
+2016.11.16 05:05:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:05:23 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:05:23 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:05:34 -OK
+2016.11.16 05:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:05:44 -OK
+2016.11.16 05:05:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:05:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:05:55 -OK
+2016.11.16 05:10:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:10:23 38163
+2016.11.16 05:10:29 -ERR
+2016.11.16 05:15:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:15:34 -OK
+2016.11.16 05:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:15:44 -OK
+2016.11.16 05:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:15:55 -OK
+2016.11.16 05:20:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:20:24 38163
+2016.11.16 05:20:29 -ERR
+2016.11.16 05:25:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:25:33 -OK
+2016.11.16 05:25:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:25:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:25:43 -OK
+2016.11.16 05:25:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:25:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:25:53 Get Total:Индекс находился вне границ массива.
+2016.11.16 05:25:53 -OK
+2016.11.16 05:30:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:30:24 38163
+2016.11.16 05:30:29 -ERR
+2016.11.16 05:35:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:35:34 -OK
+2016.11.16 05:35:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:35:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:35:43 Get Total:Индекс находился вне границ массива.
+2016.11.16 05:35:43 -OK
+2016.11.16 05:35:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:35:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:35:53 -OK
+2016.11.16 05:40:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:40:24 38163
+2016.11.16 05:40:29 -ERR
+2016.11.16 05:45:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:45:34 -OK
+2016.11.16 05:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:45:44 -OK
+2016.11.16 05:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:45:54 -OK
+2016.11.16 05:50:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 05:50:24 38163
+2016.11.16 05:50:29 -ERR
+2016.11.16 05:55:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 05:55:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 05:55:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 05:55:33 -OK
+2016.11.16 05:55:33 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 05:55:33 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 05:55:43 -OK
+2016.11.16 05:55:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 05:55:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 05:55:53 -OK
+2016.11.16 06:00:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:00:24 38163
+2016.11.16 06:00:29 -ERR
+2016.11.16 06:05:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:05:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:05:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:05:34 -OK
+2016.11.16 06:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:05:45 -OK
+2016.11.16 06:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:05:55 -OK
+2016.11.16 06:10:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:10:24 38163
+2016.11.16 06:10:29 -ERR
+2016.11.16 06:15:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:15:34 -OK
+2016.11.16 06:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:15:44 -OK
+2016.11.16 06:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:15:55 -OK
+2016.11.16 06:20:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:20:24 38163
+2016.11.16 06:20:29 -ERR
+2016.11.16 06:25:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:25:34 -OK
+2016.11.16 06:25:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:25:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:25:44 -OK
+2016.11.16 06:25:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:25:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:25:54 -OK
+2016.11.16 06:30:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:30:24 38163
+2016.11.16 06:30:29 -ERR
+2016.11.16 06:35:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:35:33 -OK
+2016.11.16 06:35:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:35:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:35:43 -OK
+2016.11.16 06:35:43 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:35:43 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:35:53 -OK
+2016.11.16 06:40:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:40:24 38163
+2016.11.16 06:40:30 -ERR
+2016.11.16 06:45:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:45:34 -OK
+2016.11.16 06:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:45:43 -OK
+2016.11.16 06:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:45:53 -OK
+2016.11.16 06:50:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 06:50:24 38163
+2016.11.16 06:50:30 -ERR
+2016.11.16 06:55:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 06:55:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 06:55:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 06:55:34 -OK
+2016.11.16 06:55:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 06:55:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 06:55:44 -OK
+2016.11.16 06:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 06:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 06:55:54 -OK
+2016.11.16 07:00:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:00:24 38163
+2016.11.16 07:00:30 -ERR
+2016.11.16 07:05:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:05:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:05:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:05:34 -OK
+2016.11.16 07:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:05:45 -OK
+2016.11.16 07:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:05:55 -OK
+2016.11.16 07:10:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:10:24 38163
+2016.11.16 07:10:30 -ERR
+2016.11.16 07:15:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:15:34 -OK
+2016.11.16 07:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:15:45 -OK
+2016.11.16 07:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:15:55 -OK
+2016.11.16 07:20:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:20:24 38163
+2016.11.16 07:20:30 -ERR
+2016.11.16 07:25:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:25:34 -OK
+2016.11.16 07:25:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:25:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:25:44 -OK
+2016.11.16 07:25:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:25:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:25:55 -OK
+2016.11.16 07:30:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:30:24 38163
+2016.11.16 07:30:30 -ERR
+2016.11.16 07:35:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:35:34 -OK
+2016.11.16 07:35:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:35:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:35:44 -OK
+2016.11.16 07:35:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:35:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:35:53 -OK
+2016.11.16 07:40:23 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:40:24 38163
+2016.11.16 07:40:30 -ERR
+2016.11.16 07:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:45:34 -OK
+2016.11.16 07:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:45:44 -OK
+2016.11.16 07:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:45:54 -OK
+2016.11.16 07:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 07:50:24 38163
+2016.11.16 07:50:30 -ERR
+2016.11.16 07:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 07:55:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 07:55:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 07:55:34 -OK
+2016.11.16 07:55:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 07:55:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 07:55:44 -OK
+2016.11.16 07:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 07:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 07:55:54 -OK
+2016.11.16 08:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:00:24 38163
+2016.11.16 08:00:30 -ERR
+2016.11.16 08:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:05:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:05:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:05:32 Get Cur:Индекс находился вне границ массива.
+2016.11.16 08:05:34 -OK
+2016.11.16 08:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:05:45 -OK
+2016.11.16 08:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:05:55 -OK
+2016.11.16 08:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:10:24 38163
+2016.11.16 08:10:30 -ERR
+2016.11.16 08:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:15:34 -OK
+2016.11.16 08:15:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:15:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:15:45 -OK
+2016.11.16 08:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:15:55 -OK
+2016.11.16 08:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:20:24 38163
+2016.11.16 08:20:30 -ERR
+2016.11.16 08:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:25:34 -OK
+2016.11.16 08:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:25:45 -OK
+2016.11.16 08:25:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:25:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:25:55 -OK
+2016.11.16 08:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:30:24 38163
+2016.11.16 08:30:30 -ERR
+2016.11.16 08:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:35:34 -OK
+2016.11.16 08:35:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:35:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:35:44 Get Total:Индекс находился вне границ массива.
+2016.11.16 08:35:44 -OK
+2016.11.16 08:35:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:35:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:35:54 -OK
+2016.11.16 08:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:40:24 38163
+2016.11.16 08:40:30 -ERR
+2016.11.16 08:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:45:33 Get Total:Индекс находился вне границ массива.
+2016.11.16 08:45:33 -OK
+2016.11.16 08:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:45:44 -OK
+2016.11.16 08:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:45:54 -OK
+2016.11.16 08:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 08:50:24 38163
+2016.11.16 08:50:30 -ERR
+2016.11.16 08:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 08:55:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 08:55:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 08:55:34 -OK
+2016.11.16 08:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 08:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 08:55:44 -OK
+2016.11.16 08:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 08:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 08:55:54 -OK
+2016.11.16 09:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:00:24 38163
+2016.11.16 09:00:30 -ERR
+2016.11.16 09:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:05:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:05:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:05:34 -OK
+2016.11.16 09:05:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:05:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:05:44 -OK
+2016.11.16 09:05:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:05:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:05:54 -OK
+2016.11.16 09:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:10:24 38163
+2016.11.16 09:10:30 -ERR
+2016.11.16 09:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:15:35 -OK
+2016.11.16 09:15:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:15:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:15:45 -OK
+2016.11.16 09:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:15:55 -OK
+2016.11.16 09:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:20:24 38163
+2016.11.16 09:20:30 -ERR
+2016.11.16 09:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:25:35 -OK
+2016.11.16 09:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:25:45 -OK
+2016.11.16 09:25:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:25:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:25:56 -OK
+2016.11.16 09:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:30:24 38163
+2016.11.16 09:30:30 -ERR
+2016.11.16 09:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:35:34 -OK
+2016.11.16 09:35:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:35:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:35:44 -OK
+2016.11.16 09:35:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:35:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:35:54 -OK
+2016.11.16 09:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:40:24 38163
+2016.11.16 09:40:30 -ERR
+2016.11.16 09:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:45:34 -OK
+2016.11.16 09:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:45:44 -OK
+2016.11.16 09:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:45:54 -OK
+2016.11.16 09:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 09:50:24 38163
+2016.11.16 09:50:30 -ERR
+2016.11.16 09:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 09:55:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 09:55:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 09:55:34 -OK
+2016.11.16 09:55:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 09:55:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 09:55:44 -OK
+2016.11.16 09:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 09:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 09:55:54 -OK
+2016.11.16 10:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:00:24 38163
+2016.11.16 10:00:30 -ERR
+2016.11.16 10:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:05:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:05:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:05:34 -OK
+2016.11.16 10:05:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:05:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:05:45 -OK
+2016.11.16 10:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:05:55 -OK
+2016.11.16 10:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:10:24 38163
+2016.11.16 10:10:30 -ERR
+2016.11.16 10:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:15:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:15:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:15:34 -OK
+2016.11.16 10:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:15:42 Get Cur:Индекс находился вне границ массива.
+2016.11.16 10:15:44 -OK
+2016.11.16 10:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:15:55 -OK
+2016.11.16 10:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:20:24 38163
+2016.11.16 10:20:30 -ERR
+2016.11.16 10:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:25:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:25:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:25:35 -OK
+2016.11.16 10:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:25:45 -OK
+2016.11.16 10:25:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:25:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:25:56 -OK
+2016.11.16 10:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:30:24 38163
+2016.11.16 10:30:31 -ERR
+2016.11.16 10:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:35:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:35:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:35:35 -OK
+2016.11.16 10:35:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:35:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:35:45 -OK
+2016.11.16 10:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:35:56 -OK
+2016.11.16 10:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:40:24 38163
+2016.11.16 10:40:30 -ERR
+2016.11.16 10:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:45:24 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:45:24 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:45:34 -OK
+2016.11.16 10:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:45:44 -OK
+2016.11.16 10:45:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:45:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:45:54 Get Total:Индекс находился вне границ массива.
+2016.11.16 10:45:54 -OK
+2016.11.16 10:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 10:50:24 38163
+2016.11.16 10:50:31 -ERR
+2016.11.16 10:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 10:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 10:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 10:55:35 -OK
+2016.11.16 10:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 10:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 10:55:44 Get Total:Индекс находился вне границ массива.
+2016.11.16 10:55:44 -OK
+2016.11.16 10:55:44 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 10:55:44 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 10:55:54 -OK
+2016.11.16 11:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:00:25 38163
+2016.11.16 11:00:31 -ERR
+2016.11.16 11:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:05:35 -OK
+2016.11.16 11:05:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:05:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:05:45 -OK
+2016.11.16 11:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:05:55 -OK
+2016.11.16 11:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:10:25 38163
+2016.11.16 11:10:31 -ERR
+2016.11.16 11:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:15:34 -OK
+2016.11.16 11:15:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:15:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:15:45 -OK
+2016.11.16 11:15:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:15:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:15:55 -OK
+2016.11.16 11:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:20:25 38163
+2016.11.16 11:20:31 -ERR
+2016.11.16 11:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:25:35 -OK
+2016.11.16 11:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:25:45 -OK
+2016.11.16 11:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:25:56 -OK
+2016.11.16 11:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:30:25 38163
+2016.11.16 11:30:31 -ERR
+2016.11.16 11:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:35:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:35:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:35:35 -OK
+2016.11.16 11:35:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:35:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:35:45 -OK
+2016.11.16 11:35:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:35:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:35:55 -OK
+2016.11.16 11:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:40:25 38163
+2016.11.16 11:40:31 -ERR
+2016.11.16 11:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:45:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:45:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:45:34 Get Total:Индекс находился вне границ массива.
+2016.11.16 11:45:34 -OK
+2016.11.16 11:45:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:45:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:45:45 -OK
+2016.11.16 11:45:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:45:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:45:54 Get Total:Индекс находился вне границ массива.
+2016.11.16 11:45:54 -OK
+2016.11.16 11:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 11:50:25 38163
+2016.11.16 11:50:31 -ERR
+2016.11.16 11:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 11:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 11:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 11:55:35 -OK
+2016.11.16 11:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 11:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 11:55:45 -OK
+2016.11.16 11:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 11:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 11:55:55 -OK
+2016.11.16 12:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:00:25 38163
+2016.11.16 12:00:31 -ERR
+2016.11.16 12:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:05:35 -OK
+2016.11.16 12:05:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:05:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:05:45 -OK
+2016.11.16 12:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:05:55 -OK
+2016.11.16 12:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:10:25 38163
+2016.11.16 12:10:31 -ERR
+2016.11.16 12:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:15:35 -OK
+2016.11.16 12:15:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:15:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:15:45 -OK
+2016.11.16 12:15:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:15:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:15:56 -OK
+2016.11.16 12:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:20:25 38163
+2016.11.16 12:20:31 -ERR
+2016.11.16 12:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:25:35 -OK
+2016.11.16 12:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:25:46 -OK
+2016.11.16 12:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:25:56 -OK
+2016.11.16 12:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:30:25 38163
+2016.11.16 12:30:31 -ERR
+2016.11.16 12:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:35:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:35:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:35:34 -OK
+2016.11.16 12:35:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:35:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:35:44 -OK
+2016.11.16 12:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:35:54 -OK
+2016.11.16 12:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:40:25 38163
+2016.11.16 12:40:31 -ERR
+2016.11.16 12:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:45:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:45:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:45:34 -OK
+2016.11.16 12:45:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:45:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:45:45 -OK
+2016.11.16 12:45:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:45:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:45:55 -OK
+2016.11.16 12:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 12:50:25 38163
+2016.11.16 12:50:31 -ERR
+2016.11.16 12:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 12:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 12:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 12:55:35 -OK
+2016.11.16 12:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 12:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 12:55:45 -OK
+2016.11.16 12:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 12:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 12:55:55 -OK
+2016.11.16 13:00:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:00:25 38163
+2016.11.16 13:00:31 -ERR
+2016.11.16 13:05:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:05:33 Get Cur:Индекс находился вне границ массива.
+2016.11.16 13:05:35 -OK
+2016.11.16 13:05:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:05:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:05:45 -OK
+2016.11.16 13:05:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:05:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:05:56 -OK
+2016.11.16 13:10:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:10:25 38163
+2016.11.16 13:10:31 -ERR
+2016.11.16 13:15:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:15:35 -OK
+2016.11.16 13:15:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:15:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:15:46 -OK
+2016.11.16 13:15:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:15:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:15:56 -OK
+2016.11.16 13:20:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:20:25 38163
+2016.11.16 13:20:31 -ERR
+2016.11.16 13:25:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:25:35 -OK
+2016.11.16 13:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:25:46 -OK
+2016.11.16 13:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:25:56 -OK
+2016.11.16 13:30:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:30:25 38163
+2016.11.16 13:30:31 -ERR
+2016.11.16 13:35:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:35:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:35:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:35:35 -OK
+2016.11.16 13:35:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:35:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:35:45 Get Total:Индекс находился вне границ массива.
+2016.11.16 13:35:45 -OK
+2016.11.16 13:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:35:55 -OK
+2016.11.16 13:40:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:40:25 38163
+2016.11.16 13:40:31 -ERR
+2016.11.16 13:45:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:45:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:45:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:45:34 Get Total:Индекс находился вне границ массива.
+2016.11.16 13:45:34 -OK
+2016.11.16 13:45:34 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:45:34 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:45:44 -OK
+2016.11.16 13:45:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:45:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:45:55 -OK
+2016.11.16 13:50:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 13:50:25 38163
+2016.11.16 13:50:31 -ERR
+2016.11.16 13:55:24 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 13:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 13:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 13:55:35 -OK
+2016.11.16 13:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 13:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 13:55:45 -OK
+2016.11.16 13:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 13:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 13:55:55 -OK
+2016.11.16 14:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:00:25 38163
+2016.11.16 14:00:31 -ERR
+2016.11.16 14:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:05:35 -OK
+2016.11.16 14:05:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:05:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:05:44 -OK
+2016.11.16 14:05:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:05:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:05:55 -OK
+2016.11.16 14:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:10:25 38163
+2016.11.16 14:10:31 -ERR
+2016.11.16 14:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:15:35 -OK
+2016.11.16 14:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:15:46 -OK
+2016.11.16 14:15:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:15:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:15:56 -OK
+2016.11.16 14:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:20:25 38163
+2016.11.16 14:20:31 -ERR
+2016.11.16 14:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:25:35 -OK
+2016.11.16 14:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:25:46 -OK
+2016.11.16 14:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:25:56 -OK
+2016.11.16 14:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:30:25 38163
+2016.11.16 14:30:31 -ERR
+2016.11.16 14:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:35:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:35:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:35:36 -OK
+2016.11.16 14:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:35:46 -OK
+2016.11.16 14:35:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:35:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:35:56 -OK
+2016.11.16 14:40:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:40:25 38163
+2016.11.16 14:40:31 -ERR
+2016.11.16 14:45:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:45:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:45:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:45:35 -OK
+2016.11.16 14:45:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:45:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:45:45 -OK
+2016.11.16 14:45:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:45:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:45:56 -OK
+2016.11.16 14:50:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 14:50:25 38163
+2016.11.16 14:50:31 -ERR
+2016.11.16 14:55:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 14:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 14:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 14:55:35 -OK
+2016.11.16 14:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 14:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 14:55:43 Get Cur:Индекс находился вне границ массива.
+2016.11.16 14:55:45 -OK
+2016.11.16 14:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 14:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 14:55:56 -OK
+2016.11.16 15:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:00:25 38163
+2016.11.16 15:00:31 -ERR
+2016.11.16 15:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:05:36 -OK
+2016.11.16 15:05:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:05:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:05:46 -OK
+2016.11.16 15:05:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:05:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:05:56 -OK
+2016.11.16 15:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:10:25 38163
+2016.11.16 15:10:31 -ERR
+2016.11.16 15:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:15:36 -OK
+2016.11.16 15:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:15:46 -OK
+2016.11.16 15:15:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:15:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:15:57 -OK
+2016.11.16 15:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:20:25 38163
+2016.11.16 15:20:31 -ERR
+2016.11.16 15:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:25:35 -OK
+2016.11.16 15:25:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:25:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:25:45 -OK
+2016.11.16 15:25:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:25:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:25:55 Get Total:Индекс находился вне границ массива.
+2016.11.16 15:25:55 -OK
+2016.11.16 15:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:30:25 38163
+2016.11.16 15:30:31 -ERR
+2016.11.16 15:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:35:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:35:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:35:35 -OK
+2016.11.16 15:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:35:45 Get Total:Индекс находился вне границ массива.
+2016.11.16 15:35:45 -OK
+2016.11.16 15:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:35:55 -OK
+2016.11.16 15:40:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:40:25 38163
+2016.11.16 15:40:31 -ERR
+2016.11.16 15:45:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:45:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:45:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:45:36 -OK
+2016.11.16 15:45:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:45:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:45:46 -OK
+2016.11.16 15:45:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:45:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:45:56 -OK
+2016.11.16 15:50:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 15:50:25 38163
+2016.11.16 15:50:31 -ERR
+2016.11.16 15:55:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 15:55:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 15:55:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 15:55:35 -OK
+2016.11.16 15:55:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 15:55:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 15:55:45 -OK
+2016.11.16 15:55:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 15:55:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 15:55:55 -OK
+2016.11.16 16:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:00:25 38163
+2016.11.16 16:00:31 -ERR
+2016.11.16 16:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:05:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:05:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:05:36 -OK
+2016.11.16 16:05:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:05:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:05:46 -OK
+2016.11.16 16:05:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:05:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:05:57 -OK
+2016.11.16 16:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:10:25 38163
+2016.11.16 16:10:31 -ERR
+2016.11.16 16:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:15:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:15:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:15:36 -OK
+2016.11.16 16:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:15:46 -OK
+2016.11.16 16:15:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:15:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:15:57 -OK
+2016.11.16 16:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:20:25 38163
+2016.11.16 16:20:31 -ERR
+2016.11.16 16:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:25:25 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:25:25 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:25:36 -OK
+2016.11.16 16:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:25:46 -OK
+2016.11.16 16:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:25:55 -OK
+2016.11.16 16:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:30:25 38163
+2016.11.16 16:30:31 -ERR
+2016.11.16 16:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:35:35 -OK
+2016.11.16 16:35:35 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:35:35 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:35:45 -OK
+2016.11.16 16:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:35:55 -OK
+2016.11.16 16:40:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:40:26 38163
+2016.11.16 16:40:31 -ERR
+2016.11.16 16:45:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:45:35 -OK
+2016.11.16 16:45:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:45:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:45:45 -OK
+2016.11.16 16:45:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:45:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:45:55 -OK
+2016.11.16 16:50:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 16:50:26 38163
+2016.11.16 16:50:31 -ERR
+2016.11.16 16:55:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 16:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 16:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 16:55:36 -OK
+2016.11.16 16:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 16:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 16:55:46 -OK
+2016.11.16 16:55:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 16:55:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 16:55:56 -OK
+2016.11.16 17:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:00:26 38163
+2016.11.16 17:00:31 -ERR
+2016.11.16 17:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:05:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:05:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:05:36 -OK
+2016.11.16 17:05:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:05:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:05:46 -OK
+2016.11.16 17:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:05:57 -OK
+2016.11.16 17:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:10:26 38163
+2016.11.16 17:10:31 -ERR
+2016.11.16 17:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:15:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:15:36 -OK
+2016.11.16 17:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:15:46 -OK
+2016.11.16 17:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:15:57 -OK
+2016.11.16 17:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:20:26 38163
+2016.11.16 17:20:31 -ERR
+2016.11.16 17:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:25:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:25:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:25:36 -OK
+2016.11.16 17:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:25:46 -OK
+2016.11.16 17:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:25:56 -OK
+2016.11.16 17:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:30:26 38163
+2016.11.16 17:30:31 -ERR
+2016.11.16 17:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:35:35 -OK
+2016.11.16 17:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:35:45 -OK
+2016.11.16 17:35:45 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:35:45 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:35:55 -OK
+2016.11.16 17:40:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:40:26 38163
+2016.11.16 17:40:31 -ERR
+2016.11.16 17:45:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:45:35 -OK
+2016.11.16 17:45:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:45:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:45:46 -OK
+2016.11.16 17:45:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:45:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:45:56 -OK
+2016.11.16 17:50:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 17:50:26 38163
+2016.11.16 17:50:31 -ERR
+2016.11.16 17:55:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 17:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 17:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 17:55:36 -OK
+2016.11.16 17:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 17:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 17:55:46 -OK
+2016.11.16 17:55:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 17:55:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 17:55:57 -OK
+2016.11.16 18:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:00:26 38163
+2016.11.16 18:00:31 -ERR
+2016.11.16 18:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:05:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:05:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:05:36 -OK
+2016.11.16 18:05:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:05:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:05:47 -OK
+2016.11.16 18:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:05:57 -OK
+2016.11.16 18:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:10:26 38163
+2016.11.16 18:10:31 -ERR
+2016.11.16 18:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:15:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:15:36 -OK
+2016.11.16 18:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:15:47 -OK
+2016.11.16 18:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:15:56 -OK
+2016.11.16 18:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:20:26 38163
+2016.11.16 18:20:31 -ERR
+2016.11.16 18:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:25:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:25:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:25:36 -OK
+2016.11.16 18:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:25:46 -OK
+2016.11.16 18:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:25:56 -OK
+2016.11.16 18:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:30:26 38163
+2016.11.16 18:30:31 -ERR
+2016.11.16 18:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:35:36 -OK
+2016.11.16 18:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:35:45 -OK
+2016.11.16 18:35:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:35:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:35:56 -OK
+2016.11.16 18:40:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:40:26 38163
+2016.11.16 18:40:31 -ERR
+2016.11.16 18:45:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:45:36 -OK
+2016.11.16 18:45:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:45:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:45:46 -OK
+2016.11.16 18:45:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:45:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:45:56 -OK
+2016.11.16 18:50:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 18:50:26 38163
+2016.11.16 18:50:31 -ERR
+2016.11.16 18:55:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 18:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 18:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 18:55:35 -OK
+2016.11.16 18:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 18:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 18:55:44 Get Cur:Индекс находился вне границ массива.
+2016.11.16 18:55:46 -OK
+2016.11.16 18:55:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 18:55:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 18:55:56 -OK
+2016.11.16 19:00:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:00:26 38163
+2016.11.16 19:00:32 -ERR
+2016.11.16 19:05:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:05:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:05:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:05:36 -OK
+2016.11.16 19:05:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:05:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:05:47 -OK
+2016.11.16 19:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:05:57 -OK
+2016.11.16 19:10:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:10:26 38163
+2016.11.16 19:10:32 -ERR
+2016.11.16 19:15:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:15:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:15:36 -OK
+2016.11.16 19:15:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:15:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:15:47 -OK
+2016.11.16 19:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:15:57 -OK
+2016.11.16 19:20:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:20:26 38163
+2016.11.16 19:20:32 -ERR
+2016.11.16 19:25:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:25:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:25:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:25:36 -OK
+2016.11.16 19:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:25:46 -OK
+2016.11.16 19:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:25:56 Get Total:Индекс находился вне границ массива.
+2016.11.16 19:25:56 -OK
+2016.11.16 19:30:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:30:26 38163
+2016.11.16 19:30:32 -ERR
+2016.11.16 19:35:25 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:35:36 -OK
+2016.11.16 19:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:35:45 Get Total:Индекс находился вне границ массива.
+2016.11.16 19:35:45 -OK
+2016.11.16 19:35:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:35:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:35:56 -OK
+2016.11.16 19:40:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:40:26 38163
+2016.11.16 19:40:32 -ERR
+2016.11.16 19:45:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:45:36 -OK
+2016.11.16 19:45:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:45:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:45:46 -OK
+2016.11.16 19:45:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:45:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:45:56 -OK
+2016.11.16 19:50:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 19:50:26 38163
+2016.11.16 19:50:32 -ERR
+2016.11.16 19:55:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 19:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 19:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 19:55:36 -OK
+2016.11.16 19:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 19:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 19:55:46 -OK
+2016.11.16 19:55:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 19:55:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 19:55:57 -OK
+2016.11.16 20:00:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:00:26 38163
+2016.11.16 20:00:32 -ERR
+2016.11.16 20:05:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:05:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:05:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:05:36 -OK
+2016.11.16 20:05:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:05:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:05:47 -OK
+2016.11.16 20:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:05:57 -OK
+2016.11.16 20:10:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:10:26 38163
+2016.11.16 20:10:32 -ERR
+2016.11.16 20:15:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:15:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:15:36 -OK
+2016.11.16 20:15:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:15:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:15:47 -OK
+2016.11.16 20:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:15:57 -OK
+2016.11.16 20:20:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:20:26 38163
+2016.11.16 20:20:32 -ERR
+2016.11.16 20:25:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:25:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:25:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:25:36 Get Total:Индекс находился вне границ массива.
+2016.11.16 20:25:36 -OK
+2016.11.16 20:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:25:46 -OK
+2016.11.16 20:25:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:25:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:25:56 Get Total:Индекс находился вне границ массива.
+2016.11.16 20:25:56 -OK
+2016.11.16 20:30:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:30:26 38163
+2016.11.16 20:30:32 -ERR
+2016.11.16 20:35:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:35:36 -OK
+2016.11.16 20:35:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:35:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:35:46 -OK
+2016.11.16 20:35:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:35:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:35:57 -OK
+2016.11.16 20:40:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:40:26 38163
+2016.11.16 20:40:32 -ERR
+2016.11.16 20:45:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:45:36 -OK
+2016.11.16 20:45:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:45:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:45:47 -OK
+2016.11.16 20:45:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:45:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:45:57 -OK
+2016.11.16 20:50:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 20:50:26 38163
+2016.11.16 20:50:32 -ERR
+2016.11.16 20:55:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 20:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 20:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 20:55:37 -OK
+2016.11.16 20:55:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 20:55:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 20:55:47 -OK
+2016.11.16 20:55:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 20:55:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 20:55:58 -OK
+2016.11.16 21:00:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:00:26 38163
+2016.11.16 21:00:32 -ERR
+2016.11.16 21:05:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:05:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:05:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:05:37 -OK
+2016.11.16 21:05:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:05:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:05:47 -OK
+2016.11.16 21:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:05:58 -OK
+2016.11.16 21:10:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:10:27 38163
+2016.11.16 21:10:33 -ERR
+2016.11.16 21:15:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:15:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:15:37 -OK
+2016.11.16 21:15:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:15:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:15:47 -OK
+2016.11.16 21:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:15:57 -OK
+2016.11.16 21:20:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:20:26 38163
+2016.11.16 21:20:33 -ERR
+2016.11.16 21:25:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:25:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:25:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:25:37 -OK
+2016.11.16 21:25:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:25:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:25:44 Get Cur:Индекс находился вне границ массива.
+2016.11.16 21:25:46 -OK
+2016.11.16 21:25:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:25:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:25:57 -OK
+2016.11.16 21:30:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:30:26 38163
+2016.11.16 21:30:32 -ERR
+2016.11.16 21:35:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:35:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:35:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:35:37 -OK
+2016.11.16 21:35:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:35:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:35:47 -OK
+2016.11.16 21:35:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:35:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:35:58 -OK
+2016.11.16 21:40:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:40:26 38163
+2016.11.16 21:40:32 -ERR
+2016.11.16 21:45:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:45:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:45:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:45:37 -OK
+2016.11.16 21:45:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:45:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:45:47 -OK
+2016.11.16 21:45:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:45:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:45:58 -OK
+2016.11.16 21:50:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 21:50:26 38163
+2016.11.16 21:50:32 -ERR
+2016.11.16 21:55:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 21:55:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 21:55:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 21:55:36 -OK
+2016.11.16 21:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 21:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 21:55:46 -OK
+2016.11.16 21:55:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 21:55:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 21:55:56 Get Total:Индекс находился вне границ массива.
+2016.11.16 21:55:56 -OK
+2016.11.16 22:00:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:00:26 38163
+2016.11.16 22:00:32 -ERR
+2016.11.16 22:05:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:05:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:05:26 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:05:37 -OK
+2016.11.16 22:05:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:05:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:05:46 Get Total:Индекс находился вне границ массива.
+2016.11.16 22:05:46 -OK
+2016.11.16 22:05:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:05:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:05:56 -OK
+2016.11.16 22:10:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:10:26 38163
+2016.11.16 22:10:32 -ERR
+2016.11.16 22:15:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:15:26 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:15:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:15:37 -OK
+2016.11.16 22:15:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:15:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:15:47 -OK
+2016.11.16 22:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:15:57 -OK
+2016.11.16 22:20:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:20:26 38163
+2016.11.16 22:20:32 -ERR
+2016.11.16 22:25:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:25:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:25:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:25:36 -OK
+2016.11.16 22:25:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:25:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:25:47 -OK
+2016.11.16 22:25:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:25:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:25:57 -OK
+2016.11.16 22:30:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:30:27 38163
+2016.11.16 22:30:32 -ERR
+2016.11.16 22:35:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:35:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:35:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:35:37 -OK
+2016.11.16 22:35:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:35:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:35:47 -OK
+2016.11.16 22:35:48 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:35:48 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:35:58 -OK
+2016.11.16 22:40:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:40:27 38163
+2016.11.16 22:40:33 -ERR
+2016.11.16 22:45:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:45:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:45:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:45:37 -OK
+2016.11.16 22:45:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:45:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:45:47 -OK
+2016.11.16 22:45:48 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:45:48 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:45:57 -OK
+2016.11.16 22:50:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 22:50:27 38163
+2016.11.16 22:50:33 -ERR
+2016.11.16 22:55:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 22:55:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 22:55:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 22:55:36 Get Total:Индекс находился вне границ массива.
+2016.11.16 22:55:36 -OK
+2016.11.16 22:55:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 22:55:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 22:55:47 -OK
+2016.11.16 22:55:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 22:55:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 22:55:56 Get Total:Индекс находился вне границ массива.
+2016.11.16 22:55:56 -OK
+2016.11.16 23:00:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:00:27 38163
+2016.11.16 23:00:33 -ERR
+2016.11.16 23:05:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:05:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:05:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:05:37 -OK
+2016.11.16 23:05:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:05:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:05:47 -OK
+2016.11.16 23:05:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:05:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:05:57 -OK
+2016.11.16 23:10:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:10:27 38163
+2016.11.16 23:10:33 -ERR
+2016.11.16 23:15:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:15:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:15:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:15:37 -OK
+2016.11.16 23:15:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:15:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:15:47 -OK
+2016.11.16 23:15:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:15:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:15:57 -OK
+2016.11.16 23:20:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:20:27 38163
+2016.11.16 23:20:33 -ERR
+2016.11.16 23:25:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:25:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:25:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:25:37 -OK
+2016.11.16 23:25:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:25:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:25:47 -OK
+2016.11.16 23:25:48 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:25:48 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:25:58 -OK
+2016.11.16 23:30:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:30:27 38163
+2016.11.16 23:30:33 -ERR
+2016.11.16 23:35:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:35:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:35:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:35:37 -OK
+2016.11.16 23:35:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:35:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:35:48 -OK
+2016.11.16 23:35:48 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:35:48 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:35:58 -OK
+2016.11.16 23:40:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:40:27 38163
+2016.11.16 23:40:33 -ERR
+2016.11.16 23:45:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:45:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:45:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:45:36 -OK
+2016.11.16 23:45:37 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:45:37 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:45:46 Get Total:Индекс находился вне границ массива.
+2016.11.16 23:45:46 -OK
+2016.11.16 23:45:47 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:45:47 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:45:57 -OK
+2016.11.16 23:50:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfMIRTEKReader.exe
+2016.11.16 23:50:27 38163
+2016.11.16 23:50:33 -ERR
+2016.11.16 23:55:26 Start C:\bami\SZT_VOLOGDA\ESReadService\bin\Debug\ElfM230Reader.exe
+2016.11.16 23:55:27 Start read NODE: 57513 Name:Любань, Загор. шос. 36а (58)
+2016.11.16 23:55:27 IP: 10.0.3.214 idx: 2016 ModbusAddress: 58
+2016.11.16 23:55:36 Get Total:Индекс находился вне границ массива.
+2016.11.16 23:55:36 -OK
+2016.11.16 23:55:36 Start read NODE: 57516 Name:Любань, Загор. шос. 36а (92)
+2016.11.16 23:55:36 IP: 10.0.3.214 idx: 2016 ModbusAddress: 92
+2016.11.16 23:55:46 -OK
+2016.11.16 23:55:46 Start read NODE: 75798 Name:Любань, Загор. шос. 36а (97)
+2016.11.16 23:55:46 IP: 10.0.3.214 idx: 2016 ModbusAddress: 97
+2016.11.16 23:55:56 -OK

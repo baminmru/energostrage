@@ -1,0 +1,115 @@
+create table ENODES
+(
+  node_id     INTEGER not null,
+  sender_id   INTEGER,
+  mpoint_code VARCHAR2(24),
+  mpoint_name VARCHAR2(512),
+  id_dev      NUMBER(2),
+  id_mask     NUMBER(4),
+  npip        VARCHAR2(40),
+  nppassword  VARCHAR2(60),
+  npquery     NUMBER(1) default 0,
+  nplock      DATE,
+  hiderow     NUMBER(1) default 0,
+  transport   NUMBER(1) default 0,
+  ipport      NUMBER(5),
+  nocport     VARCHAR2(40),
+  srv_ip_id   NUMBER(5),
+  callerid    VARCHAR2(30),
+  hourshift   NUMBER(3) default 0,
+  cfio1       VARCHAR2(64),
+  cphone1     VARCHAR2(32),
+  cfio2       VARCHAR2(64),
+  cphone2     VARCHAR2(32),
+  caddress    VARCHAR2(200),
+  id_masksum  NUMBER(4),
+  mapx        NUMBER(11,7) default 0,
+  mapy        NUMBER(11,7) default 0,
+  fulladdress VARCHAR2(200),
+  id_maskday  NUMBER(4),
+  netaddr     NUMBER(3) default 0,
+  groups_id   NUMBER(10),
+  ki          NUMBER(18,6) default 1,
+  ku          NUMBER(18,6) default 1,
+  p_ap        NUMBER(18,6) default 0,
+  p_am        NUMBER(18,6) default 0,
+  p_rp        NUMBER(18,6) default 0,
+  p_rm        NUMBER(18,6) default 0,
+  kvtcost     NUMBER(18,6) default 4.6
+)
+;
+comment on column ENODES.sender_id
+  is 'филиал';
+comment on column ENODES.mpoint_code
+  is 'Код - идентификатор объекта <measuringpoint code>';
+comment on column ENODES.mpoint_name
+  is 'Название объекта потребления энергоресурса <measuringpoint name>';
+comment on column ENODES.id_dev
+  is 'тип устройства';
+comment on column ENODES.id_mask
+  is 'маска текущих';
+comment on column ENODES.npip
+  is 'адрес ip';
+comment on column ENODES.nppassword
+  is 'пароль для доступа к прибору';
+comment on column ENODES.npquery
+  is 'опрос включен или нет';
+comment on column ENODES.nplock
+  is 'блокировка ';
+comment on column ENODES.hiderow
+  is 'скрыть строку';
+comment on column ENODES.transport
+  is 'тип транспорта';
+comment on column ENODES.ipport
+  is 'порт или индекс порта';
+comment on column ENODES.nocport
+  is 'номер ком порта';
+comment on column ENODES.srv_ip_id
+  is 'сервер опроса';
+comment on column ENODES.callerid
+  is 'идентификатор  вызывающего устройста ( АССВ)';
+comment on column ENODES.hourshift
+  is 'сдвиг  для анализа соответствия часовых данных';
+comment on column ENODES.cfio1
+  is 'ФИО 1';
+comment on column ENODES.cphone1
+  is 'Телефон 1';
+comment on column ENODES.cfio2
+  is 'ФИО 2';
+comment on column ENODES.cphone2
+  is 'Телефон 2';
+comment on column ENODES.caddress
+  is 'адрес';
+comment on column ENODES.id_masksum
+  is 'маска итоговых';
+comment on column ENODES.mapx
+  is 'Координата на карте широта';
+comment on column ENODES.mapy
+  is 'Координата на карте долгота';
+comment on column ENODES.fulladdress
+  is 'полный адрес для расчета координат';
+comment on column ENODES.id_maskday
+  is 'маска суточных';
+comment on column ENODES.netaddr
+  is 'Сетевой адрес прибора';
+comment on column ENODES.groups_id
+  is 'Идентификатор группы узлов';
+comment on column ENODES.ki
+  is 'Трансформация по току';
+comment on column ENODES.ku
+  is 'Трансформация по напряжению';
+comment on column ENODES.p_ap
+  is 'Потери при измерении активной+ нагрузки';
+comment on column ENODES.p_am
+  is 'Потери при измерении активной- нагрузки';
+comment on column ENODES.p_rp
+  is 'Потери при измерении реактивной+ нагрузки';
+comment on column ENODES.p_rm
+  is 'Потери при измерении реактивной- нагрузки';
+comment on column ENODES.kvtcost
+  is 'Стоимость киловата (руб)';
+create index ENODES_IDX on ENODES (SENDER_ID, MPOINT_CODE, MPOINT_NAME);
+create index ENODES_IDX2 on ENODES (SENDER_ID);
+alter table ENODES
+  add constraint PK_ENODES primary key (NODE_ID);
+

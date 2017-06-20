@@ -1,0 +1,7 @@
+create sequence MASKS_SEQ
+minvalue 1
+maxvalue 99999
+start with 5
+increment by 1
+nocache;
+

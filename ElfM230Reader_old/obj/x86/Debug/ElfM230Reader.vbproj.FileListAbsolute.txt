@@ -1,0 +1,14 @@
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ElfM230Reader.exe
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ElfM230Reader.pdb
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ElfM230Reader.xml
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ELFDBMain.dll
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ELFDBMain.pdb
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ELFDBMain.xml
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.Resources.resources
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.exe
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.xml
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.pdb
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\Config.xml
+C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\Oracle.ManagedDataAccess.dll

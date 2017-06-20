@@ -1,0 +1,7 @@
+create sequence ELOADED_SEQ
+minvalue 1
+maxvalue 9999999999999
+start with 7
+increment by 3
+cache 20;
+

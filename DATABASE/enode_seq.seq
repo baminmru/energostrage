@@ -1,0 +1,7 @@
+create sequence ENODE_SEQ
+minvalue 1
+maxvalue 9999999
+start with 93903
+increment by 3
+cache 20;
+

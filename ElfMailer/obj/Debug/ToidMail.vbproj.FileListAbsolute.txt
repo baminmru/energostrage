@@ -1,0 +1,13 @@
+C:\Users\Михаил\AppData\Local\Temporary Projects\ToidMail\bin\Debug\ToidMail.exe.config
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\ToidMail.exe.config
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\ToidMail.exe
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\ToidMail.pdb
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\ToidMail.xml
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.vbprojResolveAssemblyReference.cache
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.Resources.resources
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.vbproj.GenerateResource.Cache
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.exe
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.xml
+C:\bami\projects\CM_2016\ToidMail\ToidMail\obj\Debug\ToidMail.pdb
+C:\bami\projects\CM_2016\ToidMail\ToidMail\bin\Debug\mailconfig.xml

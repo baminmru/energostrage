@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config server="baminote2\sqlexpress"
+        database="censor" 
+        user="sa" 
+        password="bami" 
+        INN="11111111"  
+        NAME="Коми"
+        path="c:\data\"
+        lastdate="01.01.2012"
+></config>

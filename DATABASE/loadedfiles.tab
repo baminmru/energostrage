@@ -1,0 +1,10 @@
+create table LOADEDFILES
+(
+  file_name VARCHAR2(255) not null,
+  loaddate  DATE,
+  fsize     NUMBER
+)
+;
+alter table LOADEDFILES
+  add constraint LOADEDFILES primary key (FILE_NAME);
+

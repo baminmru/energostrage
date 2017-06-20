@@ -1,0 +1,14 @@
+create table ESENDER
+(
+  sender_id   INTEGER not null,
+  sender_inn  VARCHAR2(11),
+  sender_name VARCHAR2(128)
+)
+;
+comment on column ESENDER.sender_inn
+  is 'ИНН идентификатор организации ';
+comment on column ESENDER.sender_name
+  is 'Название организации';
+alter table ESENDER
+  add constraint PK_SENDER primary key (SENDER_ID);
+

@@ -1,0 +1,10 @@
+create table CLUSTERING
+(
+  node_id        NUMBER not null,
+  cluster_number NUMBER not null,
+  cluster_value  NUMBER(18,6) not null
+)
+;
+alter table CLUSTERING
+  add constraint CLUSTERING_PK primary key (NODE_ID);
+

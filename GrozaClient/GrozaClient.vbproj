@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{343E857F-77FC-4051-AE5B-82861744CC25}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>GrozaClient.My.MyApplication</StartupObject>
+    <RootNamespace>GrozaClient</RootNamespace>
+    <AssemblyName>GrozaClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GrozaClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GrozaClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CLI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.Shared.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\odp.net.managed.121.1.2\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear, Version=5.0.3.106, Culture=neutral, PublicKeyToken=39c186f5904944ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Szt_2012\Service_2.2_oracle_provider\lib\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassKmeans.vb" />
+    <Compile Include="frmCalcMult.Designer.vb">
+      <DependentUpon>frmCalcMult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalcMult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCORR.Designer.vb">
+      <DependentUpon>frmCORR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCORR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDayNight.Designer.vb">
+      <DependentUpon>frmDayNight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDayNight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDayProfil.designer.vb">
+      <DependentUpon>frmDayProfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDayProfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHourly.Designer.vb">
+      <DependentUpon>frmHourly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHourly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHourlyAn.designer.vb">
+      <DependentUpon>frmHourlyAn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHourlyAn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKMEAN.Designer.vb">
+      <DependentUpon>frmKMEAN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKMEAN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLike.Designer.vb">
+      <DependentUpon>frmLike.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLike.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNodePrognoz.Designer.vb">
+      <DependentUpon>frmNodePrognoz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNodePrognoz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNodeState.Designer.vb">
+      <DependentUpon>frmNodeState.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNodeState.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNodeYearState.Designer.vb">
+      <DependentUpon>frmNodeYearState.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNodeYearState.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrognoz.Designer.vb">
+      <DependentUpon>frmPrognoz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrognoz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgress.Designer.vb">
+      <DependentUpon>frmProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStat.Designer.vb">
+      <DependentUpon>frmStat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeekProfil.Designer.vb">
+      <DependentUpon>frmWeekProfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeekProfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfil.Designer.vb">
+      <DependentUpon>frmProfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrSum.Designer.vb">
+      <DependentUpon>frmPrSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTop20.Designer.vb">
+      <DependentUpon>frmTop20.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTop20.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTree.Designer.vb">
+      <DependentUpon>frmTree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTree.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeekly.Designer.vb">
+      <DependentUpon>frmWeekly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeekly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCalcMult.resx">
+      <DependentUpon>frmCalcMult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCORR.resx">
+      <DependentUpon>frmCORR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDayNight.resx">
+      <DependentUpon>frmDayNight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDayProfil.resx">
+      <DependentUpon>frmDayProfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHourly.resx">
+      <DependentUpon>frmHourly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHourlyAn.resx">
+      <DependentUpon>frmHourlyAn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKMEAN.resx">
+      <DependentUpon>frmKMEAN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLike.resx">
+      <DependentUpon>frmLike.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNodePrognoz.resx">
+      <DependentUpon>frmNodePrognoz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNodeState.resx">
+      <DependentUpon>frmNodeState.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNodeYearState.resx">
+      <DependentUpon>frmNodeYearState.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrognoz.resx">
+      <DependentUpon>frmPrognoz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProgress.resx">
+      <DependentUpon>frmProgress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStat.resx">
+      <DependentUpon>frmStat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeekProfil.resx">
+      <DependentUpon>frmWeekProfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfil.resx">
+      <DependentUpon>frmProfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrSum.resx">
+      <DependentUpon>frmPrSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTop20.resx">
+      <DependentUpon>frmTop20.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTree.resx">
+      <DependentUpon>frmTree.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeekly.resx">
+      <DependentUpon>frmWeekly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CLI.ico" />
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="lv.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cencor2XML\Cencor2XML\Cencor2XML.vbproj">
+      <Project>{24981C44-1DF4-4BDB-9037-F80A3F5862ED}</Project>
+      <Name>Cencor2XML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cencor2XML_2016\Cencor2XML\Cencor2XMLV2.vbproj">
+      <Project>{56301438-31C7-4261-A7CF-83D4DC45E64B}</Project>
+      <Name>Cencor2XMLV2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELFAdmin\ELFAdmin.vbproj">
+      <Project>{F48074EC-C988-450D-9095-0FC02E37ED03}</Project>
+      <Name>ELFAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELFDBMain\ELFDBMain.vbproj">
+      <Project>{0C7D9D95-1165-4C46-8346-748E4D276CFD}</Project>
+      <Name>ELFDBMain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElfMIRTEKReader\ElfMIRTEKReader.vbproj">
+      <Project>{3540BFE2-79B3-4076-A04C-307EF00094A1}</Project>
+      <Name>ElfMIRTEKReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElfMakeAgg\ElfMakeAgg.vbproj">
+      <Project>{A7614162-BFAD-46E2-9F02-3E0EAE8A0F89}</Project>
+      <Name>ElfMakeAgg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetAllData\GetAllData.vbproj">
+      <Project>{12FC483B-85F4-4B31-8DE1-A784189EA2E3}</Project>
+      <Name>GetAllData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NodeEditor\ElfNodeEditor.vbproj">
+      <Project>{1FE064C5-075E-4987-AA41-067A20D52B70}</Project>
+      <Name>ElfNodeEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="YearStamp.MonthStamp.DayStamp.Increment" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

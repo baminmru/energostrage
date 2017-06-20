@@ -1,0 +1,14 @@
+create table EDATA_WEEKMULT
+(
+  chanel_id INTEGER not null,
+  week      NUMBER not null,
+  code_01   NUMBER(18,6),
+  code_02   NUMBER(18,6),
+  code_03   NUMBER(18,6),
+  code_04   NUMBER(18,6),
+  ar        NUMBER(18,6)
+)
+;
+alter table EDATA_WEEKMULT
+  add constraint PK_EDATA_WEEKMULT primary key (CHANEL_ID, WEEK);
+

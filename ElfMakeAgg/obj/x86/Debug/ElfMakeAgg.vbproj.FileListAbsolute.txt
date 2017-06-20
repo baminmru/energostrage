@@ -1,0 +1,14 @@
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\Config.xml
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ElfMakeAgg.exe
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ElfMakeAgg.pdb
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ElfMakeAgg.xml
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ELFDBMain.dll
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ELFDBMain.pdb
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ELFDBMain.xml
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.Resources.resources
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.exe
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.xml
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.pdb
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\Oracle.ManagedDataAccess.dll

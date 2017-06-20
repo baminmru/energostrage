@@ -1,0 +1,11 @@
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\bin\Debug\C2XMLV2_Config.xml
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\bin\Debug\Cencor2XMLV2.exe.config
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\bin\Debug\Cencor2XMLV2.exe
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\bin\Debug\Cencor2XMLV2.pdb
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\bin\Debug\Cencor2XMLV2.xml
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.Resources.resources
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.vbproj.GenerateResource.Cache
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.exe
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.xml
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.pdb
+C:\bami\SZT_VOLOGDA\Cencor2XML_2016\Cencor2XML\obj\Debug\Cencor2XMLV2.vbprojResolveAssemblyReference.cache

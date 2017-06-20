@@ -1,0 +1,19 @@
+﻿
+2017.02.14 17:16:15 downfoad file a2xml_78000001_20170210_done.xml
+2017.02.14 17:16:58 downfoad file a2xml_78000001_20170209_done.xml
+2017.02.14 17:17:56 downfoad file a2xml_78000001_20170210_done.xml
+2017.02.14 17:18:03 downloaded to: c:\data\spba2xml_78000001_20170210_done.xml SIZE=4108288 create=2017.02.14 17:18:00
+2017.02.14 17:18:23 process file: c:\data\spba2xml_78000001_20170210_done.xml FSIZE=4108288
+2017.02.14 17:18:23 Error while parsing XML file c:\data\spba2xml_78000001_20170210_done.xml :Процесс не может получить доступ к файлу "c:\data\spba2xml_78000001_20170210_done.xml", так как этот файл используется другим процессом.
+2017.02.14 17:22:05 downfoad file a2xml_78000001_20170209_done.xml
+2017.02.14 17:22:13 downloaded to: c:\data\spba2xml_78000001_20170209_done.xml SIZE=4116480 create=2017.02.14 17:22:10
+2017.02.14 17:22:24 downfoad file a2xml_78000001_20170210_done.xml
+2017.02.14 17:22:28 downloaded to: c:\data\spba2xml_78000001_20170210_done.xml SIZE=4109861 create=2017.02.14 17:18:00
+2017.02.14 17:27:46 downfoad file a2xml_78000001_20170209_done.xml
+2017.02.14 17:27:46 downloaded to: c:\data\spba2xml_78000001_20170209_done.xml SIZE=4116480 create=2017.02.14 17:27:46
+2017.02.14 17:27:46 downfoad file a2xml_78000001_20170210_done.xml
+2017.02.14 17:27:47 downloaded to: c:\data\spba2xml_78000001_20170210_done.xml SIZE=4108288 create=2017.02.14 17:27:47
+2017.02.14 17:28:09 process file: c:\data\spba2xml_78000001_20170209_done.xml FSIZE=4117489
+2017.02.14 17:52:38 downfoad file a2xml_78000001_20170209_done.xml
+2017.02.14 17:52:46 downloaded to: c:\data\spba2xml_78000001_20170209_done.xml SIZE=4117489 create=2017.02.14 17:27:46
+2017.02.14 17:52:46 downfoad file a2xml_78000001_20170210_done.xml

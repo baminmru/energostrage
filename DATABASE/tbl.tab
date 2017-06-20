@@ -1,0 +1,10 @@
+create table TBL
+(
+  sid   INTEGER not null,
+  sname VARCHAR2(64),
+  depno NUMBER(2)
+)
+;
+alter table TBL
+  add constraint PK_TBL primary key (SID);
+

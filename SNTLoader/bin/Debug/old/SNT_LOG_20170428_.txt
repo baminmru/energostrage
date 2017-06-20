@@ -1,0 +1,311 @@
+2017.04.28 22:00:00 Dogovor: 260071
+
+2017.04.28 22:00:01 2600710009 2600710009 BA-0027 п. Новокондакопшино, д. 61
+2017.04.28 22:00:01 2017-04-23T00:00:00+03:00
+2017.04.28 22:00:02 2017-04-24T00:00:00+03:00
+2017.04.28 22:00:02 2017-04-25T00:00:00+03:00
+2017.04.28 22:00:03 2017-04-26T00:00:00+03:00
+2017.04.28 22:00:04 2017-04-27T00:00:00+03:00
+2017.04.28 22:00:04 2600710004 2600710004 К1-465 г. Павловск, ул. Конюшенная (Красных зорь), д. 17
+2017.04.28 22:00:04 2017-04-23T00:00:00+03:00
+2017.04.28 22:00:06 2017-04-24T00:00:00+03:00
+2017.04.28 22:00:08 2017-04-25T00:00:00+03:00
+2017.04.28 22:00:10 2017-04-26T00:00:00+03:00
+2017.04.28 22:00:12 2017-04-27T00:00:00+03:00
+2017.04.28 22:00:14 2600710004 2600710004 К1-465 г. Павловск, ул. Конюшенная (Красных зорь), д. 17
+2017.04.28 22:00:14 2017-04-23T00:00:00+03:00
+2017.04.28 22:00:15 2017-04-24T00:00:00+03:00
+2017.04.28 22:00:17 2017-04-25T00:00:00+03:00
+2017.04.28 22:00:19 2017-04-26T00:00:00+03:00
+2017.04.28 22:00:21 2017-04-27T00:00:00+03:00
+2017.04.28 22:00:23 2600710001 2600710001 АТС-470/465/476 г. Пушкин, ул. Церковная, д. 48 
+2017.04.28 22:00:23 2017-04-23T00:00:00+03:00
+2017.04.28 22:00:25 2017-04-24T00:00:00+03:00
+2017.04.28 22:00:27 2017-04-25T00:00:00+03:00
+2017.04.28 22:00:28 2017-04-26T00:00:00+03:00
+2017.04.28 22:00:30 2017-04-27T00:00:00+03:00
+2017.04.28 22:00:32 2600710001 2600710001 АТС-470/465/476 г. Пушкин, ул. Церковная, д. 48
+2017.04.28 22:00:32 2017-04-23T00:00:00+03:00
+2017.04.28 22:00:34 2017-04-24T00:00:00+03:00
+2017.04.28 22:00:56 insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(145849019,23330,to_date('20170424142959','yyyymmddhh24miss'),'0',to_date('20170424','yyyymmdd'),to_date('20170424140000','yyyymmddhh24miss'),to_date('20170424142959','yyyymmddhh24miss')) => ORA-12570: Network Session: Unexpected packet read error
+2017.04.28 22:00:56 update edata set  code_02=0 where data_id=145849019 => Oracle error ORA-12571 encountered
+2017.04.28 22:00:56 select edata_seq.nextval from dual => Oracle error ORA-12571 encountered
+2017.04.28 22:00:56 Error while parsing XML string  :В позиции 0 строка отсутствует.
+2017.04.28 22:02:37 Время ожидания операции истекло
+2017.04.28 22:03:40 Невозможно соединиться с удаленным сервером
+2017.04.28 22:03:40 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 Sender not found error
+2017.04.28 22:03:40 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:40 Sender not found error
+2017.04.28 22:03:40 Dogovor: 00774
+
+2017.04.28 22:03:41 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Sender not found error
+2017.04.28 22:03:41 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Sender not found error
+2017.04.28 22:03:41 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Sender not found error
+2017.04.28 22:03:41 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Sender not found error
+2017.04.28 22:03:41 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:41 Sender not found error
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 Dogovor: 121097
+
+2017.04.28 22:03:42 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:42 Sender not found error
+2017.04.28 22:03:42 Dogovor: 231732
+
+2017.04.28 22:03:43 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Sender not found error
+2017.04.28 22:03:43 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Sender not found error
+2017.04.28 22:03:43 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Sender not found error
+2017.04.28 22:03:43 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Sender not found error
+2017.04.28 22:03:43 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:43 Sender not found error
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:44 Dogovor: 240048
+
+2017.04.28 22:03:44 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:44 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:45 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:45 Sender not found error
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:46 Dogovor: 250552
+
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:46 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:46 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:47 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:47 Sender not found error
+2017.04.28 22:03:48 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Sender not found error
+2017.04.28 22:03:48 Dogovor: 89043
+
+2017.04.28 22:03:48 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Sender not found error
+2017.04.28 22:03:48 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Sender not found error
+2017.04.28 22:03:48 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:48 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:49 Sender not found error
+2017.04.28 22:03:49 Dogovor: 2220096
+
+2017.04.28 22:03:50 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Sender not found error
+2017.04.28 22:03:50 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Sender not found error
+2017.04.28 22:03:50 Dogovor: 170012
+
+2017.04.28 22:03:50 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Sender not found error
+2017.04.28 22:03:50 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:50 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:51 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:51 Sender not found error
+2017.04.28 22:03:52 select * from esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:52 insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'SNTPORTAL','7800000078') => Oracle error ORA-12571 encountered
+2017.04.28 22:03:52 Select * From esender where sender_inn='7800000078' and sender_name='SNTPORTAL' => Oracle error ORA-12571 encountered
+2017.04.28 22:03:52 Sender not found error

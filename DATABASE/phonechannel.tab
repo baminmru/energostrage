@@ -1,0 +1,8 @@
+create table PHONECHANNEL
+(
+  tid    NUMBER,
+  tphone VARCHAR2(16),
+  tcom   VARCHAR2(6)
+)
+;
+

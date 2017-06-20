@@ -1,0 +1,9 @@
+create table USERGROUP
+(
+  usersid NUMBER not null,
+  id_grp  NUMBER not null
+)
+;
+alter table USERGROUP
+  add constraint USREGROUP_PK primary key (USERSID, ID_GRP);
+
