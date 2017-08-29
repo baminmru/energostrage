@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports Newtonsoft.Json
 
-Partial Class greports
+Partial Class costs2
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
@@ -23,41 +23,31 @@ Partial Class greports
             Exit Sub
         End If
 
-        Dim D As String
-        Dim A As String
-        Dim F As String
-        Dim T As String
-        Dim sF As String
-        Dim sT As String
-        D = Request.QueryString("D") & ""
-        A = Request.QueryString("P") & ""
-        F = Request.QueryString("F") & ""
-        T = Request.QueryString("T") & ""
+
+        Dim Y As String
+        Dim M As String
+
+
+        Y = Request.QueryString("Y") & ""
+        M = Request.QueryString("M") & ""
         Dim w As String
         w = " 1=1 "
 
 
 
-        If T = "" Then
-            sT = " sysdate "
-        Else
-            sT = " to_date('" + T + "','YYYY-MM-DD HH24:MI:SS')"
+        If Y = "" Then
+            Y = "2017"
+
         End If
 
-        If F = "" Then
-            sF = " (sysdate-1) "
-        Else
-            sF = " to_date('" + F + "','YYYY-MM-DD HH24:MI:SS')"
+        If M = "" Then
+            M = "5"
         End If
-        If D <> "" Then
-            w = w & " and node_id=" & D
-        End If
-       
 
 
-        w = w & " and p_date>=" & sF & " and p_date <" & sT
+        w = w & " and theyear=" & Y & " and themonth =" & M
 
-        dt = cm.QuerySelect("select * from V_EDATA   WHERE " & w & " order  by p_date DESC ")
+        dt = cm.QuerySelect("SELECT  SENDER_NAME,CODE,POWER_QUALITY,min(POWERLEVEL_MIN) POWERLEVEL_MIN,max(POWERLEVEL_MAX) POWERLEVEL_MAX,THEYEAR,THEMONTH,sum(I) I,sum(II) II,sum(III) III,sum(IV) IV,sum(V) V,sum(VI) VI FROM V_COST WHERE " & w & "  group by SENDER_NAME,CODE,  POWER_QUALITY,THEYEAR,THEMONTH  order  by CODE DESC ")
 
 
         jj = New JOut

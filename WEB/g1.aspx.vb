@@ -60,7 +60,7 @@ Partial Class g1
                 w = w & " and p_date>=" & sF & " and p_date <" & sT
                 dt = cm.QuerySelect( _
                "select p_hour||':'||p_min as  p_date, sum(nvl(AP,0)) as AP ,sum (nvl(AM,0)) as AM,sum(nvl(RP,0)) as RP ,sum(nvl(RM,0)) as RM , count(*) CNT" & _
-                                   " from edata_halfhour join echanel on edata_halfhour.chanel_id=echanel.chanel_id and echanel.node_id=" + d + w + "  group by p_hour,p_min order by p_hour,p_min ")
+                                   " from edata_halfhour " + w + " and node_id=" + d +"  group by p_hour,p_min order by p_hour,p_min ")
 
 
                 Dim i As Integer
@@ -104,7 +104,7 @@ Partial Class g1
                 w = w & " and p_date>=" & sF & " and p_date <" & sT
                 dt = cm.QuerySelect( _
                "select p_hour p_date, sum(nvl(AP,0)) as AP ,sum (nvl(AM,0)) as AM,sum(nvl(RP,0)) as RP ,sum(nvl(RM,0)) as RM , count(*) CNT" & _
-                                   " from edata_hour join echanel on edata_hour.chanel_id=echanel.chanel_id and echanel.node_id=" + d + w + "  group by p_hour order by p_hour ")
+                                   " from edata_hour "+ w + " and node_id=" + d +"  group by p_hour order by p_hour ")
 
 
                 Dim i As Integer
@@ -144,15 +144,15 @@ Partial Class g1
 
             Case "2"
                 w = w & " and p_date>=" & sF & " and p_date <" & sT
-                dt = cm.QuerySelect("select  to_char(p_date,'YYYY-MM-DD') P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + D + w + " group by to_char(p_date,'YYYY-MM-DD') order by p_date")
+                dt = cm.QuerySelect("select  to_char(p_date,'YYYY-MM-DD') P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg " + w + " and node_id=" + D+" group by to_char(p_date,'YYYY-MM-DD') order by p_date")
 
             Case "3"
                 w = w & " and p_date>=" & sF & " and p_date <" & sT
-                dt = cm.QuerySelect("select to_char(p_date,'YYYY:IW') as P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + D + w + " group by to_char(p_date,'YYYY:IW')  order by P_DATE ")
+                dt = cm.QuerySelect("select to_char(p_date,'YYYY:IW') as P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg " + w +  " and node_id=" + D+" group by to_char(p_date,'YYYY:IW')  order by P_DATE ")
 
             Case "4"
                 w = w & " and p_date>=" & sF & " and p_date <" & sT
-                dt = cm.QuerySelect("select P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + D + w + " group by p_date  order by P_DATE ")
+                dt = cm.QuerySelect("select P_DATE , sum(nvl(code_01,0)) as AP, sum(nvl(code_02,0)) as AM,sum(nvl(code_03,0))  as RP,sum(nvl(code_04,0)) as RM from edata_agg " + w + " and node_id=" + D+" group by p_date  order by P_DATE ")
         End Select
         
 

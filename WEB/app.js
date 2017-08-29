@@ -72,6 +72,28 @@ Ext.define('grep_model', {
 ]
 });
 
+Ext.define('cost_model', {
+    extend: 'Ext.data.Model',
+    fields: [
+	{ name: 'NODE_ID', type: 'number'}, 
+	{ name: 'SENDER_NAME', type: 'string'}   ,
+	{ name: 'CODE', type: 'string'}   , 
+	{ name: 'NAME', type: 'string'}   , 
+	{ name: 'POWERLEVEL_MIN', type: 'string'}, 
+	{ name: 'POWERLEVEL_MAX', type: 'string'}, 
+	{ name: 'POWER_QUALITY', type: 'string'}, 
+	{ name: 'THEYEAR', type: 'string'},
+	{ name: 'THEMONTH', type: 'string'},
+	{ name: 'I', type: 'string'},
+	{ name: 'II', type: 'string'},
+	{ name: 'III', type: 'string'},
+	{ name: 'IV', type: 'string'},
+	{ name: 'V', type: 'string'},
+	{ name: 'VI', type: 'string'},
+	{ name: 'OPTIMAL', type: 'string'}
+]
+});
+
 
 Ext.define('rep_model', {
     extend: 'Ext.data.Model',
@@ -156,6 +178,10 @@ var date_t =Ext.Date.clearTime( Ext.Date.add     (new Date(), Ext.Date.DAY, 1) )
 
 var last_f=myDateRenderer(  date_f );
 var	last_t=myDateRenderer(  date_t );
+
+var last_y=2017;
+var	last_m=5;
+
 
 var contentPanel;
 var menuPanel;
@@ -596,6 +622,12 @@ function trefRenderer(value, metaData, record, row, col, store, gridView) {
     return "<a href='rpt\\template\\" + record.get('TNAME') + "' target='_blank' >" + record.get('FILENAME') +"</a>";
 
 }
+function myTipRenderer(value, metaData, record, row, col, store, gridView) {
+	if (metaData != null) {
+		metaData.tdAttr = 'data-qtip="' + Ext.String.htmlEncode(value) + '"';    
+	};
+    return Ext.String.htmlEncode(value);
+}
 
 
 function reloadData(){
@@ -758,6 +790,172 @@ function GetDataFilter(){
 								}
                             }
                         }
+                    ]
+		}
+	);
+	return p1;
+			
+}
+
+
+function GetCostFilter(){
+	
+		var p1 = Ext.create('Ext.panel.Panel', {
+		    layout: {
+		        type: 'table',
+				columns:2
+		    },
+		    autoScroll: true,
+			items: [
+			{
+
+						xtype:  'numberfield',
+						minWidth:'350',
+					
+						labelAlign:'top',
+						value:  2017,
+						 maxValue: 2050,
+						minValue: 2015,
+						name:  'cost_y',
+						itemId: 'cost_y',
+						fieldLabel: 'Год',
+						emptyText: 'Год для вариантов  цен',
+						editable: false,
+
+				 		submitEmptyText: false,
+						listeners:{
+							change: function( fld, newValue, oldValue, eOpts ){
+										var dfrom = newValue;
+										if(dfrom==null ){
+											last_y="";
+										}
+										if(dfrom!=null ){
+											last_y=newValue;
+										}
+										if(	last_y!="" && last_m!="" 	)
+											reloadCosts();
+										
+							}
+						}
+			},
+						
+					
+			{
+
+						xtype:  'numberfield',
+						minWidth:'350',
+					
+						labelAlign:'top',
+						value:  5,
+						maxValue: 12,
+						minValue: 1,
+						name:  'cost_m',
+						itemId: 'cost_m',
+						fieldLabel: 'Месяц',
+						emptyText: 'Месяц для вариантов цен',
+						editable: false,
+
+				 		submitEmptyText: false,
+						listeners:{
+							change: function( fld, newValue, oldValue, eOpts ){
+										var dfrom = newValue;
+										if(dfrom==null ){
+											last_m="";
+										}
+										if(dfrom!=null ){
+											last_m=newValue;
+										}
+										if(	last_m!="" && last_y!="" 	)
+											reloadCosts();
+										
+							}
+						}
+					}
+						
+						
+                    ]
+		}
+	);
+	return p1;
+			
+}
+
+
+function GetCostFilter2(){
+	
+		var p1 = Ext.create('Ext.panel.Panel', {
+		    layout: {
+		        type: 'table',
+				columns:2
+		    },
+		    autoScroll: true,
+			items: [
+			{
+
+						xtype:  'numberfield',
+						minWidth:'350',
+					
+						labelAlign:'top',
+						value:  2017,
+						 maxValue: 2050,
+						minValue: 2015,
+						name:  'cost_y',
+						itemId: 'cost_y',
+						fieldLabel: 'Год',
+						emptyText: 'Год для вариантов  цен',
+						editable: false,
+
+				 		submitEmptyText: false,
+						listeners:{
+							change: function( fld, newValue, oldValue, eOpts ){
+										var dfrom = newValue;
+										if(dfrom==null ){
+											last_y="";
+										}
+										if(dfrom!=null ){
+											last_y=newValue;
+										}
+										if(	last_y!="" && last_m!="" 	)
+											reloadCosts2();
+										
+							}
+						}
+			},
+						
+					
+			{
+
+						xtype:  'numberfield',
+						minWidth:'350',
+					
+						labelAlign:'top',
+						value:  5,
+						maxValue: 12,
+						minValue: 1,
+						name:  'cost_m',
+						itemId: 'cost_m',
+						fieldLabel: 'Месяц',
+						emptyText: 'Месяц для вариантов цен',
+						editable: false,
+
+				 		submitEmptyText: false,
+						listeners:{
+							change: function( fld, newValue, oldValue, eOpts ){
+										var dfrom = newValue;
+										if(dfrom==null ){
+											last_m="";
+										}
+										if(dfrom!=null ){
+											last_m=newValue;
+										}
+										if(	last_m!="" && last_y!="" 	)
+											reloadCosts2();
+										
+							}
+						}
+					}
+						
+						
                     ]
 		}
 	);
@@ -1270,7 +1468,7 @@ function GetRepPanel() {
 							{ text: 'Шаблон', dataIndex: 'FILENAME', width: 120, minWidth: 100, sortable: true, renderer: trefRenderer },
                             { text: 'Готовность', dataIndex: 'REPORTREADY', width: 100, minWidth: 50, sortable: true ,renderer:OkRenderer},
 							{ text: 'Файл', dataIndex: 'REPORTREADY', width: 100, minWidth: 50, sortable: true ,renderer:refRenderer},
-                            { text: 'Ошибка', dataIndex: 'REPORTMSG',  minWidth: 100, sortable: true, flex:1 }
+                            { text: 'Ошибка', dataIndex: 'REPORTMSG',  minWidth: 100, sortable: true, flex:1 ,renderer:myTipRenderer}
 						]
 				});
 
@@ -1324,6 +1522,15 @@ function onAddTplClick() {
 function onExportClick() {
     var wn =last_dname +". "+last_pname;
     var config = { title: wn , columns: newcolumns };
+    var workbook = new Workbook(config);
+    workbook.addWorksheet(dGrid.store, config);
+    var x = workbook.render();
+    window.open('data:application/vnd.ms-excel;base64,' + Base64.encode(x), '_blank');
+}
+
+function onExportClick2() {
+    var wn ="";
+    var config = { title: wn , columns: dGrid.columns };
     var workbook = new Workbook(config);
     workbook.addWorksheet(dGrid.store, config);
     var x = workbook.render();
@@ -1803,8 +2010,74 @@ menuPanel = Ext.create('Ext.panel.Panel',
 							
 
 						}
+					},
+					{
+						toggleGroup:'menu',
+						xtype: 'button',
+						scale: 'small',
+						text: 'Цены',
+		 				iconCls: 'icon-money',
+						itemId: 'cmd_cost',
+						border: 1,
+						minWidth: 200,
+						style: {
+							borderColor: 'cyan',
+							borderStyle: 'solid'
+						},
+						handler: function () {
+							contentPanel.removeAll();
+							if(intervalID!=0){
+								window.clearInterval(intervalID);
+								intervalID=0;
+							}
+							
+							contentPanel.add(GetCostsPanel());
+							filterPanel.removeAll();
+							filterPanel.add(GetCostFilter());
+							filterPanel.setVisible(true);
+							filterPanel.expand();
+							filterPanel.setTitle('Фильтр');
+							store_dev.load({ params: { U: userid} });
+							store_costs.load({ params: { U: userid,Y:last_y,M:last_m} });
+							
+						}
+
+
 					}
-					
+					,
+					{
+						toggleGroup:'menu',
+						xtype: 'button',
+						scale: 'small',
+						text: 'Цены по объекту',
+		 				iconCls: 'icon-money',
+						itemId: 'cmd_cost2',
+						border: 1,
+						minWidth: 200,
+						style: {
+							borderColor: 'cyan',
+							borderStyle: 'solid'
+						},
+						handler: function () {
+							contentPanel.removeAll();
+							if(intervalID!=0){
+								window.clearInterval(intervalID);
+								intervalID=0;
+							}
+							
+							contentPanel.add(GetCostsPanel2());
+							filterPanel.removeAll();
+							filterPanel.add(GetCostFilter2());
+							filterPanel.setVisible(true);
+							filterPanel.expand();
+							filterPanel.setTitle('Фильтр');
+							store_dev.load({ params: { U: userid} });
+							store_costs2.load({ params: { U: userid,Y:last_y,M:last_m} });
+							
+						}
+
+
+					}
 					
 				]
 			} 
@@ -1871,6 +2144,70 @@ function reloadStatus(){
 	store_status.load({ params: { U: userid} });
 }
 
+
+var store_costs = Ext.create('Ext.data.Store', {
+	model: 'cost_model',
+	autoLoad: false,
+	autoSync: false,
+	proxy: {
+		type: 'ajax',
+		url: 'costs.aspx',
+		reader: {
+			type: 'json'
+		, root: 'data'
+		, successProperty: 'success'
+		, messageProperty: 'msg'
+		},
+		listeners: {
+			exception: function (proxy, response, operation) {
+			    /*
+			    Ext.MessageBox.show({
+			    title: 'REMOTE EXCEPTION',
+			    msg: operation.getError(),
+			    icon: Ext.MessageBox.ERROR,
+			    buttons: Ext.Msg.OK
+			    });
+			    */
+			}
+		}
+	}
+});
+
+var store_costs2 = Ext.create('Ext.data.Store', {
+	model: 'cost_model',
+	autoLoad: false,
+	autoSync: false,
+	proxy: {
+		type: 'ajax',
+		url: 'costs2.aspx',
+		reader: {
+			type: 'json'
+		, root: 'data'
+		, successProperty: 'success'
+		, messageProperty: 'msg'
+		},
+		listeners: {
+			exception: function (proxy, response, operation) {
+			    /*
+			    Ext.MessageBox.show({
+			    title: 'REMOTE EXCEPTION',
+			    msg: operation.getError(),
+			    icon: Ext.MessageBox.ERROR,
+			    buttons: Ext.Msg.OK
+			    });
+			    */
+			}
+		}
+	}
+});
+
+function reloadCosts(){
+	store_costs.load({ params: {  Y:last_y, M: last_m} });
+}
+
+function reloadCosts2(){
+	store_costs2.load({ params: {  Y:last_y, M: last_m} });
+}
 				
 function GetStatusPanel() {
 
@@ -1921,8 +2258,144 @@ function GetStatusPanel() {
     return p1;
 }
 
-				
-				
+	
+
+function GetCostsPanel() {
+
+    dGrid = Ext.create('Ext.grid.Panel', { xtype: 'grid',
+        itemId: 'cost_grid',
+        autoScroll: true,
+        store: store_costs,
+
+        dockedItems: [{
+            xtype: 'toolbar',
+            items: [
+						    {
+						        iconCls: 'icon-page_refresh',
+						        text: 'Обновить',
+						        itemId: 'bRefresh',
+						        scope: this,
+						        handler: function () {
+						            reloadCosts();
+						        }
+						    }, 
+							{
+					        iconCls: 'icon-page_excel',
+					        text: 'Экспорт',
+					        itemId: 'bExport',
+					        scope: this,
+					        handler: onExportClick2
+					    } 
+						]
+        }],
+        columns: [
+
+    	                    { text: 'Филиал', dataIndex: 'SENDER_NAME', width: 120, minWidth: 50, sortable: true ,renderer:myTipRenderer},
+							{ text: 'Код', dataIndex: 'CODE', width: 100, minWidth: 50, sortable: true,renderer:myTipRenderer},
+							{ text: 'Узел', dataIndex: 'NAME', width: 250, minWidth: 50, sortable: true,renderer:myTipRenderer},
+							{ text: 'У.Н.', dataIndex: 'POWER_QUALITY', minWidth: 90, flex: 1, sortable: true,renderer:myTipRenderer},
+                            { text: 'Р.М. от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Р.М. до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Год', dataIndex: 'THEYEAR', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Месяц', dataIndex: 'THEMONTH', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'Оптимальная<br/>категория', dataIndex: 'OPTIMAL', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
+							{ text: 'I', dataIndex: 'I', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'II', dataIndex: 'II', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III', dataIndex: 'III', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV', dataIndex: 'IV', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'V', dataIndex: 'V', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'VI', dataIndex: 'VI', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer}
+						
+							
+
+						]
+    });
+
+    var p1 = Ext.create('Ext.panel.Panel',
+				{
+				    title: 'Варианты расчета стоимости',
+				    layout: 'fit',
+				    autoScroll: true,
+				    items: [
+						dGrid
+					]
+				}
+
+			);
+
+    intervalID = window.setInterval(reloadStatus, 60000);
+
+    return p1;
+}	
+	
+
+function GetCostsPanel2() {
+
+    dGrid = Ext.create('Ext.grid.Panel', { xtype: 'grid',
+        itemId: 'cost_grid',
+        autoScroll: true,
+        store: store_costs2,
+
+        dockedItems: [{
+            xtype: 'toolbar',
+            items: [
+						    {
+						        iconCls: 'icon-page_refresh',
+						        text: 'Обновить',
+						        itemId: 'bRefresh',
+						        scope: this,
+						        handler: function () {
+						            reloadCosts();
+						        }
+						    }, 
+							{
+					        iconCls: 'icon-page_excel',
+					        text: 'Экспорт',
+					        itemId: 'bExport',
+					        scope: this,
+					        handler: onExportClick2
+					    } 
+						]
+        }],
+        columns: [
+
+    	                    { text: 'Филиал', dataIndex: 'SENDER_NAME', width: 120, minWidth: 50, sortable: true ,renderer:myTipRenderer},
+							{ text: 'Код', dataIndex: 'CODE', width: 100, minWidth: 50, sortable: true,renderer:myTipRenderer},
+							//{ text: 'Узел', dataIndex: 'NAME', width: 250, minWidth: 50, sortable: true,renderer:myTipRenderer},
+							{ text: 'У.Н.', dataIndex: 'POWER_QUALITY', minWidth: 90, flex: 1, sortable: true,renderer:myTipRenderer},
+                            { text: 'Р.М. от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Р.М. до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Год', dataIndex: 'THEYEAR', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Месяц', dataIndex: 'THEMONTH', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
+							//{ text: 'Оптимальная<br/>категория', dataIndex: 'OPTIMAL', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
+							{ text: 'I', dataIndex: 'I', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'II', dataIndex: 'II', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III', dataIndex: 'III', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV', dataIndex: 'IV', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'V', dataIndex: 'V', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'VI', dataIndex: 'VI', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer}
+						
+							
+
+						]
+    });
+
+    var p1 = Ext.create('Ext.panel.Panel',
+				{
+				    title: 'Варианты расчета стоимости',
+				    layout: 'fit',
+				    autoScroll: true,
+				    items: [
+						dGrid
+					]
+				}
+
+			);
+
+    intervalID = window.setInterval(reloadStatus, 60000);
+
+    return p1;
+}		
 
 function OnLogin(){
 	contentPanel.removeAll();
