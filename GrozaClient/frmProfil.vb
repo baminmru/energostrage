@@ -76,36 +76,36 @@ Public Class frmProfil
 
 
             If opt1.Checked Then
-                w = " where  edata_HALFHOUR.p_date >= sysdate -1 "
+                w = " where  EDATA_HALFHOUR.p_date >= sysdate -1 "
                 divider = 1
             End If
 
             If opt7.Checked Then
-                w = " where  edata_HALFHOUR.p_date >= sysdate - 7 "
+                w = " where  EDATA_HALFHOUR.p_date >= sysdate - 7 "
                 divider = 7
             End If
 
             If opt14.Checked Then
-                w = " where  edata_HALFHOUR.p_date >= sysdate - 14 "
+                w = " where  EDATA_HALFHOUR.p_date >= sysdate - 14 "
                 divider = 14
             End If
 
             If opt30.Checked Then
-                w = " where  edata_HALFHOUR.p_date >= sysdate - 30 "
+                w = " where  EDATA_HALFHOUR.p_date >= sysdate - 30 "
                 divider = 30
             End If
 
             If optPeriod.Checked Then
                 divider = Math.Abs(DateDiff(DateInterval.Day, dtpFrom.Value, dtpTo.Value))
-                w = " where edata_HALFHOUR.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and edata_HALFHOUR.p_date <=" + tvmain.OracleDate(dtpTo.Value)
+                w = " where EDATA_HALFHOUR.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and EDATA_HALFHOUR.p_date <=" + tvmain.OracleDate(dtpTo.Value)
             End If
 
 
-            
 
-            dt = tvmain.QuerySelect( _
-             "select edata_HALFHOUR.p_hour || ':' || edata_HALFHOUR.p_min as p_date,  sum(AP) as A_PLUS , sum(AM) as A_MINUS ,sum(RP) as R_PLUS ,sum(RM) as R_MINUS " & _
-                                 " from edata_HALFHOUR join echanel on edata_HALFHOUR.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by edata_HALFHOUR.p_hour,edata_HALFHOUR.p_min  order by edata_HALFHOUR.p_hour || ':' || edata_HALFHOUR.p_min  ")
+
+            dt = tvmain.QuerySelect(
+             "select EDATA_HALFHOUR.p_hour || ':' || EDATA_HALFHOUR.p_min as p_date,  sum(AP) as A_PLUS , sum(AM) as A_MINUS ,sum(RP) as R_PLUS ,sum(RM) as R_MINUS " &
+                                 " from EDATA_HALFHOUR  " + w + " AND EDATA_HALFHOUR.node_id=" + id.ToString + " group by EDATA_HALFHOUR.p_hour,EDATA_HALFHOUR.p_min  order by EDATA_HALFHOUR.p_hour || ':' || EDATA_HALFHOUR.p_min  ")
 
 
 
@@ -232,35 +232,35 @@ Public Class frmProfil
 
             Dim dt As DataTable
 
-            Dim w As String = ""
+            Dim w As String = "WHERE 1=1 "
 
 
             If opt1.Checked Then
-                w = " where  edata.p_date >= sysdate -1 "
+                w = " where  EDATA2.p_date >= sysdate -1 "
                 divider = 1
             End If
 
             If opt7.Checked Then
-                w = " where  edata.p_date >= sysdate - 7 "
+                w = " where  EDATA2.p_date >= sysdate - 7 "
                 divider = 7
             End If
 
             If opt14.Checked Then
-                w = " where  edata.p_date >= sysdate - 14 "
+                w = " where  EDATA2.p_date >= sysdate - 14 "
                 divider = 14
             End If
 
             If opt30.Checked Then
-                w = " where  edata.p_date >= sysdate - 30 "
+                w = " where  EDATA2.p_date >= sysdate - 30 "
                 divider = 30
             End If
 
             If optPeriod.Checked Then
                 divider = Math.Abs(DateDiff(DateInterval.Day, dtpFrom.Value, dtpTo.Value))
-                w = " where edata.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and edata.p_date <=" + tvmain.OracleDate(dtpTo.Value)
+                w = " where EDATA2.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and EDATA2.p_date <=" + tvmain.OracleDate(dtpTo.Value)
             End If
 
-            dt = tvmain.QuerySelect("select edata.* from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " order by p_date,p_start")
+            dt = tvmain.QuerySelect("select EDATA2.* from EDATA2 " + w + " AND node_id=" + id.ToString + " order by p_date,p_start")
 
             pb1.Maximum = dt.Rows.Count - 1
             pb1.Minimum = 0
@@ -289,7 +289,7 @@ Public Class frmProfil
                 p_s = dt.Rows(i)("p_start")
                 p_d = dt.Rows(i)("p_date")
                 p_c = dt.Rows(i)("c_date")
-                cid = dt.Rows(i)("chanel_id")
+                cid = dt.Rows(i)("NODE_ID")
 
                 Try
                     ap = dt.Rows(i)("CODE_01")
@@ -323,14 +323,14 @@ Public Class frmProfil
 
 
 
-                        q = "select edata_seq.nextval from dual"
+                        q = "select EDATA_seq.nextval from dual"
                         dt2 = tvmain.QuerySelect(q)
                         did2 = dt2.Rows(0)(0)
 
                         p_cur = p_s.AddMinutes(cur)
                         p_cur = DateSerial(p_cur.Year, p_cur.Month, p_cur.Day)
 
-                        q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
+                        q = "insert into EDATA2(data_id,NODE_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
                         q = q + "," + tvmain.OracleDate(p_c)
                         q = q + ",'" + dt.Rows(i)("lightsave").ToString
                         q = q + "'," + tvmain.OracleDate(p_cur)
@@ -340,15 +340,13 @@ Public Class frmProfil
 
                         tvmain.QueryExec(q)
 
-                        q = "update edata set "
+                        q = "update EDATA2 set "
 
                         q = q + " code_01=" + NanFormat(ap * (cur - last) / delta, "##############0.000").Replace(",", ".")
                         q = q + " ,code_02=" + NanFormat(am * (cur - last) / delta, "##############0.000").Replace(",", ".")
                         q = q + " ,code_03=" + NanFormat(rp * (cur - last) / delta, "##############0.000").Replace(",", ".")
                         q = q + " ,code_04=" + NanFormat(rm * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        'q = q + " code_T=" + NanFormat(ct * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        'q = q + " code_H=" + NanFormat(ch * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        'q = q + " code_L=" + NanFormat(cl * (cur - last) / delta, "##############0.000").Replace(",", ".")
+
 
                         q = q + " where data_id=" + did2.ToString
                         tvmain.QueryExec(q)
@@ -365,7 +363,7 @@ Public Class frmProfil
 
 
 
-                    q = "select edata_seq.nextval from dual"
+                    q = "select EDATA_seq.nextval from dual"
                     dt2 = tvmain.QuerySelect(q)
                     did2 = dt2.Rows(0)(0)
 
@@ -373,7 +371,7 @@ Public Class frmProfil
                     p_cur = p_s.AddMinutes(delta)
                     p_cur = DateSerial(p_cur.Year, p_cur.Month, p_cur.Day)
 
-                    q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
+                    q = "insert into EDATA2(data_id,NODE_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
                     q = q + "," + tvmain.OracleDate(p_c)
                     q = q + ",'" + dt.Rows(i)("lightsave").ToString
                     q = q + "'," + tvmain.OracleDate(p_cur)
@@ -383,22 +381,20 @@ Public Class frmProfil
 
                     tvmain.QueryExec(q)
 
-                    q = "update edata set "
+                    q = "update EDATA2 set "
 
                     q = q + " code_01=" + NanFormat(ap * (delta - last) / delta, "##############0.000").Replace(",", ".")
                     q = q + " ,code_02=" + NanFormat(am * (delta - last) / delta, "##############0.000").Replace(",", ".")
                     q = q + " ,code_03=" + NanFormat(rp * (delta - last) / delta, "##############0.000").Replace(",", ".")
                     q = q + " ,code_04=" + NanFormat(rm * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    'q = q + " code_T=" + NanFormat(ct * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    'q = q + " code_H=" + NanFormat(ch * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    'q = q + " code_L=" + NanFormat(cl * (delta - last) / delta, "##############0.000").Replace(",", ".")
+
 
                     q = q + " where data_id=" + did2.ToString
                     tvmain.QueryExec(q)
 
 
 
-                    q = "delete from edata where data_id=" & did.ToString()
+                    q = "delete from EDATA2 where data_id=" & did.ToString()
                     tvmain.QueryExec(q)
 
                 End If

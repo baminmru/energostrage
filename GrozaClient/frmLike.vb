@@ -70,27 +70,12 @@ Public Class frmLike
             Dim Y As String = ""
 
             Dim q As String = ""
-            'select v_STAT. chanel_id, M as MEDIAN, D as DISP,YEAR from v_STAT join echanel on V_STAT.chanel_id=echanel.chanel_id  join enodes on enodes.node_id=echanel.node_id=8070
 
 
-
-            'Try
-            '    Y = Integer.Parse(txtYear.Text)
-            '    If Y < 2014 And Y > Date.Today.Year Then
-            '        Y = Date.Today.Year() - 1
-            '    End If
-            'Catch ex As Exception
-            '    Y = Date.Today.Year() - 1
-            'End Try
-
-
-            'txtYear.Text = Y.ToString
-
-            q = "select enodes.mpoint_name as NAME , A.YEAR ,CAST(A.M as number(18,6)) AS  med1,CAST(b.M as number(18,6)) AS MED2,CAST(A.d as number(18,6)) AS dsp1,CAST(b.d as number(18,6)) AS DSP2 " & _
-            " from v_STAT A " & _
-            " join v_STAT B on a.YEAR=B.YEAR and a.CHANEL_ID <>B.CHANEL_ID and ABS(A.M-B.M)<ABS(A.M)/5 and ABS(A.D-B.D) < ABS(A.D) /5" & _
-            " join echanel AC on a.chanel_id = AC.Chanel_id" & _
-            " join echanel BC on B.chanel_id = BC.Chanel_id join enodes on BC.NODE_ID=enodes.node_id  " & _
+            q = "select enodes.mpoint_name as NAME , A.YEAR ,CAST(A.M as number(18,6)) AS  med1,CAST(b.M as number(18,6)) AS MED2,CAST(A.d as number(18,6)) AS dsp1,CAST(b.d as number(18,6)) AS DSP2 " &
+            " from v_STAT A " &
+            " join v_STAT B on a.YEAR=B.YEAR and a.node_ID <>B.node_ID and ABS(A.M-B.M)<ABS(A.M)/5 and ABS(A.D-B.D) < ABS(A.D) /5" &
+            " join enodes on B.NODE_ID=enodes.node_id  " &
             " where AC.NODE_ID=" & id.ToString & " order by A.year, Name" ' & " AND a.year=" & Y.ToString
 
             dt = tvmain.QuerySelect(q)

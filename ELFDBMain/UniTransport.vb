@@ -19,7 +19,7 @@ Public Enum UnitransportAction
     Connecting = 0
     Connected = 1
     SendData = 2
-    ReceiveData = 3
+    ReceivEDATA = 3
     Disconnecting = 4
     Disconnected = 5
     Wait = 6
@@ -253,7 +253,7 @@ Public Class SerialTransport
             i = Port.Read(buffer, offset, cnt)
             BytesReceived += cnt
             If i > 0 Then
-                SendEvent(UnitransportAction.ReceiveData, "")
+                SendEvent(UnitransportAction.ReceivEDATA, "")
             End If
 
 
@@ -400,7 +400,7 @@ Public Class NportTransport
         tmpReadCount = IPSerial.nsio_read(Port_id, tmpBuffer(0), tmpSize)
         If tmpReadCount > 0 Then
             BytesReceived += tmpReadCount
-            SendEvent(UnitransportAction.ReceiveData, "")
+            SendEvent(UnitransportAction.ReceivEDATA, "")
             For i = 0 To tmpReadCount - 1
                 inBuffer(ReadCount) = tmpBuffer(i)
                 ReadCount += 1
@@ -586,7 +586,7 @@ Public Class NportTransport
 
 
         BytesReceived += CntRead
-        SendEvent(UnitransportAction.ReceiveData, "")
+        SendEvent(UnitransportAction.ReceivEDATA, "")
         ReadCount -= CntRead
         If ReadCount > 0 Then
             For i = 0 To ReadCount - 1
@@ -849,7 +849,7 @@ Public Class ModemTransport
             Port.Read(buf, 0, btr)
             BytesReceived += btr
             sz += btr
-            SendEvent(UnitransportAction.ReceiveData, "")
+            SendEvent(UnitransportAction.ReceivEDATA, "")
 
             System.Threading.Thread.Sleep(1 + CInt(1000 * 8 * 2 / Port.BaudRate))
             SendIdle()
@@ -1180,7 +1180,7 @@ Public Class ModemTransport
                 cnt = cnt + 1
             End If
 
-            SendEvent(UnitransportAction.ReceiveData, "")
+            SendEvent(UnitransportAction.ReceivEDATA, "")
             btr = Port.BytesToRead
             If btr = 0 Then
                 System.Threading.Thread.Sleep(10 + CInt(1000 * 8 * 16 / Port.BaudRate))
@@ -1408,7 +1408,7 @@ Public Class VortexTransport
             End If
             tmpReadCount = soc.Receive(tmpBuffer, tmpSize, Net.Sockets.SocketFlags.None)
             BytesReceived += tmpReadCount
-            SendEvent(UnitransportAction.ReceiveData, "")
+            SendEvent(UnitransportAction.ReceivEDATA, "")
             If tmpReadCount > 0 Then
                 For i = 0 To tmpReadCount - 1
                     inBuffer(ReadCount) = tmpBuffer(i)
@@ -1484,7 +1484,7 @@ Public Class VortexTransport
             'Stop
         End Try
         BytesReceived += CntRead
-        SendEvent(UnitransportAction.ReceiveData, "")
+        SendEvent(UnitransportAction.ReceivEDATA, "")
         ReadCount -= CntRead
         If ReadCount > 0 Then
             For i = 0 To ReadCount - 1
@@ -1600,7 +1600,7 @@ Public Class GRPSTransport
         tmpReadCount = Soc.Read(tmpBuffer, 0, tmpSize)
         If tmpReadCount > 0 Then
             BytesReceived += tmpReadCount
-            SendEvent(UnitransportAction.ReceiveData, "")
+            SendEvent(UnitransportAction.ReceivEDATA, "")
                 For i = 0 To tmpReadCount - 1
                 dataBuffer(DataCount) = tmpBuffer(i)
                 DataCount += 1
@@ -1627,7 +1627,7 @@ Public Class GRPSTransport
     '        End If
     '        tmpReadCount = Soc.IPSocket.Receive(tmpBuffer, tmpSize, Net.Sockets.SocketFlags.None)
     '        BytesReceived += tmpReadCount
-    '        SendEvent(UnitransportAction.ReceiveData, "")
+    '        SendEvent(UnitransportAction.ReceivEDATA, "")
     '        If tmpReadCount > 0 Then
     '            For i = 0 To tmpReadCount - 1
     '                inBuffer(ReadCount) = tmpBuffer(i)
@@ -1696,7 +1696,7 @@ Public Class GRPSTransport
         Log(">>r" + CntRead.ToString + " >>")
 
         BytesReceived += CntRead
-        SendEvent(UnitransportAction.ReceiveData, "")
+        SendEvent(UnitransportAction.ReceivEDATA, "")
         DataCount -= CntRead
         If DataCount > 0 Then
             For i = 0 To DataCount - 1

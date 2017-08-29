@@ -39,14 +39,14 @@ Public Class frmTop20
     '    Dim dt As DataTable
 
     '    Dim cmd As OracleCommand
-    '    Dim da As OracleDataAdapter
+    '    Dim da As OraclEDATAAdapter
 
     '    'dt = New DataTable
     '    'cmd = New OracleCommand
     '    'cmd.Connection = tvmain.dbconnect
     '    'cmd.CommandType = CommandType.Text
     '    'cmd.CommandText = "select * from chartsettings  where id_bd=" + id.ToString() + " and ptype=" + ptype.ToString() + " and CHARTNUM=" + Chartnum.ToString() + " and Enable =1"
-    '    'da = New OracleDataAdapter
+    '    'da = New OraclEDATAAdapter
     '    'da.SelectCommand = cmd
     '    'da.Fill(dt)
     '    'GraphDT = dt
@@ -165,8 +165,8 @@ Public Class frmTop20
         End If
 
         Dim q As String = ""
-        q = "select sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) as value ,enodes.mpoint_name as name from edata_agg edata join echanel on edata.chanel_id=echanel.chanel_id " & _
-                " join enodes on enodes.node_id=echanel.node_id " & _
+        q = "select sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) as value ,enodes.mpoint_name as name from EDATA_agg  " &
+                " join enodes on enodes.node_id=EDATA_agg.node_id " &
                  w & " and enodes.sender_id=" + id.ToString + " and enodes.mpoint_name is not null having sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) > 0  group by enodes.mpoint_name order by sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) desc "
 
         dt = tvmain.QuerySelect(q)

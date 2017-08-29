@@ -194,6 +194,12 @@
     <Compile Include="frmStat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmWeekend.Designer.vb">
+      <DependentUpon>frmWeekend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeekend.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmWeekProfil.Designer.vb">
       <DependentUpon>frmWeekProfil.vb</DependentUpon>
     </Compile>
@@ -302,6 +308,9 @@
     <EmbeddedResource Include="frmStat.resx">
       <DependentUpon>frmStat.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmWeekend.resx">
+      <DependentUpon>frmWeekend.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWeekProfil.resx">
       <DependentUpon>frmWeekProfil.vb</DependentUpon>
     </EmbeddedResource>
@@ -408,7 +417,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="YearStamp.MonthStamp.DayStamp.Increment" />
+      <UserProperties BuildVersion_BuildVersioningStyle="YearStamp.MonthStamp.DayStamp.Increment" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UseGlobalSettings="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

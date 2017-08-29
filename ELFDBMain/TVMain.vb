@@ -160,7 +160,7 @@ Public Class TVMain
         cmd.CommandText = "delete from " & DBTableName & " where dcounter>=" +
         OracleDate(after) + " and dcounter<=" +
         OracleDate(befor) + " and id_ptype=" + ArchType.ToString() +
-        "and id_bd=" + id_bd.ToString()
+        " and id_bd=" + id_bd.ToString()
         Debug.Print(cmd.CommandText)
         Try
             'SyncLock connection
@@ -173,7 +173,7 @@ Public Class TVMain
         End Try
     End Sub
 
-    Public Sub PrepareDataWork(ByVal DateFrom As Date, ByVal DateTo As Date)
+    Public Sub PreparEDATAWork(ByVal DateFrom As Date, ByVal DateTo As Date)
         Dim cmd As New OracleCommand()
         cmd.CommandText = "delete from datawork where dcounter>=" +
         OracleDate(DateFrom) + " and dcounter<=" +
@@ -224,7 +224,7 @@ Public Class TVMain
         cmd.CommandText = "select count(*) CNT  from " & DBTableName & " where dcounter>=" +
         OracleDate(after) + " and dcounter<=" +
         OracleDate(befor) + " and id_ptype=" + ArchType.ToString() +
-        "and id_bd=" + id_bd.ToString() + ""
+        " and id_bd=" + id_bd.ToString() + ""
 
 
 
@@ -272,7 +272,7 @@ Public Class TVMain
         cmd.CommandText = "select dcounter  from " & DBTableName & " where dcounter>=" +
         OracleDate(after) + " and dcounter<=" +
         OracleDate(befor) + " and id_ptype=" + ArchType.ToString() +
-        "and id_bd=" + id_bd.ToString() + " "
+        " and id_bd=" + id_bd.ToString() + " "
 
         Dim da As OracleDataAdapter
         Dim dt As DataTable = New DataTable
@@ -326,7 +326,7 @@ Public Class TVMain
 
     'Public Function GetDBRecords(ByVal id_bd As String, ByVal after As Date, ByVal befor As Date, ByVal archtype As Short) As DataTable
     '    Dim dt As DataTable = Nothing
-    '    Dim dr As OracleDataReader
+    '    Dim dr As OraclEDATAReader
     '    Dim cmd As New OracleCommand()
     '    after = after.AddSeconds(-1)
     '    befor = befor.AddSeconds(1)
@@ -334,7 +334,7 @@ Public Class TVMain
     '    cmd.CommandText = "select * from v_" & DBTableName & " where dcounter>=" + _
     '    OracleDate(after) + " and dcounter<=" + _
     '    OracleDate(befor) + " and id_ptype=" + archtype.ToString + _
-    '    "and id_bd=" + id_bd + " "
+    '    " and id_bd=" + id_bd + " "
     '    dt = New DataTable
     '    dt.Columns.Add("id_bd", GetType(System.Int32))
     '    dt.Columns.Add("DCALL", GetType(System.DateTime))
@@ -468,7 +468,7 @@ Public Class TVMain
 
         cmd.CommandText = "select * from v_" & DBTableName & " where dcounter>=" +
         OracleDate(after) + " and dcounter<=" +
-        OracleDate(befor) + "and id_ptype=" + archtype.ToString +
+        OracleDate(befor) + " and id_ptype=" + archtype.ToString +
         " and id_bd=" + id_bd + " "
         'dt = New DataTable
         cmd.Connection = connection
@@ -504,7 +504,7 @@ Public Class TVMain
         'cmd.CommandText = "select * from plancall where cstatus=0"
         cmd.CommandText = "select plancall.*,npip,nppassword,ipport,transport,sysdate ServerDate from bdevices join plancall on bdevices.id_bd=plancall.id_bd where  transport in (0,2,3) and npquery=1 and( nplock is null or nplock < sysdate) " &
             " and (plancall.dlock is null or plancall.dlock + plancall.MINREPEAT/24/60 < sysdate ) and plancall.ncall < plancall.nmaxcall " &
-            "and ((plancall.chour=1 and nvl(plancall.DNEXTHOUR,sysdate-1)<=sysdate) or (plancall.ccurr=1 and nvl(plancall.dnextcurr,sysdate-1) <=sysdate) or (plancall.c24=1 and nvl(plancall.dnext24 ,sysdate-1)<=sysdate)  or (plancall.csum=1 and nvl(plancall.dnextsum ,sysdate-1)<=sysdate)) " + " "
+            " and ((plancall.chour=1 and nvl(plancall.DNEXTHOUR,sysdate-1)<=sysdate) or (plancall.ccurr=1 and nvl(plancall.dnextcurr,sysdate-1) <=sysdate) or (plancall.c24=1 and nvl(plancall.dnext24 ,sysdate-1)<=sysdate)  or (plancall.csum=1 and nvl(plancall.dnextsum ,sysdate-1)<=sysdate)) " + " "
 
         da.SelectCommand = cmd
         dt = New DataTable
@@ -1054,7 +1054,7 @@ Public Class TVMain
             End If
         End If
 
-            DeviceReady = False
+        DeviceReady = False
 
         Dim xml As XmlDocument
         xml = New XmlDocument
@@ -1158,7 +1158,7 @@ Public Class TVMain
         cmd.Connection = connection
         cmd.CommandText = "select bdevices.npip,bdevices.scheme_name,bbuildings.caddress," +
            "devices.cdevdesc from bdevices,bbuildings,devices where bdevices.id_bd=" + id_bd.ToString +
-           "and bbuildings.id_bu = bdevices.id_bu and devices.id_dev=bdevices.id_dev" + " "
+           " and bbuildings.id_bu = bdevices.id_bu and devices.id_dev=bdevices.id_dev" + " "
         Try
             SyncLock connection
                 dr = cmd.ExecuteReader()
@@ -1305,7 +1305,7 @@ Public Class TVMain
         " " + after.Hour.ToString() + ":" + after.Minute.ToString() + ":" + after.Second.ToString() + "','YYYY-MM-DD HH24:MI:SS') and dcounter<=" +
         "to_date('" + befor.Year.ToString() + "-" + befor.Month.ToString() + "-" + befor.Day.ToString() +
         " " + befor.Hour.ToString() + ":" + befor.Minute.ToString() + ":" + befor.Second.ToString() + "','YYYY-MM-DD HH24:MI:SS') and id_ptype=" + archtype.ToString() +
-        "and id_bd=" + id_bd.ToString()
+        " and id_bd=" + id_bd.ToString()
         Try
             '' SyncLock connection
             cmd.ExecuteNonQuery()
@@ -1797,7 +1797,7 @@ Public Class TVMain
 
             Case ELFDBMain.UnitransportAction.Disconnecting
 
-            Case ELFDBMain.UnitransportAction.ReceiveData
+            Case ELFDBMain.UnitransportAction.ReceivEDATA
 
             Case ELFDBMain.UnitransportAction.SendData
 

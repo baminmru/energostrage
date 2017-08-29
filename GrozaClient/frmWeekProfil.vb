@@ -70,10 +70,10 @@ Public Class frmWeekProfil
 
             Dim w As String = ""
 
-           
-            dt = tvmain.QuerySelect("select  nvl(code_01,0) as A_PLUS, nvl(code_02,0) as A_MINUS,nvl(code_03,0)  as R_PLUS,nvl(code_04,0) as R_MINUS from edata_weekmult where edata_weekmult.chanel_id=" + id.ToString + "  order by edata_weekmult.week")
 
-               
+            dt = tvmain.QuerySelect("select  nvl(code_01,0) as A_PLUS, nvl(code_02,0) as A_MINUS,nvl(code_03,0)  as R_PLUS,nvl(code_04,0) as R_MINUS from EDATA_weekmult where  node_id=" + id.ToString + "  order by EDATA_weekmult.week")
+
+
 
 
 

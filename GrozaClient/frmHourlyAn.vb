@@ -99,47 +99,44 @@ Public Class frmHourlyAn
 
             If opt1.Checked Then
 
-                    w = " where edata_hour.p_date >= sysdate -1 "
+                    w = " where EDATA_hour.p_date >= sysdate -1 "
                     divider = 1
                 End If
 
                 If opt7.Checked Then
-                    w = " where edata_hour.p_date >= sysdate - 7 "
+                    w = " where EDATA_hour.p_date >= sysdate - 7 "
                     divider = 7
                 End If
 
                 If opt14.Checked Then
-                    w = " where edata_hour.p_date >= sysdate - 14 "
+                    w = " where EDATA_hour.p_date >= sysdate - 14 "
                     divider = 14
                 End If
 
                 If opt30.Checked Then
-                    w = " where edata_hour.p_date >= sysdate - 30 "
+                    w = " where EDATA_hour.p_date >= sysdate - 30 "
                     divider = 30
                 End If
 
                 If optPeriod.Checked Then
                     divider = Math.Abs(DateDiff(DateInterval.Day, dtpFrom.Value, dtpTo.Value))
-                    w = " where edata_hour.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and edata_hour.p_date <=" + tvmain.OracleDate(dtpTo.Value)
+                    w = " where EDATA_hour.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and EDATA_hour.p_date <=" + tvmain.OracleDate(dtpTo.Value)
                 End If
 
-                wPrev = " where edata_hour.p_date >= " + tvmain.OracleDate(prevMonth) + " and edata_hour.p_date <=" + tvmain.OracleDate(prevMonthEnd)
+                wPrev = " where EDATA_hour.p_date >= " + tvmain.OracleDate(prevMonth) + " and EDATA_hour.p_date <=" + tvmain.OracleDate(prevMonthEnd)
 
 
-                'dt = tvmain.QuerySelect( _
-                '    "select to_char(p_start,'HH24') p_date, sum(nvl(code_01,0)) as A_PLUS ,sum (nvl(code_02,0)) as A_MINUS ,sum(nvl(code_03,0)) as R_PLUS ,sum(nvl(code_04,0)) as R_MINUS " & _
-                '                        " from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + "  group by to_char(p_start,'HH24') order by to_char(p_start,'HH24') ")
 
-                dt = tvmain.QuerySelect(
-             "select edata_hour.p_hour p_date, cast(avg(nvl(AP,0)) as number(18,6)) as A_PLUS ,cast(avg (nvl(AM,0)) as number(18,6)) as A_MINUS ,cast(avg(nvl(RP,0))as number(18,6)) as R_PLUS ,cast(avg(nvl(RM,0)) as number(18,6))  as R_MINUS" &
-                                 " from edata_hour join echanel on edata_hour.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + "  group by edata_hour.p_hour order by edata_hour.p_HOUR ")
+            dt = tvmain.QuerySelect(
+             "select EDATA_hour.p_hour p_date, cast(avg(nvl(AP,0)) as number(18,6)) as A_PLUS ,cast(avg (nvl(AM,0)) as number(18,6)) as A_MINUS ,cast(avg(nvl(RP,0))as number(18,6)) as R_PLUS ,cast(avg(nvl(RM,0)) as number(18,6))  as R_MINUS" &
+                                 " from EDATA_hour " + w + " and node_id=" + id.ToString + "  group by EDATA_hour.p_hour order by EDATA_hour.p_HOUR ")
 
-                dtPrev = tvmain.QuerySelect(
-             "select edata_hour.p_hour p_date, cast(avg(nvl(AP,0)) as number(18,6)) as A_PLUS ,cast(avg (nvl(AM,0)) as number(18,6)) as A_MINUS ,cast(avg(nvl(RP,0))as number(18,6)) as R_PLUS ,cast(avg(nvl(RM,0)) as number(18,6))  as R_MINUS " &
-                                 " from edata_hour join echanel on edata_hour.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + wPrev + "  group by edata_hour.p_hour order by edata_hour.p_HOUR ")
+            dtPrev = tvmain.QuerySelect(
+             "select EDATA_hour.p_hour p_date, cast(avg(nvl(AP,0)) as number(18,6)) as A_PLUS ,cast(avg (nvl(AM,0)) as number(18,6)) as A_MINUS ,cast(avg(nvl(RP,0))as number(18,6)) as R_PLUS ,cast(avg(nvl(RM,0)) as number(18,6))  as R_MINUS " &
+                                 " from EDATA_hour " + wPrev + " and node_id=" + id.ToString + "  group by EDATA_hour.p_hour order by EDATA_hour.p_HOUR ")
 
 
-                dtG = New DataTable
+            dtG = New DataTable
                 Dim dc As DataColumn
                 Dim dr As DataRow
                 dc = New DataColumn("P_DATE", GetType(System.String))

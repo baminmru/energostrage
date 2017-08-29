@@ -69,8 +69,8 @@ Public Class frmStat
             Dim dt As DataTable
 
             Dim q As String = ""
-            q = "select  cast(M as number(18,6)) as MED,  cast(D as number(18,6)) as DSP,YEAR from v_STAT join echanel on V_STAT.chanel_id=echanel.chanel_id and echanel.Mchanel_code='01'  " & _
-                    " where echanel.node_id=" & id.ToString
+            q = "select  cast(M as number(18,6)) as MED,  cast(D as number(18,6)) as DSP,YEAR from v_STAT   " &
+                    " where node_id=" & id.ToString
 
 
             dt = tvmain.QuerySelect(q)

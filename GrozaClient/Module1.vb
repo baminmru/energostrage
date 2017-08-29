@@ -11,8 +11,8 @@ Module Module1
     Public Sub Agregate()
         If MsgBox("Провести агрегацию данных для графиков?", MsgBoxStyle.YesNo + MsgBoxStyle.Question, "Агрегация данных") = DialogResult.Yes Then
             tvmain.QueryExec("update enodes Set ecolor=null")
-            tvmain.QueryExec("delete from edata_week where year=" & Date.Today.Year.ToString())
-            tvmain.QueryExec("insert into edata_WEEK (chanel_id, Year, WEEK, code_t, code_h, code_l, code_01, code_02, code_03, code_04)(select chanel_id, to_char(p_date, 'YYYY' ) YEAR,to_char(p_date, 'IW' ) WEEK,sum(nvl(code_t,0)),sum(nvl(code_h,0)),sum(nvl(code_l,0)),sum(nvl(code_01,0)),sum(nvl(code_02,0)),sum(nvl(code_03,0)),sum(nvl(code_04,0))        from (edata_agg) where to_char(p_date, 'YYYY' )='" & Date.Today.Year.ToString() + "' group by chanel_id,to_char(p_date, 'YYYY' ), to_char(p_date, 'IW' ))")
+            tvmain.QueryExec("delete from EDATA_week where year=" & Date.Today.Year.ToString())
+            tvmain.QueryExec("insert into EDATA_WEEK (node_id, Year, WEEK, code_01, code_02, code_03, code_04)(select node_id, to_char(p_date, 'YYYY' ) YEAR,to_char(p_date, 'IW' ) WEEK,sum(nvl(code_01,0)),sum(nvl(code_02,0)),sum(nvl(code_03,0)),sum(nvl(code_04,0))        from (EDATA_agg) where to_char(p_date, 'YYYY' )='" & Date.Today.Year.ToString() + "' group by node_id,to_char(p_date, 'YYYY' ), to_char(p_date, 'IW' ))")
 
             Dim dt As DataTable
             dt = tvmain.QuerySelect("select node_id from enodes")
@@ -130,8 +130,8 @@ Module Module1
         w = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
         If (w > 2) Then
             Dim q As String
-            q = "Select code_01 , week  from edata_week, echanel where echanel.chanel_id=edata_week.chanel_id And echanel.mchanel_code='01' and echanel.node_id=" + nid.ToString() + " and year=" + Date.Today.Year.ToString + " And week <" + w.ToString() + " and week >=" + (w - 2).ToString()
-                    dt = tvmain.QuerySelect(q)
+            q = "Select code_01 , week  from EDATA_week where node_id=" + nid.ToString() + " and year=" + Date.Today.Year.ToString + " And week <" + w.ToString() + " and week >=" + (w - 2).ToString()
+            dt = tvmain.QuerySelect(q)
 
             If dt.Rows.Count = 0 Then
 
@@ -202,7 +202,7 @@ Module Module1
             If (forWeek >= 2) Then
                 w = forWeek
                 Dim q As String
-                q = "Select nvl(code_01,0) code_01 , week from edata_week, echanel where echanel.chanel_id=edata_week.chanel_id And echanel.mchanel_code='01' and echanel.node_id=" + nid.ToString() + " and year=" + Date.Today.Year.ToString + " And week <" + w.ToString() + " and week >=" + (w - 2).ToString()
+                q = "Select nvl(code_01,0) code_01 , week from EDATA_week where node_id=" + nid.ToString() + " and year=" + Date.Today.Year.ToString + " And week <" + w.ToString() + " and week >=" + (w - 2).ToString()
                 dt = tvmain.QuerySelect(q)
 
                 If dt.Rows.Count = 0 Then

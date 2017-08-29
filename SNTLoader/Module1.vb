@@ -17,8 +17,31 @@ Module Module1
 
     Sub Main()
         Init()
+        Dim args() As String
+        args = Environment.GetCommandLineArgs()
 
-        GetHalfHour2(Today().AddDays(-4), Today().AddDays(-1))
+        Dim dfrom As Integer = 4
+        Dim dto As Integer = 1
+        If args.Count > 1 Then
+            Try
+                dfrom = Integer.Parse(args(1))
+            Catch ex As Exception
+                dfrom = 4
+            End Try
+
+            If args.Count > 2 Then
+                Try
+                    dto = Integer.Parse(args(2))
+                Catch ex As Exception
+                    dto = 1
+                End Try
+            End If
+
+
+        End If
+
+
+        GetHalfHour2(Today().AddDays(-dfrom), Today().AddDays(-dto))
 
         'Dim i As Integer
         'For i = 0 To txtID.Count - 1
@@ -451,42 +474,42 @@ nxt_prj:
             Dim t As DateTime
             t = Now
             Dim dt As DataTable
-            Dim da As OracleDataAdapter
-            dt = New DataTable
-            da = New OracleDataAdapter
-            da.SelectCommand = cmd
-            Try
-                da.Fill(dt)
-            Catch ex As Exception
+        Dim da As OraclEDATAAdapter
+        dt = New DataTable
+        da = New OraclEDATAAdapter
+        da.SelectCommand = cmd
+        Try
+            da.Fill(dt)
+        Catch ex As Exception
             LOG(s + " => " + ex.Message)
             connection.Close()
         End Try
 
-            'Log(s + " dt:" + DateDiff(DateInterval.Second, t, Now).ToString)
-            Return dt
-        End Function
+        'Log(s + " dt:" + DateDiff(DateInterval.Second, t, Now).ToString)
+        Return dt
+    End Function
 
-        Private Function CheckArea(ByVal aName As String, ByVal aINN As String) As Integer
-            Dim dt As DataTable
-            dt = QuerySelect("select * from esender where sender_inn='" + QQ(aINN) + "' and sender_name='" + QQ(aName) + "'")
-            If dt.Rows.Count = 0 Then
-                QueryExec("insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'" + QQ(aName) + "','" + QQ(aINN) + "')")
-                dt = QuerySelect("Select * From esender where sender_inn='" + QQ(aINN) + "' and sender_name='" + QQ(aName) + "'")
-            End If
-            If dt.Rows.Count > 0 Then
-                Return dt.Rows(0)("sender_id")
-            End If
-            Log("Sender not found error")
+    Private Function CheckArea(ByVal aName As String, ByVal aINN As String) As Integer
+        Dim dt As DataTable
+        dt = QuerySelect("select * from esender where sender_inn='" + QQ(aINN) + "' and sender_name='" + QQ(aName) + "'")
+        If dt.Rows.Count = 0 Then
+            QueryExec("insert into esender(sender_id,sender_name,sender_inn) values(esender_seq.nextval,'" + QQ(aName) + "','" + QQ(aINN) + "')")
+            dt = QuerySelect("Select * From esender where sender_inn='" + QQ(aINN) + "' and sender_name='" + QQ(aName) + "'")
+        End If
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0)("sender_id")
+        End If
+        LOG("Sender not found error")
+        Return -1
+    End Function
+
+
+    Private Function CheckNode(ByVal aID As Integer, ByVal nName As String, nCode As String) As Integer
+        Dim dt As DataTable
+        Dim nId As Integer
+        If nName = "" Then
             Return -1
-        End Function
-
-
-        Private Function CheckNode(ByVal aID As Integer, ByVal nName As String, nCode As String) As Integer
-            Dim dt As DataTable
-            Dim nId As Integer
-            If nName = "" Then
-                Return -1
-            End If
+        End If
         If nCode = "" Then
             nCode = "не задан"
         End If
@@ -496,60 +519,68 @@ nxt_prj:
 
 
         dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "'")
-            If dt.Rows.Count = 0 Then
-                QueryExec("insert into enodes(sender_id,node_id,mpoint_name,mpoint_code) values(" + aID.ToString + ",enode_seq.nextval,'" + QQ(nName) + "','" + QQ(nCode) + "')")
-                dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "'")
-                If dt.Rows.Count > 0 Then
-                    nId = dt.Rows(0)("node_id")
-                End If
-
-            End If
+        If dt.Rows.Count = 0 Then
+            QueryExec("insert into enodes(sender_id,node_id,mpoint_name,mpoint_code) values(" + aID.ToString + ",enode_seq.nextval,'" + QQ(nName) + "','" + QQ(nCode) + "')")
+            dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "'")
             If dt.Rows.Count > 0 Then
-                Return dt.Rows(0)("node_id")
+                nId = dt.Rows(0)("node_id")
             End If
-            Return -1
-        End Function
 
-        Private Function CheckChanel(ByVal nID As Integer, cCode As String, cDesc As String) As Integer
-            Dim dt As DataTable
-            dt = QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-            If dt.Rows.Count = 0 Then
-                QueryExec("insert into echanel(node_id,chanel_id,mchanel_code,mchanel_desc) values(" + nID.ToString + ",echanel_seq.nextval,'" + QQ(cCode) + "','" + QQ(cDesc) + "')")
-                dt = QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-                'If dt.Rows.Count > 0 Then
-                '    nId = dt.Rows(0)("node_id")
-                'End If
-
-                'QueryExec("update enodes set mchanel_desc='" + QQ1(cDesc) + "' where node_id=" + nId.ToString)
-            End If
-            If dt.Rows.Count > 0 Then
-                Return dt.Rows(0)("chanel_id")
-            End If
-            Return -1
-        End Function
+        End If
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0)("node_id")
+        End If
+        Return -1
+    End Function
 
 
-        Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
-            Dim did As Integer
-            Dim dt As DataTable
-            Dim dd As String
-            Dim q As String
-            q = "select edata_seq.nextval from dual"
+
+
+    Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
+        Dim did As Integer
+        Dim dt As DataTable
+        Dim dd As String
+        Dim q As String
+
+        If s_start.Length = 4 And s_end.Length = 4 Then
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day) + " and p_start=" + todatetime(s_day + s_start) + " and p_end=" + todatetime(s_day + s_end)
+
             dt = QuerySelect(q)
-            did = dt.Rows(0)(0)
-
-            If s_start.Length = 4 And s_end.Length = 4 Then
-
-                q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+                Console.Write("u")
+            Else
+                q = "select EDATA_seq.nextval from dual"
+                dt = QuerySelect(q)
+                did = dt.Rows(0)(0)
+                Console.Write("i")
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
                 q = q + "," + todatetime(s_timestamp)
                 q = q + ",'" + s_daylightsavingtime
                 q = q + "'," + todate(s_day)
                 q = q + "," + todatetime(s_day + s_start)
                 q = q + "," + todatetime(s_day + s_end)
                 q = q + ")"
-                dd = todate(s_day)
+                QueryExec(q)
+            End If
+
+
+
+            dd = todate(s_day)
+        Else
+
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_end.Substring(0, 8)) + " and p_start=" + todatetime(s_start) + " and p_end=" + todatetime(s_end)
+
+            dt = QuerySelect(q)
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+                Console.Write("u")
             Else
-                q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+                q = "select EDATA_seq.nextval from dual"
+                dt = QuerySelect(q)
+                did = dt.Rows(0)(0)
+                Console.Write("i")
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
                 q = q + "," + todatetime(s_timestamp)
                 q = q + ",'" + s_daylightsavingtime
                 q = q + "'," + todate(s_end.Substring(0, 8))
@@ -557,108 +588,106 @@ nxt_prj:
                 q = q + "," + todatetime(s_end)
                 q = q + ")"
                 dd = todate(s_end.Substring(0, 8))
+                QueryExec(q)
             End If
 
-            QueryExec(q)
 
-            s_val = s_val.Replace(",", ".")
+        End If
 
-            q = "update edata set "
-            Select Case cCode
-                Case "01"
-                    q = q + " code_01=" + s_val
-                Case "02"
-                    q = q + " code_02=" + s_val
-                Case "03"
-                    q = q + " code_03=" + s_val
-                Case "04"
-                    q = q + " code_04=" + s_val
-                Case "T"
-                    q = q + " code_T=" + s_val
-                Case "H"
-                    q = q + " code_H=" + s_val
-                Case "L"
-                    q = q + " code_L=" + s_val
-            End Select
-            q = q + " where data_id=" + did.ToString
-            QueryExec(q)
+
+        s_val = s_val.Replace(",", ".")
+
+        q = "update EDATA2 set "
+        Select Case cCode
+            Case "01"
+                q = q + " code_01=" + s_val
+            Case "02"
+                q = q + " code_02=" + s_val
+            Case "03"
+                q = q + " code_03=" + s_val
+            Case "04"
+                q = q + " code_04=" + s_val
+
+        End Select
+        q = q + " where data_id=" + did.ToString
+        QueryExec(q)
 
 
 
 
         Return did
-        End Function
+    End Function
 
-        Private Function CleanPeriod(ByVal nId As Integer, ByVal s_day As String) As Boolean
-        'Log(" Clean period for " + s_day)
-        If QueryExec("delete from edata where chanel_id=" + nId.ToString + " and p_date=" + todate(s_day)) = False Then
-                QueryExec("delete from edata where chanel_id=" + nId.ToString + " and p_date=" + todate2(s_day))
-            End If
-            Return True
-        End Function
+    Private Function CleanPeriod(ByVal nId As Integer, ByVal s_day As String) As Boolean
+        Console.Write("d " + s_day + ".")
+        If QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day)) = False Then
+            QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate2(s_day))
+        End If
+        Return True
+    End Function
 
 
-        Private Function ProcessXML(ByVal xString As String, d_addr As String, d_name As String, d_code As String) As Boolean
+    Private Function ProcessXML(ByVal xString As String, d_addr As String, d_name As String, d_code As String) As Boolean
 
-            Dim xml As System.Xml.XmlDocument
-            xml = New XmlDocument
-            Try
-                xml.LoadXml(xString)
+        Dim xml As System.Xml.XmlDocument
+        xml = New XmlDocument
+        Try
+            xml.LoadXml(xString)
 
-                Dim node As XmlElement
-                Dim nodes As XmlNodeList
+            Dim node As XmlElement
+            Dim nodes As XmlNodeList
 
 
             Dim aID As Integer
 
 
             Dim mps As XmlNodeList
-                Dim mp As XmlElement
+            Dim mp As XmlElement
 
-                aID = CheckArea(aName, aINN)
+            aID = CheckArea(aName, aINN)
             'Log(aID)
             If aID = -1 Then Return False
 
 
 
-                Dim mcs As XmlNodeList
-                Dim mc As XmlElement
-                Dim nName As String
-                Dim nCode As String
-                Dim nId As Integer
-                Dim nKT As Double = 1.0
-                Dim nKP As Double = 0.0
-                Dim s_date As String
-                Dim d_date As DateTime
+            Dim mcs As XmlNodeList
+            Dim mc As XmlElement
+            Dim nName As String
+            Dim nCode As String
+            Dim nId As Integer
+            Dim nKT As Double = 1.0
+            Dim nKP As Double = 0.0
+            Dim s_date As String
+            Dim d_date As DateTime
 
-                nName = d_name + " " + d_addr
-                nCode = d_code
+            nName = d_name + " " + d_addr
+            nCode = d_code
 
-                'Try
-                '        nKT = Double.Parse(mp.GetAttribute("kt"))
-                '    Catch ex As Exception
-                '        nKT = 1.0
-                '    End Try
+            'Try
+            '        nKT = Double.Parse(mp.GetAttribute("kt"))
+            '    Catch ex As Exception
+            '        nKT = 1.0
+            '    End Try
 
-                '    Try
-                '        nKP = Double.Parse(mp.GetAttribute("kp"))
-                '    Catch ex As Exception
-                '        nKP = 0.0
-                '    End Try
+            '    Try
+            '        nKP = Double.Parse(mp.GetAttribute("kp"))
+            '    Catch ex As Exception
+            '        nKP = 0.0
+            '    End Try
 
-                nId = CheckNode(aID, nName, nCode)
+            nId = CheckNode(aID, nName, nCode)
 
-                If nId > 0 And (nKT <> 1.0 Or nKP <> 0.0) Then
-                    QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
-                End If
-
-
+            If nId > 0 And (nKT <> 1.0 Or nKP <> 0.0) Then
+                QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
+            End If
 
 
-                If nId >= 0 Then
-                    Log(nCode + " " + nName)
 
-                    mps = xml.GetElementsByTagName("items")
+
+            If nId >= 0 Then
+                LOG(nCode + " " + nName)
+
+                mps = xml.GetElementsByTagName("items")
                 For Each mp In mps
                     nodes = mp.GetElementsByTagName("date")
                     If nodes.Count > 0 Then
@@ -671,16 +700,9 @@ nxt_prj:
 
 
                     Dim cId As Integer
-                    cId = CheckChanel(nId, "01", "A+")
-                    CleanPeriod(cId, d_date.ToString("yyyyMMdd"))
-                    cId = CheckChanel(nId, "02", "A-")
-                    CleanPeriod(cId, d_date.ToString("yyyyMMdd"))
-                    cId = CheckChanel(nId, "03", "R+")
-                    CleanPeriod(cId, d_date.ToString("yyyyMMdd"))
-                    cId = CheckChanel(nId, "04", "R-")
+                    cId = nId
                     CleanPeriod(cId, d_date.ToString("yyyyMMdd"))
 
-                    ' Console.WriteLine("C")
 
                     mcs = mp.GetElementsByTagName("data")
                     For Each mc In mcs
@@ -707,9 +729,10 @@ nxt_prj:
                                 cCode = "04"
                             End If
 
-                        End If
 
-                        cId = CheckChanel(nId, cCode, cDesc)
+                        End If
+                        Console.Write("C" + cCode + " ")
+
 
                         Dim periods As XmlNodeList
                         Dim period As XmlElement
@@ -737,13 +760,13 @@ nxt_prj:
 
                         Next 'values
 
-                        QueryExec(" delete  from  edata_agg where chanel_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date))
+                        QueryExec(" delete  from  EDATA_agg where node_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date))
 
-                        QueryExec(" insert into edata_agg (chanel_id,p_date,code_t,code_h,code_l,code_01,code_02,code_03,code_04)(select chanel_id, p_date, sum(nvl(code_t, 0)), sum(nvl(code_h, 0)), sum(nvl(code_l, 0)), sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(edata) where chanel_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date) + " group by chanel_id,p_date)")
+                        QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(EDATA2) where node_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date) + " group by node_id,p_date)")
 
                     Next 'data
 
-
+                    Console.WriteLine("")
                 Next ' items
 
 

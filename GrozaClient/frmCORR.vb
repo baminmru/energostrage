@@ -75,12 +75,10 @@ Public Class frmCORR
 
 
             q = q + "select cast(CORR(nvl(A.code_01,0), nvl(B.code_01,0)) as number(18,6)) as CR ,  cast(median(nvl(A.code_01,0)) as number(18,6) ) as MED1, cast(median(nvl(B.code_01,0)) as number(18,6) ) as MED2 ,cast(stddev(nvl(A.code_01,0)) as number(18,6) ) as DISP1,cast(stddev(nvl(B.code_01,0)) as number(18,6) ) as DISP2, A.YEAR, enodes.mpoint_name"
-            q = q + " from edata_week A "
-            q = q + " join edata_week B on a.YEAR=B.YEAR and a.week=b.week and a.CHANEL_ID <>B.CHANEL_ID "
-            q = q + " join echanel AC on A.chanel_id = AC.Chanel_id  and AC.Mchanel_code='01'"
-            q = q + " join echanel BC on B.chanel_id = BC.Chanel_id  and BC.Mchanel_code='01' "
+            q = q + " from EDATA_week A "
+            q = q + " join EDATA_week B on a.YEAR=B.YEAR and a.week=b.week and a.NODE_ID <>B.NODE_ID "
             q = q + " join enodes on BC.NODE_ID=enodes.node_id  "
-            q = q + " where AC.NODE_ID=" & id.ToString
+            q = q + " where A.NODE_ID=" & id.ToString
             q = q + " group by A.YEAR,enodes.mpoint_name"
             q = q + " having CORR(nvl(A.code_01,0), nvl(B.code_01,0)) >= 0.8 and ABS(median(nvl(A.code_01,0))-(median(nvl(B.code_01,0)))) < median(nvl(A.code_01,0))/10 and median(nvl(B.code_01,0))>5"
             q = q + " order by  A.YEAR,enodes.mpoint_name"

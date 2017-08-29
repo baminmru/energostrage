@@ -163,12 +163,10 @@
                 s = "delete from plancall where id_bd=" + id.ToString
                 TvMain.QueryExec(s)
 
-                s = "delete from edata where chanel_id in (select chanel_id from echanel where node_id=" + id.ToString + " )"
+
+                s = "delete from EDATA2 where  node_id=" + id.ToString
                 TvMain.QueryExec(s)
 
-
-                s = "delete from echanel where node_id=" + id.ToString
-                TvMain.QueryExec(s)
 
                 s = "delete from enodes where node_id=" + id.ToString
                 TvMain.QueryExec(s)

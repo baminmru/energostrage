@@ -74,7 +74,7 @@ Public Class frmDayProfil
 
 
             Dim q As String
-            q = "select p_date ,sum(nvl(code_01,0)) as A_PLUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + " and  " + w2 + " Group by p_date "
+            q = "select p_date ,sum(nvl(code_01,0)) as A_PLUS from EDATA_agg   where " + w2 + " and node_id=" + id.ToString + " Group by p_date "
             dtPrev = tvmain.QuerySelect(q)
             Dim valPrev As Double = 0.0
             Dim valCur As Double = 0.0
@@ -100,9 +100,9 @@ Public Class frmDayProfil
 
 
             If chkMovingAverage.Checked = False Then
-                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by p_date order by p_date")
+                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
             Else
-                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by p_date order by p_date")
+                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
 
                 Dim dt2 As DataTable
                 Dim dc As DataColumn

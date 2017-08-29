@@ -282,7 +282,7 @@ Partial Class frmHourly
         Me.CHART_A.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y.TickmarkInterval = 40.0R
         Me.CHART_A.Axis.Y.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y.Visible = True
         Me.CHART_A.Axis.Y2.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -309,7 +309,7 @@ Partial Class frmHourly
         Me.CHART_A.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y2.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y2.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y2.TickmarkInterval = 40.0R
         Me.CHART_A.Axis.Y2.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y2.Visible = False
         Me.CHART_A.Axis.Z.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)

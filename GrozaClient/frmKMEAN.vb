@@ -31,9 +31,8 @@
         Dim curYear As Integer
         curYear = Date.Today.Year
 
-        q = "select  AC.node_id, A.YEAR ,CAST(A.M as number(18,6)) AS  med ,CAST(A.d as number(18,6)) AS dsp " &
+        q = "select  A.node_id, A.YEAR ,CAST(A.M as number(18,6)) AS  med ,CAST(A.d as number(18,6)) AS dsp " &
              " from v_STAT A " &
-             " join echanel AC on a.chanel_id = AC.Chanel_id " &
              " where A.year=" + curYear.ToString() + " and A.M > 0 "
 
 
@@ -94,7 +93,7 @@
         Next
         pb.Value = max_iters
         MsgBox("Разбиение завершено")
-        dt = tvmain.QuerySelect("select count(*) as COUNT,CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER from v_stat join  echanel on v_stat.chanel_id=echanel.chanel_id join  CLUSTERING on echanel.node_id=CLUSTERING.Node_Id        where(v_stat.year = 2015 And M > 0) group by CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER order by CLUSTER_VALUE ")
+        dt = tvmain.QuerySelect("select count(*) as COUNT,CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER from v_stat join  CLUSTERING on v_stat.node_id=CLUSTERING.Node_Id        where(v_stat.year = 2015 And M > 0) group by CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER order by CLUSTER_VALUE ")
         gv.DataSource = dt
         ' Me.Close()
     End Sub
@@ -105,7 +104,7 @@
 
     Private Sub frmKMEAN_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim dt As DataTable
-        dt = tvmain.QuerySelect("select count(*) as COUNT,CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER from v_stat join  echanel on v_stat.chanel_id=echanel.chanel_id join  CLUSTERING on echanel.node_id=CLUSTERING.Node_Id        where(v_stat.year = 2015 And M > 0) group by CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER order by CLUSTER_VALUE ")
+        dt = tvmain.QuerySelect("select count(*) as COUNT,CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER from v_stat  join  CLUSTERING on v_stat.node_id=CLUSTERING.Node_Id        where(v_stat.year = 2015 And M > 0) group by CLUSTERING.CLUSTER_VALUE,CLUSTERING.CLUSTER_NUMBER order by CLUSTER_VALUE ")
         gv.DataSource = dt
     End Sub
 End Class

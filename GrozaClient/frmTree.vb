@@ -88,48 +88,13 @@ Public Class frmTree
                 w = " where p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and p_date <=" + tvmain.OracleDate(dtpTo.Value)
             End If
             If chkSumm.Checked Then
-                dt = tvmain.QuerySelect("select sum(code_01) as A_PLUS ,sum (code_02) as A_MINUS ,sum(code_03) as R_PLUS ,sum(code_04) as R_MINUS ,mchanel_desc from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by mchanel_desc")
+                dt = tvmain.QuerySelect("select sum(code_01) as A_PLUS ,sum (code_02) as A_MINUS ,sum(code_03) as R_PLUS ,sum(code_04) as R_MINUS  from v_EDATA " + w + " and node_id=" + id.ToString + " ")
             Else
-                dt = tvmain.QuerySelect("select p_start,p_end,code_01 as A_PLUS,code_02 as A_MINUS,code_03  as R_PLUS,code_04 as R_MINUS,mchanel_desc from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " order by p_start desc ")
+                dt = tvmain.QuerySelect("select p_start,p_end,code_01 as A_PLUS,code_02 as A_MINUS,code_03  as R_PLUS,code_04 as R_MINUS from v_EDATA " + w + " and node_id=" + id.ToString + " order by p_start desc ")
             End If
 
             dv.DataSource = dt
-            'Else
 
-            '    id = n.Tag
-            '    Dim dt As DataTable
-
-            '    Dim w As String = ""
-
-            '    If opt1.Checked Then
-            '        w = " where p_date >= sysdate -1 "
-            '    End If
-
-            '    If opt7.Checked Then
-            '        w = " where p_date >= sysdate - 7 "
-            '    End If
-
-            '    If opt14.Checked Then
-            '        w = " where p_date >= sysdate - 14 "
-            '    End If
-
-            '    If opt30.Checked Then
-            '        w = " where p_date >= sysdate - 30 "
-            '    End If
-
-            '    If optPeriod.Checked Then
-            '        w = " where p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and p_date <=" + tvmain.OracleDate(dtpTo.Value)
-            '    End If
-
-            '    Dim q As String = ""
-            '    q = "select sum(nvl(code_01,0)) as A_PLUS ,sum(nvl(code_02,0)) as A_MINUS ,sum(nvl(code_03,0)) as R_PLUS ,sum(nvl(code_04,0)) as R_MINUS ,mchanel_desc,enodes.mpoint_name from edata join echanel on edata.chanel_id=echanel.chanel_id " & _
-            '            " join enodes on enodes.node_id=echanel.node_id  and enodes.sender_id=" & id.ToString & _
-            '             w & " group by mchanel_desc,enodes.mpoint_name order by enodes.mpoint_name,mchanel_desc "
-
-            '    dt = tvmain.QuerySelect(q)
-
-
-            '    dv.DataSource = dt
 
         End If
     End Sub

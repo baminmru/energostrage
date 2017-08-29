@@ -359,23 +359,7 @@ Public Class ftpPush
         Return -1
     End Function
 
-    Private Function CheckChanel(ByVal nID As Integer, cCode As String, cDesc As String) As Integer
-        Dim dt As DataTable
-        dt = QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-        If dt.Rows.Count = 0 Then
-            QueryExec("insert into echanel(node_id,chanel_id,mchanel_code,mchanel_desc) values(" + nID.ToString + ",echanel_seq.nextval,'" + QQ(cCode) + "','" + QQ(cDesc) + "')")
-            dt = QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-            'If dt.Rows.Count > 0 Then
-            '    nId = dt.Rows(0)("node_id")
-            'End If
 
-            'QueryExec("update enodes set mchanel_desc='" + QQ1(cDesc) + "' where node_id=" + nId.ToString)
-        End If
-        If dt.Rows.Count > 0 Then
-            Return dt.Rows(0)("chanel_id")
-        End If
-        Return -1
-    End Function
 
 
     Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
@@ -383,36 +367,63 @@ Public Class ftpPush
         Dim dt As DataTable
         Dim dd As String
         Dim q As String
-        q = "select edata_seq.nextval from dual"
-        dt = QuerySelect(q)
-        did = dt.Rows(0)(0)
 
         If s_start.Length = 4 And s_end.Length = 4 Then
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day) + " and p_start=" + todatetime(s_day + s_start) + " and p_end=" + todatetime(s_day + s_end)
 
-            q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
-            q = q + "," + todatetime(s_timestamp)
-            q = q + ",'" + s_daylightsavingtime
-            q = q + "'," + todate(s_day)
-            q = q + "," + todatetime(s_day + s_start)
-            q = q + "," + todatetime(s_day + s_end)
-            q = q + ")"
+            dt = QuerySelect(q)
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+                Console.Write("u")
+            Else
+                q = "select EDATA_seq.nextval from dual"
+                dt = QuerySelect(q)
+                did = dt.Rows(0)(0)
+                Console.Write("i")
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+                q = q + "," + todatetime(s_timestamp)
+                q = q + ",'" + s_daylightsavingtime
+                q = q + "'," + todate(s_day)
+                q = q + "," + todatetime(s_day + s_start)
+                q = q + "," + todatetime(s_day + s_end)
+                q = q + ")"
+                QueryExec(q)
+            End If
+
+
+
             dd = todate(s_day)
         Else
-            q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
-            q = q + "," + todatetime(s_timestamp)
-            q = q + ",'" + s_daylightsavingtime
-            q = q + "'," + todate(s_end.Substring(0, 8))
-            q = q + "," + todatetime(s_start)
-            q = q + "," + todatetime(s_end)
-            q = q + ")"
-            dd = todate(s_end.Substring(0, 8))
+
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_end.Substring(0, 8)) + " and p_start=" + todatetime(s_start) + " and p_end=" + todatetime(s_end)
+
+            dt = QuerySelect(q)
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+                Console.Write("u")
+            Else
+                q = "select EDATA_seq.nextval from dual"
+                dt = QuerySelect(q)
+                did = dt.Rows(0)(0)
+                Console.Write("i")
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+                q = q + "," + todatetime(s_timestamp)
+                q = q + ",'" + s_daylightsavingtime
+                q = q + "'," + todate(s_end.Substring(0, 8))
+                q = q + "," + todatetime(s_start)
+                q = q + "," + todatetime(s_end)
+                q = q + ")"
+                dd = todate(s_end.Substring(0, 8))
+                QueryExec(q)
+            End If
+
+
         End If
 
-        QueryExec(q)
 
         s_val = s_val.Replace(",", ".")
 
-        q = "update edata set "
+        q = "update EDATA2 set "
         Select Case cCode
             Case "01"
                 q = q + " code_01=" + s_val
@@ -422,19 +433,11 @@ Public Class ftpPush
                 q = q + " code_03=" + s_val
             Case "04"
                 q = q + " code_04=" + s_val
-            Case "T"
-                q = q + " code_T=" + s_val
-            Case "H"
-                q = q + " code_H=" + s_val
-            Case "L"
-                q = q + " code_L=" + s_val
+
         End Select
         q = q + " where data_id=" + did.ToString
         QueryExec(q)
 
-        QueryExec("delete  from  edata_agg where chanel_id=" + nId.ToString + " and  p_date=" + dd)
-
-        QueryExec(" insert into edata_agg (chanel_id,p_date,code_t,code_h,code_l,code_01,code_02,code_03,code_04)(select chanel_id, p_date, sum(nvl(code_t, 0)), sum(nvl(code_h, 0)), sum(nvl(code_l, 0)), sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(edata) where chanel_id=" + nId.ToString + " and  p_date=" + dd + " group by chanel_id,p_date)")
 
 
 
@@ -442,9 +445,9 @@ Public Class ftpPush
     End Function
 
     Private Function CleanPeriod(ByVal nId As Integer, ByVal s_day As String) As Boolean
-        Log(" Clean period for " + s_day)
-        If QueryExec("delete from edata where chanel_id=" + nId.ToString + " and p_date=" + todate(s_day)) = False Then
-            QueryExec("delete from edata where chanel_id=" + nId.ToString + " and p_date=" + todate2(s_day))
+        Console.Write("d " + s_day + ".")
+        If QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day)) = False Then
+            QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate2(s_day))
         End If
         Return True
     End Function
@@ -537,6 +540,8 @@ Public Class ftpPush
                     If nId >= 0 Then
                         Log(nCode + " " + nName)
                         mcs = mp.GetElementsByTagName("measuringchannel")
+                        Dim cln As Boolean
+                        cln = True
                         For Each mc In mcs
                             Console.WriteLine("C")
                             Dim cCode As String
@@ -548,13 +553,16 @@ Public Class ftpPush
                             cDesc = mc.GetAttribute("desc")
                             cCode = mc.GetAttribute("code")
 
-                          
 
 
-                            cId = CheckChanel(nId, cCode, cDesc)
-                            Console.WriteLine(cId.ToString)
+
+                            cId = nId
+
+                            Console.WriteLine(cId.ToString + "->" + cCode)
                             periods = mc.GetElementsByTagName("period")
-                            CleanPeriod(cId, s_day)
+                            If cln Then
+                                CleanPeriod(cId, s_day)
+                            End If
                             Dim s_daycur As String
                             s_daycur = s_day
                             For Each period In periods
@@ -569,13 +577,18 @@ Public Class ftpPush
                                 If s_end.Length > 8 Then
                                     If s_daycur <> s_end.Substring(0, 8) Then
                                         s_daycur = s_end.Substring(0, 8)
-                                        CleanPeriod(cId, s_daycur)
+                                        If cln Then
+                                            CleanPeriod(cId, s_daycur)
+                                        End If
+
                                     End If
                                 End If
 
                                 'Console.Write("p")
                                 SavePeriod(cId, s_start, s_end, s_val, s_timestamp, s_day, s_daylightsavingtime, cCode)
                             Next
+                            cln = False
+                            Console.WriteLine("C.")
                         Next
                     End If
                 Next
@@ -691,9 +704,9 @@ Public Class ftpPush
         Dim t As DateTime
         t = Now
         Dim dt As DataTable
-        Dim da As OracleDataAdapter
+        Dim da As OraclEDATAAdapter
         dt = New DataTable
-        da = New OracleDataAdapter
+        da = New OraclEDATAAdapter
         da.SelectCommand = cmd
         Try
             da.Fill(dt)

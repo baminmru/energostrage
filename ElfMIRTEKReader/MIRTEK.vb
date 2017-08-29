@@ -1022,7 +1022,7 @@ Public Class MIRTEK
 
 
         Dim cid As Integer
-        cid = CheckChanel(id, "01", "А +")
+        cid = id
 
 
         If dtp.Rows.Count > 0 Then
@@ -1035,13 +1035,13 @@ Public Class MIRTEK
 
                 Dim cval As Double
                 cval = Arch.G0 - dtp.Rows(0)("g0")
-                'tvmain.QueryExec("delete from edata where chanel_id=" + cid.ToString())
-                SavePeriod(cid, dtp.Rows(0)("dcounter"), Arch.DateArch, dd, 0, "01", NanFormat(cval, "##############0.000"))
+
+                SavePeriod(cid, Arch.DateArch, dd, NanFormat(cval, "##############0.000"), dtp.Rows(0)("dcounter"), dtp.Rows(0)("dcounter"), 0, "01")
 
 
-                tvmain.QueryExec("delete  from  edata_agg where chanel_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd))
+                tvmain.QueryExec("delete  from  EDATA_agg where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd))
 
-                tvmain.QueryExec(" insert into edata_agg (chanel_id,p_date,code_t,code_h,code_l,code_01,code_02,code_03,code_04)(select chanel_id, p_date, sum(nvl(code_t, 0)), sum(nvl(code_h, 0)), sum(nvl(code_l, 0)), sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(edata) where chanel_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd) + " group by chanel_id,p_date)")
+                tvmain.QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(V_EDATA) where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd) + " group by node_id,p_date)")
 
 
 
@@ -1670,69 +1670,98 @@ Public Class MIRTEK
 
 
 
-    
-
-
-    
 
 
 
-    Private Function CheckChanel(ByVal nID As Integer, ByVal cCode As String, ByVal cDesc As String) As Integer
-        Dim dt As DataTable
-        dt = tvmain.QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-        If dt.Rows.Count = 0 Then
-            tvmain.QueryExec("insert into echanel(node_id,chanel_id,mchanel_code,mchanel_desc) values(" + nID.ToString + ",echanel_seq.nextval,'" + QQ(cCode) + "','" + QQ(cDesc) + "')")
-            dt = tvmain.QuerySelect("select * from echanel where node_id=" + nID.ToString + " and mchanel_code='" + QQ(cCode) + "' and mchanel_desc='" + QQ(cDesc) + "'")
-
-        End If
-        If dt.Rows.Count > 0 Then
-            Return dt.Rows(0)("chanel_id")
-        End If
-        Return -1
-    End Function
 
 
-    Private Function SavePeriod(ByVal nId As Integer, ByVal s_start As Date, ByVal s_end As Date, ByVal s_date As String, ByVal s_daylightsavingtime As String, ByVal cCode As String, ByVal s_val As String) As Integer
+    Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
         Dim did As Integer
         Dim dt As DataTable
-
+        Dim dd As String
         Dim q As String
-        q = "select edata_seq.nextval from dual"
-        dt = tvmain.QuerySelect(q)
-        did = dt.Rows(0)(0)
 
-        q = "insert into edata(data_id,chanel_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
-        q = q + "," + tvmain.OracleDate(s_date)
-        q = q + ",'" + s_daylightsavingtime
-        q = q + "'," + tvmain.OracleDate(s_date)
-        q = q + "," + tvmain.OracleDate(s_start)
-        q = q + "," + tvmain.OracleDate(s_end)
-        q = q + ")"
+        If s_start.Length = 4 And s_end.Length = 4 Then
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day) + " and p_start=" + todatetime(s_day + s_start) + " and p_end=" + todatetime(s_day + s_end)
 
-        tvmain.QueryExec(q)
+            dt = tvmain.QuerySelect(q)
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+            Else
+                q = "select EDATA_seq.nextval from dual"
+                dt = tvmain.QuerySelect(q)
+                did = dt.Rows(0)(0)
 
-        q = "update edata set "
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+                q = q + "," + todatetime(s_timestamp)
+                q = q + ",'" + s_daylightsavingtime
+                q = q + "'," + todate(s_day)
+                q = q + "," + todatetime(s_day + s_start)
+                q = q + "," + todatetime(s_day + s_end)
+                q = q + ")"
+                tvmain.QueryExec(q)
+            End If
+
+
+
+            dd = todate(s_day)
+        Else
+
+            q = "select data_id from  EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day) + " and p_start=" + todatetime(s_start) + " and p_end=" + todatetime(s_end)
+
+            dt = tvmain.QuerySelect(q)
+            If dt.Rows.Count > 0 Then
+                did = dt.Rows(0)(0)
+            Else
+                q = "insert into EDATA2(data_id,node_id,c_date,lightsave,p_date,p_start,p_end) values(" + did.ToString + "," + nId.ToString
+                q = q + "," + todatetime(s_timestamp)
+                q = q + ",'" + s_daylightsavingtime
+                q = q + "'," + todate(s_end.Substring(0, 8))
+                q = q + "," + todatetime(s_start)
+                q = q + "," + todatetime(s_end)
+                q = q + ")"
+                dd = todate(s_end.Substring(0, 8))
+                tvmain.QueryExec(q)
+            End If
+
+
+        End If
+
+
+        s_val = s_val.Replace(",", ".")
+
+        q = "update EDATA2 set "
         Select Case cCode
             Case "01"
-                q = q + " code_01='" + s_val + "'"
+                q = q + " code_01=" + s_val
             Case "02"
-                q = q + " code_02='" + s_val + "'"
+                q = q + " code_02=" + s_val
             Case "03"
-                q = q + " code_03='" + s_val + "'"
+                q = q + " code_03=" + s_val
             Case "04"
-                q = q + " code_04='" + s_val + "'"
-            Case "T"
-                q = q + " code_T='" + s_val + "'"
-            Case "H"
-                q = q + " code_H='" + s_val + "'"
-            Case "L"
-                q = q + " code_L='" + s_val + "'"
+                q = q + " code_04=" + s_val
+
         End Select
         q = q + " where data_id=" + did.ToString
         tvmain.QueryExec(q)
+
+
+
+
         Return did
     End Function
 
+    Private Function CleanPeriod(ByVal nId As Integer, ByVal s_day As String) As Boolean
+        'Log(" Clean period for " + s_day)
+        If tvmain.QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate(s_day)) = False Then
+            tvmain.QueryExec("delete from EDATA2 where node_id=" + nId.ToString + " and p_date=" + todate2(s_day))
+        End If
+        Return True
+    End Function
+
+    Private Function todate2(ByVal s As String) As String
+        Return "to_date('" + s + "','yyyyddmm')"
+    End Function
     Private Function todatetime(ByVal s As String) As String
         Return "to_date('" + s + "','yyyymmddhh24miss')"
     End Function

@@ -277,4 +277,11 @@ Public Class frmMain
         f.MdiParent = Me
         f.Show()
     End Sub
+
+    Private Sub frmWeekend_Click(sender As Object, e As EventArgs) Handles frmWeekend.Click
+        Dim f As frmWeekend
+        f = New frmWeekend
+        f.MdiParent = Me
+        f.Show()
+    End Sub
 End Class

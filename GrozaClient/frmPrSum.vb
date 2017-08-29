@@ -83,10 +83,10 @@
                 Application.DoEvents()
                 id = dtchan.Rows(k)("node_id")
 
-                dtCurYear = tvmain.QuerySelect("select week, sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from edata_week join echanel on edata_week.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + " where edata_week.year=" + (cYear).ToString + " group by week")
-                dtPrevYear = tvmain.QuerySelect("select week, sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from edata_week join echanel on edata_week.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + " where edata_week.year=" + (cYear - 1).ToString + "  group by week")
+                dtCurYear = tvmain.QuerySelect("select week, sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from EDATA_week  where EDATA_week.year=" + (cYear).ToString + " and node_id=" + id.ToString + "  group by week")
+                dtPrevYear = tvmain.QuerySelect("select week, sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from EDATA_week where EDATA_week.year=" + (cYear - 1).ToString + " and node_id=" + id.ToString + "   group by week")
 
-                dt = tvmain.QuerySelect("select  sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from edata_week join echanel on edata_week.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + " where edata_week.year=" + (cYear - 1).ToString + "")
+                dt = tvmain.QuerySelect("select  sum(code_01) as A_PLUS, sum(code_02)  as A_MINUS, sum(code_03)  as R_PLUS, sum(code_04)  as R_MINUS from EDATA_week  where EDATA_week.year=" + (cYear - 1).ToString + +" and node_id=" + id.ToString)
 
                 If dt.Rows.Count > 0 Then
 
@@ -114,10 +114,10 @@
                         avg(3) = 0
                     End Try
 
-                    dt2 = tvmain.QuerySelect("select  week, nvl(code_01,0) * " & avg(0).ToString().Replace(",", ".") & " as A_PLUS," & _
-                                             " nvl(code_02,0) * " & avg(1).ToString().Replace(",", ".") & " as A_MINUS, " & _
-                                             " nvl(code_03,0)   * " & avg(2).ToString().Replace(",", ".") & " as R_PLUS, " & _
-                                             " nvl(code_04,0) * " & avg(3).ToString().Replace(",", ".") & " as R_MINUS from edata_weekmult where chanel_id=" + id.ToString + " order by WEEK ")
+                    dt2 = tvmain.QuerySelect("select  week, nvl(code_01,0) * " & avg(0).ToString().Replace(",", ".") & " as A_PLUS," &
+                                             " nvl(code_02,0) * " & avg(1).ToString().Replace(",", ".") & " as A_MINUS, " &
+                                             " nvl(code_03,0)   * " & avg(2).ToString().Replace(",", ".") & " as R_PLUS, " &
+                                             " nvl(code_04,0) * " & avg(3).ToString().Replace(",", ".") & " as R_MINUS from EDATA_weekmult where node_id=" + id.ToString + " order by WEEK ")
 
 
 

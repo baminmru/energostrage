@@ -84,15 +84,10 @@ Public Class frmDayNight
             If optPeriod.Checked Then
                 w = " where p_start >= " + tvmain.OracleDate(dtpFrom.Value) + " and p_start <=" + tvmain.OracleDate(dtpTo.Value)
             End If
-            'If chkSumm.Checked Then
-            '    dt = tvmain.QuerySelect("select sum(code_01) as A_PLUS ,sum (code_02) as A_MINUS ,sum(code_03) as R_PLUS ,sum(code_04) as R_MINUS ,mchanel_desc from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by mchanel_desc")
-            'Else
-            'dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by p_date order by p_date")
-            'End If
 
 
             'If chkMovingAverage.Checked = False Then
-            dt = tvmain.QuerySelect("select to_char( p_start,'HH24') p_hour, to_char( p_start,'YYYY-MM-DD') p_date,  sum( nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by to_char( p_start,'YYYY-MM-DD'), to_char( p_start,'HH24')  order by to_char( p_start,'YYYY-MM-DD'), to_char( p_start,'HH24')")
+            dt = tvmain.QuerySelect("select to_char( p_start,'HH24') p_hour, to_char( p_start,'YYYY-MM-DD') p_date,  sum( nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from v_EDATA  where node_id=" + id.ToString + w + " group by to_char( p_start,'YYYY-MM-DD'), to_char( p_start,'HH24')  order by to_char( p_start,'YYYY-MM-DD'), to_char( p_start,'HH24')")
             Dim dt2 As DataTable
             Dim dc2 As DataColumn
             Dim dr As DataRow
@@ -171,61 +166,6 @@ Public Class frmDayNight
             End If
             dt = dt2
 
-            'Else
-            '    dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by p_date order by p_date")
-
-            '    Dim dt2 As DataTable
-            '    Dim dc As DataColumn
-            '    Dim dc2 As DataColumn
-            '    Dim dr As DataRow
-            '    dt2 = New DataTable
-            '    Dim i As Integer
-            '    For i = 0 To dt.Columns.Count - 1
-            '        dc = dt.Columns.Item(i)
-            '        dc2 = New DataColumn(dc.ColumnName, dc.DataType)
-            '        dt2.Columns.Add(dc2)
-
-            '    Next
-            '    Dim ma As Double
-            '    Dim j As Integer
-            '    For i = 0 To dt.Rows.Count - 7
-            '        dr = dt2.NewRow
-            '        dr("p_date") = dt.Rows(i + 3)("p_date")
-
-            '        ma = 0
-            '        For j = 0 To 6
-            '            If dt.Rows(i + j)("A_PLUS").GetType().Name <> "DBNull" Then
-            '                ma = ma + dt.Rows(i + j)("A_PLUS")
-            '            End If
-            '        Next
-            '        dr("A_PLUS") = ma / 7
-
-            '        ma = 0
-            '        For j = 0 To 6
-            '            If dt.Rows(i + j)("A_MINUS").GetType().Name <> "DBNull" Then
-            '                ma = ma + dt.Rows(i + j)("A_MINUS")
-            '            End If
-            '        Next
-            '        dr("A_MINUS") = ma / 7
-
-            '        For j = 0 To 6
-            '            If dt.Rows(i + j)("R_MINUS").GetType().Name <> "DBNull" Then
-            '                ma = ma + dt.Rows(i + j)("R_MINUS")
-            '            End If
-            '        Next
-            '        dr("R_PLUS") = ma / 7
-
-            '        For j = 0 To 6
-            '            If dt.Rows(i + j)("R_PLUS").GetType().Name <> "DBNull" Then
-            '                ma = ma + dt.Rows(i + j)("R_PLUS")
-            '            End If
-            '        Next
-            '        dr("R_PLUS") = ma / 7
-            '        dt2.Rows.Add(dr)
-            '    Next
-            '    dt = dt2
-
-            'End If
 
 
 

@@ -23,7 +23,7 @@
           remotepath="/"
    ></download>
 
-    <download  name="spb" on="true" deletefiles="false"  server ="192.168.0.2"  user="askuespb" password="askuespb7654"
+    <download  name="spb" on="false" deletefiles="false"  server ="192.168.0.2"  user="askuespb" password="askuespb7654"
           localpath="c:\data\"
           remotepath="/"
    ></download>

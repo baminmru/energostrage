@@ -55,31 +55,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ookOuyikY+gEp2KFKHQ3XDufoKw=</dsig:DigestValue>
+        <dsig:DigestValue>BuSo5nPSzlpTzmMg2F1M2IKdErw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMakeAgg.exe" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMakeAgg.exe" size="13312">
       <assemblyIdentity name="ElfMakeAgg" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Lds/RXRcb2bXpuSpP5eSTUWgE8g=</dsig:DigestValue>
+        <dsig:DigestValue>NaqiOjylV+oowO/FicNlwQ8bn0U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMIRTEKReader.exe" size="43520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMIRTEKReader.exe" size="43008">
       <assemblyIdentity name="ElfMIRTEKReader" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kHXWaIDF1FsOQdfXrLkUk1y7mxw=</dsig:DigestValue>
+        <dsig:DigestValue>mgrBp2OMBqsnsMbjYNcFFk4BcCA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,31 +91,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iAeMoDRlYXYKME4Upc8Xdy9fJ20=</dsig:DigestValue>
+        <dsig:DigestValue>PAy9o4YYcKBQdRumaOEBH8Ypwl0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTP.dll" size="18432">
-      <assemblyIdentity name="FTP" version="1.0.6331.26447" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="FTP" version="1.0.6444.27241" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CgZWfOP6QSIOXwbpIxSiasKagEs=</dsig:DigestValue>
+        <dsig:DigestValue>fBXzg3wXtWQAzMqNCIs50d6tC8g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GetAllData.exe" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GetAllData.exe" size="23552">
       <assemblyIdentity name="GetAllData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3IMApW8TYUyluBm9doaMnNrFxr0=</dsig:DigestValue>
+        <dsig:DigestValue>v/mNycZeUiqO4GMagALWMRUo6TI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -535,7 +535,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>T3SKkwjZGoV0RZrvaY0THc0Ldxk=</dsig:DigestValue>
+        <dsig:DigestValue>cmzaGZIHQ/bfcgra6MEoCfrzhRY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -553,13 +553,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PropertyGridEx.dll" size="34304">
-      <assemblyIdentity name="PropertyGridEx" version="1.0.6331.26447" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PropertyGridEx" version="1.0.6444.27241" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VdMsK/p74ubGoz98QQWR0MlidAE=</dsig:DigestValue>
+        <dsig:DigestValue>jTnmL6z/0anwCvdoO+MmKPo7+oA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -54,15 +54,17 @@ Public Class frmNodeState
         q = ""
         q = q + " Select esender.SENDER_NAME Филиал ,enodes.MPOINT_CODE Код, ENODES.MPOINT_NAME Название, ENODES.ECOLOR ,EDATA_WEEK.YEAR Год,EDATA_WEEK.WEEK Неделя,EDATA_WEEK.CODE_01 as ""Активная +"" , cast(EDATA_WEEK.CODE_01 * 100 / pw.code_01 AS  number(10,2)) as ""% к пред. неделе"" FROM ENODES  "
         q = q + " Join esender On ENODES.SENDER_ID=ESENDER.SENDER_ID  "
-        q = q + " Join echanel ON ENODES.NODE_ID=ECHANEL.NODE_ID  "
-        q = q + " Join EDATA_WEEK On echanel.CHANEL_ID=EDATA_WEEK.CHANEL_ID"
-        q = q + " Join EDATA_WEEK pw On echanel.CHANEL_ID=pw.CHANEL_ID"
+        q = q + " Join EDATA_WEEK On ENODES.NODE_ID=EDATA_WEEK.NODE_ID"
+        q = q + " Join EDATA_WEEK pw On  ENODES.NODE_ID=pw.NODE_ID"
         q = q + "  WHERE  ENODES.ECOLOR!='Gray' " + cw + " AND ENODES.ECOLOR IS NOT NULL  and EDATA_WEEK.year=" + Date.Today.Year.ToString + " And EDATA_WEEK.week =" + w.ToString() + " and pw.year=" + Date.Today.Year.ToString + " And pw.week =" + (w - 1).ToString() + " and EDATA_WEEK.CODE_01 > 0 and pw.CODE_01 > 0"
         q = q + " ORDER BY  esender.SENDER_NAME, enodes.MPOINT_CODE, ENODES.MPOINT_NAME" ', EDATA_WEEK.YEAR, EDATA_WEEK.WEEK"
 
         dt = tvmain.QuerySelect(q)
         dgv.DataSource = dt
-        dgv.Columns(3).Visible = False
+        If dt.Rows.Count > 0 Then
+            dgv.Columns(3).Visible = False
+        End If
+
     End Sub
 
 

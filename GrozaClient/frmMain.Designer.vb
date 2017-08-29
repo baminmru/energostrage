@@ -58,6 +58,7 @@ Partial Class frmMain
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.frmWeekend = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -184,7 +185,7 @@ Partial Class frmMain
         '
         'ToolStripMenuItem3
         '
-        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuStat, Me.mnuLike, Me.mnuCORR})
+        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuStat, Me.mnuLike, Me.mnuCORR, Me.frmWeekend})
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         Me.ToolStripMenuItem3.Size = New System.Drawing.Size(362, 22)
         Me.ToolStripMenuItem3.Text = "Статистика"
@@ -192,19 +193,19 @@ Partial Class frmMain
         'mnuStat
         '
         Me.mnuStat.Name = "mnuStat"
-        Me.mnuStat.Size = New System.Drawing.Size(226, 22)
+        Me.mnuStat.Size = New System.Drawing.Size(294, 22)
         Me.mnuStat.Text = "Статистические показатели"
         '
         'mnuLike
         '
         Me.mnuLike.Name = "mnuLike"
-        Me.mnuLike.Size = New System.Drawing.Size(226, 22)
+        Me.mnuLike.Size = New System.Drawing.Size(294, 22)
         Me.mnuLike.Text = "Похожие узлы"
         '
         'mnuCORR
         '
         Me.mnuCORR.Name = "mnuCORR"
-        Me.mnuCORR.Size = New System.Drawing.Size(226, 22)
+        Me.mnuCORR.Size = New System.Drawing.Size(294, 22)
         Me.mnuCORR.Text = "Корреляция объектов"
         '
         'mnuKMEAN
@@ -262,6 +263,12 @@ Partial Class frmMain
         Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
         '
+        'frmWeekend
+        '
+        Me.frmWeekend.Name = "frmWeekend"
+        Me.frmWeekend.Size = New System.Drawing.Size(294, 22)
+        Me.frmWeekend.Text = "Соотношение Рабочие и Выходные дни"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -314,4 +321,5 @@ Partial Class frmMain
     Friend WithEvents mnuStatus As ToolStripMenuItem
     Friend WithEvents mnuEconomyRecalc As ToolStripMenuItem
     Friend WithEvents mnuNodeYearStatus As ToolStripMenuItem
+    Friend WithEvents frmWeekend As ToolStripMenuItem
 End Class

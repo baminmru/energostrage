@@ -103,7 +103,7 @@ Partial Class frmDayNight
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.cmdRefresh)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -202,8 +202,8 @@ Partial Class frmDayNight
         'CHART_A
         '
         Me.CHART_A.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CHART_A.Axis.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(220, Byte), Integer))
         PaintElement1.ElementType = Infragistics.UltraChart.[Shared].Styles.PaintElementType.None
         PaintElement1.Fill = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(220, Byte), Integer))
@@ -282,7 +282,7 @@ Partial Class frmDayNight
         Me.CHART_A.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y.TickmarkInterval = 10.0R
         Me.CHART_A.Axis.Y.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y.Visible = True
         Me.CHART_A.Axis.Y2.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -309,7 +309,7 @@ Partial Class frmDayNight
         Me.CHART_A.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y2.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y2.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y2.TickmarkInterval = 10.0R
         Me.CHART_A.Axis.Y2.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y2.Visible = False
         Me.CHART_A.Axis.Z.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)

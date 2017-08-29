@@ -124,3 +124,4 @@ C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\FTP.xml
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmNodeState.resources
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmProgress.resources
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmNodeYearState.resources
+C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmWeekend.resources

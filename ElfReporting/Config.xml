@@ -1,14 +1,15 @@
 <Config DataSource="ORA11PIR"
-    Oracle="pirexe"
+    Oracle="//192.168.9.220:1521/xe"
+    Oracle1="pirexe"
     UserID="beavis"
     Password="beavis7654"
     TimeOut="1000"
-TimerInterval="1000"
-RequestInterval="55000"
-ShowHidden ="false"
-SendToTGK ="false"
-AutoOpen="d"
-        AutoOpen1="d;s;n;g"
+    TimerInterval="1000"
+    RequestInterval="55000"
+    ShowHidden ="false"
+    SendToTGK ="false"
+    AutoOpen="d"
+    AutoOpen1="d;s;n;g"
 >
 </Config>
 

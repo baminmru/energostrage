@@ -37,7 +37,7 @@ Public Class frmCalcMult
         Dim cYear As Integer
         cYear = Date.Today.Year() - 1
 
-        dt = tvmain.QuerySelect("select week, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_week join echanel on edata_week.chanel_id=echanel.chanel_id and echanel.node_id=" + nid.ToString + " where edata_week.year=" + cYear.ToString() + "  group by week order by week")
+        dt = tvmain.QuerySelect("select week, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_week  where EDATA_week.node_id=" + nid.ToString + " and EDATA_week.year=" + cYear.ToString() + "  group by week order by week")
         If dt.Rows.Count = 0 Then Exit Sub
 
         For i = 0 To dt.Rows.Count - 1
@@ -167,11 +167,11 @@ Public Class frmCalcMult
 
         'End If
 
-        tvmain.QueryExec("delete from edata_weekmult where chanel_id=" & nid)
+        tvmain.QueryExec("delete from EDATA_weekmult where node_id=" & nid)
 
 
         For i = 1 To 53
-            tvmain.QueryExec("insert into edata_weekmult(CHANEL_ID,WEEK,CODE_01,CODE_02,CODE_03,CODE_04,AR) values (" & nid & "," & i.ToString & "," & w(0, i).ToString().Replace(",", ".") & "," & w(1, i).ToString().Replace(",", ".") & "," & w(2, i).ToString().Replace(",", ".") & "," & w(3, i).ToString().Replace(",", ".") & "," & S(i - 1).ToString().Replace(",", ".") & ")")
+            tvmain.QueryExec("insert into EDATA_weekmult(node_ID,WEEK,CODE_01,CODE_02,CODE_03,CODE_04,AR) values (" & nid & "," & i.ToString & "," & w(0, i).ToString().Replace(",", ".") & "," & w(1, i).ToString().Replace(",", ".") & "," & w(2, i).ToString().Replace(",", ".") & "," & w(3, i).ToString().Replace(",", ".") & "," & S(i - 1).ToString().Replace(",", ".") & ")")
         Next
 
 
@@ -189,22 +189,14 @@ Public Class frmCalcMult
 
 
         txtOut.Text = "Подготовка данных"
-        'tvmain.QueryExec("delete from edata_agg")
-        'tvmain.QueryExec("truncate table edata_agg")
-        'pb.Value = 1
-        'Application.DoEvents()
-        ''tvmain.QueryExec(" insert into edata_agg (chanel_id,p_date,code_t,code_h,code_l,code_01,code_02,code_03,code_04)(select chanel_id, p_date, sum(nvl(code_t, 0)), sum(nvl(code_h, 0)), sum(nvl(code_l, 0)), sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(edata)group by chanel_id,p_date)")
-        'pb.Value = 2
-        'Application.DoEvents()
-        'tvmain.QueryExec("delete from edata_week")
 
         tvmain.QueryExec("update enodes set ecolor=null")
         Application.DoEvents()
         pb.Value = 1
-        tvmain.QueryExec("delete from edata_week where year=" & Date.Today.Year.ToString())
+        tvmain.QueryExec("delete from EDATA_week where year=" & Date.Today.Year.ToString())
         pb.Value = 2
         Application.DoEvents()
-        tvmain.QueryExec("insert into edata_WEEK (chanel_id,YEAR,WEEK,code_t,code_h,code_l,code_01,code_02,code_03,code_04)(select chanel_id,to_char(p_date, 'YYYY' ) YEAR,to_char(p_date, 'IW' ) WEEK,sum(nvl(code_t,0)),sum(nvl(code_h,0)),sum(nvl(code_l,0)),sum(nvl(code_01,0)),sum(nvl(code_02,0)),sum(nvl(code_03,0)),sum(nvl(code_04,0))        from (edata_agg) where to_char(p_date, 'YYYY' )='" & Date.Today.Year.ToString() + "' group by chanel_id,to_char(p_date, 'YYYY' ), to_char(p_date, 'IW' ))")
+        tvmain.QueryExec("insert into EDATA_WEEK (node_id,YEAR,WEEK,code_01,code_02,code_03,code_04)(select node_id,to_char(p_date, 'YYYY' ) YEAR,to_char(p_date, 'IW' ) WEEK,sum(nvl(code_01,0)),sum(nvl(code_02,0)),sum(nvl(code_03,0)),sum(nvl(code_04,0))        from (EDATA_agg) where to_char(p_date, 'YYYY' )='" & Date.Today.Year.ToString() + "' group by node_id,to_char(p_date, 'YYYY' ), to_char(p_date, 'IW' ))")
         pb.Value = 3
         Application.DoEvents()
 
@@ -244,7 +236,7 @@ Public Class frmCalcMult
         Dim firstId As Boolean
 
         firstId = True
-        dt = tvmain.QuerySelect("select data_id,  p_start, p_end  from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + nid.ToString + " order by p_start")
+        dt = tvmain.QuerySelect("select data_id,  p_start, p_end  from V_EDATA where node_id=" + nid.ToString + " order by p_start")
         If dt.Rows.Count = 0 Then Exit Sub
         Dim vvv As Boolean
         j = 0
@@ -263,7 +255,7 @@ Public Class frmCalcMult
             End If
 
             If j > 500 Then
-                tvmain.QueryExec("delete from edata where data_id in (" + sb.ToString() + ")")
+                tvmain.QueryExec("delete from EDATA2 where data_id in (" + sb.ToString() + ")")
                 sb.Clear()
                 firstId = True
                 txtOut.Text = "Устранено " & j.ToString & " дублей" & vbCrLf & txtOut.Text
@@ -273,7 +265,7 @@ Public Class frmCalcMult
         Next
 
         If j > 0 Then
-            tvmain.QueryExec("delete from edata where data_id in (" + sb.ToString() + ")")
+            tvmain.QueryExec("delete from EDATA2 where data_id in (" + sb.ToString() + ")")
 
         End If
         If j > 0 Then
@@ -289,7 +281,7 @@ Public Class frmCalcMult
         Dim i As Integer
         Dim j As Integer
 
-        dt = tvmain.QuerySelect("select data_id,  nvl(code_01,0) as code_01, nvl(code_02,0) as code_02,nvl(code_03,0)  as code_03, nvl(code_04,0) as code_04 from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + nid.ToString + " order by p_start")
+        dt = tvmain.QuerySelect("select data_id,  nvl(code_01,0) as code_01, nvl(code_02,0) as code_02,nvl(code_03,0)  as code_03, nvl(code_04,0) as code_04 from EDATA2  where node_id=" + nid.ToString + " order by p_start")
         If dt.Rows.Count = 0 Then Exit Sub
         Dim vvv As Boolean
         j = 0
@@ -299,7 +291,7 @@ Public Class frmCalcMult
         If CLng(dt.Rows(i)("code_01")) < 0 Or CLng(dt.Rows(i)("code_01")) > 100000 Then
             dt.Rows(i)("code_01") = 0
 
-            tvmain.QueryExec("update edata set code_01=" + dt.Rows(i)("code_01").ToString().Replace(",", ".") + _
+            tvmain.QueryExec("update EDATA2 set code_01=" + dt.Rows(i)("code_01").ToString().Replace(",", ".") + _
                             ", code_02=" + dt.Rows(i)("code_02").ToString().Replace(",", ".") + _
                             ",  code_03=" + dt.Rows(i)("code_03").ToString().Replace(",", ".") + _
                             ",  code_04=" + dt.Rows(i)("code_04").ToString().Replace(",", ".") + _
@@ -362,7 +354,7 @@ Public Class frmCalcMult
 
 
             If vvv Then
-                tvmain.QueryExec("update edata set code_01=" + dt.Rows(i)("code_01").ToString().Replace(",", ".") + _
+                tvmain.QueryExec("update EDATA2 set code_01=" + dt.Rows(i)("code_01").ToString().Replace(",", ".") + _
                                 ", code_02=" + dt.Rows(i)("code_02").ToString().Replace(",", ".") + _
                                 ",  code_03=" + dt.Rows(i)("code_03").ToString().Replace(",", ".") + _
                                 ",  code_04=" + dt.Rows(i)("code_04").ToString().Replace(",", ".") + _

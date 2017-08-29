@@ -76,41 +76,37 @@ Public Class frmHourly
 
 
             If opt1.Checked Then
-                w = " where edata_hour.p_date >= sysdate -1 "
+                w = " and EDATA_hour.p_date >= sysdate -1 "
                 divider = 1
             End If
 
             If opt7.Checked Then
-                w = " where edata_hour.p_date >= sysdate - 7 "
+                w = " and EDATA_hour.p_date >= sysdate - 7 "
                 divider = 7
             End If
 
             If opt14.Checked Then
-                w = " where edata_hour.p_date >= sysdate - 14 "
+                w = " and EDATA_hour.p_date >= sysdate - 14 "
                 divider = 14
             End If
 
             If opt30.Checked Then
-                w = " where edata_hour.p_date >= sysdate - 30 "
+                w = " and EDATA_hour.p_date >= sysdate - 30 "
                 divider = 30
             End If
 
             If optPeriod.Checked Then
                 divider = Math.Abs(DateDiff(DateInterval.Day, dtpFrom.Value, dtpTo.Value))
-                w = " where edata_hour.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and edata_hour.p_date <=" + tvmain.OracleDate(dtpTo.Value)
+                w = " and EDATA_hour.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and EDATA_hour.p_date <=" + tvmain.OracleDate(dtpTo.Value)
             End If
 
 
 
-            'dt = tvmain.QuerySelect( _
-            '    "select to_char(p_start,'HH24') p_date, sum(nvl(code_01,0)) as A_PLUS ,sum (nvl(code_02,0)) as A_MINUS ,sum(nvl(code_03,0)) as R_PLUS ,sum(nvl(code_04,0)) as R_MINUS " & _
-            '                        " from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + "  group by to_char(p_start,'HH24') order by to_char(p_start,'HH24') ")
 
             dt = tvmain.QuerySelect(
-             "select edata_hour.p_hour p_date, sum(nvl(AP,0)) as A_PLUS ,sum (nvl(AM,0)) as A_MINUS ,sum(nvl(RP,0)) as R_PLUS ,sum(nvl(RM,0)) as R_MINUS " &
-                                 " from edata_hour join echanel on edata_hour.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + "  group by edata_hour.p_hour order by edata_hour.p_HOUR ")
+             "select EDATA_hour.p_hour p_date, sum(nvl(AP,0)) as A_PLUS ,sum (nvl(AM,0)) as A_MINUS ,sum(nvl(RP,0)) as R_PLUS ,sum(nvl(RM,0)) as R_MINUS " &
+                                 " from EDATA_hour  where node_id=" + id.ToString + w + "  group by EDATA_hour.p_hour order by EDATA_hour.p_HOUR ")
 
-            '"select edata_hour.p_hour p_date, sum(nvl(AP,0)) as A_PLUS ,sum (nvl(AM,0)) as A_MINUS ,sum(nvl(RP,0)) as R_PLUS ,sum(nvl(RM,0)) as R_MINUS , sum(nvl(AP,0)*0.75) as MINUS_25, sum(nvl(AP,0)*1.05) as PLUS_5" &
 
             For i = 0 To dt.Rows.Count - 1
 
@@ -130,13 +126,7 @@ Public Class frmHourly
                     dt.Rows(i)("R_PLUS") = dt.Rows(i)("R_PLUS") / divider
                 End If
 
-                'If dt.Rows(i)("MINUS_25").GetType().Name <> "DBNull" Then
-                '    dt.Rows(i)("MINUS_25") = dt.Rows(i)("MINUS_25") / divider
-                'End If
 
-                'If dt.Rows(i)("PLUS_5").GetType().Name <> "DBNull" Then
-                '    dt.Rows(i)("PLUS_5") = dt.Rows(i)("PLUS_5") / divider
-                'End If
 
             Next
 

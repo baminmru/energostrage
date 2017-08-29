@@ -89,19 +89,14 @@ Public Class frmWeekly
             If optPeriod.Checked Then
                 w = " where p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and p_date <=" + tvmain.OracleDate(dtpTo.Value)
             End If
-            'If chkSumm.Checked Then
-            '    dt = tvmain.QuerySelect("select sum(code_01) as A_PLUS ,sum (code_02) as A_MINUS ,sum(code_03) as R_PLUS ,sum(code_04) as R_MINUS ,mchanel_desc from edata join echanel on edata.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by mchanel_desc")
-            'Else
-            'dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by p_date order by p_date")
-            'End If
 
 
             If chkMovingAverage.Checked = False Then
-                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by to_char(p_date,'YYYY:IW')  order by WEEK ")
+                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW')  order by WEEK ")
 
 
             Else
-                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from edata_agg join echanel on edata_agg.chanel_id=echanel.chanel_id and echanel.node_id=" + id.ToString + w + " group by to_char(p_date,'YYYY:IW') order by WEEk")
+                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW') order by WEEk")
 
                 Dim dt2 As DataTable
                 Dim dc As DataColumn
