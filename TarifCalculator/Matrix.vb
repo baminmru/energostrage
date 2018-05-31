@@ -46,11 +46,11 @@ Public Class Matrix
         Dim q As String
         If aSUBTARRIF = "" Then
             q = "select * from pr_info
-                          WHERE category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
+                          WHERE powerlevel='" + aPowerLevel + "' and category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
                           and SUBTARRIF is null  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString()
         Else
             q = "select * from pr_info
-                          WHERE category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
+                          WHERE powerlevel='" + aPowerLevel + "' and category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
                           and SUBTARRIF='" + aSUBTARRIF + "'  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString()
 
         End If
@@ -67,7 +67,7 @@ Public Class Matrix
             Dim i As Integer
             Dim dd As DateTime
             Init()
-            For i = 1 To dt2.Rows.Count - 1
+            For i = 0 To dt2.Rows.Count - 1
                 dd = dt2.Rows(i)("thedate")
                 Data(dd.Day, dt2.Rows(i)("hour")) = dt2.Rows(i)("VALUE")
             Next
@@ -117,7 +117,7 @@ Public Class Matrix
             Dim j As Integer
             Dim dd As DateTime
             Init()
-            For i = 1 To dt2.Rows.Count - 1
+            For i = 0 To dt2.Rows.Count - 1
                 dd = dt2.Rows(i)("thedate")
                 If aPriceCategory = "I" Or aPriceCategory = "II" Then
                     For j = 0 To 31
@@ -148,14 +148,14 @@ Public Class Matrix
             sum(nvl(code_03,0)) as RP ,
             sum(nvl(code_04,0)) as RM ,
             node_id
-             from EDATA2
+             from v_EDATA
              WHERE node_id=" + NodeID.ToString() + "  AND to_char(p_DATE,'YYYY')=" + Y.ToString() + " AND to_char(p_DATE,'MM')=" + M.ToString() + "
                 group by node_id,p_date, to_char(p_end,'HH24')
                 ORDER BY p_date,to_char(p_end,'HH24')
         ")
 
         Dim i As Integer
-        For i = 1 To dt.Rows.Count - 1
+        For i = 0 To dt.Rows.Count - 1
             Data(dt.Rows(i)("D"), dt.Rows(i)("p_hour")) = dt.Rows(i)("AP")
         Next
         MatrixType = enumMatrixType.HaourData

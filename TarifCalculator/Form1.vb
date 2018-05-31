@@ -17,7 +17,15 @@
     Private Sub cmdCalc_Click(sender As Object, e As EventArgs) Handles cmdCalc.Click
         Dim dt As DataTable
         stopCalc = False
-        dt = tvmain.QuerySelect("select * from enodes where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
+
+        If txtNodeID.Text <> "" Then
+            dt = tvmain.QuerySelect("select * from enodes where node_id=" + txtNodeID.Text)
+        Else
+
+            dt = tvmain.QuerySelect("select * from enodes where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
+        End If
+
+        'dt = tvmain.QuerySelect("select * from enodes where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
         pb.Minimum = 0
         pb.Maximum = dt.Rows.Count
         pb.Value = 0
@@ -246,7 +254,7 @@
         Cost = 0
         Power = 0
         PowerCnt = 0
-        For i = 0 To 31
+        For i = 1 To 31
             For j = 0 To 23
 
                 Cost = Cost + dm.Data(i, j) * MPower.Data(i, j) / 1000
@@ -259,7 +267,12 @@
         Next
 
         If PowerCnt > 0 Then
-            Power = Power / PowerCnt
+            If chkRound.Checked Then
+                Power = Math.Round(Power / PowerCnt)
+            Else
+                Power = Power / PowerCnt
+            End If
+
         End If
         Return Cost + Power * MPower.Cost / 1000
     End Function
@@ -297,7 +310,11 @@
         Next
 
         If PowerCnt > 0 Then
-            Power = Power / PowerCnt
+            If chkRound.Checked Then
+                Power = Math.Round(Power / PowerCnt)
+            Else
+                Power = Power / PowerCnt
+            End If
         End If
         Return Cost + Power * MPower.Cost / 1000 + Power * MPower.Peredacha / 1000
     End Function
@@ -335,7 +352,11 @@
         Next
 
         If PowerCnt > 0 Then
-            Power = Power / PowerCnt
+            If chkRound.Checked Then
+                Power = Math.Round(Power / PowerCnt)
+            Else
+                Power = Power / PowerCnt
+            End If
         End If
         Return Cost + Power * MPower.Cost / 1000
     End Function
@@ -373,7 +394,11 @@
         Next
 
         If PowerCnt > 0 Then
-            Power = Power / PowerCnt
+            If chkRound.Checked Then
+                Power = Math.Round(Power / PowerCnt)
+            Else
+                Power = Power / PowerCnt
+            End If
         End If
         Return Cost + Power * MPower.Cost / 1000 + Power * MPower.Peredacha / 1000
     End Function
