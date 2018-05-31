@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <db  DataSource="ora11ssz"
+    Oracle="//10.160.27.4/ora11ssz"
+    UserID="beavis"
+    Password="beavis7654"
+    TimeOut="1000"
+    >
+  </db>
+ 
+  <download  name="Vologda" on="false" deletefiles="true"  server ="193.19.66.7"  user="rtk" password="Kbrf-98"  
+          localpath="c:\data\"
+          remotepath="/"  
+   ></download>
+
+  <download  name="Karelia" on="false" deletefiles="true"  server ="78.36.54.72"  user="asku" password="qwerty!123"
+          localpath="c:\data\"
+          remotepath="/"
+   ></download>
+
+  <download  name="Kalinigrad" on="false" deletefiles="true"  server ="217.168.64.234"  user="censor_m" password="g89M93!"
+          localpath="c:\data\"
+          remotepath="/"
+   ></download>
+
+    <download  name="spb" on="false" deletefiles="false"  server ="192.168.0.2"  user="askuespb" password="askuespb7654"
+          localpath="c:\data\"
+          remotepath="/"
+   ></download>
+
+  <download  name="spb2" on="false" deletefiles="false"  server ="pire"  user="anonymous" password="anonymous"
+          localpath="c:\data\"
+          remotepath="/"
+   ></download>
+  
+</config>

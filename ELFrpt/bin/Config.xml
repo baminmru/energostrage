@@ -1,5 +1,5 @@
-<Config DataSource="ORA11PIR"
-    Oracle="//192.168.9.220:1521/xe"
+<Config DataSource="ora11ssz"
+    Oracle="//10.160.27.4/ora11ssz"
     UserID="beavis"
     Password="beavis7654"
 TimeOut="1000"

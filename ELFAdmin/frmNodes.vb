@@ -24,12 +24,17 @@
         q = q + " left join esender on enodes.sender_id = esender.sender_id "
         q = q + " left join whogivetop on enodes.whogive= whogivetop.id_whotop "
         q = q + " left join devices on enodes.id_dev=devices.id_dev "
+        q = q + "  where 1=1 "
+        If chkActiveNode.Checked Then
+            q = q + " and  hidden=0 "
+        End If
+
         If txtFilter.Text <> "" Then
-            q = q + " where (sender_name || ';' || mpoint_name || ';' || mpoint_code || ';' || cdevname) like '%" + txtFilter.Text + "%'"
+            q = q + " and (sender_name || ';' || mpoint_name || ';' || mpoint_code || ';' || nvl(cdevname,'') || ';' || nvl(enodes.mpoint_serial,'')  || ';' || nvl(enodes.dogovor,'')) like '%" + txtFilter.Text + "%'"
         End If
 
         q = q + "order by sender_name, mpoint_name"
-            dt = TvMain.QuerySelect(q)
+        dt = TvMain.QuerySelect(q)
         GV.DataSource = dt
         Dim i As Integer
 
@@ -42,21 +47,40 @@
                         .HeaderText = "ID"
                         .Visible = True
                         .MinimumWidth = 30
+                        .DisplayIndex = 1
+
 
                     Case "mpoint_code"
                         .HeaderText = "код"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 2
 
                     Case "mpoint_name"
                         .HeaderText = "название"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 3
+
+
+                    Case "dogovor"
+                        .HeaderText = "индекс"
+                        .Visible = True
+                        .MinimumWidth = 100
+                        .DisplayIndex = 4
+
+                    Case "mpoint_serial"
+                        .HeaderText = "SN"
+                        .Visible = True
+                        .MinimumWidth = 100
+                        .DisplayIndex = 5
 
                     Case "sender_name"
                         .HeaderText = "филиал"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 6
+
                     Case "cfio1"
                         .HeaderText = "ФИО 2"
                         .Visible = True
@@ -97,6 +121,11 @@
 
                     Case "wname"
                         .HeaderText = "поставщик"
+                        .Visible = True
+                        .MinimumWidth = 100
+
+                    Case "hidden"
+                        .HeaderText = "скрыть"
                         .Visible = True
                         .MinimumWidth = 100
 
@@ -219,6 +248,10 @@
     End Sub
 
     Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        refreshGrid()
+    End Sub
+
+    Private Sub chkActiveNode_CheckedChanged(sender As Object, e As EventArgs) Handles chkActiveNode.CheckedChanged
         refreshGrid()
     End Sub
 End Class

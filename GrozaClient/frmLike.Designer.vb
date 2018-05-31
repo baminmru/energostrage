@@ -25,6 +25,7 @@ Partial Class frmLike
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLike))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.txtFilter = New System.Windows.Forms.TextBox()
         Me.tv = New Infragistics.Win.UltraWinTree.UltraTree()
         Me.dv = New System.Windows.Forms.DataGridView()
         Me.wb = New SpreadsheetGear.Windows.Forms.WorkbookView()
@@ -45,6 +46,7 @@ Partial Class frmLike
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtFilter)
         Me.SplitContainer1.Panel1.Controls.Add(Me.tv)
         '
         'SplitContainer1.Panel2
@@ -54,13 +56,24 @@ Partial Class frmLike
         Me.SplitContainer1.SplitterDistance = 315
         Me.SplitContainer1.TabIndex = 0
         '
+        'txtFilter
+        '
+        Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFilter.Location = New System.Drawing.Point(3, 3)
+        Me.txtFilter.Name = "txtFilter"
+        Me.txtFilter.Size = New System.Drawing.Size(309, 20)
+        Me.txtFilter.TabIndex = 4
+        '
         'tv
         '
-        Me.tv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tv.HideSelection = False
-        Me.tv.Location = New System.Drawing.Point(0, 0)
+        Me.tv.Location = New System.Drawing.Point(0, 29)
         Me.tv.Name = "tv"
-        Me.tv.Size = New System.Drawing.Size(315, 363)
+        Me.tv.Size = New System.Drawing.Size(315, 334)
         Me.tv.TabIndex = 0
         '
         'dv
@@ -69,8 +82,8 @@ Partial Class frmLike
         Me.dv.AllowUserToDeleteRows = False
         Me.dv.AllowUserToOrderColumns = True
         Me.dv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dv.Location = New System.Drawing.Point(3, 3)
         Me.dv.Name = "dv"
@@ -103,6 +116,7 @@ Partial Class frmLike
         Me.Name = "frmLike"
         Me.Text = "Статистически схожие узлы (Среднее и дисперсия различаются менее 20%)"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -116,4 +130,5 @@ Partial Class frmLike
     Friend WithEvents wb As SpreadsheetGear.Windows.Forms.WorkbookView
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents dv As System.Windows.Forms.DataGridView
+    Friend WithEvents txtFilter As TextBox
 End Class

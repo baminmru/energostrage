@@ -1,6 +1,5 @@
-<Config DataSource="PIREXE"
-   
-    Oracle="//192.168.9.220:1521/xe"
+<Config DataSource="ora11ssz"
+    Oracle="//10.160.27.4/ora11ssz"
         Oracle1="pirexe"
     UserID="beavis"
     Password="beavis7654"

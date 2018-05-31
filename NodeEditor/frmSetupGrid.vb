@@ -42,8 +42,8 @@ Public Class frmSetupGrid
         cmd.CommandText = sqlstr
 
 
-        Dim da As OracleDataAdapter
-        da = New OracleDataAdapter
+        Dim da As OraclEDATAAdapter
+        da = New OraclEDATAAdapter
         da.SelectCommand = cmd
         dt = New DataTable
         da.Fill(dt)
@@ -132,7 +132,7 @@ Public Class frmSetupGrid
 
 
         Dim i As Long
-        Dim dr As OracleDataReader
+        Dim dr As OraclEDATAReader
 
         For i = 0 To cdt.Rows.Count - 1
 

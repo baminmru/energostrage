@@ -1,3 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<config server="petra\SQLEXPRESS" database="askuespb16" user="sa" password="Pa55w0rd+2" INN="78000000" NAME="Аскуэ спб" path="c:\data\" lastdate="27.05.2017">
-</config>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config server="petra\SQLEXPRESS"
+        database="askuespb16"
+        user="sa"
+        password="Pa55w0rd+2"
+        INN="78000000"
+        NAME="Аскуэ спб"
+        path="c:\data\"
+        lastdate="01.02.2017"
+></config>

@@ -26,6 +26,7 @@ Partial Class frmWeekProfil
         Dim GradientEffect1 As Infragistics.UltraChart.Resources.Appearance.GradientEffect = New Infragistics.UltraChart.Resources.Appearance.GradientEffect()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWeekProfil))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.txtFilter = New System.Windows.Forms.TextBox()
         Me.tv = New Infragistics.Win.UltraWinTree.UltraTree()
         Me.CHART_A = New Infragistics.Win.UltraWinChart.UltraChart()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -48,6 +49,7 @@ Partial Class frmWeekProfil
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtFilter)
         Me.SplitContainer1.Panel1.Controls.Add(Me.tv)
         '
         'SplitContainer1.Panel2
@@ -58,13 +60,24 @@ Partial Class frmWeekProfil
         Me.SplitContainer1.SplitterDistance = 315
         Me.SplitContainer1.TabIndex = 0
         '
+        'txtFilter
+        '
+        Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFilter.Location = New System.Drawing.Point(6, 12)
+        Me.txtFilter.Name = "txtFilter"
+        Me.txtFilter.Size = New System.Drawing.Size(306, 20)
+        Me.txtFilter.TabIndex = 11
+        '
         'tv
         '
-        Me.tv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tv.HideSelection = False
-        Me.tv.Location = New System.Drawing.Point(0, 0)
+        Me.tv.Location = New System.Drawing.Point(0, 39)
         Me.tv.Name = "tv"
-        Me.tv.Size = New System.Drawing.Size(315, 363)
+        Me.tv.Size = New System.Drawing.Size(315, 324)
         Me.tv.TabIndex = 0
         '
         '			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
@@ -75,8 +88,8 @@ Partial Class frmWeekProfil
         'CHART_A
         '
         Me.CHART_A.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CHART_A.Axis.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(220, Byte), Integer))
         PaintElement1.ElementType = Infragistics.UltraChart.[Shared].Styles.PaintElementType.None
         PaintElement1.Fill = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(220, Byte), Integer))
@@ -155,7 +168,7 @@ Partial Class frmWeekProfil
         Me.CHART_A.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y.TickmarkInterval = 40.0R
         Me.CHART_A.Axis.Y.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y.Visible = True
         Me.CHART_A.Axis.Y2.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -182,7 +195,7 @@ Partial Class frmWeekProfil
         Me.CHART_A.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y2.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y2.TickmarkInterval = 20.0R
+        Me.CHART_A.Axis.Y2.TickmarkInterval = 40.0R
         Me.CHART_A.Axis.Y2.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y2.Visible = False
         Me.CHART_A.Axis.Z.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -254,7 +267,7 @@ Partial Class frmWeekProfil
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.cmdRefresh)
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
@@ -285,6 +298,7 @@ Partial Class frmWeekProfil
         Me.Name = "frmWeekProfil"
         Me.Text = "Коэфициенты для прогноза"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -300,4 +314,5 @@ Partial Class frmWeekProfil
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Private WithEvents CHART_A As Infragistics.Win.UltraWinChart.UltraChart
     Friend WithEvents cmdRefresh As System.Windows.Forms.Button
+    Friend WithEvents txtFilter As TextBox
 End Class

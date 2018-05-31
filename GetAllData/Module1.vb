@@ -43,6 +43,14 @@ Module Module1
 
     Sub Main()
 
+        Dim p() As Process
+        p = Process.GetProcessesByName("GetAllData")
+        If p.Count > 0 Then
+            Console.WriteLine("GetAllData already started")
+            End
+        End If
+
+
         Dim fp As ftpPush
         fp = New ftpPush
         fp.DownloadFiles()

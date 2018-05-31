@@ -55,67 +55,67 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ookOuyikY+gEp2KFKHQ3XDufoKw=</dsig:DigestValue>
+        <dsig:DigestValue>TpWthbAvOZoFNiN4oyFHL32Z10s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMakeAgg.exe" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMakeAgg.exe" size="13312">
       <assemblyIdentity name="ElfMakeAgg" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FiD9ZyOoJZeeLyDbT+NnYCzdBqI=</dsig:DigestValue>
+        <dsig:DigestValue>+e42v6nwvCt9LDqO3tLArdMNYpY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMIRTEKReader.exe" size="43520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ElfMIRTEKReader.exe" size="43008">
       <assemblyIdentity name="ElfMIRTEKReader" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kHXWaIDF1FsOQdfXrLkUk1y7mxw=</dsig:DigestValue>
+        <dsig:DigestValue>AoN8OGXRvTZO/sT6I92NHjUCWaA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESAdmin.exe" size="190464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESAdmin.exe" size="191488">
       <assemblyIdentity name="ESAdmin" version="2016.8.2.201" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>NXFu0tg1UlrfmxHwhyMa1qFVnsQ=</dsig:DigestValue>
+        <dsig:DigestValue>z0cTaEvxYFRSEKUM3AO/De8t7pU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FTP.dll" size="18432">
-      <assemblyIdentity name="FTP" version="1.0.6331.26447" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="FTP" version="1.0.6625.19652" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>CgZWfOP6QSIOXwbpIxSiasKagEs=</dsig:DigestValue>
+        <dsig:DigestValue>I/g8fgloGYj0o/EunaGf6+HepAc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GetAllData.exe" size="25088">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GetAllData.exe" size="26112">
       <assemblyIdentity name="GetAllData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3IMApW8TYUyluBm9doaMnNrFxr0=</dsig:DigestValue>
+        <dsig:DigestValue>n3LQ/jgZaJSHqP8MDaTTAQOnXag=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -528,14 +528,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NodeEditorLib.dll" size="173056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NodeEditorLib.dll" size="175104">
       <assemblyIdentity name="NodeEditorLib" version="2016.8.2.231" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>T3SKkwjZGoV0RZrvaY0THc0Ldxk=</dsig:DigestValue>
+        <dsig:DigestValue>j9P4vIzu2wQzqcViK74lVGbDZtg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -553,13 +553,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PropertyGridEx.dll" size="34304">
-      <assemblyIdentity name="PropertyGridEx" version="1.0.6331.26447" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PropertyGridEx" version="1.0.6625.19652" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VdMsK/p74ubGoz98QQWR0MlidAE=</dsig:DigestValue>
+        <dsig:DigestValue>aTtMBzqAeaKykpubEs4r8722njY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -584,13 +584,13 @@
       <dsig:DigestValue>ksJNsND7n/uWmwazpMJ77DRDPMk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Config.xml" size="272" writeableType="applicationData">
+  <file name="Config.xml" size="322" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>EzmMPFlziVaOzJ/k6IZslQ/lbFk=</dsig:DigestValue>
+      <dsig:DigestValue>WI9evceS+P0sCRA1FFskmkpbGKQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="edit.jpg" size="1055">

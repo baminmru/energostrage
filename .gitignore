@@ -1,0 +1,8 @@
+/ButchLoader/bin/Debug/*.dll
+/ButchLoader/bin/Debug/*.pdb
+/ButchLoader/obj/Debug/*.Cache
+/ButchLoader/bin/Debug/*.exe
+*.dll
+*.exe
+logs
+Debug

@@ -11,7 +11,7 @@
     <OutputType>Exe</OutputType>
     <StartupObject>GetAllData.Module1</StartupObject>
     <RootNamespace>GetAllData</RootNamespace>
-    <AssemblyName>GetAllData</AssemblyName>
+    <AssemblyName>GetAllData2</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -25,7 +25,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>GetAllData.xml</DocumentationFile>
+    <DocumentationFile>GetAllData2.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -35,7 +35,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>GetAllData.xml</DocumentationFile>
+    <DocumentationFile>GetAllData2.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -117,6 +117,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FileLoader\FileLoader.vbproj">
+      <Project>{078b020c-eb5e-427d-87bf-bfa9a0375ae4}</Project>
+      <Name>FileLoader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ftp\FTP.vbproj">
       <Project>{39498eac-1690-4dce-957a-4db53abde0e9}</Project>
       <Name>FTP</Name>

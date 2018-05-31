@@ -11,9 +11,11 @@ Public Class frmDayProfil
         dtpTo.Value = DateTime.Today
 
         ClearGraph()
+        txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
     End Sub
+
 
 
 
@@ -74,7 +76,7 @@ Public Class frmDayProfil
 
 
             Dim q As String
-            q = "select p_date ,sum(nvl(code_01,0)) as A_PLUS from EDATA_agg   where " + w2 + " and node_id=" + id.ToString + " Group by p_date "
+            q = "select p_date ,sum(nvl(code_01,0)) as A_PLUS from v_EDATA   where " + w2 + " and node_id=" + id.ToString + " Group by p_date "
             dtPrev = tvmain.QuerySelect(q)
             Dim valPrev As Double = 0.0
             Dim valCur As Double = 0.0
@@ -100,9 +102,9 @@ Public Class frmDayProfil
 
 
             If chkMovingAverage.Checked = False Then
-                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
+                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from v_edata " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
             Else
-                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
+                dt = tvmain.QuerySelect("select p_date, sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from v_edata " + w + " and node_id=" + id.ToString + " group by p_date order by p_date")
 
                 Dim dt2 As DataTable
                 Dim dc As DataColumn
@@ -332,5 +334,40 @@ Public Class frmDayProfil
             dtpTo.Enabled = False
         End If
         tv_AfterSelect(Me, Nothing)
+    End Sub
+
+    Private Sub tv_DoubleClick(sender As Object, e As EventArgs) Handles tv.DoubleClick
+        Dim n As UltraTreeNode = Nothing
+        If tv.SelectedNodes.Count > 0 Then
+            n = tv.SelectedNodes.Item(0)
+        End If
+        If n Is Nothing Then Exit Sub
+        Dim id As Integer
+
+        If n.Key.ToString().StartsWith("esender:") Then
+            Exit Sub
+        End If
+
+        If n.Key.ToString().StartsWith("enodes:") Then
+            id = n.Tag
+
+            Dim f As Form
+            Dim ne As NodeEditorLib.NodeEditor = Nothing
+            If ne Is Nothing Then
+                ne = New NodeEditorLib.NodeEditor
+            End If
+            f = ne.GetForm(id, tvmain)
+
+            f.ShowDialog()
+            f = Nothing
+        End If
+
+    End Sub
+
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
     End Sub
 End Class

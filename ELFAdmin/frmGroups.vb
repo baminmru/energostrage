@@ -105,7 +105,7 @@
                 TvMain.QueryExec(s)
                 refreshGrid()
             Catch ex As Exception
-
+                MsgBox(ex.Message)
             End Try
 
         End If
