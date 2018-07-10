@@ -82,15 +82,25 @@ Ext.define('cost_model', {
 	{ name: 'POWERLEVEL_MIN', type: 'string'}, 
 	{ name: 'POWERLEVEL_MAX', type: 'string'}, 
 	{ name: 'POWER_QUALITY', type: 'string'}, 
+	{ name: 'COST_CATEGORY', type: 'string'},
 	{ name: 'THEYEAR', type: 'string'},
 	{ name: 'THEMONTH', type: 'string'},
 	{ name: 'I', type: 'string'},
 	{ name: 'II', type: 'string'},
 	{ name: 'III', type: 'string'},
+	{ name: 'III_A', type: 'string'},
+	{ name: 'III_B', type: 'string'},
 	{ name: 'IV', type: 'string'},
+	{ name: 'IV_A', type: 'string'},
+	{ name: 'IV_B', type: 'string'},
+	{ name: 'IV_C', type: 'string'},
 	{ name: 'V', type: 'string'},
 	{ name: 'VI', type: 'string'},
-	{ name: 'OPTIMAL', type: 'string'}
+	{ name: 'OPTIMAL', type: 'string'}, 
+	{ name: 'ENERGY', type: 'string'},
+	{ name: 'POWER', type: 'string'},
+	{ name: 'SENDPOWER', type: 'string'}
+
 ]
 });
 
@@ -745,7 +755,8 @@ function GetDataFilter(){
                         fieldLabel: 'Узел',
 						emptyText:'Узел',
 						labelAlign:'top',
-                        editable: false,
+                        editable: true,
+						typeAhead: true,
                         queryMode: 'local',
 						autoSelect:true,
 					
@@ -1053,7 +1064,8 @@ function GetG1Filter(){
                         fieldLabel: 'Узел',
 						emptyText:'Узел',
 						labelAlign:'top',
-                        editable: false,
+                         editable: true,
+						typeAhead: true,
                         queryMode: 'local',
 						autoSelect:true,
 	
@@ -1203,7 +1215,8 @@ function GetEFilter(){
                         fieldLabel: 'Узел',
 						emptyText:'Узел',
 						labelAlign:'top',
-                        editable: false,
+                        editable: true,
+						typeAhead: true,
                         queryMode: 'local',
 						autoSelect:true,
 	
@@ -1324,7 +1337,8 @@ function GetRepFilter(){
                         fieldLabel: 'Узел',
 						emptyText:'Узел',
 						labelAlign:'top',
-                        editable: false,
+                         editable: true,
+						typeAhead: true,
                         queryMode: 'local',
 						autoSelect:true,
 	
@@ -2294,18 +2308,24 @@ function GetCostsPanel() {
 							{ text: 'Код', dataIndex: 'CODE', width: 100, minWidth: 50, sortable: true,renderer:myTipRenderer},
 							{ text: 'Узел', dataIndex: 'NAME', width: 250, minWidth: 50, sortable: true,renderer:myTipRenderer},
 							{ text: 'У.Н.', dataIndex: 'POWER_QUALITY', minWidth: 90, flex: 1, sortable: true,renderer:myTipRenderer},
-                            { text: 'Р.М. от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
-							{ text: 'Р.М. до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+                            { text: 'Р.М.<br/>от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Р.М.<br/>до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
 							{ text: 'Год', dataIndex: 'THEYEAR', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
 							{ text: 'Месяц', dataIndex: 'THEMONTH', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'Текущая<br/>категория', dataIndex: 'COST_CATEGORY', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
 							{ text: 'Оптимальная<br/>категория', dataIndex: 'OPTIMAL', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
-							{ text: 'I', dataIndex: 'I', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'II', dataIndex: 'II', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'III', dataIndex: 'III', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
-							{ text: 'IV', dataIndex: 'IV', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'V', dataIndex: 'V', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'VI', dataIndex: 'VI', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer}
-						
+							{ text: 'I', dataIndex: 'I', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'II', dataIndex: 'II', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III', dataIndex: 'III', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV', dataIndex: 'IV', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III<br/>энергия', dataIndex: 'III_A', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'III<br/>мощность', dataIndex: 'III_B', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV<br/>энергия', dataIndex: 'IV_A', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'IV<br/>мощность', dataIndex: 'IV_B', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'IV<br/>передача', dataIndex: 'IV_C', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Энергия', dataIndex: 'ENERGY', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Мощность', dataIndex: 'POWER', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Передача', dataIndex: 'SENDPOWER', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer}
 							
 
 						]
@@ -2363,17 +2383,24 @@ function GetCostsPanel2() {
 							{ text: 'Код', dataIndex: 'CODE', width: 100, minWidth: 50, sortable: true,renderer:myTipRenderer},
 							//{ text: 'Узел', dataIndex: 'NAME', width: 250, minWidth: 50, sortable: true,renderer:myTipRenderer},
 							{ text: 'У.Н.', dataIndex: 'POWER_QUALITY', minWidth: 90, flex: 1, sortable: true,renderer:myTipRenderer},
-                            { text: 'Р.М. от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
-							{ text: 'Р.М. до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+                            { text: 'Р.М.<br/>от', dataIndex: 'POWERLEVEL_MIN', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
+							{ text: 'Р.М.<br/>до', dataIndex: 'POWERLEVEL_MAX', minWidth: 50, flex: 1, sortable: true,renderer:myTipRenderer },
 							{ text: 'Год', dataIndex: 'THEYEAR', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
 							{ text: 'Месяц', dataIndex: 'THEMONTH', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
-							//{ text: 'Оптимальная<br/>категория', dataIndex: 'OPTIMAL', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
-							{ text: 'I', dataIndex: 'I', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'II', dataIndex: 'II', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'III', dataIndex: 'III', minWidth: 50, flex: 1, sortable: false,renderer:myTipRenderer },
-							{ text: 'IV', dataIndex: 'IV', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'V', dataIndex: 'V', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer},
-							{ text: 'VI', dataIndex: 'VI', minWidth: 50, flex: 1, sortable: false ,renderer:myTipRenderer}
+							{ text: 'Текущая<br/>категория', dataIndex: 'COST_CATEGORY', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
+							{ text: 'Оптимальная<br/>категория', dataIndex: 'OPTIMAL', minWidth: 100, flex: 1, sortable: true ,renderer:myTipRenderer},
+							{ text: 'I', dataIndex: 'I', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'II', dataIndex: 'II', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III', dataIndex: 'III', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV', dataIndex: 'IV', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'III<br/>энергия', dataIndex: 'III_A', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'III<br/>мощность', dataIndex: 'III_B', minWidth: 100, flex: 1, sortable: false,renderer:myTipRenderer },
+							{ text: 'IV<br/>энергия', dataIndex: 'IV_A', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'IV<br/>мощность', dataIndex: 'IV_B', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'IV<br/>передача', dataIndex: 'IV_C', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Энергия', dataIndex: 'ENERGY', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Мощность', dataIndex: 'POWER', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer},
+							{ text: 'Передача', dataIndex: 'SENDPOWER', minWidth: 100, flex: 1, sortable: false ,renderer:myTipRenderer}
 						
 							
 

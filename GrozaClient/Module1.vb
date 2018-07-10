@@ -113,6 +113,7 @@ Module Module1
                 Else
                     nclr = CheckNodeColor(n.Tag)
                     tvmain.QueryExec("update enodes set ecolor='" & nclr.Name & "' where node_id=" & dt.Rows(i)("node_id").ToString())
+                    Debug.Print("i=" + i.ToString)
                 End If
 
                 n.Override.NodeAppearance.BackColor = Color.White

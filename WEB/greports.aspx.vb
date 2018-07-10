@@ -45,7 +45,7 @@ Partial Class greports
         End If
 
         If F = "" Then
-            sF = " (sysdate-1) "
+            sF = " (sysdate-5) "
         Else
             sF = " to_date('" + F + "','YYYY-MM-DD HH24:MI:SS')"
         End If

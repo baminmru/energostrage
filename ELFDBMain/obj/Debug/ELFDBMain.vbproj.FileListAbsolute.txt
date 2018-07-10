@@ -17,4 +17,4 @@ C:\bami\projects\szt\SZT_VOLOGDA\ELFDBMain\obj\Debug\ELFDBMain.vbproj.GenerateRe
 C:\bami\projects\szt\SZT_VOLOGDA\ELFDBMain\obj\Debug\ELFDBMain.dll
 C:\bami\projects\szt\SZT_VOLOGDA\ELFDBMain\obj\Debug\ELFDBMain.xml
 C:\bami\projects\szt\SZT_VOLOGDA\ELFDBMain\obj\Debug\ELFDBMain.pdb
-C:\bami\SZT_VOLOGDA\ELFDBMain\obj\Debug\ELFDBMain.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ELFDBMain\bin\Debug\ELFDBMain.dll.config

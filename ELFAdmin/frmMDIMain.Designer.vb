@@ -49,6 +49,7 @@ Partial Class frmMDIMain
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.mnuTarification = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -91,7 +92,7 @@ Partial Class frmMDIMain
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ГоловныеПоставщикиToolStripMenuItem, Me.ПоставщикиToolStripMenuItem, Me.ГруппыУзловToolStripMenuItem, Me.СхемыПодключенияToolStripMenuItem, Me.ТипыУстройствToolStripMenuItem, Me.ШаблоныToolStripMenuItem, Me.ДоговорныеПараметрыToolStripMenuItem, Me.mnuUsers, Me.РабочиеСтанцииToolStripMenuItem})
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ГоловныеПоставщикиToolStripMenuItem, Me.ПоставщикиToolStripMenuItem, Me.ГруппыУзловToolStripMenuItem, Me.СхемыПодключенияToolStripMenuItem, Me.ТипыУстройствToolStripMenuItem, Me.ШаблоныToolStripMenuItem, Me.ДоговорныеПараметрыToolStripMenuItem, Me.mnuUsers, Me.РабочиеСтанцииToolStripMenuItem, Me.mnuTarification})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(94, 20)
         Me.ToolStripMenuItem1.Text = "Справочники"
@@ -205,6 +206,12 @@ Partial Class frmMDIMain
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'mnuTarification
+        '
+        Me.mnuTarification.Name = "mnuTarification"
+        Me.mnuTarification.Size = New System.Drawing.Size(225, 22)
+        Me.mnuTarification.Text = "Тарифы"
+        '
         'frmMDIMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -250,5 +257,5 @@ Partial Class frmMDIMain
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuUsers As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents РабочиеСтанцииToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
+    Friend WithEvents mnuTarification As ToolStripMenuItem
 End Class

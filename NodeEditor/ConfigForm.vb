@@ -106,6 +106,7 @@ Public Class ConfigForm
         cmbDevtype.SelectedValue = dtMain.Rows(0)("id_dev")
         cmbGRP.SelectedValue = dtMain.Rows(0)("sender_id")
         cmbWhoGiveTop.SelectedValue = dtMain.Rows(0)("whogive")
+        cmbTarif.SelectedValue = dtMain.Rows(0)("tarifid")
 
 
         cmbMaskM.SelectedValue = dtMain.Rows(0)("id_mask")
@@ -265,6 +266,11 @@ Public Class ConfigForm
             s = s & ", WHOGIVE =null"
         End If
 
+        If Not cmbTarif.SelectedValue Is Nothing Then
+            s = s & ", TARIFID =" + cmbTarif.SelectedValue.ToString
+        Else
+            s = s & ", TARIFID =null"
+        End If
 
 
         If Not cmbDevtype.SelectedValue Is Nothing Then
@@ -458,6 +464,12 @@ Public Class ConfigForm
         cmbWhoGiveTop.ValueMember = "id_whotop"
         cmbWhoGiveTop.DataSource = ddw
 
+        q = "select * from tarif order by name"
+        Dim dtrf As DataTable
+        dtrf = TvMain.QuerySelect(q)
+        cmbTarif.DisplayMember = "name"
+        cmbTarif.ValueMember = "tarifid"
+        cmbTarif.DataSource = dtrf
 
 
 

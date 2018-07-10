@@ -95,3 +95,4 @@ C:\bami\SZT_VOLOGDA\NodeEditor\bin\Debug\Infragistics3.Win.UltraWinGrid.ExcelExp
 C:\bami\SZT_VOLOGDA\NodeEditor\obj\Debug\NodeEditorLib.dll
 C:\bami\SZT_VOLOGDA\NodeEditor\obj\Debug\NodeEditorLib.xml
 C:\bami\SZT_VOLOGDA\NodeEditor\obj\Debug\NodeEditorLib.pdb
+C:\bami\SZT_VOLOGDA\NodeEditor\bin\Debug\NodeEditorLib.dll.config

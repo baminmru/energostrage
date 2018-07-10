@@ -89,9 +89,9 @@ Public Class CMConnector
         cmd.CommandText = s
         cmd.Connection = dbconnect()
         Dim dt As DataTable
-        Dim da As OracleDataAdapter
+        Dim da As OraclEDATAAdapter
         dt = New DataTable
-        da = New OracleDataAdapter
+        da = New OraclEDATAAdapter
         Try
             da.SelectCommand = cmd
             da.Fill(dt)

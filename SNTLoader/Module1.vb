@@ -594,7 +594,8 @@ nxt_prj:
 
         Dim UpdateSerial As Boolean = False
 
-        dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and MPOINT_SERIAL ='" & dSerial & "' ")
+        'dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and MPOINT_SERIAL ='" & dSerial & "' ")
+        dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and MPOINT_SERIAL ='" & dSerial & "' ")
         If dt.Rows.Count = 0 Then
             dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and MPOINT_SERIAL is null ")
             UpdateSerial = True

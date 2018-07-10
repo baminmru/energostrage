@@ -11,3 +11,5 @@ C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.exe
 C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.xml
 C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.pdb
 C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\obj\x86\Debug\ElfMIRTEKReader.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\ElfMIRTEKReader.exe.config
+C:\bami\SZT_VOLOGDA\ElfMIRTEKReader\bin\Debug\Oracle.ManagedDataAccess.dll

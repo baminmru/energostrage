@@ -49,3 +49,4 @@ C:\bami\ELECTRO\CardLoader\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\bami\ELECTRO\CardLoader\bin\Debug\ELFDBMain.pdb
 C:\bami\ELECTRO\CardLoader\bin\Debug\ELFDBMain.xml
 C:\bami\ELECTRO\CardLoader\bin\Debug\SpreadSheetLight1.pdb
+C:\bami\ELECTRO\CardLoader\obj\Debug\CardLoader.frmPEEK4.resources

@@ -541,10 +541,13 @@ Public Class ftpPush
     End Function
 
     Private Function ProcessFileXMLReader(ByVal spath As String) As Boolean
+
+        Reconnect()
+
         Dim XR As XmlReader
         Dim XRPoint As XmlReader
         Dim XRChanel As XmlReader
-
+        Dim PointCount As Integer = 0
 
 
         Dim s_timestamp As String = ""
@@ -556,6 +559,7 @@ Public Class ftpPush
         Dim aName As String = ""
         Dim aINN As String = ""
         Dim aID As Integer
+        Dim fileOK As Boolean = False
 
         XR = XmlReader.Create(spath)
         If XR.ReadToFollowing("message") Then
@@ -578,16 +582,19 @@ Public Class ftpPush
 
 
             XR.ReadToFollowing("sender")
-            xmlDoc = New XmlDocument()
-            xmlDoc.LoadXml(XR.ReadOuterXml)
-            For Each Node As XmlNode In xmlDoc.FirstChild.ChildNodes()
-                Select Case Node.Name
-                    Case "inn"
-                        aINN = Node.InnerText
-                    Case "name"
-                        aName = Node.InnerText
-                End Select
-            Next
+            If True Then
+                xmlDoc = New XmlDocument()
+                xmlDoc.LoadXml(XR.ReadOuterXml)
+                For Each Node As XmlNode In xmlDoc.FirstChild.ChildNodes()
+                    Select Case Node.Name
+                        Case "inn"
+                            aINN = Node.InnerText
+                        Case "name"
+                            aName = Node.InnerText
+                    End Select
+                Next
+            End If
+
 
 
             XR.ReadToFollowing("area")
@@ -596,11 +603,19 @@ Public Class ftpPush
 
             aID = CheckArea(aName, aINN)
             Log(aID)
-            If aID = -1 Then Return False
+            If aID = -1 Then
+                XR.Close()
+                Return False
+            End If
 
             If msgClass <> "100" Then
-
+#Region "normal file"
                 While XR.ReadToFollowing("measuringpoint")
+
+                    PointCount += 1
+                    Console.WriteLine("----------------------------------")
+                    Console.WriteLine("Узел № " + PointCount.ToString())
+                    Console.WriteLine("----------------------------------")
                     XRPoint = XR.ReadSubtree()
 
                     Dim nName As String
@@ -697,14 +712,21 @@ Public Class ftpPush
                             End While
                             XRChanel.Close()
                         End While
+                        XRPoint.Close()
                     End If
 
                     cln = False
                     Console.WriteLine("C.")
 
+                    If (PointCount Mod 100) = 0 Then
+                        Console.WriteLine("Reconnect")
+                        Reconnect()
+                    End If
                 End While
-            Else ' class=100 ''''''''''''''''''''''''''''''''''
+#End Region
 
+            Else ' class=100 ''''''''''''''''''''''''''''''''''
+#Region " 100 "
                 While XR.ReadToFollowing("measuringpoint")
                     XRPoint = XR.ReadSubtree()
 
@@ -750,21 +772,14 @@ Public Class ftpPush
                         XRPoint.Close()
                     End If
                 End While
+#End Region
 
-
-
-
-
-            End If ''''''''''''''''''''''''''''''''''''''''''''
-            Return True
-
-
-
-
+            End If
+            ''''''''''''''''''''''''''''''''''''''''''''
+            fileOK = True
         End If
-
-
-        Return False
+        XR.Close()
+        Return fileOK
     End Function
 
 
@@ -1060,6 +1075,9 @@ Public Class ftpPush
     End Function
 
     Public Function QueryExec(ByVal s As String) As Boolean
+        If connection.State <> ConnectionState.Open Then
+            Reconnect()
+        End If
         Try
             Dim cmd As OracleCommand
             cmd = New OracleCommand
@@ -1078,6 +1096,9 @@ Public Class ftpPush
     End Function
 
     Public Function QuerySelect(ByVal s As String) As DataTable
+        If connection.State <> ConnectionState.Open Then
+            Reconnect()
+        End If
         Dim cmd As OracleCommand
         cmd = New OracleCommand
         cmd.CommandType = CommandType.Text

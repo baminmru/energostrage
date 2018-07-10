@@ -125,3 +125,5 @@ C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\FTP.xml
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.exe
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.pdb
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.xml
+C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.frmTarif.resources
+C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.frmTarifEdit.resources

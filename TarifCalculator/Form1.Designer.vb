@@ -33,6 +33,7 @@ Partial Class Form1
         Me.txtNodeID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.chkRound = New System.Windows.Forms.CheckBox()
+        Me.chkLog = New System.Windows.Forms.CheckBox()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numY, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +127,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtNodeID.Location = New System.Drawing.Point(427, 72)
         Me.txtNodeID.Name = "txtNodeID"
-        Me.txtNodeID.Size = New System.Drawing.Size(532, 20)
+        Me.txtNodeID.Size = New System.Drawing.Size(547, 20)
         Me.txtNodeID.TabIndex = 17
         '
         'Label1
@@ -142,18 +143,30 @@ Partial Class Form1
         '
         Me.chkRound.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkRound.AutoSize = True
-        Me.chkRound.Location = New System.Drawing.Point(980, 75)
+        Me.chkRound.Location = New System.Drawing.Point(980, 54)
         Me.chkRound.Name = "chkRound"
         Me.chkRound.Size = New System.Drawing.Size(134, 17)
         Me.chkRound.TabIndex = 19
         Me.chkRound.Text = "Округлять мощность"
         Me.chkRound.UseVisualStyleBackColor = True
         '
+        'chkLog
+        '
+        Me.chkLog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkLog.AutoSize = True
+        Me.chkLog.Location = New System.Drawing.Point(1026, 77)
+        Me.chkLog.Name = "chkLog"
+        Me.chkLog.Size = New System.Drawing.Size(88, 17)
+        Me.chkLog.TabIndex = 20
+        Me.chkLog.Text = "Лог расчета"
+        Me.chkLog.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1126, 529)
+        Me.Controls.Add(Me.chkLog)
         Me.Controls.Add(Me.chkRound)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNodeID)
@@ -186,4 +199,5 @@ Partial Class Form1
     Friend WithEvents txtNodeID As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents chkRound As CheckBox
+    Friend WithEvents chkLog As CheckBox
 End Class
