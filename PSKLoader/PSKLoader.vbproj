@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{318A0B42-A7BA-4C97-BC47-D104521D930C}</ProjectGuid>
+    <ProjectGuid>{878B2AD9-B43B-4713-896C-23846CBBF8E2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>TarifCalculator.My.MyApplication</StartupObject>
-    <RootNamespace>TarifCalculator</RootNamespace>
-    <AssemblyName>TarifCalculatorNew</AssemblyName>
+    <StartupObject>PSKLoader.My.MyApplication</StartupObject>
+    <RootNamespace>PSKLoader</RootNamespace>
+    <AssemblyName>PSKLoaderNew</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>TarifCalculatorNew.xml</DocumentationFile>
+    <DocumentationFile>PSKLoaderNew.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>TarifCalculatorNew.xml</DocumentationFile>
+    <DocumentationFile>PSKLoaderNew.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,7 +76,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcInfo.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -80,14 +83,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCheckLoad.Designer.vb">
-      <DependentUpon>frmCheckLoad.vb</DependentUpon>
+    <Compile Include="frmPEEK4.Designer.vb">
+      <DependentUpon>frmPEEK4.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCheckLoad.vb">
+    <Compile Include="frmPEEK4.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Matrix.vb" />
-    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -108,8 +109,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckLoad.resx">
-      <DependentUpon>frmCheckLoad.vb</DependentUpon>
+    <EmbeddedResource Include="frmPEEK4.resx">
+      <DependentUpon>frmPEEK4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -131,6 +132,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\SZT_VOLOGDA\ELFDBMain\ELFDBMain.vbproj">
       <Project>{0c7d9d95-1165-4c46-8346-748e4d276cfd}</Project>
       <Name>ELFDBMain</Name>
@@ -143,7 +155,6 @@
   <ItemGroup>
     <Content Include="Config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
