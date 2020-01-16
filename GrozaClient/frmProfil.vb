@@ -9,43 +9,19 @@ Public Class frmProfil
 
     Private Sub frmTree_Load(sender As Object, e As EventArgs) Handles Me.Load
         ClearGraph()
+        txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    'Private Sub LoadTree()
-    '    tv.Nodes.Clear()
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from esender")
-    '    Dim n As UltraTreeNode
-
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        n = New UltraTreeNode("esender:" + dt.Rows(i)("sender_id").ToString, dt.Rows(i)("sender_name") + " (" + dt.Rows(i)("sender_inn") + ")")
-    '        tv.Nodes.Add(n)
-    '        n.Tag = dt.Rows(i)("sender_id")
-    '        LoadNodes(n, dt.Rows(i)("sender_id"))
-    '    Next
-
-    'End Sub
-
-    'Private Sub LoadNodes(p As UltraTreeNode, sender_id As Integer)
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from enodes where sender_id=" + sender_id.ToString() + " order by mpoint_name")
-    '    Dim n As UltraTreeNode
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        Try
-    '            n = New UltraTreeNode("enodes:" + dt.Rows(i)("node_id").ToString, dt.Rows(i)("mpoint_name") + " (" + dt.Rows(i)("mpoint_code") + ")")
-    '            n.Tag = dt.Rows(i)("node_id")
-    '            p.Nodes.Add(n)
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message)
-    '        End Try
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
+    End Sub
 
 
-    '    Next
-    'End Sub
 
     Private Function fd(v As Double) As String
         Dim s As String
@@ -53,6 +29,35 @@ Public Class frmProfil
         s = s.Replace(",", ".")
         Return s
     End Function
+
+
+    Private Sub tv_DoubleClick(sender As Object, e As EventArgs) Handles tv.DoubleClick
+        Dim n As UltraTreeNode = Nothing
+        If tv.SelectedNodes.Count > 0 Then
+            n = tv.SelectedNodes.Item(0)
+        End If
+        If n Is Nothing Then Exit Sub
+        Dim id As Integer
+
+        If n.Key.ToString().StartsWith("esender:") Then
+            Exit Sub
+        End If
+
+        If n.Key.ToString().StartsWith("enodes:") Then
+            id = n.Tag
+
+            Dim f As Form
+            Dim ne As NodeEditorLib.NodeEditor = Nothing
+            If ne Is Nothing Then
+                ne = New NodeEditorLib.NodeEditor
+            End If
+            f = ne.GetForm(id, tvmain)
+
+            f.ShowDialog()
+            f = Nothing
+        End If
+
+    End Sub
 
     Private Sub tv_AfterSelect(sender As Object, e As SelectEventArgs) Handles tv.AfterSelect
         Dim n As UltraTreeNode
@@ -217,198 +222,5 @@ Public Class frmProfil
         End If
     End Function
 
-    Private Sub cmdSplitData_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSplitData.Click
-        Dim n As UltraTreeNode
-        'n = e.NewSelections.Item(0)
-        If tv.SelectedNodes.Count = 0 Then Exit Sub
-        n = tv.SelectedNodes.Item(0)
-        Dim id As Integer
-        Dim cid As Integer
-        Dim divider As Double = 1.0
-        If n Is Nothing Then Exit Sub
-        If n.Key.ToString().StartsWith("enodes:") Then
 
-            id = n.Tag
-
-            Dim dt As DataTable
-
-            Dim w As String = "WHERE 1=1 "
-
-
-            If opt1.Checked Then
-                w = " where  EDATA2.p_date >= sysdate -1 "
-                divider = 1
-            End If
-
-            If opt7.Checked Then
-                w = " where  EDATA2.p_date >= sysdate - 7 "
-                divider = 7
-            End If
-
-            If opt14.Checked Then
-                w = " where  EDATA2.p_date >= sysdate - 14 "
-                divider = 14
-            End If
-
-            If opt30.Checked Then
-                w = " where  EDATA2.p_date >= sysdate - 30 "
-                divider = 30
-            End If
-
-            If optPeriod.Checked Then
-                divider = Math.Abs(DateDiff(DateInterval.Day, dtpFrom.Value, dtpTo.Value))
-                w = " where EDATA2.p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and EDATA2.p_date <=" + tvmain.OracleDate(dtpTo.Value)
-            End If
-
-            dt = tvmain.QuerySelect("select EDATA2.* from EDATA2 " + w + " AND node_id=" + id.ToString + " order by p_date,p_start")
-
-            pb1.Maximum = dt.Rows.Count - 1
-            pb1.Minimum = 0
-            pb1.Value = 0
-            pb1.Visible = True
-            Dim did As Integer
-            Dim delta As Long
-            Dim cur As Long
-            Dim last As Long
-            Dim p_s As Date
-            Dim p_d As Date
-            Dim p_cur As Date
-            Dim p_c As Date
-            Dim am As Double, ap As Double, rm As Double, rp As Double
-            Dim i As Integer
-            Dim did2 As Integer
-            Dim dt2 As DataTable
-
-
-            Dim q As String
-            For i = 0 To dt.Rows.Count - 1
-                pb1.Value = i
-                Application.DoEvents()
-                delta = Math.Abs(DateDiff(DateInterval.Minute, dt.Rows(i)("p_end"), dt.Rows(i)("p_start")))
-                did = dt.Rows(i)("data_id")
-                p_s = dt.Rows(i)("p_start")
-                p_d = dt.Rows(i)("p_date")
-                p_c = dt.Rows(i)("c_date")
-                cid = dt.Rows(i)("NODE_ID")
-
-                Try
-                    ap = dt.Rows(i)("CODE_01")
-                Catch ex As Exception
-                    ap = 0
-                End Try
-
-                Try
-                    am = dt.Rows(i)("CODE_02")
-                Catch ex As Exception
-                    am = 0
-                End Try
-
-
-                Try
-                    rp = dt.Rows(i)("CODE_03")
-                Catch ex As Exception
-                    rp = 0
-                End Try
-
-                Try
-                    rm = dt.Rows(i)("CODE_04")
-                Catch ex As Exception
-                    rm = 0
-                End Try
-
-                If delta > 30 Then
-                    cur = 30
-                    last = 0
-                    While cur < delta
-
-
-
-                        q = "select EDATA_seq.nextval from dual"
-                        dt2 = tvmain.QuerySelect(q)
-                        did2 = dt2.Rows(0)(0)
-
-                        p_cur = p_s.AddMinutes(cur)
-                        p_cur = DateSerial(p_cur.Year, p_cur.Month, p_cur.Day)
-
-                        q = "insert into EDATA2(data_id,NODE_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
-                        q = q + "," + tvmain.OracleDate(p_c)
-                        q = q + ",'" + dt.Rows(i)("lightsave").ToString
-                        q = q + "'," + tvmain.OracleDate(p_cur)
-                        q = q + "," + tvmain.OracleDate(p_s.AddMinutes(last))
-                        q = q + "," + tvmain.OracleDate(p_s.AddMinutes(cur))
-                        q = q + ")"
-
-                        tvmain.QueryExec(q)
-
-                        q = "update EDATA2 set "
-
-                        q = q + " code_01=" + NanFormat(ap * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        q = q + " ,code_02=" + NanFormat(am * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        q = q + " ,code_03=" + NanFormat(rp * (cur - last) / delta, "##############0.000").Replace(",", ".")
-                        q = q + " ,code_04=" + NanFormat(rm * (cur - last) / delta, "##############0.000").Replace(",", ".")
-
-
-                        q = q + " where data_id=" + did2.ToString
-                        tvmain.QueryExec(q)
-
-                        last = cur
-
-
-                        If cur + 30 < delta Then
-                            cur = cur + 30
-                        Else
-                            Exit While
-                        End If
-                    End While
-
-
-
-                    q = "select EDATA_seq.nextval from dual"
-                    dt2 = tvmain.QuerySelect(q)
-                    did2 = dt2.Rows(0)(0)
-
-
-                    p_cur = p_s.AddMinutes(delta)
-                    p_cur = DateSerial(p_cur.Year, p_cur.Month, p_cur.Day)
-
-                    q = "insert into EDATA2(data_id,NODE_id,c_date,lightsave,p_date,p_start,p_end) values(" + did2.ToString + "," + cid.ToString
-                    q = q + "," + tvmain.OracleDate(p_c)
-                    q = q + ",'" + dt.Rows(i)("lightsave").ToString
-                    q = q + "'," + tvmain.OracleDate(p_cur)
-                    q = q + "," + tvmain.OracleDate(p_s.AddMinutes(last))
-                    q = q + "," + tvmain.OracleDate(p_s.AddMinutes(delta))
-                    q = q + ")"
-
-                    tvmain.QueryExec(q)
-
-                    q = "update EDATA2 set "
-
-                    q = q + " code_01=" + NanFormat(ap * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    q = q + " ,code_02=" + NanFormat(am * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    q = q + " ,code_03=" + NanFormat(rp * (delta - last) / delta, "##############0.000").Replace(",", ".")
-                    q = q + " ,code_04=" + NanFormat(rm * (delta - last) / delta, "##############0.000").Replace(",", ".")
-
-
-                    q = q + " where data_id=" + did2.ToString
-                    tvmain.QueryExec(q)
-
-
-
-                    q = "delete from EDATA2 where data_id=" & did.ToString()
-                    tvmain.QueryExec(q)
-
-                End If
-
-
-
-
-
-            Next
-
-            pb1.Visible = False
-
-
-        End If
-
-    End Sub
 End Class

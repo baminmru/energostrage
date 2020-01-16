@@ -37,6 +37,7 @@ Partial Class frmHourly
         Me.opt7 = New System.Windows.Forms.RadioButton()
         Me.opt1 = New System.Windows.Forms.RadioButton()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.txtFilter = New System.Windows.Forms.TextBox()
         Me.CHART_A = New Infragistics.Win.UltraWinChart.UltraChart()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.tv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,11 +69,13 @@ Partial Class frmHourly
         '
         'tv
         '
-        Me.tv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tv.HideSelection = False
-        Me.tv.Location = New System.Drawing.Point(0, 0)
+        Me.tv.Location = New System.Drawing.Point(0, 32)
         Me.tv.Name = "tv"
-        Me.tv.Size = New System.Drawing.Size(284, 592)
+        Me.tv.Size = New System.Drawing.Size(284, 560)
         Me.tv.TabIndex = 0
         '
         'Label1
@@ -184,6 +187,7 @@ Partial Class frmHourly
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtFilter)
         Me.SplitContainer1.Panel1.Controls.Add(Me.tv)
         '
         'SplitContainer1.Panel2
@@ -193,6 +197,15 @@ Partial Class frmHourly
         Me.SplitContainer1.Size = New System.Drawing.Size(856, 592)
         Me.SplitContainer1.SplitterDistance = 284
         Me.SplitContainer1.TabIndex = 1
+        '
+        'txtFilter
+        '
+        Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFilter.Location = New System.Drawing.Point(4, 6)
+        Me.txtFilter.Name = "txtFilter"
+        Me.txtFilter.Size = New System.Drawing.Size(277, 20)
+        Me.txtFilter.TabIndex = 2
         '
         '			'UltraChart' properties's serialization: Since 'ChartType' changes the way axes look,
         '			'ChartType' must be persisted ahead of any Axes change made in design time.
@@ -282,7 +295,7 @@ Partial Class frmHourly
         Me.CHART_A.Axis.Y.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y.TickmarkInterval = 40.0R
+        Me.CHART_A.Axis.Y.TickmarkInterval = 50.0R
         Me.CHART_A.Axis.Y.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y.Visible = True
         Me.CHART_A.Axis.Y2.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -309,7 +322,7 @@ Partial Class frmHourly
         Me.CHART_A.Axis.Y2.MinorGridLines.Color = System.Drawing.Color.LightGray
         Me.CHART_A.Axis.Y2.MinorGridLines.DrawStyle = Infragistics.UltraChart.[Shared].Styles.LineDrawStyle.Dot
         Me.CHART_A.Axis.Y2.MinorGridLines.Visible = False
-        Me.CHART_A.Axis.Y2.TickmarkInterval = 40.0R
+        Me.CHART_A.Axis.Y2.TickmarkInterval = 50.0R
         Me.CHART_A.Axis.Y2.TickmarkStyle = Infragistics.UltraChart.[Shared].Styles.AxisTickStyle.Smart
         Me.CHART_A.Axis.Y2.Visible = False
         Me.CHART_A.Axis.Z.Labels.Font = New System.Drawing.Font("Verdana", 7.0!)
@@ -395,6 +408,7 @@ Partial Class frmHourly
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -417,4 +431,5 @@ Partial Class frmHourly
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Private WithEvents CHART_A As Infragistics.Win.UltraWinChart.UltraChart
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents txtFilter As TextBox
 End Class

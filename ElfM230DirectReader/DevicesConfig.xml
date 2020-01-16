@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <dev ip="192.168.7.2" addr="43" name="Дачный-17"></dev>
+  <dev ip="192.168.0.50" addr="58" name="Ленинский 106-1"></dev>
+  <output path="c:\data"></output>
+</Config>
+
+
+
+        

@@ -11,9 +11,16 @@ Public Class frmCORR
     'Private WithEvents outws As IWorksheet
 
     Private Sub frmTree_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
-
+        txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
     End Sub
 
     'Private Sub LoadTree()
@@ -77,7 +84,7 @@ Public Class frmCORR
             q = q + "select cast(CORR(nvl(A.code_01,0), nvl(B.code_01,0)) as number(18,6)) as CR ,  cast(median(nvl(A.code_01,0)) as number(18,6) ) as MED1, cast(median(nvl(B.code_01,0)) as number(18,6) ) as MED2 ,cast(stddev(nvl(A.code_01,0)) as number(18,6) ) as DISP1,cast(stddev(nvl(B.code_01,0)) as number(18,6) ) as DISP2, A.YEAR, enodes.mpoint_name"
             q = q + " from EDATA_week A "
             q = q + " join EDATA_week B on a.YEAR=B.YEAR and a.week=b.week and a.NODE_ID <>B.NODE_ID "
-            q = q + " join enodes on BC.NODE_ID=enodes.node_id  "
+            q = q + " join enodes on B.NODE_ID=enodes.node_id  "
             q = q + " where A.NODE_ID=" & id.ToString
             q = q + " group by A.YEAR,enodes.mpoint_name"
             q = q + " having CORR(nvl(A.code_01,0), nvl(B.code_01,0)) >= 0.8 and ABS(median(nvl(A.code_01,0))-(median(nvl(B.code_01,0)))) < median(nvl(A.code_01,0))/10 and median(nvl(B.code_01,0))>5"

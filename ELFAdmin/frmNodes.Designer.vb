@@ -28,13 +28,14 @@ Partial Class frmNodes
         Me.cmdSetupNode = New System.Windows.Forms.Button()
         Me.txtFilter = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkActiveNode = New System.Windows.Forms.CheckBox()
         CType(Me.GV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdDel
         '
         Me.cmdDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdDel.Location = New System.Drawing.Point(407, 228)
+        Me.cmdDel.Location = New System.Drawing.Point(407, 313)
         Me.cmdDel.Name = "cmdDel"
         Me.cmdDel.Size = New System.Drawing.Size(105, 30)
         Me.cmdDel.TabIndex = 15
@@ -44,7 +45,7 @@ Partial Class frmNodes
         'cmdAdd
         '
         Me.cmdAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdAdd.Location = New System.Drawing.Point(283, 228)
+        Me.cmdAdd.Location = New System.Drawing.Point(283, 313)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(104, 30)
         Me.cmdAdd.TabIndex = 10
@@ -61,18 +62,18 @@ Partial Class frmNodes
         Me.GV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.GV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.GV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GV.Location = New System.Drawing.Point(12, 35)
+        Me.GV.Location = New System.Drawing.Point(12, 65)
         Me.GV.MultiSelect = False
         Me.GV.Name = "GV"
         Me.GV.ReadOnly = True
         Me.GV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.GV.Size = New System.Drawing.Size(498, 180)
+        Me.GV.Size = New System.Drawing.Size(498, 235)
         Me.GV.TabIndex = 8
         '
         'cmdSetupNode
         '
         Me.cmdSetupNode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdSetupNode.Location = New System.Drawing.Point(151, 228)
+        Me.cmdSetupNode.Location = New System.Drawing.Point(151, 313)
         Me.cmdSetupNode.Name = "cmdSetupNode"
         Me.cmdSetupNode.Size = New System.Drawing.Size(113, 29)
         Me.cmdSetupNode.TabIndex = 32
@@ -97,11 +98,22 @@ Partial Class frmNodes
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Фильтр"
         '
+        'chkActiveNode
+        '
+        Me.chkActiveNode.AutoSize = True
+        Me.chkActiveNode.Location = New System.Drawing.Point(93, 38)
+        Me.chkActiveNode.Name = "chkActiveNode"
+        Me.chkActiveNode.Size = New System.Drawing.Size(115, 17)
+        Me.chkActiveNode.TabIndex = 35
+        Me.chkActiveNode.Text = "Только активные"
+        Me.chkActiveNode.UseVisualStyleBackColor = True
+        '
         'frmNodes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(521, 264)
+        Me.ClientSize = New System.Drawing.Size(521, 349)
+        Me.Controls.Add(Me.chkActiveNode)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFilter)
         Me.Controls.Add(Me.cmdSetupNode)
@@ -121,4 +133,5 @@ Partial Class frmNodes
     Friend WithEvents cmdSetupNode As System.Windows.Forms.Button
     Friend WithEvents txtFilter As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents chkActiveNode As CheckBox
 End Class

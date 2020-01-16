@@ -232,4 +232,13 @@ Public Class frmMDIMain
         fip.Show()
         fip.Select()
     End Sub
+
+    Private Sub mnuTarification_Click(sender As Object, e As EventArgs) Handles mnuTarification.Click
+        If ftarif Is Nothing Then
+            ftarif = New frmTarif
+        End If
+        ftarif.MdiParent = Me
+        ftarif.Show()
+        ftarif.Select()
+    End Sub
 End Class

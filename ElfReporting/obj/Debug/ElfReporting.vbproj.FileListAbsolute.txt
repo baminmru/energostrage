@@ -54,3 +54,4 @@ C:\bami\SZT_VOLOGDA\ElfReporting\obj\Debug\ElfReporting.xml
 C:\bami\SZT_VOLOGDA\ElfReporting\obj\Debug\ElfReporting.pdb
 C:\bami\SZT_VOLOGDA\ElfReporting\bin\Debug\Newtonsoft.Json.dll
 C:\bami\SZT_VOLOGDA\ElfReporting\bin\Debug\Newtonsoft.Json.xml
+C:\bami\SZT_VOLOGDA\ElfReporting\bin\Debug\ElfReporting.exe.config

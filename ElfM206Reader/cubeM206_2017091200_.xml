@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<message class="100" version="1" number="0">
+  <datetime>
+    <timestamp>20170912161708</timestamp>
+    <day>20171209</day>
+  </datetime>
+  <sender>
+    <inn>7800000078</inn>
+    <name>СПБ_КУБЫ_M206</name>
+  </sender>
+  <area>
+    <inn>7800000078</inn>
+    <name>СПБ_КУБЫ_M206</name>
+    <measuringpoint ip="192.168.49.22" name="Броницкая, д. 15,  1-й этаж" netaddress="27361536">
+      <mesure AP0="1492.13" AP1="338.07" AP2="0" AP3="0" RP0="803.96" RP1="184.17" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.24" name="Московский пр., д. 36, 1-й этаж" netaddress="27361519">
+      <mesure AP0="1133.37" AP1="245.34" AP2="0" AP3="0" RP0="761.73" RP1="172.67" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.25" name="Броницкая, д. 13,  1-й этаж" netaddress="27361488">
+      <mesure AP0="1308.04" AP1="278.09" AP2="0" AP3="0" RP0="809.65" RP1="174.3" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.36" name="2-я Красноармейская, д. 14, подъезд №1" netaddress="27364307">
+      <mesure AP0="1471.32" AP1="296.75" AP2="0" AP3="0" RP0="809.99" RP1="165.62" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.37" name="6-я Красноармейская, д. 14, подъезд №4" netaddress="27361657">
+      <mesure AP0="1338.74" AP1="268.03" AP2="0" AP3="0" RP0="758.72" RP1="158.64" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.39" name="Московский пр., д. 45, подъезд №1" netaddress="27361652">
+      <mesure AP0="1278.88" AP1="248.34" AP2="0" AP3="0" RP0="788.31" RP1="158.99" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.41" name="Московский пр., д. 59, подъезд №1" netaddress="28526965">
+      <mesure AP0="1744.49" AP1="335.4" AP2="0" AP3="0" RP0="708.77" RP1="138.17" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.27" name="4-я Красноармейская, д. 14, подъезд №1" netaddress="28636756">
+      <mesure AP0="1214.93" AP1="214.05" AP2="0" AP3="0" RP0="778.18" RP1="145.13" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.66" name="Смоленская ул., д. 23, подъезд №1" netaddress="28527094">
+      <mesure AP0="545.63" AP1="95.84" AP2="0" AP3="0" RP0="666.83" RP1="122.73" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.67" name="Киевская ул., д.14, подъезд №2" netaddress="28526453">
+      <mesure AP0="554.47" AP1="97.17" AP2="0" AP3="0" RP0="636.09" RP1="114.88" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.68" name="Московский пр., д. 86, подъезд №8" netaddress="28526579">
+      <mesure AP0="621.45" AP1="112.58" AP2="0" AP3="0" RP0="649.62" RP1="119.6" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.86" name="Лесной пр., д.39, к.2" netaddress="28526635">
+      <mesure AP0="776.36" AP1="382.23" AP2="0" AP3="0" RP0="440.71" RP1="219.64" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.87" name="Лесной пр., д.37, к.1" netaddress="27363722">
+      <mesure AP0="786.44" AP1="388.53" AP2="0" AP3="0" RP0="432.82" RP1="223.93" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.89" name="ул.Харченко,д.3" netaddress="28526707">
+      <mesure AP0="984.33" AP1="483.25" AP2="0" AP3="0" RP0="425.75" RP1="213.68" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.103" name="Б. Самсониевский пр., д.80" netaddress="29222766">
+      <mesure AP0="1971.11" AP1="0.17" AP2="0" AP3="0" RP0="1234.5" RP1="0.1" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.105" name="Б. Самсониевский пр., д.83" netaddress="29222736">
+      <mesure AP0="973.09" AP1="0.95" AP2="0" AP3="0" RP0="616.35" RP1="0.5" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.106" name="Б. Самсониевский пр., д.98" netaddress="25623997">
+      <mesure AP0="660.47" AP1="327.25" AP2="0" AP3="0" RP0="441.71" RP1="238.47" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.107" name="Б. Самсониевский пр., д.93" netaddress="29222764">
+      <mesure AP0="686.53" AP1="0.95" AP2="0" AP3="0" RP0="636.37" RP1="0.49" RP2="0" RP3="0" />
+    </measuringpoint>
+    <measuringpoint ip="192.168.49.108" name="Б. Самсониевский пр., д.92" netaddress="29222767">
+      <mesure AP0="935.83" AP1="0.95" AP2="0" AP3="0" RP0="554.87" RP1="0.5" RP2="0" RP3="0" />
+    </measuringpoint>
+  </area>
+</message>

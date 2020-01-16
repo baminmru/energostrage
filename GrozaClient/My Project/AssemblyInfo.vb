@@ -12,13 +12,13 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Сбор данных по электроэнергии")> 
 <Assembly: AssemblyCompany("bami")> 
 <Assembly: AssemblyProduct("Сбор данных по электроэнергии")> 
-<Assembly: AssemblyCopyright("Copyright © bami 2013")> 
+<Assembly: AssemblyCopyright("Copyright © bami 2013-2018")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("12345678-1234-1234-1434-123456781234")> 
+<Assembly: Guid("12345678-1234-1234-1434-123456781234")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2016.8.2.10")> 
-<Assembly: AssemblyFileVersion("2016.8.2.10")> 
+<Assembly: AssemblyVersion("2018.6.3.15")>
+<Assembly: AssemblyFileVersion("2018.6.3.15")>

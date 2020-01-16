@@ -85,13 +85,10 @@ C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.vbprojResolveAssemblyRefer
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.vbproj.GenerateResource.Cache
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ElfMakeAgg.exe
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ESAdmin.exe
-C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData.exe
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\FTP.dll
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ESAdmin.xml
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ElfMakeAgg.pdb
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ElfMakeAgg.xml
-C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData.pdb
-C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData.xml
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\CFG_GetAllData.xml
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\ESAdmin.pdb
 C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\PropertyGridEx.dll
@@ -125,3 +122,6 @@ C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmNodeState.resources
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmProgress.resources
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmNodeYearState.resources
 C:\bami\SZT_VOLOGDA\GrozaClient\obj\Debug\GrozaClient.frmWeekend.resources
+C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData2.exe
+C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData2.pdb
+C:\bami\SZT_VOLOGDA\GrozaClient\bin\Debug\GetAllData2.xml

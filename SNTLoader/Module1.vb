@@ -40,7 +40,7 @@ Module Module1
 
         End If
 
-
+        System.Net.ServicePointManager.SecurityProtocol = Net.SecurityProtocolType.Tls12
         GetHalfHour2(Today().AddDays(-dfrom), Today().AddDays(-dto))
 
         'Dim i As Integer
@@ -203,12 +203,18 @@ Module Module1
         Dim xn As XmlNode
         Dim xn2 As XmlNode
         Dim xn3 As XmlNode
+
         Dim id As String
         Dim addr As String = ""
         Dim code As String = ""
         Dim name As String = ""
+        Dim serial_number As String = ""
+
         Dim devnodes As XmlDocument
         Dim pcnt As Integer
+        Dim nKT As Double = 1.0
+        Dim nKU As Double = 1.0
+        Dim nP_AP As Double = 0.0
 
         xlistp = node.GetElementsByTagName("projects")
         LOG("Found " + xlistp.Count().ToString() + "  projects")
@@ -276,6 +282,76 @@ Module Module1
                                     If xn3.Name = "name" Then
                                         name = xn3.InnerText
                                     End If
+
+                                    If xn3.Name = "serial_number" Then
+                                        serial_number = xn3.InnerText
+                                    End If
+
+                                    If xn3.Name = "current_transformation_ratio" Then
+                                        'Try
+                                        '    nKT = Double.Parse(xn3.InnerText)
+                                        'Catch ex As Exception
+                                        '    nKT = 1.0
+                                        'End Try
+
+                                        If Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = "," Then
+                                            Try
+                                                nKT = Double.Parse(xn3.InnerText.Replace(".", ","))
+                                            Catch ex As Exception
+
+                                                nKT = 1.0
+                                            End Try
+                                        Else
+                                            Try
+                                                nKT = Double.Parse(xn3.InnerText.Replace(",", "."))
+                                            Catch ex As Exception
+
+                                                nKT = 1.0
+                                            End Try
+                                        End If
+
+                                    End If
+
+                                    If xn3.Name = "voltage_transformation_ratio" Then
+                                        If Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = "," Then
+                                            Try
+                                                nKU = Double.Parse(xn3.InnerText.Replace(".", ","))
+                                            Catch ex As Exception
+
+                                                nKU = 1.0
+                                            End Try
+                                        Else
+                                            Try
+                                                nKU = Double.Parse(xn3.InnerText.Replace(",", "."))
+                                            Catch ex As Exception
+
+                                                nKU = 1.0
+                                            End Try
+                                        End If
+                                    End If
+                                    If xn3.Name = "percent_of_line_loss_ap" Then
+                                        If Globalization.CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = "," Then
+                                            Try
+                                                nP_AP = Double.Parse(xn3.InnerText.Replace(".", ","))
+                                            Catch ex As Exception
+
+                                                nP_AP = 0.0
+                                            End Try
+                                        Else
+                                            Try
+                                                nP_AP = Double.Parse(xn3.InnerText.Replace(",", "."))
+                                            Catch ex As Exception
+
+                                                nP_AP = 0.0
+                                            End Try
+                                        End If
+                                        'Try
+                                        '    nP_AP = Double.Parse(xn3.InnerText)
+                                        'Catch ex As Exception
+
+                                        '    nP_AP = 0.0
+                                        'End Try
+                                    End If
                                 Next
                             Next
 
@@ -293,7 +369,7 @@ Module Module1
                                         webClient.Dispose()
                                         'Console.WriteLine(q + "->" + responseFromServer)
                                         Dim dayly As XmlDocument = JsonConvert.DeserializeXmlNode(responseFromServer, "root")
-                                        ProcessXML(dayly.InnerXml, addr, name, code)
+                                        ProcessXML(dayly.InnerXml, addr, name, code, serial_number, nKT, nKU, nP_AP)
                                     Catch ex As Exception
                                         LOG(ex.Message & "DeviceID=" & id.ToString())
                                         webClient.Dispose()
@@ -504,9 +580,8 @@ nxt_prj:
     End Function
 
 
-    Private Function CheckNode(ByVal aID As Integer, ByVal nName As String, nCode As String) As Integer
+    Private Function CheckNode(ByVal aID As Integer, ByVal nName As String, nCode As String, dSerial As String) As Integer
         Dim dt As DataTable
-        Dim nId As Integer
         If nName = "" Then
             Return -1
         End If
@@ -517,17 +592,25 @@ nxt_prj:
             nCode = nCode.Substring(0, 12)
         End If
 
+        Dim UpdateSerial As Boolean = False
 
-        dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "'")
+        'dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and MPOINT_SERIAL ='" & dSerial & "' ")
+        dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and MPOINT_SERIAL ='" & dSerial & "' ")
         If dt.Rows.Count = 0 Then
-            QueryExec("insert into enodes(sender_id,node_id,mpoint_name,mpoint_code) values(" + aID.ToString + ",enode_seq.nextval,'" + QQ(nName) + "','" + QQ(nCode) + "')")
-            dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "'")
+            dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and MPOINT_SERIAL is null ")
+            UpdateSerial = True
+        End If
+        If dt.Rows.Count = 0 Then
+            QueryExec("insert into enodes(sender_id,node_id,mpoint_name,mpoint_code,mpoint_serial) values(" + aID.ToString + ",enode_seq.nextval,'" + QQ(nName) + "','" + QQ(nCode) + "','" + dSerial + "')")
+            dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and mpoint_serial='" + dSerial + "'")
             If dt.Rows.Count > 0 Then
-                nId = dt.Rows(0)("node_id")
+                Return dt.Rows(0)("node_id")
             End If
 
-        End If
-        If dt.Rows.Count > 0 Then
+        Else
+            If UpdateSerial Then
+                QueryExec("update enodes set mpoint_serial='" + dSerial + "' where node_id=" + dt.Rows(0)("node_id").ToString)
+            End If
             Return dt.Rows(0)("node_id")
         End If
         Return -1
@@ -627,7 +710,7 @@ nxt_prj:
     End Function
 
 
-    Private Function ProcessXML(ByVal xString As String, d_addr As String, d_name As String, d_code As String) As Boolean
+    Private Function ProcessXML(ByVal xString As String, d_addr As String, d_name As String, d_code As String, d_serial As String, nKT As Double, nKU As Double, nKP As Double) As Boolean
 
         Dim xml As System.Xml.XmlDocument
         xml = New XmlDocument
@@ -655,31 +738,20 @@ nxt_prj:
             Dim nName As String
             Dim nCode As String
             Dim nId As Integer
-            Dim nKT As Double = 1.0
-            Dim nKP As Double = 0.0
+
             Dim s_date As String
             Dim d_date As DateTime
 
             nName = d_name + " " + d_addr
             nCode = d_code
 
-            'Try
-            '        nKT = Double.Parse(mp.GetAttribute("kt"))
-            '    Catch ex As Exception
-            '        nKT = 1.0
-            '    End Try
 
-            '    Try
-            '        nKP = Double.Parse(mp.GetAttribute("kp"))
-            '    Catch ex As Exception
-            '        nKP = 0.0
-            '    End Try
 
-            nId = CheckNode(aID, nName, nCode)
+            nId = CheckNode(aID, nName, nCode, d_serial)
 
-            If nId > 0 And (nKT <> 1.0 Or nKP <> 0.0) Then
-                QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
-            End If
+            'If nId > 0 And (nKT <> 1.0 Or nKU <> 1.0 Or nKP <> 0.0) Then
+            QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ",KU=" + nKU.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
+            'End If
 
 
 
@@ -762,7 +834,7 @@ nxt_prj:
 
                         QueryExec(" delete  from  EDATA_agg where node_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date))
 
-                        QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(EDATA2) where node_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date) + " group by node_id,p_date)")
+                        QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(v_EDATA) where node_id=" + cId.ToString + " and  p_date=" + OracleDate(d_date) + " group by node_id,p_date)")
 
                     Next 'data
 
@@ -773,14 +845,14 @@ nxt_prj:
             End If
 
 
-                Return True
-            Catch ex As Exception
-                Log("Error while parsing XML string  :" + ex.Message)
-                Return False
-            End Try
-
             Return True
-        End Function
+        Catch ex As Exception
+            LOG("Error while parsing XML string  :" + ex.Message)
+            Return False
+        End Try
+
+        Return True
+    End Function
 
     'Private Sub Search()
     '    Dim responseFromServer As String

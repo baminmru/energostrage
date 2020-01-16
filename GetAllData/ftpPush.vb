@@ -240,41 +240,48 @@ Public Class ftpPush
         di = New DirectoryInfo(lMyPath)
         For Each fi In di.GetFiles("*.xml")
             If fi.Length > 0 Then
-                Log("process file: " & fi.FullName & " FSIZE=" & fi.Length)
 
-                Dim dt As DataTable
-                dt = QuerySelect("select * from LOADEDFILES where file_name='" + fi.Name + "' and fsize=" + fi.Length.ToString)
-                If dt.Rows.Count > 0 Then
-                    Log("skip processing, file already loaded, so delete -" & fi.FullName & " size: " & fi.Length.ToString)
-                    
-                    Try
-                        fi.MoveTo(lMyPath & "done\" & fi.Name)
-                    Catch ex As Exception
-                        Log(ex.Message)
-                        Try
-                            fi.Delete()
-                        Catch ex2 As Exception
-                            Log(ex2.Message)
-                        End Try
-                    End Try
-                Else
-                    If ProcessFile(fi.FullName) Then
-                        QueryExec("delete from  LOADEDFILES where FILE_NAME='" + fi.Name + "'")
-                        QueryExec("insert into LOADEDFILES(FILE_NAME,LOADDATE,fSIZE) values ('" + fi.Name + "',sysdate," & fi.Length.ToString & ")")
-                        '
-                        Try
-                            fi.MoveTo(lMyPath & "done\" & fi.Name)
-                        Catch ex As Exception
-                            Log(ex.Message)
-                            Try
-                                fi.Delete()
-                            Catch ex2 As Exception
-                                Log(ex2.Message)
-                            End Try
-                        End Try
+                Dim psInfo As New System.Diagnostics.ProcessStartInfo(System.IO.Path.GetDirectoryName(Me.GetType().Assembly.Location) & "/FileLoader.exe ", "-d " & fi.FullName)
+                psInfo.WindowStyle = ProcessWindowStyle.Hidden
+                Dim process As System.Diagnostics.Process
+                process = System.Diagnostics.Process.Start(psInfo)
+                process.WaitForExit()
 
-                    End If
-                End If
+                'Log("process file: " & fi.FullName & " FSIZE=" & fi.Length)
+
+                'Dim dt As DataTable
+                'dt = QuerySelect("select * from LOADEDFILES where file_name='" + fi.Name + "' and fsize=" + fi.Length.ToString)
+                'If dt.Rows.Count > 0 Then
+                '    Log("skip processing, file already loaded, so delete -" & fi.FullName & " size: " & fi.Length.ToString)
+
+                '    Try
+                '        fi.MoveTo(lMyPath & "done\" & fi.Name)
+                '    Catch ex As Exception
+                '        Log(ex.Message)
+                '        Try
+                '            fi.Delete()
+                '        Catch ex2 As Exception
+                '            Log(ex2.Message)
+                '        End Try
+                '    End Try
+                'Else
+                '    If ProcessFile(fi.FullName) Then
+                '        QueryExec("delete from  LOADEDFILES where FILE_NAME='" + fi.Name + "'")
+                '        QueryExec("insert into LOADEDFILES(FILE_NAME,LOADDATE,fSIZE) values ('" + fi.Name + "',sysdate," & fi.Length.ToString & ")")
+                '        '
+                '        Try
+                '            fi.MoveTo(lMyPath & "done\" & fi.Name)
+                '        Catch ex As Exception
+                '            Log(ex.Message)
+                '            Try
+                '                fi.Delete()
+                '            Catch ex2 As Exception
+                '                Log(ex2.Message)
+                '            End Try
+                '        End Try
+
+                '    End If
+                'End If
             Else
                 Log("Skip file: " & fi.FullName & " FSIZE=" & fi.Length)
 
@@ -333,6 +340,33 @@ Public Class ftpPush
     End Function
 
 
+    Private Function CheckNode2(ByVal aID As Integer, ByVal nName As String, nCode As String, nSerial As String) As Integer
+        Dim dt As DataTable
+        Dim nId As Integer
+        If nName = "" Then
+            Return -1
+        End If
+        If nCode = "" Then
+            nCode = "не задан"
+        End If
+
+
+        dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and mpoint_serial='" & nSerial & "'")
+        If dt.Rows.Count = 0 Then
+            QueryExec("insert into enodes(sender_id,node_id,mpoint_name,mpoint_code,mpoint_serial) values(" + aID.ToString + ",enode_seq.nextval,'" + QQ(nName) + "','" + QQ(nCode) + "','" & nSerial & "')")
+            dt = QuerySelect("select * from enodes where sender_id=" + aID.ToString + " and mpoint_code='" + QQ(nCode) + "' and mpoint_name='" + QQ(nName) + "' and mpoint_serial='" & nSerial & "'")
+            If dt.Rows.Count > 0 Then
+                nId = dt.Rows(0)("node_id")
+            End If
+
+        End If
+        If dt.Rows.Count > 0 Then
+            Return dt.Rows(0)("node_id")
+        End If
+        Return -1
+    End Function
+
+
     Private Function CheckNode(ByVal aID As Integer, ByVal nName As String, nCode As String) As Integer
         Dim dt As DataTable
         Dim nId As Integer
@@ -360,7 +394,81 @@ Public Class ftpPush
     End Function
 
 
+    Private Function SaveEl(nId As Integer, s_day As String, AP() As String, RP() As String) As Boolean
+        Dim q As String
 
+        Dim dtp As DataTable
+
+        dtp = QuerySelect("select max(AP0) AP0,max(AP1) AP1,max(AP2) AP2,max(AP3) AP3, max(nvl(RP0,0)) RP0 , max(nvl(RP1,0)) RP1 , max(nvl(RP2,0)) RP2 , max(nvl(RP3,0)) RP3, max(dcounter) dcounter from electro where id_bd=" & nId.ToString + " and id_ptype=2")
+
+
+        'If dtp.Rows.Count > 0 Then
+        '    cid = id
+        '    Try
+        '        Dim dd As Date
+        '        dd = Arch.DateArch
+        '        dd = dd.AddMinutes(-dd.Minute)
+        '        dd = dd.AddHours(-dd.Hour)
+        '        dd = dd.AddSeconds(-dd.Second)
+
+        '        Dim cval As Double
+        '        cval = AP(0) - dtp.Rows(0)("AP0")
+        '        SavePeriod(nId, Arch.DateArch, dd, NanFormat(cval, "##############0.000"), dtp.Rows(0)("dcounter"), dtp.Rows(0)("dcounter"), 0, "01")
+
+
+        '        tvmain.QueryExec("delete  from  EDATA_agg where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd))
+
+        '        tvmain.QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(v_EDATA) where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd) + " group by node_id,p_date)")
+
+
+
+        '    Catch ex As Exception
+
+        '    End Try
+
+        '    cid = id
+        '    Try
+        '        Dim dd As Date
+        '        dd = Arch.DateArch
+        '        dd = dd.AddMinutes(-dd.Minute)
+        '        dd = dd.AddHours(-dd.Hour)
+        '        dd = dd.AddSeconds(-dd.Second)
+
+        '        Dim cval As Double
+        '        cval = Arch.RP0 - dtp.Rows(0)("RP0")
+
+        '        SavePeriod(cid, Arch.DateArch, dd, NanFormat(cval, "##############0.000"), dtp.Rows(0)("dcounter"), dtp.Rows(0)("dcounter"), 0, "01")
+
+
+        '        tvmain.QueryExec("delete  from  EDATA_agg where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd))
+
+        '        tvmain.QueryExec(" insert into EDATA_agg (node_id,p_date,code_01,code_02,code_03,code_04)(select node_id, p_date,  sum(nvl(code_01, 0)), sum(nvl(code_02, 0)), sum(nvl(code_03, 0)), sum(nvl(code_04, 0)) from(v_EDATA) where node_id=" + cid.ToString + " and  p_date=" + tvmain.OracleDate(dd) + " group by node_id,p_date)")
+
+
+
+        '    Catch ex As Exception
+
+        '    End Try
+        'End If
+
+
+        Console.Write("i")
+        q = "insert into ELECTRO(id_bd,dcall,dcounter,AP0,AP1,AP2,AP3,RP0,RP1,RP2,RP3,id_PTYPE) values(" + nId.ToString
+        q = q + ",SYSDATE"
+        q = q + "," + todate(s_day)
+
+        q = q + "," + AP(0)
+        q = q + "," + AP(1)
+        q = q + "," + AP(2)
+        q = q + "," + AP(3)
+        q = q + "," + RP(0)
+        q = q + "," + RP(1)
+        q = q + "," + RP(2)
+        q = q + "," + RP(3)
+        q = q + ",2)"
+
+        Return QueryExec(q)
+    End Function
 
     Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
         Dim did As Integer
@@ -468,13 +576,22 @@ Public Class ftpPush
             Dim s_timestamp As String
             Dim s_daylightsavingtime As String
             Dim s_day As String
+            Dim msgClass As String
+            dts = xml.GetElementsByTagName("message")
+            dt = dts(0)
+            msgClass = dt.GetAttribute("class")
 
             dts = xml.GetElementsByTagName("datetime")
             dt = dts(0)
             dts = dt.GetElementsByTagName("timestamp")
             s_timestamp = dts(0).InnerText
-            dts = dt.GetElementsByTagName("daylightsavingtime")
-            s_daylightsavingtime = dts(0).InnerText
+            Try
+                dts = dt.GetElementsByTagName("daylightsavingtime")
+                s_daylightsavingtime = dts(0).InnerText
+            Catch ex As Exception
+
+            End Try
+
             dts = dt.GetElementsByTagName("day")
             s_day = dts(0).InnerText
 
@@ -502,97 +619,149 @@ Public Class ftpPush
                 Log(aID)
                 If aID = -1 Then Return False
 
-                mps = area.GetElementsByTagName("measuringpoint")
-                For Each mp In mps
-                    'Console.WriteLine("M")
-                    Dim mcs As XmlNodeList
-                    Dim mc As XmlElement
-                    Dim nName As String
-                    Dim nCode As String
-                    Dim nId As Integer
-                    Dim nKT As Double = 1.0
-                    Dim nKP As Double = 0.0
-
-                    nName = mp.GetAttribute("name")
-                    nCode = mp.GetAttribute("code")
-
-                    Try
-                        nKT = Double.Parse(mp.GetAttribute("kt"))
-                    Catch ex As Exception
-                        nKT = 1.0
-                    End Try
-
-                    Try
-                        nKP = Double.Parse(mp.GetAttribute("kp"))
-                    Catch ex As Exception
-                        nKP = 0.0
-                    End Try
-
-                    nId = CheckNode(aID, nName, nCode)
-
-                    If nId > 0 And (nKT <> 1.0 Or nKP <> 0.0) Then
-                        QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
-                    End If
-
-                   
+                If msgClass <> "100" Then
 
 
-                    If nId >= 0 Then
-                        Log(nCode + " " + nName)
-                        mcs = mp.GetElementsByTagName("measuringchannel")
-                        Dim cln As Boolean
-                        cln = True
-                        For Each mc In mcs
-                            Console.WriteLine("C")
-                            Dim cCode As String
-                            Dim cDesc As String
-                            Dim cId As Integer
+                    mps = area.GetElementsByTagName("measuringpoint")
+                    For Each mp In mps
+                        'Console.WriteLine("M")
+                        Dim mcs As XmlNodeList
+                        Dim mc As XmlElement
+                        Dim nName As String
+                        Dim nCode As String
+                        Dim nId As Integer
+                        Dim nKT As Double = 1.0
+                        Dim nKP As Double = 0.0
 
-                            Dim periods As XmlNodeList
-                            Dim period As XmlElement
-                            cDesc = mc.GetAttribute("desc")
-                            cCode = mc.GetAttribute("code")
+                        nName = mp.GetAttribute("name")
+                        nCode = mp.GetAttribute("code")
+
+                        Try
+                            nKT = Double.Parse(mp.GetAttribute("kt"))
+                        Catch ex As Exception
+                            nKT = 1.0
+                        End Try
+
+                        Try
+                            nKP = Double.Parse(mp.GetAttribute("kp"))
+                        Catch ex As Exception
+                            nKP = 0.0
+                        End Try
+
+                        nId = CheckNode(aID, nName, nCode)
+
+                        If nId > 0 And (nKT <> 1.0 Or nKP <> 0.0) Then
+                            QueryExec("update enodes set KI=" + nKT.ToString().Replace(",", ".") + ", P_AP=" + nKP.ToString().Replace(",", ".") + " where node_id=" & nId.ToString)
+                        End If
 
 
 
 
-                            cId = nId
+                        If nId >= 0 Then
+                            Log(nCode + " " + nName)
+                            mcs = mp.GetElementsByTagName("measuringchannel")
+                            Dim cln As Boolean
+                            cln = True
+                            For Each mc In mcs
+                                Console.WriteLine("C")
+                                Dim cCode As String
+                                Dim cDesc As String
+                                Dim cId As Integer
 
-                            Console.WriteLine(cId.ToString + "->" + cCode)
-                            periods = mc.GetElementsByTagName("period")
-                            If cln Then
-                                CleanPeriod(cId, s_day)
-                            End If
-                            Dim s_daycur As String
-                            s_daycur = s_day
-                            For Each period In periods
-                                Dim s_start As String
-                                Dim s_end As String
-                                Dim s_val As String
-                                s_start = period.GetAttribute("start")
-                                s_end = period.GetAttribute("end")
-                                dts = period.GetElementsByTagName("value")
-                                s_val = dts(0).InnerText
+                                Dim periods As XmlNodeList
+                                Dim period As XmlElement
+                                cDesc = mc.GetAttribute("desc")
+                                cCode = mc.GetAttribute("code")
 
-                                If s_end.Length > 8 Then
-                                    If s_daycur <> s_end.Substring(0, 8) Then
-                                        s_daycur = s_end.Substring(0, 8)
-                                        If cln Then
-                                            CleanPeriod(cId, s_daycur)
-                                        End If
+                                cId = nId
 
-                                    End If
+                                Console.WriteLine(cId.ToString + "->" + cCode)
+                                periods = mc.GetElementsByTagName("period")
+                                If cln Then
+                                    CleanPeriod(cId, s_day)
                                 End If
+                                Dim s_daycur As String
+                                s_daycur = s_day
+                                For Each period In periods
+                                    Dim s_start As String
+                                    Dim s_end As String
+                                    Dim s_val As String
+                                    s_start = period.GetAttribute("start")
+                                    s_end = period.GetAttribute("end")
+                                    dts = period.GetElementsByTagName("value")
+                                    s_val = dts(0).InnerText
 
-                                'Console.Write("p")
-                                SavePeriod(cId, s_start, s_end, s_val, s_timestamp, s_day, s_daylightsavingtime, cCode)
+                                    If s_end.Length > 8 Then
+                                        If s_daycur <> s_end.Substring(0, 8) Then
+                                            s_daycur = s_end.Substring(0, 8)
+                                            If cln Then
+                                                CleanPeriod(cId, s_daycur)
+                                            End If
+
+                                        End If
+                                    End If
+
+                                    'Console.Write("p")
+                                    SavePeriod(cId, s_start, s_end, s_val, s_timestamp, s_day, s_daylightsavingtime, cCode)
+                                Next
+                                cln = False
+                                Console.WriteLine("C.")
                             Next
-                            cln = False
-                            Console.WriteLine("C.")
-                        Next
-                    End If
-                Next
+                        End If
+                    Next
+                Else ' class=100 ''''''''''''''''''''''''''''''''''
+                    mps = area.GetElementsByTagName("measuringpoint")
+                    For Each mp In mps
+                        'Console.WriteLine("M")
+                        Dim mcs As XmlNodeList
+                        Dim mc As XmlElement
+                        Dim nName As String
+                        Dim nCode As String
+                        Dim nSerial As String
+                        Dim nId As Integer
+                        Dim nKT As Double = 1.0
+                        Dim nKP As Double = 0.0
+
+                        nName = mp.GetAttribute("name")
+                        nCode = mp.GetAttribute("code")
+                        nSerial = mp.GetAttribute("netaddress")
+
+                        nId = CheckNode2(aID, nName, nCode, nSerial)
+
+
+                        If nId >= 0 Then
+                            Log(nCode + " " + nName)
+                            mcs = mp.GetElementsByTagName("mesure")
+
+                            For Each mc In mcs
+                                Console.WriteLine("C")
+                                Dim AP(4) As String
+                                Dim RP(4) As String
+
+                                AP(0) = mc.GetAttribute("AP0")
+                                AP(1) = mc.GetAttribute("AP1")
+                                AP(2) = mc.GetAttribute("AP2")
+                                AP(3) = mc.GetAttribute("AP3")
+
+                                RP(0) = mc.GetAttribute("RP0")
+                                RP(1) = mc.GetAttribute("RP1")
+                                RP(2) = mc.GetAttribute("RP2")
+                                RP(3) = mc.GetAttribute("RP3")
+
+
+                                SaveEL(nId, s_day, AP, RP)
+
+
+                            Next
+                        End If
+                    Next
+
+
+
+
+                End If ''''''''''''''''''''''''''''''''''''''''''''
             Next
+
             Return True
         Catch ex As Exception
             log("Error while parsing XML file " + spath + " :" + ex.Message)

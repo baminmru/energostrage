@@ -14,3 +14,4 @@ C:\bami\Projects\SZT_VOLOGDA\ftp\obj\Debug\FTP.pdb
 C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.dll
 C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.xml
 C:\bami\SZT_VOLOGDA\ftp\obj\Debug\FTP.pdb
+C:\Generated\Generated Dlls\FTP.dll.config

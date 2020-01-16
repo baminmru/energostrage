@@ -111,6 +111,10 @@
     <Reference Include="Infragistics2.Win.UltraWinTree.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics2.Win.v9.1.Design, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SpreadsheetGear">
       <HintPath>..\lib\SpreadsheetGear.dll</HintPath>
     </Reference>
@@ -186,6 +190,18 @@
       <DependentUpon>frmSchemaEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSchemaEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTarif.Designer.vb">
+      <DependentUpon>frmTarif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTarif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTarifEdit.Designer.vb">
+      <DependentUpon>frmTarifEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTarifEdit.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUsers.Designer.vb">
@@ -306,6 +322,12 @@
     <EmbeddedResource Include="frmSchemaEdit.resx">
       <DependentUpon>frmSchemaEdit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTarif.resx">
+      <DependentUpon>frmTarif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTarifEdit.resx">
+      <DependentUpon>frmTarifEdit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.vb</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +383,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="VIPAdmin_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

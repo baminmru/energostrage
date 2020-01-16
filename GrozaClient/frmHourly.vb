@@ -9,8 +9,16 @@ Public Class frmHourly
 
     Private Sub frmTree_Load(sender As Object, e As EventArgs) Handles Me.Load
         ClearGraph()
+        txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
     End Sub
 
     'Private Sub LoadTree()
@@ -54,6 +62,34 @@ Public Class frmHourly
         Return s
     End Function
 
+
+    Private Sub tv_DoubleClick(sender As Object, e As EventArgs) Handles tv.DoubleClick
+        Dim n As UltraTreeNode = Nothing
+        If tv.SelectedNodes.Count > 0 Then
+            n = tv.SelectedNodes.Item(0)
+        End If
+        If n Is Nothing Then Exit Sub
+        Dim id As Integer
+
+        If n.Key.ToString().StartsWith("esender:") Then
+            Exit Sub
+        End If
+
+        If n.Key.ToString().StartsWith("enodes:") Then
+            id = n.Tag
+
+            Dim f As Form
+            Dim ne As NodeEditorLib.NodeEditor = Nothing
+            If ne Is Nothing Then
+                ne = New NodeEditorLib.NodeEditor
+            End If
+            f = ne.GetForm(id, tvmain)
+
+            f.ShowDialog()
+            f = Nothing
+        End If
+
+    End Sub
     Private Sub tv_AfterSelect(sender As Object, e As SelectEventArgs) Handles tv.AfterSelect
         Dim n As UltraTreeNode
         'n = e.NewSelections.Item(0)

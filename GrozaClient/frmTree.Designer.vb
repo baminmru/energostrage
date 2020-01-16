@@ -24,6 +24,7 @@ Partial Class frmTree
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTree))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.txtFilter = New System.Windows.Forms.TextBox()
         Me.tv = New Infragistics.Win.UltraWinTree.UltraTree()
         Me.dv = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -56,6 +57,7 @@ Partial Class frmTree
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtFilter)
         Me.SplitContainer1.Panel1.Controls.Add(Me.tv)
         '
         'SplitContainer1.Panel2
@@ -66,13 +68,24 @@ Partial Class frmTree
         Me.SplitContainer1.SplitterDistance = 315
         Me.SplitContainer1.TabIndex = 0
         '
+        'txtFilter
+        '
+        Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFilter.Location = New System.Drawing.Point(6, 7)
+        Me.txtFilter.Name = "txtFilter"
+        Me.txtFilter.Size = New System.Drawing.Size(306, 20)
+        Me.txtFilter.TabIndex = 8
+        '
         'tv
         '
-        Me.tv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tv.HideSelection = False
-        Me.tv.Location = New System.Drawing.Point(0, 0)
+        Me.tv.Location = New System.Drawing.Point(0, 33)
         Me.tv.Name = "tv"
-        Me.tv.Size = New System.Drawing.Size(315, 363)
+        Me.tv.Size = New System.Drawing.Size(315, 330)
         Me.tv.TabIndex = 0
         '
         'dv
@@ -235,6 +248,7 @@ Partial Class frmTree
         Me.Name = "frmTree"
         Me.Text = "Данные"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -261,4 +275,5 @@ Partial Class frmTree
     Friend WithEvents tv As Infragistics.Win.UltraWinTree.UltraTree
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents cmdRefresh As System.Windows.Forms.Button
+    Friend WithEvents txtFilter As TextBox
 End Class

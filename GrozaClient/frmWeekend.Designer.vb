@@ -25,11 +25,21 @@ Partial Class frmWeekend
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWeekend))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+<<<<<<< HEAD
         Me.tv = New Infragistics.Win.UltraWinTree.UltraTree()
         Me.dv = New System.Windows.Forms.DataGridView()
         Me.wb = New SpreadsheetGear.Windows.Forms.WorkbookView()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
+=======
+        Me.txtFilter = New System.Windows.Forms.TextBox()
+        Me.tv = New Infragistics.Win.UltraWinTree.UltraTree()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtHTo = New System.Windows.Forms.NumericUpDown()
+        Me.txtHFrom = New System.Windows.Forms.NumericUpDown()
+        Me.Label3 = New System.Windows.Forms.Label()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.cmdRefresh = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -40,19 +50,32 @@ Partial Class frmWeekend
         Me.opt14 = New System.Windows.Forms.RadioButton()
         Me.opt7 = New System.Windows.Forms.RadioButton()
         Me.opt1 = New System.Windows.Forms.RadioButton()
+<<<<<<< HEAD
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtHFrom = New System.Windows.Forms.NumericUpDown()
         Me.txtHTo = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
+=======
+        Me.dv = New System.Windows.Forms.DataGridView()
+        Me.wb = New SpreadsheetGear.Windows.Forms.WorkbookView()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.tv, System.ComponentModel.ISupportInitialize).BeginInit()
+<<<<<<< HEAD
         CType(Me.dv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.txtHFrom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtHTo, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+        Me.Panel1.SuspendLayout()
+        CType(Me.txtHTo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtHFrom, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dv, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -63,6 +86,10 @@ Partial Class frmWeekend
         '
         'SplitContainer1.Panel1
         '
+<<<<<<< HEAD
+=======
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtFilter)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.SplitContainer1.Panel1.Controls.Add(Me.tv)
         '
         'SplitContainer1.Panel2
@@ -73,6 +100,7 @@ Partial Class frmWeekend
         Me.SplitContainer1.SplitterDistance = 315
         Me.SplitContainer1.TabIndex = 0
         '
+<<<<<<< HEAD
         'tv
         '
         Me.tv.Dock = System.Windows.Forms.DockStyle.Fill
@@ -110,6 +138,27 @@ Partial Class frmWeekend
         '
         Me.SaveFileDialog1.DefaultExt = "xls"
         Me.SaveFileDialog1.Filter = "Excel file|*.xls"
+=======
+        'txtFilter
+        '
+        Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFilter.Location = New System.Drawing.Point(3, 7)
+        Me.txtFilter.Name = "txtFilter"
+        Me.txtFilter.Size = New System.Drawing.Size(306, 20)
+        Me.txtFilter.TabIndex = 9
+        '
+        'tv
+        '
+        Me.tv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tv.HideSelection = False
+        Me.tv.Location = New System.Drawing.Point(0, 35)
+        Me.tv.Name = "tv"
+        Me.tv.Size = New System.Drawing.Size(315, 328)
+        Me.tv.TabIndex = 0
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         '
         'Panel1
         '
@@ -134,6 +183,46 @@ Partial Class frmWeekend
         Me.Panel1.Size = New System.Drawing.Size(626, 68)
         Me.Panel1.TabIndex = 3
         '
+<<<<<<< HEAD
+=======
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(492, 35)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(10, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "-"
+        '
+        'txtHTo
+        '
+        Me.txtHTo.Location = New System.Drawing.Point(522, 32)
+        Me.txtHTo.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.txtHTo.Minimum = New Decimal(New Integer() {13, 0, 0, 0})
+        Me.txtHTo.Name = "txtHTo"
+        Me.txtHTo.Size = New System.Drawing.Size(47, 20)
+        Me.txtHTo.TabIndex = 13
+        Me.txtHTo.Value = New Decimal(New Integer() {20, 0, 0, 0})
+        '
+        'txtHFrom
+        '
+        Me.txtHFrom.Location = New System.Drawing.Point(439, 33)
+        Me.txtHFrom.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
+        Me.txtHFrom.Name = "txtHFrom"
+        Me.txtHFrom.Size = New System.Drawing.Size(47, 20)
+        Me.txtHFrom.TabIndex = 12
+        Me.txtHFrom.Value = New Decimal(New Integer() {8, 0, 0, 0})
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(353, 39)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(80, 13)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Рабочие часы:"
+        '
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         'cmdRefresh
         '
         Me.cmdRefresh.Location = New System.Drawing.Point(390, 4)
@@ -234,6 +323,7 @@ Partial Class frmWeekend
         Me.opt1.Text = "10"
         Me.opt1.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -270,6 +360,36 @@ Partial Class frmWeekend
         Me.Label4.Size = New System.Drawing.Size(10, 13)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "-"
+=======
+        'dv
+        '
+        Me.dv.AllowUserToAddRows = False
+        Me.dv.AllowUserToDeleteRows = False
+        Me.dv.AllowUserToOrderColumns = True
+        Me.dv.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dv.Location = New System.Drawing.Point(3, 77)
+        Me.dv.Name = "dv"
+        Me.dv.ReadOnly = True
+        Me.dv.Size = New System.Drawing.Size(624, 283)
+        Me.dv.TabIndex = 2
+        '
+        'wb
+        '
+        Me.wb.Location = New System.Drawing.Point(0, 0)
+        Me.wb.Name = "wb"
+        Me.wb.Size = New System.Drawing.Size(280, 160)
+        Me.wb.TabIndex = 0
+        Me.wb.Visible = False
+        Me.wb.WorkbookSetState = resources.GetString("wb.WorkbookSetState")
+        '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.DefaultExt = "xls"
+        Me.SaveFileDialog1.Filter = "Excel file|*.xls"
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         '
         'frmWeekend
         '
@@ -282,15 +402,27 @@ Partial Class frmWeekend
         Me.Name = "frmWeekend"
         Me.Text = "Статистические показатели"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+<<<<<<< HEAD
+=======
+        Me.SplitContainer1.Panel1.PerformLayout()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.tv, System.ComponentModel.ISupportInitialize).EndInit()
+<<<<<<< HEAD
         CType(Me.dv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.txtHFrom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtHTo, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.txtHTo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtHFrom, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dv, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.ResumeLayout(False)
 
     End Sub
@@ -314,4 +446,8 @@ Partial Class frmWeekend
     Friend WithEvents txtHTo As NumericUpDown
     Friend WithEvents txtHFrom As NumericUpDown
     Friend WithEvents Label3 As Label
+<<<<<<< HEAD
+=======
+    Friend WithEvents txtFilter As TextBox
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
 End Class

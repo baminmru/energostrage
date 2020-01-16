@@ -12,10 +12,15 @@ Public Class frmWeekend
 
     Private Sub frmWeekend_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
+<<<<<<< HEAD
+=======
+        txtFilter.Text = NodeFilter
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
+<<<<<<< HEAD
     'Private Sub LoadTree()
     '    tv.Nodes.Clear()
     '    Dim dt As DataTable
@@ -49,6 +54,43 @@ Public Class frmWeekend
 
     '    Next
     'End Sub
+=======
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
+    End Sub
+
+
+    Private Sub tv_DoubleClick(sender As Object, e As EventArgs) Handles tv.DoubleClick
+        Dim n As UltraTreeNode = Nothing
+        If tv.SelectedNodes.Count > 0 Then
+            n = tv.SelectedNodes.Item(0)
+        End If
+        If n Is Nothing Then Exit Sub
+        Dim id As Integer
+
+        If n.Key.ToString().StartsWith("esender:") Then
+            Exit Sub
+        End If
+
+        If n.Key.ToString().StartsWith("enodes:") Then
+            id = n.Tag
+
+            Dim f As Form
+            Dim ne As NodeEditorLib.NodeEditor = Nothing
+            If ne Is Nothing Then
+                ne = New NodeEditorLib.NodeEditor
+            End If
+            f = ne.GetForm(id, tvmain)
+
+            f.ShowDialog()
+            f = Nothing
+        End If
+
+    End Sub
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
 
     Private Sub tv_AfterSelect(ByVal sender As Object, ByVal e As SelectEventArgs) Handles tv.AfterSelect
         Dim n As UltraTreeNode = Nothing

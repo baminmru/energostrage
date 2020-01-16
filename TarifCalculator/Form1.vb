@@ -11,7 +11,35 @@
 
     Protected Sub LOG(ByVal s As String)
         If chkLog.Checked Then
+<<<<<<< HEAD
 
+
+            Try
+                System.IO.File.AppendAllText(GetMyDir() + "\LOGS\LOG_" + Date.Now.ToString("yyyyMMdd") + ".txt", s + vbCrLf)
+                'Date.Now.ToString("yyyy.MM.dd HH:mm:ss") + " " +
+            Catch ex As Exception
+
+            End Try
+
+        End If
+
+    End Sub
+    Protected Sub ERASELOG()
+        If chkLog.Checked Then
+
+
+            Try
+                System.IO.File.WriteAllText(GetMyDir() + "\LOGS\LOG_" + Date.Now.ToString("yyyyMMdd") + ".txt", "")
+                'Date.Now.ToString("yyyy.MM.dd HH:mm:ss") + " " +
+            Catch ex As Exception
+
+            End Try
+
+        End If
+=======
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
+
+    End Sub
 
             Try
                 System.IO.File.AppendAllText(GetMyDir() + "\LOGS\LOG_" + Date.Now.ToString("yyyyMMdd") + ".txt", s + vbCrLf)
@@ -54,6 +82,7 @@
         Dim dt As DataTable
         stopCalc = False
         ERASELOG()
+<<<<<<< HEAD
         Dim qry As String
         qry = "select enodes.*,tarif.name trfname from enodes left join tarif on enodes.tarifid=tarif.tarifid  where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null) "
         If txtNodeID.Text <> "" Then
@@ -84,6 +113,16 @@
         'dt = tvmain.QuerySelect("select * from enodes where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
         If dt.Rows.Count = 0 Then Return
 
+=======
+        If txtNodeID.Text <> "" Then
+            dt = tvmain.QuerySelect("select enodes.*,tarif.name trfname from enodes left join tarif on enodes.tarifid=tarif.tarifid  where node_id in (" + txtNodeID.Text + ")")
+        Else
+
+            dt = tvmain.QuerySelect("select enodes.*,tarif.name trfname from enodes left join tarif on enodes.tarifid=tarif.tarifid  where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
+        End If
+
+        'dt = tvmain.QuerySelect("select * from enodes where ecolor !='GRAY' and not (COST_CATEGORY is  null) and not (POWER_QUALITY is null) and not (POWERLEVEL_MIN is null) and not (POWERLEVEL_MAX is null)")
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         pb.Minimum = 0
         pb.Maximum = dt.Rows.Count
         pb.Value = 0
@@ -271,6 +310,7 @@
                     vcat = cv(3)
                     mincat = "III"
                 End If
+<<<<<<< HEAD
 
                 If vcat > cv(2) And cv(2) > 0 Then
                     vcat = cv(2)
@@ -299,6 +339,36 @@
 
                 dr("Оптимальная категория") = mincat
 
+=======
+
+                If vcat > cv(2) And cv(2) > 0 Then
+                    vcat = cv(2)
+                    mincat = "II"
+                End If
+
+                If vcat > cv(3) Then
+                    vcat = cv(3)
+                    mincat = "III"
+                End If
+
+                If vcat > cv(4) Then
+                    vcat = cv(4)
+                    mincat = "IV"
+                End If
+
+                'If vcat > cv(5) Then
+                '    vcat = cv(5)
+                '    mincat = "V"
+                'End If
+
+                'If vcat > cv(6) Then
+                '    vcat = cv(6)
+                '    mincat = "VI"
+                'End If
+
+                dr("Оптимальная категория") = mincat
+
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
                 If stopCalc Then Exit For
                 tvmain.QueryExec("delete from COSTCALCULATION where node_id=" & dr("ID").ToString & " and theyear=" & Y.ToString & " and themonth =" & M.ToString)
                 tvmain.QueryExec("insert into COSTCALCULATION(node_id,theyear,themonth,I,II,III,IV,OPTIMAL,

@@ -12,3 +12,4 @@ C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.xml
 C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.pdb
 C:\bami\SZT_VOLOGDA\ElfMakeAgg\obj\x86\Debug\ElfMakeAgg.vbprojResolveAssemblyReference.cache
 C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\bami\SZT_VOLOGDA\ElfMakeAgg\bin\Debug\ElfMakeAgg.exe.config

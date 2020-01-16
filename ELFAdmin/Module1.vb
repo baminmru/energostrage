@@ -10,4 +10,6 @@
     Public fgrp As frmGroups
     Public fusr As frmUsers
     Public fip As frmIP
+    Public ftarif As frmTarif
+
 End Module

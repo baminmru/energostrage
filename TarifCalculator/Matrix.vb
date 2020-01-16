@@ -47,6 +47,7 @@ Public Class Matrix
         Dim dt As DataTable
         Dim q As String
         If aSUBTARRIF = "" Then
+<<<<<<< HEAD
             'q = "select * from pr_info
             '              WHERE powerlevel='" + aPowerLevel + "' and category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
             '              and SUBTARRIF is null  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString() + " and TARIFID=" + Tarif.ToString()
@@ -78,6 +79,15 @@ Public Class Matrix
                           and SUBTARRIF='" + aSUBTARRIF + "'  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString() + " and TARIFID=" + Tarif.ToString()
             End If
 
+=======
+            q = "select * from pr_info
+                          WHERE powerlevel='" + aPowerLevel + "' and category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
+                          and SUBTARRIF is null  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString() + " and TARIFID=" + Tarif.ToString()
+        Else
+            q = "select * from pr_info
+                          WHERE powerlevel='" + aPowerLevel + "' and category='" + aPriceCategory + "'  AND MINPOWER=" + aMinPower.ToString() + " AND MAXPOWER=" + aMaxPower.ToString() + "
+                          and SUBTARRIF='" + aSUBTARRIF + "'  AND THEYEAR=" + Y.ToString() + " AND THEMONTH=" + M.ToString() + " and TARIFID=" + Tarif.ToString()
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
 
         End If
 

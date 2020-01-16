@@ -1,5 +1,5 @@
 <Config DataSource="pire"
-Oracle="//192.168.9.220:1521/xe"
+Oracle="//10.160.27.4/ora11ssz"
 UserID="beavis"
 Password="beavis7654" 
 TimeOut="1000"
@@ -8,6 +8,7 @@ RequestInterval="55000"
 ShowHidden ="false"
 SendToTGK ="false"
 AutoOpen="d"
+        LogEnabled="true"
         AutoOpen1="d;s;n;g"
 >
 </Config>

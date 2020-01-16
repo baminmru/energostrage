@@ -34,9 +34,12 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.chkRound = New System.Windows.Forms.CheckBox()
         Me.chkLog = New System.Windows.Forms.CheckBox()
+<<<<<<< HEAD
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCodes = New System.Windows.Forms.TextBox()
         Me.cmdCheckLoads = New System.Windows.Forms.Button()
+=======
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numY, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,9 +55,15 @@ Partial Class Form1
         Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
         Me.dgv.Location = New System.Drawing.Point(12, 114)
         Me.dgv.Name = "dgv"
         Me.dgv.Size = New System.Drawing.Size(1102, 399)
+=======
+        Me.dgv.Location = New System.Drawing.Point(12, 116)
+        Me.dgv.Name = "dgv"
+        Me.dgv.Size = New System.Drawing.Size(1102, 397)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.dgv.TabIndex = 0
         '
         'cmdCalc
@@ -72,7 +81,11 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pb.Location = New System.Drawing.Point(12, 88)
         Me.pb.Name = "pb"
+<<<<<<< HEAD
         Me.pb.Size = New System.Drawing.Size(1102, 20)
+=======
+        Me.pb.Size = New System.Drawing.Size(687, 32)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.pb.TabIndex = 2
         Me.pb.Visible = False
         '
@@ -128,27 +141,45 @@ Partial Class Form1
         '
         Me.txtNodeID.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+<<<<<<< HEAD
         Me.txtNodeID.Location = New System.Drawing.Point(556, 9)
         Me.txtNodeID.Name = "txtNodeID"
         Me.txtNodeID.Size = New System.Drawing.Size(558, 20)
+=======
+        Me.txtNodeID.Location = New System.Drawing.Point(427, 72)
+        Me.txtNodeID.Name = "txtNodeID"
+        Me.txtNodeID.Size = New System.Drawing.Size(547, 20)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.txtNodeID.TabIndex = 17
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+<<<<<<< HEAD
         Me.Label1.Location = New System.Drawing.Point(466, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "ID счетчиков"
+=======
+        Me.Label1.Location = New System.Drawing.Point(354, 75)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "ID"
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         '
         'chkRound
         '
         Me.chkRound.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkRound.AutoSize = True
+<<<<<<< HEAD
         Me.chkRound.Checked = True
         Me.chkRound.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkRound.Location = New System.Drawing.Point(556, 63)
+=======
+        Me.chkRound.Location = New System.Drawing.Point(980, 54)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.chkRound.Name = "chkRound"
         Me.chkRound.Size = New System.Drawing.Size(134, 17)
         Me.chkRound.TabIndex = 19
@@ -159,13 +190,18 @@ Partial Class Form1
         '
         Me.chkLog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkLog.AutoSize = True
+<<<<<<< HEAD
         Me.chkLog.Location = New System.Drawing.Point(427, 61)
+=======
+        Me.chkLog.Location = New System.Drawing.Point(1026, 77)
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.chkLog.Name = "chkLog"
         Me.chkLog.Size = New System.Drawing.Size(88, 17)
         Me.chkLog.TabIndex = 20
         Me.chkLog.Text = "Лог расчета"
         Me.chkLog.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -194,14 +230,19 @@ Partial Class Form1
         Me.cmdCheckLoads.Text = "Проверить загрузки"
         Me.cmdCheckLoads.UseVisualStyleBackColor = True
         '
+=======
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1126, 529)
+<<<<<<< HEAD
         Me.Controls.Add(Me.cmdCheckLoads)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtCodes)
+=======
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         Me.Controls.Add(Me.chkLog)
         Me.Controls.Add(Me.chkRound)
         Me.Controls.Add(Me.Label1)
@@ -236,7 +277,10 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents chkRound As CheckBox
     Friend WithEvents chkLog As CheckBox
+<<<<<<< HEAD
     Friend WithEvents Label4 As Label
     Friend WithEvents txtCodes As TextBox
     Friend WithEvents cmdCheckLoads As Button
+=======
+>>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
 End Class

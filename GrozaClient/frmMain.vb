@@ -59,7 +59,7 @@ Public Class frmMain
             Application.Exit()
             End
         End If
-        Agregate()
+        'Agregate()
     End Sub
 
     Private Sub ГрафикиToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ГрафикиToolStripMenuItem.Click
@@ -230,46 +230,46 @@ Public Class frmMain
         f.Show()
     End Sub
 
-    Private Sub mnuEconomyRecalc_Click(sender As Object, e As EventArgs) Handles mnuEconomyRecalc.Click
-        Dim dt As DataTable
-        dt = tvmain.QuerySelect("select node_id from enodes")
-        Dim nclr As Color
-        Dim i As Integer
-        Dim fp As frmProgress
-        fp = New frmProgress
+    'Private Sub mnuEconomyRecalc_Click(sender As Object, e As EventArgs) Handles mnuEconomyRecalc.Click
+    '    Dim dt As DataTable
+    '    dt = tvmain.QuerySelect("select node_id from enodes")
+    '    Dim nclr As Color
+    '    Dim i As Integer
+    '    Dim fp As frmProgress
+    '    fp = New frmProgress
 
-        Dim w As Integer
-        w = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
-        Dim j As Integer
+    '    Dim w As Integer
+    '    w = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
+    '    Dim j As Integer
 
-        fp.pb.Maximum = dt.Rows.Count * w
-        fp.pb.Minimum = 0
-        'fp.pb2.Maximum = 1
-        'fp.pb2.Minimum = 0
-        'fp.pb2.Value = 0
-        fp.Show()
+    '    fp.pb.Maximum = dt.Rows.Count * w
+    '    fp.pb.Minimum = 0
+    '    'fp.pb2.Maximum = 1
+    '    'fp.pb2.Minimum = 0
+    '    'fp.pb2.Value = 0
+    '    fp.Show()
 
 
 
-        For i = 0 To dt.Rows.Count - 1
-            fp.pb.Value = i * w
-            'fp.pb2.Maximum = w - 1
-            'fp.pb2.Minimum = 0
-            'fp.pb2.Value = 0
-            Application.DoEvents()
-            tvmain.QueryExec("delete from  enodecolors  where nodeid=" & dt.Rows(i)("node_id").ToString())
-            tvmain.QueryExec("insert into  enodecolors (nodeid) values(" & dt.Rows(i)("node_id").ToString() & ")")
+    '    For i = 0 To dt.Rows.Count - 1
+    '        fp.pb.Value = i * w
+    '        'fp.pb2.Maximum = w - 1
+    '        'fp.pb2.Minimum = 0
+    '        'fp.pb2.Value = 0
+    '        Application.DoEvents()
+    '        tvmain.QueryExec("delete from  enodecolors  where nodeid=" & dt.Rows(i)("node_id").ToString())
+    '        tvmain.QueryExec("insert into  enodecolors (nodeid) values(" & dt.Rows(i)("node_id").ToString() & ")")
 
-            For j = 2 To w - 1
-                fp.pb.Value = i * w + j
-                nclr = CheckNodeColor(dt.Rows(i)("node_id"), j)
-                Application.DoEvents()
-                tvmain.QueryExec("update enodecolors set week" + j.ToString() + "='" & nclr.Name & "' where nodeid=" & dt.Rows(i)("node_id").ToString())
-            Next
+    '        For j = 2 To w - 1
+    '            fp.pb.Value = i * w + j
+    '            nclr = CheckNodeColor(dt.Rows(i)("node_id"), j)
+    '            Application.DoEvents()
+    '            tvmain.QueryExec("update enodecolors set week" + j.ToString() + "='" & nclr.Name & "' where nodeid=" & dt.Rows(i)("node_id").ToString())
+    '        Next
 
-        Next
-        fp.Hide()
-    End Sub
+    '    Next
+    '    fp.Hide()
+    'End Sub
 
     Private Sub mnuNodeYearStatus_Click(sender As Object, e As EventArgs) Handles mnuNodeYearStatus.Click
         Dim f As frmNodeYearState

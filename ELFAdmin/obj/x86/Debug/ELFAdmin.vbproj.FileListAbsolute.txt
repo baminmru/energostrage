@@ -41,12 +41,9 @@ C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.xml
 C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.pdb
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\CFG_GetAllData.xml
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\ElfMakeAgg.exe
-C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData.exe
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\FTP.dll
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\ElfMakeAgg.pdb
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\ElfMakeAgg.xml
-C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData.pdb
-C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData.xml
 C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.frmParamsEdit.resources
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\PropertyGridEx.dll
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\PropertyGridEx.pdb
@@ -125,3 +122,8 @@ C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\ElfMIRTEKReader.pdb
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\ElfMIRTEKReader.xml
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\FTP.pdb
 C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\FTP.xml
+C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.exe
+C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.pdb
+C:\bami\SZT_VOLOGDA\ELFAdmin\bin\Debug\GetAllData2.xml
+C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.frmTarif.resources
+C:\bami\SZT_VOLOGDA\ELFAdmin\obj\x86\Debug\ESAdmin.frmTarifEdit.resources

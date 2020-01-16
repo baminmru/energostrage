@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <db DataSource="ora11ssz"
+    Oracle="//10.160.27.4/ora11ssz"
+    UserID="beavis"
+    Password="beavis7654"
+    TimeOut="1000"
+    >
+  </db>
+</config>

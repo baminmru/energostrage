@@ -96,6 +96,7 @@ Public Class ConfigForm
 
         txtName.Text = dtMain.Rows(0)("mpoint_name") & ""
         txtCode.Text = dtMain.Rows(0)("mpoint_code") & ""
+
         txtcaddress.Text = dtMain.Rows(0)("caddress") & ""
         txtFULLADDRESS.Text = dtMain.Rows(0)("fulladdress") & ""
         txtcfio1.Text = dtMain.Rows(0)("cfio1") & ""
@@ -105,6 +106,7 @@ Public Class ConfigForm
         cmbDevtype.SelectedValue = dtMain.Rows(0)("id_dev")
         cmbGRP.SelectedValue = dtMain.Rows(0)("sender_id")
         cmbWhoGiveTop.SelectedValue = dtMain.Rows(0)("whogive")
+        cmbTarif.SelectedValue = dtMain.Rows(0)("tarifid")
 
 
         cmbMaskM.SelectedValue = dtMain.Rows(0)("id_mask")
@@ -122,8 +124,15 @@ Public Class ConfigForm
         txtP_AM.Text = dtMain.Rows(0)("p_am").ToString()
         txtP_RP.Text = dtMain.Rows(0)("p_rp").ToString()
         txtP_RM.Text = dtMain.Rows(0)("p_rm").ToString()
-       
 
+
+        txtIndex.Text = dtMain.Rows(0)("dogovor") & ""
+        txtMPOINT_SERIAL.Text = dtMain.Rows(0)("mpoint_serial") & ""
+        If dtMain.Rows(0)("hidden") = 0 Then
+            chkHideRow.Checked = False
+        Else
+            chkHideRow.Checked = True
+        End If
 
 
     End Sub
@@ -201,7 +210,22 @@ Public Class ConfigForm
 
 
 
+
+
+
+
         Try
+
+
+
+            If chkHideRow.Checked = True Then
+                s = s & ", HIDDEN=1"
+            Else
+                s = s & ", HIDDEN=0"
+            End If
+
+            s = s & ", MPOINT_SERIAL='" + txtMPOINT_SERIAL.Text + "'"
+            s = s & ", DOGOVOR='" + txtIndex.Text + "'"
 
             s = s & ", COST_CATEGORY='" + cmbCostCategory.Text + "',POWER_QUALITY='" + cmbPowerQuality.Text + "'"
             If IsNumeric(txtPower_min.Text) Then
@@ -242,6 +266,11 @@ Public Class ConfigForm
             s = s & ", WHOGIVE =null"
         End If
 
+        If Not cmbTarif.SelectedValue Is Nothing Then
+            s = s & ", TARIFID =" + cmbTarif.SelectedValue.ToString
+        Else
+            s = s & ", TARIFID =null"
+        End If
 
 
         If Not cmbDevtype.SelectedValue Is Nothing Then
@@ -435,6 +464,12 @@ Public Class ConfigForm
         cmbWhoGiveTop.ValueMember = "id_whotop"
         cmbWhoGiveTop.DataSource = ddw
 
+        q = "select * from tarif order by name"
+        Dim dtrf As DataTable
+        dtrf = TvMain.QuerySelect(q)
+        cmbTarif.DisplayMember = "name"
+        cmbTarif.ValueMember = "tarifid"
+        cmbTarif.DataSource = dtrf
 
 
 
@@ -723,5 +758,9 @@ Public Class ConfigForm
         f.mask_id = cmbMaskT.SelectedValue
         f.txtName.Text = cmbMaskT.Text
         f.ShowDialog()
+    End Sub
+
+    Private Sub UltraPanel1_PaintClient(sender As Object, e As PaintEventArgs) Handles UltraPanel1.PaintClient
+
     End Sub
 End Class

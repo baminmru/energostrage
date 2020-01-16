@@ -166,7 +166,7 @@ Public Class clsFTP_OLD
             Login()
         End If
 
-        cSocket = CreateDataSocket()
+        cSocket = CreatEDATASocket()
         SendCommand("nlst")
         'SendCommand("NLST " & sMask)
 
@@ -340,7 +340,7 @@ Public Class clsFTP_OLD
         End If
 
         output = New FileStream(sLocalFileName, FileMode.Open, FileAccess.Write, FileShare.None)
-        cSocket = CreateDataSocket()
+        cSocket = CreatEDATASocket()
         offset = 0
 
         If (bResume) Then
@@ -409,7 +409,7 @@ Public Class clsFTP_OLD
             Login()
         End If
 
-        cSocket = CreateDataSocket()
+        cSocket = CreatEDATASocket()
         offset = 0
 
         If (bResume) Then
@@ -675,7 +675,7 @@ Public Class clsFTP_OLD
 
     '
     ' Create a Data socket.
-    Private Function CreateDataSocket() As Socket
+    Private Function CreatEDATASocket() As Socket
         Dim index1, index2, len As Int32
         Dim partCount, i, port As Int32
         Dim ipData, buf, ipAddress As String

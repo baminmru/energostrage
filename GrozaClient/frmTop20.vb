@@ -165,9 +165,9 @@ Public Class frmTop20
         End If
 
         Dim q As String = ""
-        q = "select sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) as value ,enodes.mpoint_name as name from EDATA_agg  " &
-                " join enodes on enodes.node_id=EDATA_agg.node_id " &
-                 w & " and enodes.sender_id=" + id.ToString + " and enodes.mpoint_name is not null having sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) > 0  group by enodes.mpoint_name order by sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) desc "
+        q = "select sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) as value ,enodes.mpoint_name as name from EDATA_AGG " &
+                " join enodes on enodes.node_id=EDATA_AGG.node_id " &
+                 w & " and enodes.hidden=0 and enodes.sender_id=" + id.ToString + " and enodes.mpoint_name is not null having sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) > 0  group by enodes.mpoint_name order by sum(nvl(code_01,0)+nvl(code_02,0)+nvl(code_03,0)+nvl(code_04,0)) desc "
 
         dt = tvmain.QuerySelect(q)
 

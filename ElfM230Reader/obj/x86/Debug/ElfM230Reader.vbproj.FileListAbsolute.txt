@@ -12,3 +12,4 @@ C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.pdb
 C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\Config.xml
 C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\bami\SZT_VOLOGDA\ElfM230Reader\obj\x86\Debug\ElfM230Reader.vbprojResolveAssemblyReference.cache
+C:\bami\SZT_VOLOGDA\ElfM230Reader\bin\Debug\ElfM230Reader.exe.config

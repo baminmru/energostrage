@@ -76,11 +76,22 @@ Public Class Form1
 
     Private Sub cmdLoad_Click(sender As Object, e As EventArgs) Handles cmdLoad.Click
         If txtFile.Text = "" Then
+            MsgBox("Надо выбрать файл")
             Exit Sub
         End If
 
+        If cmbTarif.SelectedIndex < 0 Then
+            MsgBox("Надо выбрать тип тарифа")
+            Exit Sub
+        End If
+        Dim TarifId As Integer
+
+        TarifId = cmbTarif.SelectedValue
+
         Y = numY.Value
         MNTH = numM.Value
+
+
 
         Dim fi As FileInfo
         fi = New FileInfo(txtFile.Text)
@@ -161,7 +172,7 @@ Public Class Form1
                                     If cell IsNot Nothing AndAlso Not cell.IsEmpty AndAlso cell.CellText <> "" Then
                                         PowerCost = cell.CellText
                                         If IsNumeric(PowerCost) Then
-                                            tvmain.QueryExec("update PR_INFO set powercost=" & PowerCost.ToString().Replace(",", ".") & " where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and POWERTEXT='" & allowedPower & "' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
+                                            tvmain.QueryExec("update PR_INFO set TARIFID=" & TarifId.ToString() & ",powercost=" & PowerCost.ToString().Replace(",", ".") & " where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and POWERTEXT='" & allowedPower & "' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
                                         End If
                                         Exit For
                                     End If
@@ -179,7 +190,7 @@ Public Class Form1
                                         Peredacha = cell.CellText
                                         htxt = hcell.CellText
                                         If IsNumeric(Peredacha) Then
-                                            tvmain.QueryExec("update PR_INFO set Peredacha=" & Peredacha.ToString().Replace(",", ".") & " where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and POWERTEXT='" & allowedPower & "' and HEADERTEXT like'%" & htxt & "%' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
+                                            tvmain.QueryExec("update PR_INFO set TARIFID=" & TarifId.ToString() & ",Peredacha=" & Peredacha.ToString().Replace(",", ".") & " where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and POWERTEXT='" & allowedPower & "' and HEADERTEXT like'%" & htxt & "%' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
                                         End If
                                     End If
                                 Next
@@ -220,17 +231,17 @@ Public Class Form1
                                     buildHeader = False
                                     Dim dt As DataTable
 
-                                    dt = tvmain.QuerySelect("select ID from PR_INFO where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
+                                    dt = tvmain.QuerySelect("select ID from PR_INFO where  tarifid=" & TarifId.ToString() & " and filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString())
                                     If dt.Rows.Count = 0 Then
 
 
                                         dt = tvmain.QuerySelect("select pr_info_seq.nextval nv from dual")
                                         matrixID = dt.Rows(0)("nv")
                                         tvmain.QueryExec("INSERT INTO PR_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT)
+                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,TARIFID)
                                             VALUES
                                             (
-                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,0,'','" & headrText & "'," & dd.Year().ToString() & "," & dd.Month().ToString() & ",'" & allowedPower & "'
+                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,0,'','" & headrText & "'," & dd.Year().ToString() & "," & dd.Month().ToString() & ",'" & allowedPower & "'," & TarifId.ToString() & "
                                             )")
                                     Else
                                         matrixID = dt.Rows(0)("ID")
@@ -331,8 +342,17 @@ Public Class Form1
 
     Private Sub loadPEEK_Click(sender As Object, e As EventArgs) Handles loadPEEK.Click
         If txtFile.Text = "" Then
+            MsgBox("Надо выбрать файл")
             Exit Sub
         End If
+
+        If cmbTarif.SelectedIndex < 0 Then
+            MsgBox("Надо выбрать тип тарифа")
+            Exit Sub
+        End If
+        Dim TarifId As Integer
+
+        TarifId = cmbTarif.SelectedValue
 
         Y = numY.Value
         MNTH = numM.Value
@@ -436,17 +456,17 @@ Public Class Form1
                                 buildHeader = False
                                 Dim dt As DataTable
 
-                                dt = tvmain.QuerySelect("select ID from PEEK_INFO where filename='" & fi.Name & "' and PAGENAME='" & sName & "'  and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString() & " and CATEGORY='III' and SUBTARRIF='PEEK'")
+                                dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and filename='" & fi.Name & "' and PAGENAME='" & sName & "'  and theyear=" & dd.Year().ToString() & " and themonth= " & dd.Month().ToString() & " and CATEGORY='III' and SUBTARRIF='PEEK'")
                                 If dt.Rows.Count = 0 Then
 
 
                                     dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
                                     matrixID = dt.Rows(0)("nv")
                                     tvmain.QueryExec("INSERT INTO Peek_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                                            ( TARIFID, FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
                                             VALUES
                                             (
-                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & "," & dd.Year().ToString() & "," & dd.Month().ToString() & ",'III','PEEK'
+                                             " & tarifid.ToString() & ", '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & "," & dd.Year().ToString() & "," & dd.Month().ToString() & ",'III','PEEK'
                                             )")
                                 Else
                                     matrixID = dt.Rows(0)("ID")
@@ -499,8 +519,17 @@ Public Class Form1
 
     Private Sub Load_I_II_Click(sender As Object, e As EventArgs) Handles Load_I_II.Click
         If txtFile.Text = "" Then
+            MsgBox("Надо выбрать файл")
             Exit Sub
         End If
+
+        If cmbTarif.SelectedIndex < 0 Then
+            MsgBox("Надо выбрать тип тарифа")
+            Exit Sub
+        End If
+        Dim TarifId As Integer
+
+        TarifId = cmbTarif.SelectedValue
 
         Y = numY.Value
         MNTH = numM.Value
@@ -619,7 +648,7 @@ Public Class Form1
 
 
 
-                                dt = tvmain.QuerySelect("select ID from PR_INFO where filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & "")
+                                dt = tvmain.QuerySelect("select ID from PR_INFO where tarifid=" & TarifId.ToString() & " and  filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & "")
                                 If dt.Rows.Count = 0 Then
 
 
@@ -628,24 +657,24 @@ Public Class Form1
 
                                     If allowedPower.Contains("670") Then
                                         tvmain.QueryExec("INSERT INTO PR_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST)
+                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST,TARIFID)
                                             VALUES
                                             (
-                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",150,670,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','I'," & hVal.ToString().Replace(",", ".") & "
+                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",150,670,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','I'," & hVal.ToString().Replace(",", ".") & "," & TarifId.ToString() & "
                                             )")
                                     Else
                                         tvmain.QueryExec("INSERT INTO PR_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST)
+                                            (  FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST,TARIFID)
                                             VALUES
                                             (
-                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,150,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','I'," & hVal.ToString().Replace(",", ".") & "
+                                              '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,150,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','I'," & hVal.ToString().Replace(",", ".") & "," & TarifId.ToString() & "
                                             )")
                                     End If
 
                                 Else
                                     matrixID = dt.Rows(0)("ID")
                                     tvmain.QueryExec("delete from PR_DATA where PR_INFO_ID=" & matrixID.ToString)
-                                    tvmain.QueryExec("update PR_INFO set powercost=" & hVal.ToString().Replace(",", ".") & " where ID=" & matrixID.ToString())
+                                    tvmain.QueryExec("update PR_INFO set TARIFID=" & TarifId.ToString() & ",powercost=" & hVal.ToString().Replace(",", ".") & " where ID=" & matrixID.ToString())
                                 End If
 
 
@@ -685,8 +714,17 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If txtFile.Text = "" Then
+            MsgBox("Надо выбрать файл")
             Exit Sub
         End If
+
+        If cmbTarif.SelectedIndex < 0 Then
+            MsgBox("Надо выбрать тип тарифа")
+            Exit Sub
+        End If
+        Dim TarifId As Integer
+
+        TarifId = cmbTarif.SelectedValue
 
         Y = numY.Value
         MNTH = numM.Value
@@ -832,7 +870,7 @@ Public Class Form1
 
 
 
-                                        dt = tvmain.QuerySelect("select ID from PR_INFO where subtarrif='" & SUBTARRIF & "' and filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & "")
+                                        dt = tvmain.QuerySelect("select ID from PR_INFO where tarifid=" & TarifId.ToString() & " and  subtarrif='" & SUBTARRIF & "' and filename='" & fi.Name & "' and PAGENAME='" & sName & "' and HEADERTEXT='" & headrText & "'and POWERTEXT='" & allowedPower & "' and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & "")
                                         If dt.Rows.Count = 0 Then
 
 
@@ -841,24 +879,24 @@ Public Class Form1
 
                                             If allowedPower.Contains("670") Then
                                                 tvmain.QueryExec("INSERT INTO PR_INFO
-                                            (  SUBTARRIF, FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST)
+                                            (  SUBTARRIF, FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST,TARIFID)
                                             VALUES
                                             (
-                                              '" & SUBTARRIF & "', '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",150,670,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','II'," & hVal.ToString().Replace(",", ".") & "
+                                              '" & SUBTARRIF & "', '" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",150,670,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','II'," & hVal.ToString().Replace(",", ".") & "," & TarifId.ToString & "
                                             )")
                                             Else
                                                 tvmain.QueryExec("INSERT INTO PR_INFO
-                                            ( SUBTARRIF, FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST)
+                                            ( SUBTARRIF, FILENAME ,PAGENAME ,ID ,MINPOWER ,MAXPOWER ,POWERLEVEL ,HEADERTEXT ,THEYEAR ,THEMONTH ,POWERTEXT,CATEGORY,POWERCOST,TARIFID)
                                             VALUES
                                             (
-                                              '" & SUBTARRIF & "','" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,150,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','II'," & hVal.ToString().Replace(",", ".") & "
+                                              '" & SUBTARRIF & "','" & fi.Name & "','" & sName & "'," & matrixID.ToString() & ",0,150,'" & headrText & "','" & headrText & "'," & Y.ToString() & "," & MNTH.ToString() & ",'" & allowedPower & "','II'," & hVal.ToString().Replace(",", ".") & "," & TarifId.ToString & "
                                             )")
                                             End If
 
                                         Else
                                             matrixID = dt.Rows(0)("ID")
                                             tvmain.QueryExec("delete from PR_DATA where PR_INFO_ID=" & matrixID.ToString)
-                                            tvmain.QueryExec("update PR_INFO set powercost=" & hVal.ToString().Replace(",", ".") & " where ID=" & matrixID.ToString())
+                                            tvmain.QueryExec("update PR_INFO set TARIFID=" & TarifId.ToString() & ", powercost=" & hVal.ToString().Replace(",", ".") & " where ID=" & matrixID.ToString())
                                         End If
 
 
@@ -906,22 +944,37 @@ Public Class Form1
         Dim matrixID As String
         Dim dd As DateTime
 
+
+        If txtFile.Text = "" Then
+            MsgBox("Надо выбрать файл")
+            Exit Sub
+        End If
+
+        If cmbTarif.SelectedIndex < 0 Then
+            MsgBox("Надо выбрать тип тарифа")
+            Exit Sub
+        End If
+        Dim TarifId As Integer
+
+        TarifId = cmbTarif.SelectedValue
+
+
         Y = numY.Value
         MNTH = numM.Value
 
         dd = DateSerial(Y, MNTH, 1)
 
-        dt = tvmain.QuerySelect("select ID from PEEK_INFO where filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='PEEK'")
+        dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='PEEK'")
         If dt.Rows.Count = 0 Then
 
 
             dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
             matrixID = dt.Rows(0)("nv")
             tvmain.QueryExec("INSERT INTO Peek_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                                            (  tarifid,FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
                                             VALUES
                                             (
-                                              'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','PEEK'
+                                              " & TarifId.ToString() & ",'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','PEEK'
                                             )")
         Else
             matrixID = dt.Rows(0)("ID")
@@ -938,17 +991,17 @@ Public Class Form1
         Next
 
         'HALFPEEK
-        dt = tvmain.QuerySelect("select ID from PEEK_INFO where filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='HALFPEEK'")
+        dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='HALFPEEK'")
         If dt.Rows.Count = 0 Then
 
 
             dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
             matrixID = dt.Rows(0)("nv")
             tvmain.QueryExec("INSERT INTO Peek_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                                            (  TARIFID, FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
                                             VALUES
                                             (
-                                              'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','HALFPEEK'
+                                              " & TarifId.ToString() & ",'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','HALFPEEK'
                                             )")
         Else
             matrixID = dt.Rows(0)("ID")
@@ -972,17 +1025,17 @@ Public Class Form1
         Next
 
         'NIGHT
-        dt = tvmain.QuerySelect("select ID from PEEK_INFO where filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='NIGHT'")
+        dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and  filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='NIGHT'")
         If dt.Rows.Count = 0 Then
 
 
             dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
             matrixID = dt.Rows(0)("nv")
             tvmain.QueryExec("INSERT INTO Peek_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                                            (  TARIFID, FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
                                             VALUES
                                             (
-                                              'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','NIGHT'
+                                               " & TarifId.ToString() & ",'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','NIGHT'
                                             )")
         Else
             matrixID = dt.Rows(0)("ID")
@@ -1001,17 +1054,17 @@ Public Class Form1
 
 
         'DAY
-        dt = tvmain.QuerySelect("select ID from PEEK_INFO where filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='DAY'")
+        dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and   filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='II' and SUBTARRIF='DAY'")
         If dt.Rows.Count = 0 Then
 
 
             dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
             matrixID = dt.Rows(0)("nv")
             tvmain.QueryExec("INSERT INTO Peek_INFO
-                                            (  FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                                            ( TARIFID, FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
                                             VALUES
                                             (
-                                              'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','DAY'
+                                              " & TarifId.ToString() & ",'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'II','DAY'
                                             )")
         Else
             matrixID = dt.Rows(0)("ID")
@@ -1028,13 +1081,114 @@ Public Class Form1
                                     (" & matrixID.ToString() & "," & tvmain.OracleDate(dd) & "," & i.ToString() & ")")
         Next
 
-
+        txtLog.Text = "Диапазоны созданы" & vbCrLf & txtLog.Text
 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         numY.Value = DateTime.Today().Year
         numM.Value = DateTime.Today().Month
+        Dim q As String = "select * from tarif order by name"
+        Dim dtrf As DataTable
+        dtrf = tvmain.QuerySelect(q)
+        cmbTarif.DisplayMember = "name"
+        cmbTarif.ValueMember = "tarifid"
+        cmbTarif.DataSource = dtrf
+    End Sub
+
+    Private Sub cmdPeek4_Click(sender As Object, e As EventArgs) Handles cmdPeek4.Click
+        Dim fp4 As frmPEEK4
+        fp4 = New frmPEEK4
+
+        If fp4.ShowDialog() = DialogResult.OK Then
+
+
+            If cmbTarif.SelectedIndex < 0 Then
+                MsgBox("Надо выбрать тип тарифа")
+                Exit Sub
+            End If
+            Dim TarifId As Integer
+
+            TarifId = cmbTarif.SelectedValue
+
+            Y = numY.Value
+            MNTH = numM.Value
+
+            Dim matrixID As Integer
+
+
+
+
+            Dim dt As DataTable
+
+            dt = tvmain.QuerySelect("select ID from PEEK_INFO where tarifid=" & TarifId.ToString() & " and filename='AUTO' and PAGENAME='AUTO'  and theyear=" & Y.ToString() & " and themonth= " & MNTH.ToString() & " and CATEGORY='IV' and SUBTARRIF='PEEK'")
+            If dt.Rows.Count = 0 Then
+
+
+                dt = tvmain.QuerySelect("select peek_info_seq.nextval nv from dual")
+                matrixID = dt.Rows(0)("nv")
+                tvmain.QueryExec("INSERT INTO Peek_INFO
+                    ( TARIFID, FILENAME ,PAGENAME ,ID ,THEYEAR ,THEMONTH ,CATEGORY,SUBTARRIF)
+                    VALUES
+                    (
+                        " & TarifId.ToString() & ", 'AUTO','AUTO'," & matrixID.ToString() & "," & Y.ToString() & "," & MNTH.ToString() & ",'IV','PEEK'
+                    )")
+            Else
+                matrixID = dt.Rows(0)("ID")
+                tvmain.QueryExec("delete from PEEK_DATA where PEEK_INFO_ID=" & matrixID.ToString)
+
+            End If
+
+
+            Dim dd As Date
+            Dim i As Integer
+            Dim j As Integer
+            For i = 1 To 31
+                Try
+                    dd = DateSerial(Y, MNTH, i)
+                    For j = 0 To 23
+
+                        ' первый диапазон
+                        If fp4.numFrom1.Value >= 0 And fp4.numTo1.Value > fp4.numFrom1.Value Then
+                            If j >= fp4.numFrom1.Value And j <= fp4.numTo1.Value Then
+                                tvmain.QueryExec("INSERT INTO PEEK_DATA
+                                    (  PEEK_INFO_ID ,THEDATE ,HOUR )
+                                    VALUES
+                                    (" & matrixID.ToString() & "," & tvmain.OracleDate(dd) & "," & j.ToString() & ")")
+
+                            End If
+                        End If
+
+                        ' второй диапазон
+                        If fp4.numFrom2.Value >= 0 And fp4.numTo2.Value > fp4.numFrom2.Value Then
+                            If j >= fp4.numFrom2.Value And j <= fp4.numTo2.Value Then
+                                tvmain.QueryExec("INSERT INTO PEEK_DATA
+                                    (  PEEK_INFO_ID ,THEDATE ,HOUR )
+                                    VALUES
+                                    (" & matrixID.ToString() & "," & tvmain.OracleDate(dd) & "," & j.ToString() & ")")
+
+                            End If
+                        End If
+
+
+                    Next
+
+
+
+                Catch ex As Exception
+
+                End Try
+            Next
+
+
+
+
+
+
+
+            txtLog.Text = "Загрузка завершена" & vbCrLf & txtLog.Text
+
+        End If
 
     End Sub
 End Class

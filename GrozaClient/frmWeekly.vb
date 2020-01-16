@@ -12,43 +12,46 @@ Public Class frmWeekly
 
     Private Sub frmTree_Load(sender As Object, e As EventArgs) Handles Me.Load
         ClearGraph()
+        txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    'Private Sub LoadTree()
-    '    tv.Nodes.Clear()
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from esender")
-    '    Dim n As UltraTreeNode
-
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        n = New UltraTreeNode("esender:" + dt.Rows(i)("sender_id").ToString, dt.Rows(i)("sender_name") + " (" + dt.Rows(i)("sender_inn") + ")")
-    '        tv.Nodes.Add(n)
-    '        n.Tag = dt.Rows(i)("sender_id")
-    '        LoadNodes(n, dt.Rows(i)("sender_id"))
-    '    Next
-
-    'End Sub
-
-    'Private Sub LoadNodes(p As UltraTreeNode, sender_id As Integer)
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from enodes where sender_id=" + sender_id.ToString() + " order by mpoint_name")
-    '    Dim n As UltraTreeNode
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        Try
-    '            n = New UltraTreeNode("enodes:" + dt.Rows(i)("node_id").ToString, dt.Rows(i)("mpoint_name") + " (" + dt.Rows(i)("mpoint_code") + ")")
-    '            n.Tag = dt.Rows(i)("node_id")
-    '            p.Nodes.Add(n)
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message)
-    '        End Try
+    Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
+        If NodeFilter <> txtFilter.Text Then
+            NodeFilter = txtFilter.Text
+            LoadTree(tv)
+        End If
+    End Sub
 
 
-    '    Next
-    'End Sub
+    Private Sub tv_DoubleClick(sender As Object, e As EventArgs) Handles tv.DoubleClick
+        Dim n As UltraTreeNode = Nothing
+        If tv.SelectedNodes.Count > 0 Then
+            n = tv.SelectedNodes.Item(0)
+        End If
+        If n Is Nothing Then Exit Sub
+        Dim id As Integer
+
+        If n.Key.ToString().StartsWith("esender:") Then
+            Exit Sub
+        End If
+
+        If n.Key.ToString().StartsWith("enodes:") Then
+            id = n.Tag
+
+            Dim f As Form
+            Dim ne As NodeEditorLib.NodeEditor = Nothing
+            If ne Is Nothing Then
+                ne = New NodeEditorLib.NodeEditor
+            End If
+            f = ne.GetForm(id, tvmain)
+
+            f.ShowDialog()
+            f = Nothing
+        End If
+
+    End Sub
 
     Private Sub tv_AfterSelect(sender As Object, e As SelectEventArgs) Handles tv.AfterSelect
         Dim n As UltraTreeNode = Nothing
@@ -92,11 +95,11 @@ Public Class frmWeekly
 
 
             If chkMovingAverage.Checked = False Then
-                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW')  order by WEEK ")
+                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from v_EDATA " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW')  order by WEEK ")
 
 
             Else
-                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from EDATA_agg " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW') order by WEEk")
+                dt = tvmain.QuerySelect("select to_char(p_date,'YYYY:IW') as WEEK , sum(nvl(code_01,0)) as A_PLUS, sum(nvl(code_02,0)) as A_MINUS,sum(nvl(code_03,0))  as R_PLUS,sum(nvl(code_04,0)) as R_MINUS from v_EDATA " + w + " and node_id=" + id.ToString + " group by to_char(p_date,'YYYY:IW') order by WEEk")
 
                 Dim dt2 As DataTable
                 Dim dc As DataColumn

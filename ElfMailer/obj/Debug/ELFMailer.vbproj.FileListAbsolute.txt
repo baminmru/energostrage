@@ -13,4 +13,4 @@ C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\Config.xml
 C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.dll
 C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.pdb
 C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\ELFDBMain.xml
-C:\bami\SZT_VOLOGDA\ElfMailer\obj\Debug\ELFMailer.vbproj.ToidMail.exe.config
+C:\bami\SZT_VOLOGDA\ElfMailer\bin\Debug\Oracle.ManagedDataAccess.dll

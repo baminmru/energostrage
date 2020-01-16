@@ -48,6 +48,7 @@ Partial Class frmMain
         Me.mnuStat = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLike = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCORR = New System.Windows.Forms.ToolStripMenuItem()
+        Me.frmWeekend = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuKMEAN = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEconomyRecalc = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,7 +59,6 @@ Partial Class frmMain
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.frmWeekend = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -102,6 +102,7 @@ Partial Class frmMain
         Me.mnuNodeYearStatus.Name = "mnuNodeYearStatus"
         Me.mnuNodeYearStatus.Size = New System.Drawing.Size(362, 22)
         Me.mnuNodeYearStatus.Text = "Статус с начала года"
+        Me.mnuNodeYearStatus.Visible = False
         '
         'ГрафикиToolStripMenuItem
         '
@@ -151,6 +152,7 @@ Partial Class frmMain
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
         Me.ToolStripMenuItem4.Size = New System.Drawing.Size(362, 22)
         Me.ToolStripMenuItem4.Text = "План-факт"
+        Me.ToolStripMenuItem4.Visible = False
         '
         'mnuCalcWeekMULT
         '
@@ -208,6 +210,12 @@ Partial Class frmMain
         Me.mnuCORR.Size = New System.Drawing.Size(294, 22)
         Me.mnuCORR.Text = "Корреляция объектов"
         '
+        'frmWeekend
+        '
+        Me.frmWeekend.Name = "frmWeekend"
+        Me.frmWeekend.Size = New System.Drawing.Size(294, 22)
+        Me.frmWeekend.Text = "Соотношение Рабочие и Выходные дни"
+        '
         'mnuKMEAN
         '
         Me.mnuKMEAN.Name = "mnuKMEAN"
@@ -219,6 +227,7 @@ Partial Class frmMain
         Me.mnuEconomyRecalc.Name = "mnuEconomyRecalc"
         Me.mnuEconomyRecalc.Size = New System.Drawing.Size(362, 22)
         Me.mnuEconomyRecalc.Text = "Пересчет экономии"
+        Me.mnuEconomyRecalc.Visible = False
         '
         'WindowsMenu
         '
@@ -262,12 +271,6 @@ Partial Class frmMain
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
         Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Arrange Icons"
-        '
-        'frmWeekend
-        '
-        Me.frmWeekend.Name = "frmWeekend"
-        Me.frmWeekend.Size = New System.Drawing.Size(294, 22)
-        Me.frmWeekend.Text = "Соотношение Рабочие и Выходные дни"
         '
         'frmMain
         '

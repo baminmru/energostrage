@@ -36,6 +36,8 @@ Partial Class Form1
         Me.numY = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.numM = New System.Windows.Forms.NumericUpDown()
+        Me.cmbTarif = New System.Windows.Forms.ComboBox()
+        Me.cmdPeek4 = New System.Windows.Forms.Button()
         CType(Me.numY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +49,7 @@ Partial Class Form1
         'cmdFile
         '
         Me.cmdFile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdFile.Location = New System.Drawing.Point(578, 28)
+        Me.cmdFile.Location = New System.Drawing.Point(572, 25)
         Me.cmdFile.Name = "cmdFile"
         Me.cmdFile.Size = New System.Drawing.Size(74, 28)
         Me.cmdFile.TabIndex = 0
@@ -70,7 +72,7 @@ Partial Class Form1
         Me.txtFile.Location = New System.Drawing.Point(10, 33)
         Me.txtFile.Name = "txtFile"
         Me.txtFile.ReadOnly = True
-        Me.txtFile.Size = New System.Drawing.Size(562, 20)
+        Me.txtFile.Size = New System.Drawing.Size(552, 20)
         Me.txtFile.TabIndex = 2
         '
         'txtLog
@@ -89,7 +91,7 @@ Partial Class Form1
         'cmdLoad
         '
         Me.cmdLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.cmdLoad.Location = New System.Drawing.Point(13, 374)
+        Me.cmdLoad.Location = New System.Drawing.Point(18, 308)
         Me.cmdLoad.Name = "cmdLoad"
         Me.cmdLoad.Size = New System.Drawing.Size(203, 59)
         Me.cmdLoad.TabIndex = 4
@@ -155,7 +157,7 @@ Partial Class Form1
         Me.numY.Name = "numY"
         Me.numY.Size = New System.Drawing.Size(85, 20)
         Me.numY.TabIndex = 10
-        Me.numY.Value = New Decimal(New Integer() {2015, 0, 0, 0})
+        Me.numY.Value = New Decimal(New Integer() {2018, 0, 0, 0})
         '
         'Label3
         '
@@ -176,11 +178,33 @@ Partial Class Form1
         Me.numM.TabIndex = 12
         Me.numM.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
+        'cmbTarif
+        '
+        Me.cmbTarif.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmbTarif.FormattingEnabled = True
+        Me.cmbTarif.Location = New System.Drawing.Point(304, 59)
+        Me.cmbTarif.Name = "cmbTarif"
+        Me.cmbTarif.Size = New System.Drawing.Size(341, 21)
+        Me.cmbTarif.TabIndex = 13
+        '
+        'cmdPeek4
+        '
+        Me.cmdPeek4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.cmdPeek4.Location = New System.Drawing.Point(18, 373)
+        Me.cmdPeek4.Name = "cmdPeek4"
+        Me.cmdPeek4.Size = New System.Drawing.Size(203, 59)
+        Me.cmdPeek4.TabIndex = 14
+        Me.cmdPeek4.Text = "Пиковые  часы для передачи"
+        Me.cmdPeek4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(659, 436)
+        Me.Controls.Add(Me.cmdPeek4)
+        Me.Controls.Add(Me.cmbTarif)
         Me.Controls.Add(Me.numM)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.numY)
@@ -195,7 +219,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdFile)
         Me.Name = "Form1"
-        Me.Text = "Энергостраж. Загрузка цен"
+        Me.Text = "Энергостраж. Загрузка цен ПСК"
         CType(Me.numY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numM, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -217,4 +241,6 @@ Partial Class Form1
     Friend WithEvents numY As NumericUpDown
     Friend WithEvents Label3 As Label
     Friend WithEvents numM As NumericUpDown
+    Friend WithEvents cmbTarif As ComboBox
+    Friend WithEvents cmdPeek4 As Button
 End Class

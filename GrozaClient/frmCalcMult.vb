@@ -181,30 +181,9 @@ Public Class frmCalcMult
     End Sub
 
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        pb.Minimum = 0
-        pb.Maximum = 3
-        pb.Value = 0
-        pb.Visible = True
 
 
-        txtOut.Text = "Подготовка данных"
-
-        tvmain.QueryExec("update enodes set ecolor=null")
-        Application.DoEvents()
-        pb.Value = 1
-        tvmain.QueryExec("delete from EDATA_week where year=" & Date.Today.Year.ToString())
-        pb.Value = 2
-        Application.DoEvents()
-        tvmain.QueryExec("insert into EDATA_WEEK (node_id,YEAR,WEEK,code_01,code_02,code_03,code_04)(select node_id,to_char(p_date, 'YYYY' ) YEAR,to_char(p_date, 'IW' ) WEEK,sum(nvl(code_01,0)),sum(nvl(code_02,0)),sum(nvl(code_03,0)),sum(nvl(code_04,0))        from (EDATA_agg) where to_char(p_date, 'YYYY' )='" & Date.Today.Year.ToString() + "' group by node_id,to_char(p_date, 'YYYY' ), to_char(p_date, 'IW' ))")
-        pb.Value = 3
-        Application.DoEvents()
-
-        MsgBox("Агрегация завершена")
-
-    End Sub
-
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs)
         Dim dtChan As DataTable ' chanels
         txtOut.Text = "Устранение выбросов и повторов" & vbCrLf & txtOut.Text
         dtChan = tvmain.QuerySelect("select * from enodes where sender_id<>112 order by node_id")
@@ -281,7 +260,7 @@ Public Class frmCalcMult
         Dim i As Integer
         Dim j As Integer
 
-        dt = tvmain.QuerySelect("select data_id,  nvl(code_01,0) as code_01, nvl(code_02,0) as code_02,nvl(code_03,0)  as code_03, nvl(code_04,0) as code_04 from EDATA2  where node_id=" + nid.ToString + " order by p_start")
+        dt = tvmain.QuerySelect("select data_id,  nvl(code_01,0) as code_01, nvl(code_02,0) as code_02,nvl(code_03,0)  as code_03, nvl(code_04,0) as code_04 from v_edata  where node_id=" + nid.ToString + " order by p_start")
         If dt.Rows.Count = 0 Then Exit Sub
         Dim vvv As Boolean
         j = 0
