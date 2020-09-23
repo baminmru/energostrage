@@ -1,0 +1,15 @@
+<Config DataSource="ora11ssz"
+    Oracle="//10.160.27.4/ora11ssz"
+    UserID="beavis"
+    Password="beavis7654"
+    TimeOut="1000"
+RequestInterval="55000"
+ShowHidden ="false"
+SendToTGK ="true"
+AutoOpen="d"
+>
+</Config>
+
+
+
+        

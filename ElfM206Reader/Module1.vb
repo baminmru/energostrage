@@ -67,6 +67,9 @@ Module Module1
         xmlOut = New XmlDocument
         xmlOut.LoadXml(s)
     End Sub
+    Private sINN As String
+    Private sName As String
+
 
     Sub Main()
 
@@ -87,15 +90,25 @@ Module Module1
         End Try
 
 
+        nodes = xml.GetElementsByTagName("sender")
+        Try
+            node = nodes.Item(0)
+            sINN = node.GetAttribute("inn")
+            sName = node.GetAttribute("name")
+        Catch ex As Exception
+            sINN = "7800000078"
+            sName = "СПБ_КУБЫ_M206"
+        End Try
+
 
 
         nodes = xml.GetElementsByTagName("dev")
         Dim drv As M206
-        Dim sINN As String
+
         Dim StartDate As DateTime = Today
 
-        sINN = "7800000078"
-        InitXmlOut(StartDate, sINN, "СПБ_КУБЫ_M206")
+
+        InitXmlOut(StartDate, sINN, sName)
 
         For Each node In nodes
             Dim tryCnt As Integer
@@ -142,7 +155,7 @@ Module Module1
         If Not Directory.Exists(lPath) Then
             Directory.CreateDirectory(lPath)
         End If
-        xmlOut.Save(lPath + "\cubeM206_" + StartDate.ToString("yyyyMMddHH") + "_.xml")
+        xmlOut.Save(lPath + "\cubeM206_" + StartDate.ToString("yyyyMMddHHmmss") + "_.xml")
 
 
 

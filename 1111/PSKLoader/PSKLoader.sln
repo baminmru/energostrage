@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PSKLoader", "PSKLoader.vbproj", "{878B2AD9-B43B-4713-896C-23846CBBF8E2}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RKSLoader", "..\RKSLoader\RKSLoader.vbproj", "{BED8DA42-1B33-42E4-BDD4-8FF22FD1BAA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878B2AD9-B43B-4713-896C-23846CBBF8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878B2AD9-B43B-4713-896C-23846CBBF8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878B2AD9-B43B-4713-896C-23846CBBF8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878B2AD9-B43B-4713-896C-23846CBBF8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED8DA42-1B33-42E4-BDD4-8FF22FD1BAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED8DA42-1B33-42E4-BDD4-8FF22FD1BAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED8DA42-1B33-42E4-BDD4-8FF22FD1BAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED8DA42-1B33-42E4-BDD4-8FF22FD1BAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
