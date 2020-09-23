@@ -84,9 +84,9 @@ Partial Class frmNodes
         '
         Me.txtFilter.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFilter.Location = New System.Drawing.Point(91, 9)
+        Me.txtFilter.Location = New System.Drawing.Point(191, 9)
         Me.txtFilter.Name = "txtFilter"
-        Me.txtFilter.Size = New System.Drawing.Size(421, 20)
+        Me.txtFilter.Size = New System.Drawing.Size(321, 20)
         Me.txtFilter.TabIndex = 33
         '
         'Label1
@@ -94,14 +94,16 @@ Partial Class frmNodes
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(23, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(47, 13)
+        Me.Label1.Size = New System.Drawing.Size(162, 13)
         Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Фильтр"
+        Me.Label1.Text = "Фильтр (минимум 3 символа):"
         '
         'chkActiveNode
         '
         Me.chkActiveNode.AutoSize = True
-        Me.chkActiveNode.Location = New System.Drawing.Point(93, 38)
+        Me.chkActiveNode.Checked = True
+        Me.chkActiveNode.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkActiveNode.Location = New System.Drawing.Point(26, 42)
         Me.chkActiveNode.Name = "chkActiveNode"
         Me.chkActiveNode.Size = New System.Drawing.Size(115, 17)
         Me.chkActiveNode.TabIndex = 35

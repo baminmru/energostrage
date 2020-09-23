@@ -450,7 +450,7 @@ Public Class ftpPush
     End Function
 
     Private Function SavePeriod(nId As Integer, s_start As String, s_end As String, s_val As String, s_timestamp As String, s_day As String, s_daylightsavingtime As String, cCode As String) As Integer
-        Dim did As Integer
+        Dim did As Long
         Dim dt As DataTable
         Dim dd As String
         Dim q As String
@@ -675,6 +675,7 @@ Public Class ftpPush
 
                             If cln Then
                                 CleanPeriod(cId, s_day)
+
                             End If
 
                             Dim s_daycur As String
@@ -702,6 +703,7 @@ Public Class ftpPush
                                         s_daycur = s_end.Substring(0, 8)
                                         If cln Then
                                             CleanPeriod(cId, s_daycur)
+
                                         End If
 
                                     End If

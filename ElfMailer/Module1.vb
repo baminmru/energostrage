@@ -82,12 +82,14 @@ Module Module1
         Dim q As String
         w = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
         w = w - 1
+        If w < 2 Then Return False
         q = ""
         q = q + " Select esender.sender_id,  esender.SENDER_NAME Филиал ,enodes.node_id, enodes.MPOINT_CODE || '-'|| enodes.dogovor Код, ENODES.MPOINT_NAME Название, ENODES.MPOINT_SERIAL Ввод, ENODES.ECOLOR ,EDATA_WEEK.YEAR Год,EDATA_WEEK.WEEK Неделя,EDATA_WEEK.CODE_01 as ""Активная +"" , cast(EDATA_WEEK.CODE_01 * 100 / pw.code_01 AS  number(10,2)) as ""% к пред. неделе"" FROM ENODES  "
         q = q + " Join esender On ENODES.SENDER_ID=ESENDER.SENDER_ID  "
         q = q + " Join EDATA_WEEK On ENODES.node_ID=EDATA_WEEK.node_ID"
         q = q + " Join EDATA_WEEK pw On ENODES.node_ID=pw.node_ID"
-        q = q + "  WHERE ENODES.HIDDEN=0 and  ENODES.ECOLOR='Purple'  AND ENODES.ECOLOR IS NOT NULL  and EDATA_WEEK.year=" + Date.Today.Year.ToString + " And EDATA_WEEK.week =" + w.ToString() + " and pw.year=" + Date.Today.Year.ToString + " And pw.week =" + (w - 1).ToString() + " and EDATA_WEEK.CODE_01 > 0 and pw.CODE_01 > 0"
+        q = q + "  WHERE ENODES.HIDDEN=0 and  ENODES.ECOLOR='Purple'   AND cast(EDATA_WEEK.CODE_01 * 100 / pw.code_01 AS  number(10,2)) >=110 AND ENODES.ECOLOR IS NOT NULL  and EDATA_WEEK.year=" + Date.Today.Year.ToString + " And EDATA_WEEK.week =" + w.ToString() + " and pw.year=" + Date.Today.Year.ToString + " And pw.week =" + (w - 1).ToString() + " and EDATA_WEEK.CODE_01 > 0 and pw.CODE_01 > 0"
+        'q = q + "  WHERE ENODES.HIDDEN=0 and  ENODES.ECOLOR='Purple'    AND ENODES.ECOLOR IS NOT NULL  and EDATA_WEEK.year=" + Date.Today.Year.ToString + " And EDATA_WEEK.week =" + w.ToString() + " and pw.year=" + Date.Today.Year.ToString + " And pw.week =" + (w - 1).ToString() + " and EDATA_WEEK.CODE_01 > 0 and pw.CODE_01 > 0"
         q = q + " ORDER BY  esender.SENDER_NAME, enodes.MPOINT_CODE, ENODES.MPOINT_NAME" ', EDATA_WEEK.YEAR, EDATA_WEEK.WEEK"
 
         dts = cm.QuerySelect(q)
@@ -117,8 +119,8 @@ Module Module1
                         bdy = bdy + "<p>Это сообщение создано автоматически программой <strong>""Энергостраж""</strong>.</p>" & vbCrLf
 
 
-                        bdy = bdy + "<p><i>Программа сравнивает показания за последнюю полную неделю пн...вс (A1) и показания за предыдущую полную неделю пн...вс (A2) по сумме данных вводов объекта. </i></p>" & vbCrLf
-                        bdy = bdy + "<p><i>В отчет включаются узлы объекта на котором зафиксировано превышение по условию  A1 / A2 > 1.1 </i></p><br/>" & vbCrLf
+                    bdy = bdy + "<p><i>Программа сравнивает показания за полную неделю (№" & w.ToString() & ") пн...вс (A1) и показания за предыдущую полную неделю (№" & (w - 1).ToString() & ") пн...вс (A2) по сумме данных вводов объекта. </i></p>" & vbCrLf
+                    bdy = bdy + "<p><i>В отчет включаются узлы объекта на котором зафиксировано превышение по условию  A1 / A2 > 1.1 </i></p><br/>" & vbCrLf
 
                         bdy = bdy + "<p>Зафиксировано превышение потребления на 10% и более по следующим объектам:</p>" & vbCrLf
                         bdy = bdy + "<table border=""1pt"" cellspacing=""0"" style=""border-collapse:collapse;"" >"

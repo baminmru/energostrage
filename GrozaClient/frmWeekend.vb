@@ -12,49 +12,11 @@ Public Class frmWeekend
 
     Private Sub frmWeekend_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
-<<<<<<< HEAD
-=======
         txtFilter.Text = NodeFilter
->>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-<<<<<<< HEAD
-    'Private Sub LoadTree()
-    '    tv.Nodes.Clear()
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from esender")
-    '    Dim n As UltraTreeNode
-
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        n = New UltraTreeNode("esender:" + dt.Rows(i)("sender_id").ToString, dt.Rows(i)("sender_name") + " (" + dt.Rows(i)("sender_inn") + ")")
-    '        tv.Nodes.Add(n)
-    '        n.Tag = dt.Rows(i)("sender_id")
-    '        LoadNodes(n, dt.Rows(i)("sender_id"))
-    '    Next
-
-    'End Sub
-
-    'Private Sub LoadNodes(ByVal p As UltraTreeNode, ByVal sender_id As Integer)
-    '    Dim dt As DataTable
-    '    dt = tvmain.QuerySelect("select * from enodes where sender_id=" + sender_id.ToString() + " order by mpoint_name")
-    '    Dim n As UltraTreeNode
-    '    Dim i As Integer
-    '    For i = 0 To dt.Rows.Count - 1
-    '        Try
-    '            n = New UltraTreeNode("enodes:" + dt.Rows(i)("node_id").ToString, dt.Rows(i)("mpoint_name") + " (" + dt.Rows(i)("mpoint_code") + ")")
-    '            n.Tag = dt.Rows(i)("node_id")
-    '            p.Nodes.Add(n)
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message)
-    '        End Try
-
-
-    '    Next
-    'End Sub
-=======
     Private Sub txtFilter_TextChanged(sender As Object, e As EventArgs) Handles txtFilter.TextChanged
         If NodeFilter <> txtFilter.Text Then
             NodeFilter = txtFilter.Text
@@ -90,7 +52,6 @@ Public Class frmWeekend
         End If
 
     End Sub
->>>>>>> 1d8ab98a71a473953d1e8e0b7d27adfc3823cc01
 
     Private Sub tv_AfterSelect(ByVal sender As Object, ByVal e As SelectEventArgs) Handles tv.AfterSelect
         Dim n As UltraTreeNode = Nothing

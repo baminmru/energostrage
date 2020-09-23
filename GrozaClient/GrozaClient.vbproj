@@ -82,9 +82,11 @@
     <Reference Include="Infragistics2.Win.v9.1, Version=9.1.20091.2094, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="SpreadsheetGear, Version=5.0.3.106, Culture=neutral, PublicKeyToken=39c186f5904944ec, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -132,6 +134,12 @@
       <DependentUpon>frmDayProfil.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDayProfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmElectro.Designer.vb">
+      <DependentUpon>frmElectro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmElectro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHourly.Designer.vb">
@@ -194,6 +202,12 @@
     <Compile Include="frmStat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmTree.Designer.vb">
+      <DependentUpon>frmTree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTree.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmWeekend.Designer.vb">
       <DependentUpon>frmWeekend.vb</DependentUpon>
     </Compile>
@@ -228,12 +242,6 @@
       <DependentUpon>frmTop20.vb</DependentUpon>
     </Compile>
     <Compile Include="frmTop20.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTree.Designer.vb">
-      <DependentUpon>frmTree.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTree.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWeekly.Designer.vb">
@@ -278,6 +286,9 @@
     <EmbeddedResource Include="frmDayProfil.resx">
       <DependentUpon>frmDayProfil.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmElectro.resx">
+      <DependentUpon>frmElectro.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHourly.resx">
       <DependentUpon>frmHourly.vb</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +319,9 @@
     <EmbeddedResource Include="frmStat.resx">
       <DependentUpon>frmStat.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTree.resx">
+      <DependentUpon>frmTree.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWeekend.resx">
       <DependentUpon>frmWeekend.vb</DependentUpon>
     </EmbeddedResource>
@@ -325,9 +339,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTop20.resx">
       <DependentUpon>frmTop20.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTree.resx">
-      <DependentUpon>frmTree.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWeekly.resx">
       <DependentUpon>frmWeekly.vb</DependentUpon>

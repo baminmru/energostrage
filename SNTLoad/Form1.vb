@@ -615,6 +615,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Init()
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 ' Or SecurityProtocolType.Tls13
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

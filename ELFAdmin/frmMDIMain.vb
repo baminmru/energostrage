@@ -148,6 +148,8 @@ Public Class frmMDIMain
 
         fnodes.Show()
         fnodes.Select()
+        fnodes.WindowState = FormWindowState.Maximized
+
     End Sub
 
 

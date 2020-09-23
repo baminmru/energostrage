@@ -29,8 +29,10 @@
             q = q + " and  hidden=0 "
         End If
 
-        If txtFilter.Text <> "" Then
+        If txtFilter.Text.Length >= 3 Then
             q = q + " and (sender_name || ';' || mpoint_name || ';' || mpoint_code || ';' || nvl(cdevname,'') || ';' || nvl(enodes.mpoint_serial,'')  || ';' || nvl(enodes.dogovor,'')) like '%" + txtFilter.Text + "%'"
+        Else
+            q = q + " and (1=0) "
         End If
 
         q = q + "order by sender_name, mpoint_name"
@@ -51,83 +53,100 @@
 
 
                     Case "mpoint_code"
-                        .HeaderText = "код"
+                        .HeaderText = "Код"
                         .Visible = True
                         .MinimumWidth = 100
                         .DisplayIndex = 2
 
                     Case "mpoint_name"
-                        .HeaderText = "название"
+                        .HeaderText = "Название"
                         .Visible = True
-                        .MinimumWidth = 100
+                        .MinimumWidth = 150
                         .DisplayIndex = 3
 
-
                     Case "dogovor"
-                        .HeaderText = "индекс"
+                        .HeaderText = "Индекс"
                         .Visible = True
                         .MinimumWidth = 100
                         .DisplayIndex = 4
 
                     Case "mpoint_serial"
-                        .HeaderText = "SN"
+                        .HeaderText = "Серийный номер счетчика"
                         .Visible = True
                         .MinimumWidth = 100
                         .DisplayIndex = 5
 
                     Case "sender_name"
-                        .HeaderText = "филиал"
+                        .HeaderText = "Филиал"
                         .Visible = True
                         .MinimumWidth = 100
                         .DisplayIndex = 6
 
-                    Case "cfio1"
-                        .HeaderText = "ФИО 2"
+
+                    Case "nodecomment"
+                        .HeaderText = "Комментарий"
                         .Visible = True
                         .MinimumWidth = 100
-                    Case "cphone1"
-                        .HeaderText = "тел 1"
-                        .Visible = True
-                        .MinimumWidth = 100
-                    Case "cfio2"
-                        .HeaderText = "ФИО 2"
-                        .Visible = True
-                        .MinimumWidth = 100
-                    Case "cphone2"
-                        .HeaderText = "тел 2"
-                        .Visible = True
-                        .MinimumWidth = 100
-              
-                    Case "cdevname"
-                        .HeaderText = "тип вычислителя"
-                        .Visible = True
-                        .MinimumWidth = 100
+                        .DisplayIndex = 7
+
                     Case "cost_category"
                         .HeaderText = "Категория"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 8
+
                     Case "power_quality"
                         .HeaderText = "Уровень напряжения"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 9
+
                     Case "powerlevel_min"
                         .HeaderText = "Разр. мощность от"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 10
+
                     Case "powerlevel_max"
                         .HeaderText = "Разр. мощность до"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 11
+
+                    Case "tranzit"
+                        .HeaderText = "Транзит"
+                        .Visible = True
+                        .MinimumWidth = 100
+                        .DisplayIndex = 12
+                    Case "ki"
+                        .HeaderText = "Коэффициент трансформации по току"
+                        .Visible = True
+                        .MinimumWidth = 100
+                        .DisplayIndex = 13
+
+                    Case "p_ap"
+                        .HeaderText = "Потери"
+                        .Visible = True
+                        .MinimumWidth = 100
+                        .DisplayIndex = 14
 
                     Case "wname"
-                        .HeaderText = "поставщик"
+                        .HeaderText = "Поставщик"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 15
 
                     Case "hidden"
-                        .HeaderText = "скрыть"
+                        .HeaderText = "Скрыть"
                         .Visible = True
                         .MinimumWidth = 100
+                        .DisplayIndex = 16
+
+                        'Case "hiderow"
+                        '    .HeaderText = "не отображать"
+                        '    .Visible = True
+                        '    .MinimumWidth = 100
+                        '    .DisplayIndex = 16
 
                 End Select
             End With
@@ -163,12 +182,10 @@
     Private Sub cmdAdd_Click(sender As System.Object, e As System.EventArgs) Handles cmdAdd.Click
         Try
             Dim s As String
-          
 
 
-            s = "insert into enodes(node_id, mpoint_name, mpoint_code, id_dev
-        End If
-)values( enode_seq.nextval,'000','New node',3)"
+
+            s = "insert into enodes(node_id, mpoint_name, mpoint_code, id_dev )values( enode_seq.nextval,'000','New node',3)"
             TvMain.QueryExec(s)
             Dim dt As DataTable
             s = "select enode_seq.currval id from dual"

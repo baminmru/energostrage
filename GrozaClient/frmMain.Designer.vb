@@ -29,6 +29,7 @@ Partial Class frmMain
         Me.ОпреацииToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuTree = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuElectro = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuStatus = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuNodeYearStatus = New System.Windows.Forms.ToolStripMenuItem()
         Me.ГрафикиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,7 +75,7 @@ Partial Class frmMain
         '
         'ОпреацииToolStripMenuItem
         '
-        Me.ОпреацииToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.mnuTree, Me.mnuStatus, Me.mnuNodeYearStatus, Me.ГрафикиToolStripMenuItem, Me.mnuDayly, Me.mnuWeekly, Me.mnuHalfHour, Me.mnuHour, Me.ToolStripMenuItem5, Me.mnuDayNight, Me.ToolStripMenuItem4, Me.ToolStripMenuItem3, Me.mnuKMEAN, Me.mnuEconomyRecalc})
+        Me.ОпреацииToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.mnuTree, Me.mnuElectro, Me.mnuStatus, Me.mnuNodeYearStatus, Me.ГрафикиToolStripMenuItem, Me.mnuDayly, Me.mnuWeekly, Me.mnuHalfHour, Me.mnuHour, Me.ToolStripMenuItem5, Me.mnuDayNight, Me.ToolStripMenuItem4, Me.ToolStripMenuItem3, Me.mnuKMEAN, Me.mnuEconomyRecalc})
         Me.ОпреацииToolStripMenuItem.Name = "ОпреацииToolStripMenuItem"
         Me.ОпреацииToolStripMenuItem.Size = New System.Drawing.Size(75, 20)
         Me.ОпреацииToolStripMenuItem.Text = "Операции"
@@ -91,6 +92,12 @@ Partial Class frmMain
         Me.mnuTree.Size = New System.Drawing.Size(362, 22)
         Me.mnuTree.Text = "Данные"
         '
+        'mnuElectro
+        '
+        Me.mnuElectro.Name = "mnuElectro"
+        Me.mnuElectro.Size = New System.Drawing.Size(362, 22)
+        Me.mnuElectro.Text = "Мгновенные и Итоговые данные"
+        '
         'mnuStatus
         '
         Me.mnuStatus.Name = "mnuStatus"
@@ -102,7 +109,6 @@ Partial Class frmMain
         Me.mnuNodeYearStatus.Name = "mnuNodeYearStatus"
         Me.mnuNodeYearStatus.Size = New System.Drawing.Size(362, 22)
         Me.mnuNodeYearStatus.Text = "Статус с начала года"
-        Me.mnuNodeYearStatus.Visible = False
         '
         'ГрафикиToolStripMenuItem
         '
@@ -145,6 +151,7 @@ Partial Class frmMain
         Me.mnuDayNight.Name = "mnuDayNight"
         Me.mnuDayNight.Size = New System.Drawing.Size(362, 22)
         Me.mnuDayNight.Text = "Двухтарифное представление"
+        Me.mnuDayNight.Visible = False
         '
         'ToolStripMenuItem4
         '
@@ -325,4 +332,5 @@ Partial Class frmMain
     Friend WithEvents mnuEconomyRecalc As ToolStripMenuItem
     Friend WithEvents mnuNodeYearStatus As ToolStripMenuItem
     Friend WithEvents frmWeekend As ToolStripMenuItem
+    Friend WithEvents mnuElectro As ToolStripMenuItem
 End Class

@@ -40,7 +40,12 @@ Module Module1
 
         End If
 
-        System.Net.ServicePointManager.SecurityProtocol = Net.SecurityProtocolType.Tls12
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls13 Or SecurityProtocolType.Tls12
+
+
+        'ServicePointManager.Expect100Continue = True
+        'ServicePointManager.
+
         GetHalfHour2(Today().AddDays(-dfrom), Today().AddDays(-dto))
 
         'Dim i As Integer
@@ -93,6 +98,7 @@ Module Module1
         Catch ex As Exception
 
         End Try
+        System.Diagnostics.Debug.Print(s)
         Console.WriteLine(s)
     End Sub
 

@@ -690,7 +690,7 @@ Public Class FileLoaderCls
             Dim t As DateTime
             t = Now
             cmd.ExecuteNonQuery()
-            ' Log(s + " dt:" + DateDiff(DateInterval.Second, t, Now).ToString)
+            Log(s + " dt:" + DateDiff(DateInterval.Second, t, Now).ToString)
         Catch ex As Exception
             Log(s + " => " + ex.Message)
             Return False

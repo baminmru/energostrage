@@ -83,26 +83,34 @@ Public Class ConfigForm
             chkIP.Checked = True
         End If
 
-        i = dtMain.Rows(0)("HideRow")
+        'i = dtMain.Rows(0)("HideRow")
+
+        'If i = 0 Then
+        '    chkHideRow.Checked = False
+        'Else
+        '    chkHideRow.Checked = True
+        'End If
+
+        i = dtMain.Rows(0)("tranzit")
 
         If i = 0 Then
-            chkHideRow.Checked = False
+            chkTranzit.Checked = False
         Else
-            chkHideRow.Checked = True
+            chkTranzit.Checked = True
         End If
 
-     
-    
+
 
         txtName.Text = dtMain.Rows(0)("mpoint_name") & ""
         txtCode.Text = dtMain.Rows(0)("mpoint_code") & ""
 
         txtcaddress.Text = dtMain.Rows(0)("caddress") & ""
         txtFULLADDRESS.Text = dtMain.Rows(0)("fulladdress") & ""
-        txtcfio1.Text = dtMain.Rows(0)("cfio1") & ""
-        txtcphone1.Text = dtMain.Rows(0)("cphone1") & ""
-        txtcfio2.Text = dtMain.Rows(0)("cfio2") & ""
-        txtphone2.Text = dtMain.Rows(0)("cphone2") & ""
+        txtNodeComment.Text = dtMain.Rows(0)("NodeComment") & ""
+        'txtcfio1.Text = dtMain.Rows(0)("cfio1") & ""
+        'txtcphone1.Text = dtMain.Rows(0)("cphone1") & ""
+        'txtcfio2.Text = dtMain.Rows(0)("cfio2") & ""
+        'txtphone2.Text = dtMain.Rows(0)("cphone2") & ""
         cmbDevtype.SelectedValue = dtMain.Rows(0)("id_dev")
         cmbGRP.SelectedValue = dtMain.Rows(0)("sender_id")
         cmbWhoGiveTop.SelectedValue = dtMain.Rows(0)("whogive")
@@ -116,7 +124,7 @@ Public Class ConfigForm
         cmbCostCategory.Text = dtMain.Rows(0)("COST_CATEGORY") & ""
         txtPower_min.Text = dtMain.Rows(0)("POWERLEVEL_MIN") & ""
         txtPower_max.Text = dtMain.Rows(0)("POWERLEVEL_MAX") & ""
-
+        txtDivider.Text = dtMain.Rows(0)("DIVIDER") & ""
 
         txtKI.Text = dtMain.Rows(0)("ki").ToString()
         txtKU.Text = dtMain.Rows(0)("ku").ToString()
@@ -195,6 +203,8 @@ Public Class ConfigForm
         s = "update enodes set  mpoint_name='" & txtName.Text & "'" + " ,mpoint_code='" & txtCode.Text & "'"
         s = s & ",  CADDRESS='" & txtcaddress.Text & "' "
         s = s & ",  FULLADDRESS='" & txtFULLADDRESS.Text & "'"
+        s = s & ",  NODECOMMENT='" & txtNodeComment.Text & "'"
+
 
         Try
             If Not cmbGRP.SelectedValue Is Nothing Then
@@ -224,6 +234,12 @@ Public Class ConfigForm
                 s = s & ", HIDDEN=0"
             End If
 
+            If chkTranzit.Checked = True Then
+                s = s & ", TRANZIT=1"
+            Else
+                s = s & ", TRANZIT=0"
+            End If
+
             s = s & ", MPOINT_SERIAL='" + txtMPOINT_SERIAL.Text + "'"
             s = s & ", DOGOVOR='" + txtIndex.Text + "'"
 
@@ -233,13 +249,28 @@ Public Class ConfigForm
             Else
                 s = s & ",POWERLEVEL_MIN=0"
             End If
+
+
+
             If IsNumeric(txtPower_max.Text) Then
                 s = s & " ,POWERLEVEL_MAX='" + txtPower_max.Text + "'"
             Else
                 s = s & ",POWERLEVEL_MAX=0"
             End If
 
-            s = s & ", cfio1='" + txtcfio1.Text + "',cfio2='" + txtcfio2.Text + "',cphone1='" + txtcphone1.Text + "' ,cphone2='" + txtphone2.Text + "'"
+            If IsNumeric(txtDivider.Text) Then
+                If txtDivider.Text <> "0" Then
+                    s = s & " ,DIVIDER='" + txtDivider.Text + "'"
+                Else
+                    s = s & " ,DIVIDER=1 "
+                End If
+
+            Else
+                s = s & ",DIVIDER=1 "
+            End If
+
+
+            's = s & ", cfio1='" + txtcfio1.Text + "',cfio2='" + txtcfio2.Text + "',cphone1='" + txtcphone1.Text + "' ,cphone2='" + txtphone2.Text + "'"
             s = s & "  where node_id=" + ID.ToString
             TvMain.QueryExec(s)
 
@@ -761,6 +792,10 @@ Public Class ConfigForm
     End Sub
 
     Private Sub UltraPanel1_PaintClient(sender As Object, e As PaintEventArgs) Handles UltraPanel1.PaintClient
+
+    End Sub
+
+    Private Sub txtFULLADDRESS_TextChanged(sender As Object, e As EventArgs) Handles txtFULLADDRESS.TextChanged
 
     End Sub
 End Class

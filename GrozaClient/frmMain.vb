@@ -284,4 +284,11 @@ Public Class frmMain
         f.MdiParent = Me
         f.Show()
     End Sub
+
+    Private Sub mnuElectro_Click(sender As Object, e As EventArgs) Handles mnuElectro.Click
+        Dim f As frmElectro
+        f = New frmElectro
+        f.MdiParent = Me
+        f.Show()
+    End Sub
 End Class

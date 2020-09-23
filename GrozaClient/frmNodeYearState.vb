@@ -26,15 +26,15 @@ Public Class frmNodeYearState
         q = q + " Join esender On ENODES.SENDER_ID=ESENDER.SENDER_ID  "
         q = q + " Join enodecolors ON ENODES.NODE_ID=enodecolors.NODEID  "
 
-        q = q + " where "
-        Dim wn As Integer
-        wn = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
-        For i = 3 To wn
-            If i > 3 Then
-                q = q + " OR "
-            End If
-            q = q + " WEEK" + i.ToString() + "<>'Gray' "
-        Next
+        'q = q + " where "
+        'Dim wn As Integer
+        'wn = DatePart(DateInterval.WeekOfYear, Date.Today, FirstDayOfWeek.Monday, FirstWeekOfYear.FirstFullWeek)
+        'For i = 3 To wn
+        '    If i > 3 Then
+        '        q = q + " OR "
+        '    End If
+        '    q = q + " WEEK" + i.ToString() + "<>'Gray' "
+        'Next
         q = q + " ORDER BY  esender.SENDER_NAME, enodes.MPOINT_CODE, ENODES.MPOINT_NAME"
 
         dt = tvmain.QuerySelect(q)
@@ -43,12 +43,12 @@ Public Class frmNodeYearState
         dgv.Columns(4).Visible = False
         dgv.Columns(5).Visible = False
 
-        For i = wn To 53
-            If i + 3 < dgv.ColumnCount Then
-                dgv.Columns(i + 3).Visible = False
-            End If
+        'For i = wn To 53
+        '    If i + 3 < dgv.ColumnCount Then
+        '        dgv.Columns(i + 3).Visible = False
+        '    End If
 
-        Next
+        'Next
 
 
 

@@ -2,14 +2,14 @@
 Imports Infragistics.Win.UltraWinTree
 Imports SpreadsheetGear
 
-Public Class frmTree
+Public Class frmElectro
 
     Private WithEvents workbook As IWorkbook
     Private WithEvents outworkbook As IWorkbook
     Private WithEvents ws As IWorksheet
     Private WithEvents outws As IWorksheet
 
-    Private Sub frmTree_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub frmElectro_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtFilter.Text = NodeFilter
         LoadTree(tv)
         Me.WindowState = FormWindowState.Maximized
@@ -71,31 +71,32 @@ Public Class frmTree
             Dim w As String = ""
 
             If opt1.Checked Then
-                w = " where p_date >= sysdate -1 "
+                w = " where dcounter >= sysdate -1 "
             End If
 
             If opt7.Checked Then
-                w = " where p_date >= sysdate - 7 "
+                w = " where dcounter >= sysdate - 7 "
             End If
 
             If opt14.Checked Then
-                w = " where p_date >= sysdate - 14 "
+                w = " where dcounter >= sysdate - 14 "
             End If
 
             If opt30.Checked Then
-                w = " where p_date >= sysdate - 30 "
+                w = " where dcounter >= sysdate - 30 "
             End If
 
             If optPeriod.Checked Then
-                w = " where p_date >= " + tvmain.OracleDate(dtpFrom.Value) + " and p_date <=" + tvmain.OracleDate(dtpTo.Value)
+                w = " where dcounter >= " + tvmain.OracleDate(dtpFrom.Value) + " and dcounter <=" + tvmain.OracleDate(dtpTo.Value)
             End If
-            If chkSumm.Checked Then
-                dt = tvmain.QuerySelect("select sum(code_01) ""A+"" ,sum (code_02) ""A-"" ,sum(code_03) ""R+"" ,sum(code_04) ""R-""  from v_EDATA " + w + " and node_id=" + id.ToString + " ")
+
+            If chkItog.Checked = False Then
+                dt = tvmain.QuerySelect("select DCOUNTER ""Время съема"",U1 ""Ua"",U2 ""Ub"",U3 ""Uc"" ,I1 ""Ia"",I2 ""Ib"",I3 ""Ic"",AP0 ""A+"" ,AP1 ""A+a"" ,AP2 ""A+b"",AP3 ""A+c"",RP0 ""R+"",RP1 ""R+a"",RP2 ""R+b"",RP3 ""R+c"",c1 ""KTa"",c2""KTb"",c3 ""KTc"" from electro  " + w + " and id_bd=" + id.ToString + " and id_ptype=1 order by dcounter desc ")
             Else
-                Dim sss As String
-                sss = "select p_start ""Начало периода"",p_end ""Завершение периода"" ,code_01 ""A+"",code_02 ""A-"",code_03 ""R+"",code_04 ""R-"" from v_EDATA " + w + " and node_id=" + id.ToString + " order by p_start desc "
-                dt = tvmain.QuerySelect(sss)
+                dt = tvmain.QuerySelect("select DCOUNTER ""Время съема"",T0 ""T сум"",T1,T2 ,T3,AP0 ""A+"" ,AP1 ""A+a"" ,AP2 ""A+b"",AP3 ""A+c"",RP0 ""R+"",RP1 ""R+a"",RP2 ""R+b"",RP3 ""R+c"",   AM0 ""A-"" ,RM0 ""R-"" from electro  " + w + " and id_bd=" + id.ToString + " and id_ptype=2 order by dcounter desc ")
             End If
+
+
 
             dv.DataSource = dt
 
@@ -193,11 +194,13 @@ Public Class frmTree
         tv_AfterSelect(Me, Nothing)
     End Sub
 
-    Private Sub chkSumm_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles chkSumm.CheckedChanged
+
+
+    Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
         tv_AfterSelect(Me, Nothing)
     End Sub
 
-    Private Sub cmdRefresh_Click(sender As Object, e As EventArgs) Handles cmdRefresh.Click
+    Private Sub chkItog_CheckedChanged(sender As Object, e As EventArgs) Handles chkItog.CheckedChanged
         tv_AfterSelect(Me, Nothing)
     End Sub
 End Class

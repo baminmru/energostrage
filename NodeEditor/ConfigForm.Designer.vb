@@ -31,6 +31,12 @@ Partial Class ConfigForm
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.UltraPanel1 = New Infragistics.Win.Misc.UltraPanel()
+        Me.txtNodeComment = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.chkTranzit = New System.Windows.Forms.CheckBox()
+        Me.lblTranzit = New System.Windows.Forms.Label()
+        Me.cmbTarif = New System.Windows.Forms.ComboBox()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.txtMPOINT_SERIAL = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.txtIndex = New System.Windows.Forms.TextBox()
@@ -76,14 +82,6 @@ Partial Class ConfigForm
         Me.Label21 = New System.Windows.Forms.Label()
         Me.cmbMaskM = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtphone2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtcphone1 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtcfio2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtcfio1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtcaddress = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.cmbGRP = New System.Windows.Forms.ComboBox()
@@ -99,8 +97,8 @@ Partial Class ConfigForm
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.pnlBModems = New NodeEditorLib.editTPLT_CONNECT()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cmbTarif = New System.Windows.Forms.ComboBox()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.txtDivider = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.UltraPanel1.ClientArea.SuspendLayout()
@@ -164,6 +162,12 @@ Partial Class ConfigForm
         '
         'UltraPanel1.ClientArea
         '
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtDivider)
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label3)
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtNodeComment)
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label2)
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.chkTranzit)
+        Me.UltraPanel1.ClientArea.Controls.Add(Me.lblTranzit)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.cmbTarif)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.Label30)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.txtMPOINT_SERIAL)
@@ -207,14 +211,6 @@ Partial Class ConfigForm
         Me.UltraPanel1.ClientArea.Controls.Add(Me.Label21)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.cmbMaskM)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.Label18)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtphone2)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label3)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtcphone1)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label8)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtcfio2)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label9)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.txtcfio1)
-        Me.UltraPanel1.ClientArea.Controls.Add(Me.Label2)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.txtcaddress)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.Label17)
         Me.UltraPanel1.ClientArea.Controls.Add(Me.cmbGRP)
@@ -230,19 +226,78 @@ Partial Class ConfigForm
         Me.UltraPanel1.Size = New System.Drawing.Size(819, 550)
         Me.UltraPanel1.TabIndex = 23
         '
+        'txtNodeComment
+        '
+        Me.txtNodeComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.txtNodeComment.Location = New System.Drawing.Point(559, 116)
+        Me.txtNodeComment.Multiline = True
+        Me.txtNodeComment.Name = "txtNodeComment"
+        Me.txtNodeComment.Size = New System.Drawing.Size(227, 68)
+        Me.txtNodeComment.TabIndex = 123
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label2.Location = New System.Drawing.Point(453, 120)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 15)
+        Me.Label2.TabIndex = 122
+        Me.Label2.Text = "Коментарий"
+        '
+        'chkTranzit
+        '
+        Me.chkTranzit.AutoSize = True
+        Me.chkTranzit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.chkTranzit.Location = New System.Drawing.Point(562, 185)
+        Me.chkTranzit.Name = "chkTranzit"
+        Me.chkTranzit.Size = New System.Drawing.Size(15, 14)
+        Me.chkTranzit.TabIndex = 121
+        Me.chkTranzit.UseVisualStyleBackColor = True
+        '
+        'lblTranzit
+        '
+        Me.lblTranzit.AutoSize = True
+        Me.lblTranzit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblTranzit.Location = New System.Drawing.Point(478, 185)
+        Me.lblTranzit.Name = "lblTranzit"
+        Me.lblTranzit.Size = New System.Drawing.Size(55, 15)
+        Me.lblTranzit.TabIndex = 120
+        Me.lblTranzit.Text = "Транзит"
+        '
+        'cmbTarif
+        '
+        Me.cmbTarif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTarif.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.cmbTarif.FormattingEnabled = True
+        Me.cmbTarif.Location = New System.Drawing.Point(158, 190)
+        Me.cmbTarif.Name = "cmbTarif"
+        Me.cmbTarif.Size = New System.Drawing.Size(227, 23)
+        Me.cmbTarif.TabIndex = 119
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label30.Location = New System.Drawing.Point(10, 190)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(46, 15)
+        Me.Label30.TabIndex = 118
+        Me.Label30.Text = "Тариф"
+        '
         'txtMPOINT_SERIAL
         '
         Me.txtMPOINT_SERIAL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtMPOINT_SERIAL.Location = New System.Drawing.Point(565, 315)
+        Me.txtMPOINT_SERIAL.Location = New System.Drawing.Point(559, 251)
         Me.txtMPOINT_SERIAL.Name = "txtMPOINT_SERIAL"
-        Me.txtMPOINT_SERIAL.Size = New System.Drawing.Size(222, 22)
+        Me.txtMPOINT_SERIAL.Size = New System.Drawing.Size(230, 22)
         Me.txtMPOINT_SERIAL.TabIndex = 117
         '
         'Label29
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label29.Location = New System.Drawing.Point(416, 318)
+        Me.Label29.Location = New System.Drawing.Point(418, 254)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(115, 16)
         Me.Label29.TabIndex = 116
@@ -251,16 +306,16 @@ Partial Class ConfigForm
         'txtIndex
         '
         Me.txtIndex.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtIndex.Location = New System.Drawing.Point(564, 276)
+        Me.txtIndex.Location = New System.Drawing.Point(559, 220)
         Me.txtIndex.Name = "txtIndex"
-        Me.txtIndex.Size = New System.Drawing.Size(222, 22)
+        Me.txtIndex.Size = New System.Drawing.Size(230, 22)
         Me.txtIndex.TabIndex = 115
         '
         'Label28
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label28.Location = New System.Drawing.Point(415, 279)
+        Me.Label28.Location = New System.Drawing.Point(419, 223)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(114, 16)
         Me.Label28.TabIndex = 114
@@ -269,7 +324,7 @@ Partial Class ConfigForm
         'txtPower_max
         '
         Me.txtPower_max.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtPower_max.Location = New System.Drawing.Point(154, 319)
+        Me.txtPower_max.Location = New System.Drawing.Point(158, 319)
         Me.txtPower_max.Name = "txtPower_max"
         Me.txtPower_max.Size = New System.Drawing.Size(225, 21)
         Me.txtPower_max.TabIndex = 113
@@ -287,7 +342,7 @@ Partial Class ConfigForm
         'txtPower_min
         '
         Me.txtPower_min.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtPower_min.Location = New System.Drawing.Point(154, 280)
+        Me.txtPower_min.Location = New System.Drawing.Point(158, 283)
         Me.txtPower_min.Name = "txtPower_min"
         Me.txtPower_min.Size = New System.Drawing.Size(225, 21)
         Me.txtPower_min.TabIndex = 111
@@ -308,7 +363,7 @@ Partial Class ConfigForm
         Me.cmbPowerQuality.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbPowerQuality.FormattingEnabled = True
         Me.cmbPowerQuality.Items.AddRange(New Object() {"ВН", "СН I", "СН II", "НН"})
-        Me.cmbPowerQuality.Location = New System.Drawing.Point(154, 251)
+        Me.cmbPowerQuality.Location = New System.Drawing.Point(158, 251)
         Me.cmbPowerQuality.Name = "cmbPowerQuality"
         Me.cmbPowerQuality.Size = New System.Drawing.Size(227, 23)
         Me.cmbPowerQuality.TabIndex = 109
@@ -329,7 +384,7 @@ Partial Class ConfigForm
         Me.cmbCostCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbCostCategory.FormattingEnabled = True
         Me.cmbCostCategory.Items.AddRange(New Object() {"I", "II", "III", "IV", "V", "VI"})
-        Me.cmbCostCategory.Location = New System.Drawing.Point(156, 219)
+        Me.cmbCostCategory.Location = New System.Drawing.Point(158, 219)
         Me.cmbCostCategory.Name = "cmbCostCategory"
         Me.cmbCostCategory.Size = New System.Drawing.Size(227, 23)
         Me.cmbCostCategory.TabIndex = 107
@@ -338,7 +393,7 @@ Partial Class ConfigForm
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label24.Location = New System.Drawing.Point(12, 219)
+        Me.Label24.Location = New System.Drawing.Point(10, 219)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(121, 15)
         Me.Label24.TabIndex = 106
@@ -349,7 +404,7 @@ Partial Class ConfigForm
         Me.cmbWhoGiveTop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbWhoGiveTop.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbWhoGiveTop.FormattingEnabled = True
-        Me.cmbWhoGiveTop.Location = New System.Drawing.Point(156, 161)
+        Me.cmbWhoGiveTop.Location = New System.Drawing.Point(158, 161)
         Me.cmbWhoGiveTop.Name = "cmbWhoGiveTop"
         Me.cmbWhoGiveTop.Size = New System.Drawing.Size(227, 23)
         Me.cmbWhoGiveTop.TabIndex = 105
@@ -358,7 +413,7 @@ Partial Class ConfigForm
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label20.Location = New System.Drawing.Point(11, 161)
+        Me.Label20.Location = New System.Drawing.Point(10, 161)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(72, 15)
         Me.Label20.TabIndex = 104
@@ -367,15 +422,15 @@ Partial Class ConfigForm
         'txtP_RM
         '
         Me.txtP_RM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtP_RM.Location = New System.Drawing.Point(717, 389)
+        Me.txtP_RM.Location = New System.Drawing.Point(716, 389)
         Me.txtP_RM.Name = "txtP_RM"
-        Me.txtP_RM.Size = New System.Drawing.Size(69, 21)
+        Me.txtP_RM.Size = New System.Drawing.Size(70, 21)
         Me.txtP_RM.TabIndex = 103
         '
         'txtP_RP
         '
         Me.txtP_RP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtP_RP.Location = New System.Drawing.Point(717, 356)
+        Me.txtP_RP.Location = New System.Drawing.Point(716, 357)
         Me.txtP_RP.Name = "txtP_RP"
         Me.txtP_RP.Size = New System.Drawing.Size(70, 21)
         Me.txtP_RP.TabIndex = 102
@@ -399,7 +454,7 @@ Partial Class ConfigForm
         'txtKU
         '
         Me.txtKU.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtKU.Location = New System.Drawing.Point(146, 391)
+        Me.txtKU.Location = New System.Drawing.Point(158, 391)
         Me.txtKU.Name = "txtKU"
         Me.txtKU.Size = New System.Drawing.Size(68, 21)
         Me.txtKU.TabIndex = 99
@@ -407,7 +462,7 @@ Partial Class ConfigForm
         'txtKI
         '
         Me.txtKI.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtKI.Location = New System.Drawing.Point(144, 358)
+        Me.txtKI.Location = New System.Drawing.Point(158, 358)
         Me.txtKI.Name = "txtKI"
         Me.txtKI.Size = New System.Drawing.Size(70, 21)
         Me.txtKI.TabIndex = 98
@@ -416,7 +471,7 @@ Partial Class ConfigForm
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label19.Location = New System.Drawing.Point(571, 391)
+        Me.Label19.Location = New System.Drawing.Point(559, 396)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(88, 16)
         Me.Label19.TabIndex = 97
@@ -426,7 +481,7 @@ Partial Class ConfigForm
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label15.Location = New System.Drawing.Point(571, 358)
+        Me.Label15.Location = New System.Drawing.Point(559, 360)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(91, 16)
         Me.Label15.TabIndex = 96
@@ -436,7 +491,7 @@ Partial Class ConfigForm
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label14.Location = New System.Drawing.Point(297, 392)
+        Me.Label14.Location = New System.Drawing.Point(292, 392)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(88, 16)
         Me.Label14.TabIndex = 95
@@ -446,7 +501,7 @@ Partial Class ConfigForm
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label13.Location = New System.Drawing.Point(297, 359)
+        Me.Label13.Location = New System.Drawing.Point(292, 361)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(91, 16)
         Me.Label13.TabIndex = 94
@@ -456,7 +511,7 @@ Partial Class ConfigForm
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label12.Location = New System.Drawing.Point(11, 393)
+        Me.Label12.Location = New System.Drawing.Point(10, 393)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(129, 16)
         Me.Label12.TabIndex = 93
@@ -466,7 +521,7 @@ Partial Class ConfigForm
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label11.Location = New System.Drawing.Point(11, 360)
+        Me.Label11.Location = New System.Drawing.Point(10, 360)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(77, 16)
         Me.Label11.TabIndex = 92
@@ -475,9 +530,9 @@ Partial Class ConfigForm
         'txtCode
         '
         Me.txtCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtCode.Location = New System.Drawing.Point(159, 107)
+        Me.txtCode.Location = New System.Drawing.Point(158, 107)
         Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(222, 22)
+        Me.txtCode.Size = New System.Drawing.Size(230, 22)
         Me.txtCode.TabIndex = 91
         '
         'Label10
@@ -495,9 +550,9 @@ Partial Class ConfigForm
         Me.cmbSRV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSRV.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbSRV.FormattingEnabled = True
-        Me.cmbSRV.Location = New System.Drawing.Point(140, 441)
+        Me.cmbSRV.Location = New System.Drawing.Point(158, 441)
         Me.cmbSRV.Name = "cmbSRV"
-        Me.cmbSRV.Size = New System.Drawing.Size(248, 23)
+        Me.cmbSRV.Size = New System.Drawing.Size(227, 23)
         Me.cmbSRV.TabIndex = 85
         '
         'Label23
@@ -538,9 +593,9 @@ Partial Class ConfigForm
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.chkHideRow)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Location = New System.Drawing.Point(453, 453)
+        Me.GroupBox2.Location = New System.Drawing.Point(430, 453)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(334, 94)
+        Me.GroupBox2.Size = New System.Drawing.Size(357, 94)
         Me.GroupBox2.TabIndex = 79
         Me.GroupBox2.TabStop = False
         '
@@ -548,7 +603,7 @@ Partial Class ConfigForm
         '
         Me.chkIP.AutoSize = True
         Me.chkIP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.chkIP.Location = New System.Drawing.Point(228, 27)
+        Me.chkIP.Location = New System.Drawing.Point(285, 24)
         Me.chkIP.Name = "chkIP"
         Me.chkIP.Size = New System.Drawing.Size(15, 14)
         Me.chkIP.TabIndex = 68
@@ -558,7 +613,7 @@ Partial Class ConfigForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label5.Location = New System.Drawing.Point(25, 25)
+        Me.Label5.Location = New System.Drawing.Point(125, 24)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(122, 16)
         Me.Label5.TabIndex = 67
@@ -568,7 +623,7 @@ Partial Class ConfigForm
         '
         Me.chkHideRow.AutoSize = True
         Me.chkHideRow.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.chkHideRow.Location = New System.Drawing.Point(228, 56)
+        Me.chkHideRow.Location = New System.Drawing.Point(285, 55)
         Me.chkHideRow.Name = "chkHideRow"
         Me.chkHideRow.Size = New System.Drawing.Size(15, 14)
         Me.chkHideRow.TabIndex = 66
@@ -578,7 +633,7 @@ Partial Class ConfigForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label7.Location = New System.Drawing.Point(25, 56)
+        Me.Label7.Location = New System.Drawing.Point(128, 55)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(98, 15)
         Me.Label7.TabIndex = 65
@@ -607,17 +662,17 @@ Partial Class ConfigForm
         'txtFULLADDRESS
         '
         Me.txtFULLADDRESS.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtFULLADDRESS.Location = New System.Drawing.Point(560, 42)
+        Me.txtFULLADDRESS.Location = New System.Drawing.Point(559, 42)
         Me.txtFULLADDRESS.Multiline = True
         Me.txtFULLADDRESS.Name = "txtFULLADDRESS"
-        Me.txtFULLADDRESS.Size = New System.Drawing.Size(227, 60)
+        Me.txtFULLADDRESS.Size = New System.Drawing.Size(228, 60)
         Me.txtFULLADDRESS.TabIndex = 74
         '
         'Label22
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label22.Location = New System.Drawing.Point(447, 46)
+        Me.Label22.Location = New System.Drawing.Point(443, 46)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(90, 15)
         Me.Label22.TabIndex = 73
@@ -628,9 +683,9 @@ Partial Class ConfigForm
         Me.cmbMaskT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbMaskT.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbMaskT.FormattingEnabled = True
-        Me.cmbMaskT.Location = New System.Drawing.Point(140, 521)
+        Me.cmbMaskT.Location = New System.Drawing.Point(158, 521)
         Me.cmbMaskT.Name = "cmbMaskT"
-        Me.cmbMaskT.Size = New System.Drawing.Size(182, 23)
+        Me.cmbMaskT.Size = New System.Drawing.Size(164, 23)
         Me.cmbMaskT.TabIndex = 72
         '
         'Label21
@@ -648,9 +703,9 @@ Partial Class ConfigForm
         Me.cmbMaskM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbMaskM.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cmbMaskM.FormattingEnabled = True
-        Me.cmbMaskM.Location = New System.Drawing.Point(140, 485)
+        Me.cmbMaskM.Location = New System.Drawing.Point(158, 485)
         Me.cmbMaskM.Name = "cmbMaskM"
-        Me.cmbMaskM.Size = New System.Drawing.Size(182, 23)
+        Me.cmbMaskM.Size = New System.Drawing.Size(164, 23)
         Me.cmbMaskM.TabIndex = 66
         '
         'Label18
@@ -663,91 +718,19 @@ Partial Class ConfigForm
         Me.Label18.TabIndex = 65
         Me.Label18.Text = "Маска "
         '
-        'txtphone2
-        '
-        Me.txtphone2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtphone2.Location = New System.Drawing.Point(560, 210)
-        Me.txtphone2.Name = "txtphone2"
-        Me.txtphone2.Size = New System.Drawing.Size(227, 21)
-        Me.txtphone2.TabIndex = 62
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label3.Location = New System.Drawing.Point(450, 210)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 15)
-        Me.Label3.TabIndex = 61
-        Me.Label3.Text = "Тел. 2"
-        '
-        'txtcphone1
-        '
-        Me.txtcphone1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtcphone1.Location = New System.Drawing.Point(560, 148)
-        Me.txtcphone1.Name = "txtcphone1"
-        Me.txtcphone1.Size = New System.Drawing.Size(227, 21)
-        Me.txtcphone1.TabIndex = 60
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label8.Location = New System.Drawing.Point(454, 151)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 15)
-        Me.Label8.TabIndex = 59
-        Me.Label8.Text = "Тел. 1"
-        '
-        'txtcfio2
-        '
-        Me.txtcfio2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtcfio2.Location = New System.Drawing.Point(560, 181)
-        Me.txtcfio2.Name = "txtcfio2"
-        Me.txtcfio2.Size = New System.Drawing.Size(227, 21)
-        Me.txtcfio2.TabIndex = 58
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label9.Location = New System.Drawing.Point(449, 181)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 15)
-        Me.Label9.TabIndex = 57
-        Me.Label9.Text = "ФИО 2"
-        '
-        'txtcfio1
-        '
-        Me.txtcfio1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtcfio1.Location = New System.Drawing.Point(560, 112)
-        Me.txtcfio1.Name = "txtcfio1"
-        Me.txtcfio1.Size = New System.Drawing.Size(227, 21)
-        Me.txtcfio1.TabIndex = 56
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.Location = New System.Drawing.Point(450, 115)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 15)
-        Me.Label2.TabIndex = 55
-        Me.Label2.Text = "ФИО 1"
-        '
         'txtcaddress
         '
         Me.txtcaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.txtcaddress.Location = New System.Drawing.Point(560, 13)
+        Me.txtcaddress.Location = New System.Drawing.Point(559, 13)
         Me.txtcaddress.Name = "txtcaddress"
-        Me.txtcaddress.Size = New System.Drawing.Size(227, 21)
+        Me.txtcaddress.Size = New System.Drawing.Size(228, 21)
         Me.txtcaddress.TabIndex = 54
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label17.Location = New System.Drawing.Point(449, 16)
+        Me.Label17.Location = New System.Drawing.Point(492, 16)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(41, 15)
         Me.Label17.TabIndex = 53
@@ -760,7 +743,7 @@ Partial Class ConfigForm
         Me.cmbGRP.FormattingEnabled = True
         Me.cmbGRP.Location = New System.Drawing.Point(158, 74)
         Me.cmbGRP.Name = "cmbGRP"
-        Me.cmbGRP.Size = New System.Drawing.Size(225, 23)
+        Me.cmbGRP.Size = New System.Drawing.Size(230, 23)
         Me.cmbGRP.TabIndex = 50
         '
         'Label16
@@ -780,7 +763,7 @@ Partial Class ConfigForm
         Me.cmbDevtype.FormattingEnabled = True
         Me.cmbDevtype.Location = New System.Drawing.Point(158, 42)
         Me.cmbDevtype.Name = "cmbDevtype"
-        Me.cmbDevtype.Size = New System.Drawing.Size(225, 23)
+        Me.cmbDevtype.Size = New System.Drawing.Size(230, 23)
         Me.cmbDevtype.TabIndex = 48
         '
         'txtName
@@ -788,7 +771,7 @@ Partial Class ConfigForm
         Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.txtName.Location = New System.Drawing.Point(158, 134)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(225, 21)
+        Me.txtName.Size = New System.Drawing.Size(230, 21)
         Me.txtName.TabIndex = 32
         '
         'TextBoxID_BD
@@ -797,7 +780,7 @@ Partial Class ConfigForm
         Me.TextBoxID_BD.Location = New System.Drawing.Point(158, 14)
         Me.TextBoxID_BD.Name = "TextBoxID_BD"
         Me.TextBoxID_BD.ReadOnly = True
-        Me.TextBoxID_BD.Size = New System.Drawing.Size(225, 21)
+        Me.TextBoxID_BD.Size = New System.Drawing.Size(230, 21)
         Me.TextBoxID_BD.TabIndex = 28
         '
         'Label6
@@ -870,25 +853,22 @@ Partial Class ConfigForm
         Me.pnlBModems.Size = New System.Drawing.Size(765, 362)
         Me.pnlBModems.TabIndex = 0
         '
-        'cmbTarif
+        'txtDivider
         '
-        Me.cmbTarif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbTarif.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.cmbTarif.FormattingEnabled = True
-        Me.cmbTarif.Location = New System.Drawing.Point(156, 190)
-        Me.cmbTarif.Name = "cmbTarif"
-        Me.cmbTarif.Size = New System.Drawing.Size(227, 23)
-        Me.cmbTarif.TabIndex = 119
+        Me.txtDivider.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.txtDivider.Location = New System.Drawing.Point(559, 315)
+        Me.txtDivider.Name = "txtDivider"
+        Me.txtDivider.Size = New System.Drawing.Size(230, 22)
+        Me.txtDivider.TabIndex = 125
         '
-        'Label30
+        'Label3
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label30.Location = New System.Drawing.Point(11, 190)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(46, 15)
-        Me.Label30.TabIndex = 118
-        Me.Label30.Text = "Тариф"
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label3.Location = New System.Drawing.Point(418, 306)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(115, 34)
+        Me.Label3.TabIndex = 124
+        Me.Label3.Text = "Делитель входных данных"
         '
         'ConfigForm
         '
@@ -955,14 +935,6 @@ Partial Class ConfigForm
     Friend WithEvents cmbSRV As System.Windows.Forms.ComboBox
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents pnlPLANCALL As Nodeeditorlib.editTPLT_PLANCALL
-    Friend WithEvents txtphone2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtcphone1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents txtcfio2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txtcfio1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtCode As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtP_RM As System.Windows.Forms.TextBox
@@ -993,4 +965,10 @@ Partial Class ConfigForm
     Friend WithEvents Label28 As Windows.Forms.Label
     Friend WithEvents cmbTarif As Windows.Forms.ComboBox
     Friend WithEvents Label30 As Windows.Forms.Label
+    Friend WithEvents chkTranzit As Windows.Forms.CheckBox
+    Friend WithEvents lblTranzit As Windows.Forms.Label
+    Friend WithEvents txtNodeComment As Windows.Forms.TextBox
+    Friend WithEvents Label2 As Windows.Forms.Label
+    Friend WithEvents txtDivider As Windows.Forms.TextBox
+    Friend WithEvents Label3 As Windows.Forms.Label
 End Class
